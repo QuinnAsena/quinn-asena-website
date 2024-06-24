@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Links to talks"
+  },
+  {
+    "objectID": "my-research.html",
+    "href": "my-research.html",
+    "title": "My Research",
+    "section": "",
+    "text": "I do shit!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "Find me on the Ives and Williams labs!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quinn Asena",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "I develop resources that are publicly available on my GitHub:\n\nQuarto for Colaboration"
+  }
+]

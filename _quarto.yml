@@ -1,0 +1,40 @@
+project:
+  type: website
+
+website:
+  title: "Quinn Asena"
+  navbar:
+    logo: images/profile_pic.jpg  
+    toggle-position: right
+    background: "#374699"
+    foreground: "#FFFFFF"
+    search: false
+    right:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - my-research.qmd
+      - resources.qmd
+      - talks.qmd
+    tools:
+      - icon: envelope
+        href: qasena@wisc.edu
+      - icon: github
+        href: https://github.com/QuinnAsena        
+      - icon: fingerprint
+        menu:
+          - text: Ives Lab
+            href: https://ives.labs.wisc.edu/people/
+          - text: Williams Lab
+            href: https://williamspaleolab.github.io/people/
+          - text: Perry Lab
+            href: https://spatialecol.com/
+
+format:
+  html:
+    theme: lux
+    css: styles.css
+    toc: true
+
+
+
