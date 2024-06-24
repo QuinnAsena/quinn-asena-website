@@ -16,7 +16,7 @@ about:
 
 # Ecologist, data scientist, and many other things...
 
-I'm interested in ecological dynamics. What mechanisms undrly change in ecosystems over time and space? I study resilience, thresholds, tipping points, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!).
+I'm interested in ecological dynamics. What mechanisms undrly change in ecosystems over time and space? I study resilience, thresholds, tipping points, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!). [Check out my CV here!](https://quinnasena.github.io/CV/resume_refs.html)
 
 I'm also interested in how climate, ecosystems and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?
 

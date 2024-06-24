@@ -1,18 +1,26 @@
 ---
 title: "R Packages and Resources"
+toc: false
 ---
+
+See all my resources on my [GitHub](https://github.com/QuinnAsena). I develop and host my workshop resources and slides for talks on GitHub.
 
 ## R Packages
 
+- [fishR](https://github.com/UoA-eResearch/fisheR): an R package for calculating Fisher Information
+- multinomialTS: Soon-to-be published R package for state-space modelling data from a multinomial distribution
 
 ## Workshop materials
 
--  [Quarto for Colaboration](https://github.com/QuinnAsena/resbaz2022)
+- [Quarto for Colaboration](https://github.com/QuinnAsena/resbaz2022)
+- [State-space modelling ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html) (Upcoming)
 
 ## Apps
 
+- [Accompanying app for population growth lecture](https://quinnasena.shinyapps.io/growth_app/)
+- [Two different population growth models](https://quinnasena.shinyapps.io/r_logistic/)
 
 ## Science and outreach
 
-I develop resources that are publicly available on my GitHub:
+- A [science and outreach film](https://www.youtube.com/watch?v=Htp0hVD-WYM) I made for the York Institute for Tropical Ecosystems.
 
