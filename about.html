@@ -99,11 +99,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About me</span></a>
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./my-research.html"> 
@@ -112,10 +108,6 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Packages and resources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./talks.html"> 
-<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://quinnasena.github.io/CV/resume_refs.html"> 
@@ -182,7 +174,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
   <div class="about-contents"><main class="content" id="quarto-document-content">
 <section id="ecologist-data-scientist-and-many-other-things" class="level1">
 <h1>Ecologist, data scientist, and many other things…</h1>
-<p>I’m interested in ecological dynamics. What mechanisms undrly change in ecosystems over time and space? I study resilience, thresholds, tipping points, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!).</p>
+<p>I’m interested in ecological dynamics. What mechanisms undrly change in ecosystems over time and space? I study resilience, thresholds, tipping points, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!). <a href="https://quinnasena.github.io/CV/resume_refs.html">Check out my CV here!</a></p>
 <p>I’m also interested in how climate, ecosystems and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?</p>
 <p>Currently I work with Tony Ives and Jack Williams at UW-Madison. We are developing statistical models to better understand the underlying causes of ecological change over time. Ecosystems evolve over centuries and millennia, so we delve beyond the observational record and reconstruct ecosystem histories and climate change from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change!</p>
 <p>I completed my PhD at the University of Auckland, NZ, with George Perry and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.</p>
@@ -315,6 +307,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/QuinnAsena\.github\.io\/quinn-asena-website\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -624,6 +636,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Email: qasena@wisc.edu</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
