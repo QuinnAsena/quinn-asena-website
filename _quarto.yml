@@ -4,23 +4,31 @@ project:
 website:
   title: "Quinn Asena"
   navbar:
-    logo: images/profile_pic.jpg  
     toggle-position: right
     background: "#374699"
     foreground: "#FFFFFF"
+    favicon: emoji-smile-fill
     search: false
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - my-research.qmd
-      - resources.qmd
-      - talks.qmd
+      - href: about.qmd
+        text: About me
+      - href: my-research.qmd
+        text: My research
+      - href: resources.qmd
+        text: Packages and resources
+      - href: talks.qmd
+        text: Talks
+      - href: https://quinnasena.github.io/CV/resume_refs.html
+        text: CV
     tools:
+#      - icon: mortarboard-fill
+#        href: https://quinnasena.github.io/CV/resume_refs.html
       - icon: envelope
-        href: qasena@wisc.edu
+        href: mailto:qasena@wisc.edu
       - icon: github
-        href: https://github.com/QuinnAsena        
+        href: https://github.com/QuinnAsena
       - icon: fingerprint
         menu:
           - text: Ives Lab

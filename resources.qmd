@@ -1,5 +1,5 @@
 ---
-title: "Resources"
+title: "R Packages and Resources"
 ---
 
 I develop resources that are publicly available on my GitHub:

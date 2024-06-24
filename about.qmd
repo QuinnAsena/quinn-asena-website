@@ -1,5 +1,16 @@
 ---
-title: "About me"
+title: "Quinn Asena"
+about:
+  template: trestles 
+  image: images/profile_pic.jpg
+  image-width: 20em
+  links: # create buttons
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/quinn-asena-a394202a4/
+    - text: GitHub
+      href: https://github.com/QuinnAsena
+    - text: Email
+      href: mailto:qasena@wisc.edu
 ---
 
 Find me on the [Ives](https://ives.labs.wisc.edu/people/) and [Williams](https://williamspaleolab.github.io/people/) labs!
