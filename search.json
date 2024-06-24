@@ -16,7 +16,7 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About me",
+    "title": "Quinn Asena",
     "section": "",
     "text": "Find me on the Ives and Williams labs!"
   },
@@ -30,7 +30,7 @@
   {
     "objectID": "resources.html",
     "href": "resources.html",
-    "title": "Resources",
+    "title": "R Packages and Resources",
     "section": "",
     "text": "I develop resources that are publicly available on my GitHub:\n\nQuarto for Colaboration"
   }
