@@ -18,7 +18,35 @@
     "href": "about.html",
     "title": "Quinn Asena",
     "section": "",
-    "text": "Find me on the Ives and Williams labs!"
+    "text": "I’m interested in ecological dynamics. What mechanisms undrly change in ecosystems over time and space? I study resilience, thresholds, tipping points, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!).\nI’m also interested in how climate, ecosystems and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?\nCurrently I work with Tony Ives and Jack Williams at UW-Madison. We are developing statistical models to better understand the underlying causes of ecological change over time. Ecosystems evolve over centuries and millennia, so we delve beyond the observational record and reconstruct ecosystem histories and climate change from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change!\nI completed my PhD at the University of Auckland, NZ, with George Perry and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.\n\nFind me on the Ives and Williams labs!\n\n\nProfessionally, I have a broad experience with data science and with teaching.\nTeaching experience:\n\nDiscovering Environmental Modelling\nNatural and Human Environmental Systems\nEnvironmental Science and Management\n\nLectures:\n\nPopulation growth 101\n\nWorkshops:\n\nQuarto for Colaboration\nState-space modelling ESA 2024 (updating as you read this)\n\n\n\n\nBeing interested in empirical and theoretical ecology leads to a lot of data science! For my own work, I use virtual machines, cluster computing and handle large volumes of data. My experience working for the Centre for eResearch, also included consulting on researchers needs, secure data storage, and setting up analysis workflows. Check out my Packages and resources section.\n\n\n\nI love being out in the field and help out whereveer I can on fieldwork. I’ve been out sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, flowering plants, and setting recorders and camera traps (and more)… Here are some pics:\n\n\n\nBiodiversity surveys and wetland coring in New Zealand\n\n\n\n\n\nAgrucultural fieldwork in the US\n\n\n\n\n\nIn my spare time I have no shortage of hobbies: classical piano, art, rock climbing, and baking.\n\n\n\nJackson Falls, US"
+  },
+  {
+    "objectID": "about.html#teaching",
+    "href": "about.html#teaching",
+    "title": "Quinn Asena",
+    "section": "",
+    "text": "Professionally, I have a broad experience with data science and with teaching.\nTeaching experience:\n\nDiscovering Environmental Modelling\nNatural and Human Environmental Systems\nEnvironmental Science and Management\n\nLectures:\n\nPopulation growth 101\n\nWorkshops:\n\nQuarto for Colaboration\nState-space modelling ESA 2024 (updating as you read this)"
+  },
+  {
+    "objectID": "about.html#data-science",
+    "href": "about.html#data-science",
+    "title": "Quinn Asena",
+    "section": "",
+    "text": "Being interested in empirical and theoretical ecology leads to a lot of data science! For my own work, I use virtual machines, cluster computing and handle large volumes of data. My experience working for the Centre for eResearch, also included consulting on researchers needs, secure data storage, and setting up analysis workflows. Check out my Packages and resources section."
+  },
+  {
+    "objectID": "about.html#fieldwork",
+    "href": "about.html#fieldwork",
+    "title": "Quinn Asena",
+    "section": "",
+    "text": "I love being out in the field and help out whereveer I can on fieldwork. I’ve been out sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, flowering plants, and setting recorders and camera traps (and more)… Here are some pics:\n\n\n\nBiodiversity surveys and wetland coring in New Zealand\n\n\n\n\n\nAgrucultural fieldwork in the US"
+  },
+  {
+    "objectID": "about.html#other-interests",
+    "href": "about.html#other-interests",
+    "title": "Quinn Asena",
+    "section": "",
+    "text": "In my spare time I have no shortage of hobbies: classical piano, art, rock climbing, and baking.\n\n\n\nJackson Falls, US"
   },
   {
     "objectID": "index.html",
@@ -28,10 +56,24 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
+    "objectID": "resources.html#workshop-materials",
+    "href": "resources.html#workshop-materials",
     "title": "R Packages and Resources",
-    "section": "",
-    "text": "I develop resources that are publicly available on my GitHub:\n\nQuarto for Colaboration"
+    "section": "Workshop materials",
+    "text": "Workshop materials\n\nQuarto for Colaboration"
+  },
+  {
+    "objectID": "resources.html#apps",
+    "href": "resources.html#apps",
+    "title": "R Packages and Resources",
+    "section": "Apps",
+    "text": "Apps"
+  },
+  {
+    "objectID": "resources.html#science-and-outreach",
+    "href": "resources.html#science-and-outreach",
+    "title": "R Packages and Resources",
+    "section": "Science and outreach",
+    "text": "Science and outreach\nI develop resources that are publicly available on my GitHub:"
   }
 ]
