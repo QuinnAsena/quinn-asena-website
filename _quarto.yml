@@ -3,11 +3,12 @@ project:
 
 website:
   title: "Quinn Asena"
+  favicon: emoji-smile-fill
+  google-analytics: "G-HT71J1MK87"
   navbar:
     toggle-position: right
     background: "#374699"
     foreground: "#FFFFFF"
-    favicon: emoji-smile-fill
     search: false
     right:
       - href: index.qmd

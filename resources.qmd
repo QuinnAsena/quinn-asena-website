@@ -2,6 +2,17 @@
 title: "R Packages and Resources"
 ---
 
-I develop resources that are publicly available on my GitHub:
+## R Packages
+
+
+## Workshop materials
 
 -  [Quarto for Colaboration](https://github.com/QuinnAsena/resbaz2022)
+
+## Apps
+
+
+## Science and outreach
+
+I develop resources that are publicly available on my GitHub:
+

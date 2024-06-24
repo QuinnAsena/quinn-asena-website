@@ -1,5 +1,6 @@
 ---
 title: "Quinn Asena"
+toc: false
 about:
   template: trestles 
   image: images/profile_pic.jpg
@@ -13,4 +14,55 @@ about:
       href: mailto:qasena@wisc.edu
 ---
 
+# Ecologist, data scientist, and many other things...
+
+I'm interested in ecological dynamics. What mechanisms undrly change in ecosystems over time and space? I study resilience, thresholds, tipping points, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!).
+
+I'm also interested in how climate, ecosystems and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?
+
+Currently I work with Tony Ives and Jack Williams at UW-Madison. We are developing statistical models to better understand the underlying causes of ecological change over time. Ecosystems evolve over centuries and millennia, so we delve beyond the observational record and reconstruct ecosystem histories and climate change from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change!
+
+I completed my PhD at the University of Auckland, NZ, with George Perry and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.
+
+{{< video https://www.youtube.com/embed/z-aAIb7vkQo?si=R87gHgBi3AMKGPmG >}}
+
 Find me on the [Ives](https://ives.labs.wisc.edu/people/) and [Williams](https://williamspaleolab.github.io/people/) labs!
+
+## Teaching
+
+Professionally, I have a broad experience with data science and with teaching. 
+
+Teaching experience:
+
+- Discovering Environmental Modelling
+- Natural and Human Environmental Systems
+- Environmental Science and Management
+
+Lectures:
+
+- [Population growth 101](https://quinnasena.shinyapps.io/growth_app/)
+
+Workshops:
+
+- [Quarto for Colaboration](https://github.com/QuinnAsena/resbaz2022)
+- [State-space modelling ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html) (updating as you read this)
+
+## Data science
+
+Being interested in empirical and theoretical ecology leads to a lot of data science! For my own work, I use virtual machines, cluster computing and handle large volumes of data. My experience working for the [Centre for eResearch](https://www.eresearch.auckland.ac.nz/), also included consulting on researchers needs, secure data storage, and setting up analysis workflows. Check out my Packages and resources section.
+
+
+## Fieldwork
+
+I love being out in the field and help out whereveer I can on fieldwork. I've been out sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, flowering plants, and setting recorders and camera traps (and more)... Here are some pics:
+
+![Biodiversity surveys and wetland coring in New Zealand](images/nz.jpg)
+
+![Agrucultural fieldwork in the US](images/arlington.jpeg)
+
+
+## Other interests
+
+In my spare time I have no shortage of hobbies: classical piano, art, rock climbing, and baking.
+
+![Jackson Falls, US](images/rock-climbing.jpeg)
