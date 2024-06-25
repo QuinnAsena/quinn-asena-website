@@ -6,6 +6,36 @@ categories:
   - Topic Modelling
 ---
 
-Post coming soon on a recent quantitative analysis I did of the climate jstice literature. In [this paper](https://doi.org/10.1016/j.crm.2024.100593) by Meg Parsons, we explored research trends in the literature around the topic of climate justice since its conception.
+In [this paper](https://doi.org/10.1016/j.crm.2024.100593) by Meg Parsons, we explored research trends in the literature around the topic of climate justice since its conception. I was the quantitative expert and analysed the corpus using Latent Dirichlet Allocation (LDA) to identify trends in the literature.
 
-![Coming soon!](images/parsons-2024/gamma_through_time.png)
+LDA uses the word frequencies from a corpus to assign documents in the corpus to arbitrary topics. For example, if we took a corpus around the subject 'nuclear' the corpus will probably be characterised by words like 'sustainable', 'energy', 'green', and 'disaster', 'fallout', 'meltdown', and 'weapon', 'conflict'... and so on. Words will cluster around 'topics', that are described by those words. The LDA model is agnostic and does not know what the 'topics' are, but we can identify that there are themes in the words that characterise the topics, such as 'energy', 'conflict/politics', maybe 'social movements', and other topics.
+
+'Climate Justice' was first mentioned in a published article in [1997 by Ian H. Rowlands](https://doi.org/10.1080/09644019708414340), and between 1997 and 2021 has seen 1683 published works on the Scopus database that had enough text (e.g., an abstract) that I could use for the analysis.
+
+Six overall topics emerged from the literature that we assigned the following descriptions to (@fig-topics):
+
+- Education and food security
+- Sustainable development and policy
+- International relations and carbon emissions
+- Health, vulnerability and adaptation
+- Policy and activism
+- Human rights and indigenous people
+
+![Six topics (corpus) identified through topic modelling within the published papers, with the keywords appearing most frequently within each topic.](images/parsons-2024/six_topic_plot.svg){#fig-topics}
+
+We can also see how many documents belong to each topic over time (@fig-gamma). Each document gets a score per topic and may not belong only to one topic, but we can still reasonably map out the trends. It is also true that there were not many documents published on climate justice in the early years so interpret the first decade with that in mind.
+
+![The proportion of the literature belonging to a given topic over time.](images/parsons-2024/gamma_through_time.svg){#fig-gamma}
+
+Topics 1 and 2 around sustainability and international relations, respectively, make up a consistant and substantial proportion of the literature. Smaller topics 1, 4, 5 and 6 have seen a small increase over time.
+
+I won't comment a great deal in this summary on the interpretation of the results as the subject area is Meg's expertise. I would not be able to do justice to the extensive work she did as the primary author (and of course co-authors Danielle and Johanna!) and qualitative analyst.
+
+
+::: {.callout-note}
+## Reproducible workflow
+To maintain a smooth workflow between me and colaborators, I host my analyses as a link on GitHub. The workflow is reproducible and colaborators can see the latest results by following the same link:
+
+- Here is the [whole workflow](https://quinnasena.github.io/climate-justice-modelling/bib_analysis.html)
+- The code is available on my [GitHub](https://github.com/QuinnAsena/climate-justice-modelling) and on [Figshare](https://doi.org/10.17608/k6.auckland.24539314.v1)
+:::

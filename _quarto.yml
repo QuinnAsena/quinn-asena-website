@@ -13,8 +13,6 @@ website:
     right:
       - href: index.qmd
         text: About Me
-#      - href: about.qmd
-#        text: About me
       - href: my-research.qmd
         text: My research
       - href: resources.qmd
@@ -43,8 +41,9 @@ website:
 
 format:
   html:
-    theme: lux
-    css: styles.css
+    theme:
+      - lux
+      - styles.scss
     toc: true
     link-external-icon: true
     link-external-newwindow: true
