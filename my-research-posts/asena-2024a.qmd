@@ -1,0 +1,38 @@
+---
+title: Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data
+categories:
+  - Ecology
+  - Modelling
+  - Virtual Ecology
+  - Proxy System Modelling
+  - Uncertainties
+---
+
+[This paper](https://doi.org/10.1177/09596836241247304) is about constructing a model that generates patterns of ecological change using population growth equations with underlying dynamics such as thresholds of change. The idea is not to recreate a given ecosystem but to generate patterns with the same statistical properties that we see in reality, i.e., this is a phenomenological model. Why do this? Even the most highly resolved palaeoecological data from the best laminated sediment cores contain many uncertainties from the sampling and lab processing. In empirical palaeoecology we have no 'known truth' against which to assess our inferences. By using a virtual ecological approach, we know the conditions under which our environment forms because we simulated them.
+
+> in reality we have imperfect knowledge of a perfect world. In simulation we have perfect knowledge of an imperfect representation of the world.
+
+If we start with our perfect knowledge of a simulated world we can also simulate observations from that world, in the same way that we would sample from the real world. This gives us a benchmark dataset, the original simuated data, and a reduced dataset, the sampled simulated data.
+
+Here is my simulated world (@fig-VE). Each species on the right (@fig-VE d) is simulated by a population growth equation. The growth rate of each species is their combined response to the two environmental drivers (@fig-VE b). Their optima and tolerance to each driver (@fig-VE c) determines whether the growth rate of a species is positive or negative. If the environment is unfavourable then a species goes locally extinct, but has the chance to re-establish if conditions become favourable again.
+
+![Visualisation of a simulated core sample: the accumulation rate, time-span and length of the core (a); driver conditions over time (b); the niche of each species with respect to the driving environment (c); and the abundances of pseudoproxies in the archive (d). Each species niche comprises an optima and tolerance for each driver, the optima and tolerance curves in (c) are colour-coded to match each driver in (b). In the context of the proxy system model framework, environmental drivers (b) act on a sensor (c; in this case the response of the sensor is the populations’ growth rate changing in response to the environmental drivers) and records the response of the sensor in an archive (d). The simulation runs from past to present, the first time-step being the oldest.](images/asena-2024-a/g2272.png){#fig-VE}
+
+The number of species in (@fig-VE) is only a fraction of those simulated. There are actually around 200 potential species, and maybe 15-40 in existance at any given point in the simulation (depending on the replicate). I simulated a bunch of different driving environments (e.g., one where the environmental driver undergoes an abrupt shift), in the example above (@fig-VE) the 'slow linear' driver will eventually drive species that existed at the beginning of the simulation locally extinct (unless they were very grneralist species!), and new species would establish and thrive.
+
+We then take those simulated species abundances (@fig-VE d), remember this is our 'perfect' benchmark data, and degrade them with mixing (i.e., a physical process that alters the core), sub-sampling (i.e., slicing up the core into 1 cm segmants for processing), and proxy counting (i.e., the counting of species under a microscope from the 1 cm segmants after lab processing). @fig-degradation shows how we start with absolute abundances of species, and recreate the observational process, ultimately resulting in data that look a lot more like what we see in reality from proxy-data.
+
+
+![Sample model output showing two species, visualising data from the error-free reference (a) and one treatment level from each: mixing (b); mixing combined with sub-sampling (c); and mixing combined with sub-sampling and proxy counting (d). Mixing over 10 time-steps is shown as a magnified section of species 56 displaying the error-free reference transitioning to the mixed data (b). The mixed data are then sub-sampled every 10 cm, with a thickness of 1 cm (c) and the sub-sampled data are counted at a resolution of 400 individuals per sub-sample (d). Red dashed lines indicate disturbance events that occur randomly throughout the simulation.](images/asena-2024-a/degradation_process_disturbed_area_ink.png){#fig-degradation}
+
+
+This is what a large subset of the simulated species looks like before and after the virtual degradation and sampling process (@fig-halfhalf).
+
+![Visualisation of the environmental drivers, the ‘error-free’ benchmark pseudoproxy archive, and pseudoproxies mixed over 10 time-steps, sub-sampled at 10 cm intervals and counted at a resolution of 400 individuals per sub-sample. A subset of 10 species from the pool of 200 is shown. The ‘error-free’ record shows the absolute abundances per time-step and represents ‘perfect’ knowledge of the system through time, the degraded and sampled record is converted to relative abundances and represents observations comparable to empirical proxy records. Accumulation rate and depth are not pictured in favour of a more complete species record. Note that the y-axis is in simulation time, the most recent section of core is time-step 5000.](images/asena-2024-a/archive_half_half_walk_lin_forces.png){#fig-halfhalf}
+
+
+Finally, we anayse both sets of data. In simulation the three sources of uncertainty (mixing, sub-sampling, and proxy counting) are applied individually, and in combination, at increasing levels of severity. So we end up with 1210 (_per simulation replicate!_)datasets from the benchmark to the most degraded. We analyse them all! But here is an example of the benchmark, and one level of degradation (@fig-analysis).
+
+![Fisher Information (a) and PrCs (b) of both the ‘error-free’ pseudoproxies, and the degraded and sub-sampled data for Scenario 1. The blue highlighted region in the FI indicates a ~700-year period of reversed directionality. The highlighted regions in the PrCs indicate, in the analyses of the degraded and sub-sampled data, two periods of different rates of change in the PrC. The same regions are highlighted in the ‘error-free’ analysis where no apparent change is visible. Red dashed lines indicate disturbance events for both FI and PrCs.](images/asena-2024-a/fi_prc_grad_vertical2.png){#fig-analysis}
+
+This figure shows two different multivariate community analyses (Fisher Information and principal curves), and how the results change between the 'error-free' data and the degraded and sbu-sampled dataset.

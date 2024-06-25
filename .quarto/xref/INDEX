@@ -13,5 +13,14 @@
   },
   "talks.qmd": {
     "talks.html": "46a02b66"
+  },
+  "my-research-posts/asena-2024a.qmd": {
+    "asena-2024a.html": "6fea608b"
+  },
+  "my-research-posts/asena-2024b.qmd": {
+    "asena-2024b.html": "a3438167"
+  },
+  "my-research-posts/parsons-2024.qmd": {
+    "parsons-2024.html": "9cd07ea8"
   }
 }

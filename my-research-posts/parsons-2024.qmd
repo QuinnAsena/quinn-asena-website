@@ -1,0 +1,11 @@
+---
+title: "A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward"
+categories:
+  - Climate Justice
+  - Social Science
+  - Topic Modelling
+---
+
+Post coming soon on a recent quantitative analysis I did of the climate jstice literature. In [this paper](https://doi.org/10.1016/j.crm.2024.100593) by Meg Parsons, we explored research trends in the literature around the topic of climate justice since its conception.
+
+![Coming soon!](images/parsons-2024/gamma_through_time.png)

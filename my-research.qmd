@@ -1,33 +1,13 @@
 ---
 title: "My Research"
-toc: false
+listing: 
+  contents: 
+  - /my-research-posts/asena-2024a.qmd
+  - /my-research-posts/asena-2024b.qmd
+  - /my-research-posts/parsons-2024.qmd
+  categories: true
+  type: grid
+  sort: false
 ---
 
-My research has largely focused on ecological change over time. I'm interested in expanding to how ecosystems change over space and what are the human implications of ecological change. Feel free to get in touch if you want to chat research!
-
-
-- [Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data](https://doi.org/10.1177/09596836241247304)
-  - **Asena, Q.,** Perry, G.L., Wilmshurst, J.
-  - Holocene
-  
-- [A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward](https://doi.org/10.1016/j.crm.2024.100593)
-  - Parsons, M., **Asena, Q.,** Johnson, D., Nalau, J.
-  - Climate Risk Management
-  - [Code repository publicly available](https://figshare.com/s/1906f8088eb05bffc5b3)
-
-- [Guidelines for Reporting and Archiving 210Pb Sediment Chronologies to Improve Fidelity and Extend Data Lifecycle](https://www.sciencedirect.com/science/article/pii/S1871101418301249?via%3Dihub)
-  - Courtney-Mustaphi, C.J., Brahney, J., Aquino-Lopez, M.A., Goring, S., Orton, K., Noronha, A. Czaplewski, J., **Asena, Q.,** Paton, S.
-  - Quaternary Geochronology
-  
-- [Population viability analyses in New Zealand: a review](https://newzealandecology.org/nzje/3343)
-  - Simpkins, C.E., Lee, F., Powers, B.F., Anderson, S., **Asena, Q.,** Brock, J.M.R., Perry, G.L.
-  - New Zealand Journal of Ecology
-
-- [Assessing the links between resilience, disturbance and functional traits in paleoecological datasets](https://doi.org/10.22498/pages.26.2.87)
-  - Hamilton, R., Brussel, T., **Asena, Q.,** Bruel, R., Marcisz, K., Slowinski, M., Morris, J.
-  - Past Global Changes Magazine, vol. 26(2), 87
-
-
-- [Peatland carbon stocks and burn history: Blanket bog peat core evidence highlights charcoal impacts on peat physical properties and long-term carbon storage](http://eprints.whiterose.ac.uk/135786/)
-  - Heinemeyer, A., Asena, Q., Burn, W.L., Jones, A.
-  - GEO: Geography and Environment
+My research has largely focused on ecological change over time. I'm interested in expanding to how ecosystems change over space and what are the human implications of ecological change. Feel free to get in touch if you want to chat research! Here are some simple summaries of my published work, and some sneak previews of work that is about to be published.
