@@ -20,6 +20,15 @@ See all my resources on my [GitHub](https://github.com/QuinnAsena). I develop an
 - [Accompanying app for population growth lecture](https://quinnasena.shinyapps.io/growth_app/)
 - [Two different population growth models](https://quinnasena.shinyapps.io/r_logistic/)
 
+## Talks
+
+I present work at multiple conferences each year. These are a couple of example talks.
+
+- [Ecological Society of America 2023](https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide)
+- [British Ecological Society PalaeoSIG 2022](https://quinnasena.github.io/palaeo_in_R_2022_talk_QA/slides/slides.html#/title-slide)
+  - [YouTube recording of the talk](https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT)
+
+
 ## Science and outreach
 
 - A [science and outreach film](https://www.youtube.com/watch?v=Htp0hVD-WYM) I made for the York Institute for Tropical Ecosystems.

@@ -24,7 +24,7 @@ Currently, I work with Tony Ives and Jack Williams at UW-Madison. We are develop
 
 I completed my PhD at the University of Auckland, NZ, with George Perry and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.
 
-{{< video https://www.youtube.com/embed/z-aAIb7vkQo?si=R87gHgBi3AMKGPmG >}}
+{{< video https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT >}}
 
 Find me on the [Ives](https://ives.labs.wisc.edu/people/) and [Williams](https://williamspaleolab.github.io/people/) labs!
 
