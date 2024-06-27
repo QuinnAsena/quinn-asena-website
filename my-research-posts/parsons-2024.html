@@ -177,7 +177,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 
 
 <p>In <a href="https://doi.org/10.1016/j.crm.2024.100593">this paper</a> by Meg Parsons, we explored research trends in the literature around the topic of climate justice since its conception. I was the quantitative expert and analysed the corpus using Latent Dirichlet Allocation (LDA) to identify trends in the literature.</p>
-<p>LDA uses the word frequencies from a corpus to assign documents in the corpus to arbitrary topics. For example, if we took a corpus around the subject ‘nuclear’ the corpus will probably be characterised by words like ‘sustainable’, ‘energy’, ‘green’, and ‘disaster’, ‘fallout’, ‘meltdown’, and ‘weapon’, ‘conflict’… and so on. Words will cluster around ‘topics’, that are described by those words. The LDA model is agnostic and does not know what the ‘topics’ are, but we can identify that there are themes in the words that characterise the topics, such as ‘energy’, ‘conflict/politics’, maybe ‘social movements’, and other topics.</p>
+<p>LDA uses the word frequencies from a corpus to assign documents in the corpus to arbitrary ‘topics’. For example, if we took a corpus around the subject ‘nuclear’, the corpus will probably be characterised by words like ‘sustainable’, ‘energy’, ‘green’, and ‘disaster’, ‘fallout’, ‘meltdown’, and ‘weapon’, ‘conflict’… and so on. Words will cluster around ‘topics’, that are described by those words. The LDA model is agnostic and does not know what the ‘topics’ are, but we can identify that there are themes in the words that characterise the topics, such as ‘energy’, ‘conflict/politics’, maybe ‘social movements’, and other topics.</p>
 <p>‘Climate Justice’ was first mentioned in a published article in <a href="https://doi.org/10.1080/09644019708414340">1997 by Ian H. Rowlands</a>, and between 1997 and 2021 has seen 1683 published works on the Scopus database that had enough text (e.g., an abstract) that I could use for the analysis.</p>
 <p>Six overall topics emerged from the literature that we assigned the following descriptions to (<a href="#fig-topics" class="quarto-xref">Figure&nbsp;1</a>):</p>
 <ul>
@@ -198,7 +198,7 @@ Figure&nbsp;1: Six topics (corpus) identified through topic modelling within the
 </figcaption>
 </figure>
 </div>
-<p>We can also see how many documents belong to each topic over time (<a href="#fig-gamma" class="quarto-xref">Figure&nbsp;2</a>). Each document gets a score per topic and may not belong only to one topic, but we can still reasonably map out the trends. It is also true that there were not many documents published on climate justice in the early years so interpret the first decade with that in mind.</p>
+<p>We can also see how many documents belong to each topic over time (<a href="#fig-gamma" class="quarto-xref">Figure&nbsp;2</a>). Each document gets a score per topic, and may not belong <em>only</em> to one topic, but we can still reasonably map out the trends. It is also true that there were not many documents published on climate justice in the early years, so interpret the first decade with that in mind.</p>
 <div id="fig-gamma" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -209,7 +209,7 @@ Figure&nbsp;2: The proportion of the literature belonging to a given topic over 
 </figcaption>
 </figure>
 </div>
-<p>Topics 1 and 2 around sustainability and international relations, respectively, make up a consistant and substantial proportion of the literature. Smaller topics 1, 4, 5 and 6 have seen a small increase over time.</p>
+<p>Topics 1 and 2 around sustainability and international relations, respectively, make up a consistent, and substantial proportion of the literature. Smaller topics 1, 4, 5, and 6 have seen a small increase over time.</p>
 <p>I won’t comment a great deal in this summary on the interpretation of the results as the subject area is Meg’s expertise. I would not be able to do justice to the extensive work she did as the primary author (and of course co-authors Danielle and Johanna!) and qualitative analyst.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -221,7 +221,7 @@ Reproducible workflow
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To maintain a smooth workflow between me and colaborators, I host my analyses as a link on GitHub. The workflow is reproducible and colaborators can see the latest results by following the same link:</p>
+<p>To maintain a smooth workflow between me and collaborators, I host my analyses as a link on GitHub. The workflow is reproducible, and collaborators can see the latest results by following the same link:</p>
 <ul>
 <li>Here is the <a href="https://quinnasena.github.io/climate-justice-modelling/bib_analysis.html">whole workflow</a></li>
 <li>The code is available on my <a href="https://github.com/QuinnAsena/climate-justice-modelling">GitHub</a> and on <a href="https://doi.org/10.17608/k6.auckland.24539314.v1">Figshare</a></li>
