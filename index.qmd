@@ -20,7 +20,7 @@ I'm interested in ecological dynamics. What mechanisms underlie change in ecosys
 
 I'm also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?
 
-Currently, I work with Tony Ives and Jack Williams at UW-Madison. We are developing statistical models to better understand the underlying causes of ecological change over time. Ecosystems evolve over centuries and millennia, so we delve beyond the observational record and reconstruct ecosystem histories and climate change from traces, such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change!
+Currently, I work with Tony Ives and Jack Williams at UW-Madison. We are developing statistical models to test hypotheses about the drivers ecological change over time. Ecosystems evolve over centuries and millennia, so we delve beyond the observational record and reconstruct ecosystem histories and climate change from traces, such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change!
 
 I completed my PhD at the University of Auckland, NZ, with George Perry and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.
 
@@ -30,7 +30,7 @@ Find me on the [Ives](https://ives.labs.wisc.edu/people/) and [Williams](https:/
 
 ## Teaching
 
-Professionally, I have a broad experience with data science and with teaching. 
+Professionally, I have a broad experience in data science and with teaching. 
 
 Teaching experience:
 
@@ -49,7 +49,7 @@ Workshops:
 
 ## Data science
 
-Being interested in empirical and theoretical ecology leads to a lot of data science! For my own work, I use virtual machines, cluster computing and handle large volumes of data. My experience working for the [Centre for eResearch](https://www.eresearch.auckland.ac.nz/), also included consulting on researchers' needs, secure data storage, and setting up analysis workflows. Check out my Packages and resources section.
+Being interested in empirical and theoretical ecology leads to a lot of data science! For my own work, I use virtual machines, cluster computing and handle large volumes of data. My experience working for the [Centre for eResearch](https://www.eresearch.auckland.ac.nz/), also included consulting on researchers' needs, secure data storage, and setting up analysis workflows.
 
 
 ## Fieldwork

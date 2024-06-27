@@ -1,0 +1,11 @@
+---
+title: State-space modelling...
+image: "images/asena-2024b/walk_step_fisher_two_dim_metrics_mean_plot.png"
+categories:
+  - Ecology
+  - Modelling
+  - Statistics
+  - Ecostats
+---
+
+Upcoming
