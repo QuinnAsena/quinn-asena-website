@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Quinn Asena"
-  favicon: emoji-smile-fill
+  favicon: favicon.ico
   google-analytics: "G-HT71J1MK87"
   navbar:
     toggle-position: right

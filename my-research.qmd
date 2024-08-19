@@ -2,6 +2,7 @@
 title: "My Research"
 listing: 
   contents: 
+  - /my-research-posts/asena-2024c.qmd
   - /my-research-posts/asena-2024a.qmd
   - /my-research-posts/asena-2024b.qmd
   - /my-research-posts/parsons-2024.qmd

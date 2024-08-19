@@ -7,13 +7,13 @@ See all my resources on my [GitHub](https://github.com/QuinnAsena). I develop an
 
 ## R Packages
 
+- [multinomialTS](https://github.com/QuinnAsena/multinomialTS): R package for state-space modelling of multinomially distributed data
 - [fishR](https://github.com/UoA-eResearch/fisheR): an R package for calculating Fisher Information
-- multinomialTS: Soon-to-be published R package for state-space modelling data from a multinomial distribution
 
 ## Workshop materials
 
+- [State-space modelling ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
 - [Quarto for Colaboration](https://github.com/QuinnAsena/resbaz2022)
-- [State-space modelling ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html) (Upcoming)
 
 ## Apps
 
@@ -24,6 +24,7 @@ See all my resources on my [GitHub](https://github.com/QuinnAsena). I develop an
 
 I present work at multiple conferences each year. These are a couple of example talks.
 
+- [Ecological Society of America 2024](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide)
 - [Ecological Society of America 2023](https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide)
 - [British Ecological Society PalaeoSIG 2022](https://quinnasena.github.io/palaeo_in_R_2022_talk_QA/slides/slides.html#/title-slide)
   - [YouTube recording of the talk](https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT)

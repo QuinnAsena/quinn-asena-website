@@ -1,5 +1,5 @@
 ---
-title: State-space modelling...
+title: Statistical analyses of community and paleoecological time series to identify environmental drivers and biotic interactions.
 image: "images/asena-2024b/walk_step_fisher_two_dim_metrics_mean_plot.png"
 categories:
   - Ecology
@@ -8,4 +8,34 @@ categories:
   - Ecostats
 ---
 
-Upcoming
+This is a preview of a paper we are submitting in the next days, and I will add a link to the pre-print soon.
+
+Over the last couple of years, Tony Ives, Jack Williams and I have been developing a model for estimating coefficients of driver-species relationships, and taxa-taxa interactions from multinomially distributed data. The model works with any data that are multinomially distributed; however, our objective is to be able to understand the drivers of ecological change using palaeo-data.
+
+The point of this work is to go beyond _describing_ patterns of past changes, and get at _why_ ecosystems change. If we can better understand the drivers of change in ecosystems, we can use this knowledge to understand how evosystems will change into the future under human pressures and environmental change.
+
+
+### A crash course in palaeo-data
+
+There are many forms of data that describe historical changes in environments and ecosystems (e.g., isotopes from ice cores, or diatoms from lake sediments). To reconstruct changes in vegetation, lake sediment cores are often used, and fossilised pollen is extracted from the sediment core. Consider a lake as a big instrument for recording the surrounding environment. Every year, the air is full of pollen from all the wind-pollenated species around the lake. Some of this pollen lands on the lake surface and eventually sinks to the bottom of the lake and leaves a layer like a page in a book (borrowing an analogy from my Colleague Rose Gregerson in New Zealand). Every year, another page is added to the book. Each page saying something about the surrounding environment, maybe pine forest take over from oak woodland, or periods of more fire occur. The book tells the story of the ecosystem.
+
+This is a visualisation of the pollen data from a sediment core collected at Story Lake in Northern Indianna. The data are from Schlenker _et al.,_ 2024.
+
+![Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schelnker et al., 2024](images/asena-2024-c/story-counts.png){#fig-story}
+
+### Our model
+
+These palaeo-data show patterns of change, but over the time-scale of thousands of years, we have no direct observations, or experimental evidence of the drivers of change. What this means is we cannot determine, with any certainty, the _causes_ of ecological change over such long time periods. However. it turns out that, with some very fancy maths by Tony Ives, we can generate estimates of the relationships between: (i) environmental drivers (e.g., changes in temperature or moisture) and taxa in the system; and (ii) taxa-taxa interactions. While these estimates cannot be called _causal_ links, they allow us to test (and lend statistical support to) multiple hypotheses about the drivers of ecological change from palaeo-data.
+
+To determine whether the model is recovering accurate estimates of driver-taxa relationships, and taxa-taxa interactions, we turn to simulation. We simulated data with different parameters and assess how well the model recovers those parameters. The whole process is described in detail in the paper, and here is an example from the upcoming paper on the success of the model at recovering driver-taxa relationships (@fig-BDis). This figure (@fig-BDis) will be a bit tricky to interpret out of the context of the full paper, the key points are that: each sub-plot represents different simulated conditions; each violin within the sup-plots is a simulated taxon; and the yellow dot is the target value that we want the model to estimate. Across many replicate simulations the median recovered value from the model is very close to the yellow dot, this is good!
+
+![Estimated  values of the driver-species relationship across the 500 replicate simulations for six different scenarios and two taxa for each scenario. The point within each violin plot is the scenario-prescribed value for the simulations. The horizontal lines within each violin plot are the median, 25th and 75th quantiles of the estimated values from the model fits across the 500 replicates. Good model performance is indicated by the true value sitting close to the median and within the interquartile range of the estimated values.](images/asena-2024-c/B_dis.png){#fig-BDis}
+
+## Outro
+
+This is a _very_ brief summary of some upcoming work. A great deal more can be said, but I am keeping these posts as short overviews! For more information, I have given talks and run workshops on this model (and the paper will be out soon!):
+
+- [Model workshop](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
+  - [Workshop talk](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_deck.html#%2Ftitle-slide)
+- [Application of the model talk](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#%2Ftitle-slide)
+- [Model development talk](https://quinnasena.github.io/esa-slides/slide_deck.html#%2Ftitle-slide)
