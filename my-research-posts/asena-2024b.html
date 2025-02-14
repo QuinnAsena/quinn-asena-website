@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quinn Asena - Information loss in palaeoecological data</title>
+<title>Information loss in palaeoecological data – Quinn Asena</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c38fde719a762c2377f0677d85c71a37.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,8 +91,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
     <span class="navbar-title">Quinn Asena</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -115,12 +114,12 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools tools-wide">
+            <div class="quarto-navbar-tools tools-wide">
     <a href="mailto:qasena@wisc.edu" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-envelope"></i></a>
     <a href="https://github.com/QuinnAsena" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-fingerprint"></i></a>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-fingerprint"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://ives.labs.wisc.edu/people/">
             Ives Lab
@@ -146,7 +145,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -182,7 +181,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <p><a href="../my-research-posts/asena-2024a.html">In my previous post</a>, I described the phenomenological model used to generate species patterns that mimic the statistical properties of empirical data. How can we use this approach to quantify the relative influence of sources of uncertainty on the statistical inferences we make from palaeoecological data?</p>
 <p>I’ll pick up where I left off in the last post. In short, we simulate a whole bunch of species and begin to systematically degrade the data with physical processes (in this case core mixing), sub-sampling strategies (taking 1 cm thick slices of sediment at given intervals), and proxy counting (counting and identifying species in a sub-sample). Because each of these three sources of uncertainty are introduced to the data individually, and combined, at 10 levels each, we end up with 1210 datasets per replicate simulation! There are 30-35 replicate simulations, multiplied by four different scenarios varying the driving conditions. That is terabytes of data! We want to know the relative influence of the three sources of uncertainty (mixing, sub-sampling, and proxy counting) on the two statistical analyses (Fisher Information and principal curves), from the ‘error-free’ benchmark to the most degraded and least intensively sampled.</p>
 <p>To compare the Fisher Information and principal curve analyses of the ecological communities across the 1210 datasets we used Feature Analysis for Time series. This further reduces the time-seties into a set of ‘features’ that describe the time-series. We can then use Euclidean distance to measure the distance between the features of each dataset and the original benchmark. These distances are then summarised across the replicate simulations (<a href="#fig-flow" class="quarto-xref">Figure&nbsp;1</a>).</p>
-<div id="fig-flow" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/asena-2024b/analysis_process.png" class="img-fluid figure-img">
@@ -195,7 +194,7 @@ Figure&nbsp;1: Conceptual data-flow of the degradation, sampling, and analysis p
 <p>Ok, the methods are not very easy to describe in simple terms… They will be described in detail when the paper comes out. So for the time being, let’s jump to the exciting results!</p>
 <p><img src="images/asena-2024-a/then-a-miracle-happens.gif" class="img-fluid"></p>
 <p>The uncertainties are introduced to the data systematically. By introducing the uncertainties individually, we can see how the Euclidean distance increases from our benchmark data (<a href="#fig-oneD" class="quarto-xref">Figure&nbsp;2</a>). It is interesting the Euclidean distance increases steadily with mixing, while the Euclidean distance does not increase a great deal as the proxy count is reduced. Decreasing sub-sampling intervals are having the strongest influence on the Euclidean distance.</p>
-<div id="fig-oneD" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-oneD" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-oneD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/asena-2024b/walk_step_fisher_metrics_dotplot.png" class="img-fluid figure-img">
@@ -207,7 +206,7 @@ Figure&nbsp;2: The median (dots), 25th, and 75th quantiles (error-bars and shade
 </div>
 <p>It is useful to see the different influence of the uncertainties when applied individually. However, this result is expected. We know that data become worse if we ruin them! What we want to find out is which sources of uncertainty have the strongest influence, and which ones interact when applied in combination.</p>
 <p>In the following figure (<a href="#fig-twoD" class="quarto-xref">Figure&nbsp;3</a>), two sources of uncertainty are plotted, one on each axis. What we are interested in here is whether the Euclidean distance increases along the diagonal of the plot, indicating an interaction between the uncertainties. By far the strongest influence is from the combined effect of proxy counting and sub-sampling (<a href="#fig-twoD" class="quarto-xref">Figure&nbsp;3</a> C). There appears to be little interaction between mixing and either proxy counting and sub-sampling.</p>
-<div id="fig-twoD" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-twoD" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-twoD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/asena-2024b/walk_step_fisher_two_dim_metrics_mean_plot.png" class="img-fluid figure-img">
@@ -258,18 +257,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -301,7 +289,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/QuinnAsena\.github\.io\/quinn-asena-website\/");
@@ -309,10 +317,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -356,7 +369,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -404,7 +421,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
