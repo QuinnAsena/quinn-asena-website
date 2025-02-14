@@ -18,7 +18,7 @@ about:
 
 I'm interested in ecological dynamics. What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!). I'm also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?
 
-Now, I'm working a the [Cary Institute of Evosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/) investigating the dynamics of boreal forests under climate change and fire regimes.
+Now, I'm working a the [Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/) investigating the dynamics of boreal forests under climate change and fire regimes.
 
 I recently finished a postdoc with Tony Ives and Jack Williams at UW-Madison in developing statistical models to test hypotheses about the drivers ecological change over time. Ecosystems evolve over centuries and millennia, so we look beyond the observational record and reconstruct ecosystem histories and climate change from traces, such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change! Find me on the [Ives](https://ives.labs.wisc.edu/people/) and [Williams](https://williamspaleolab.github.io/people/) labs!
 
