@@ -16,17 +16,17 @@ about:
 
 # Ecologist, data scientist, and many other things...
 
-I'm interested in ecological dynamics. What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, tipping points, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!).
+I'm interested in ecological dynamics. What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!). I'm also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?
 
-I'm also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?
+Now, I'm working a the [Cary Institute of Evosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/) investigating the dynamics of boreal forests under climate change and fire regimes.
 
-Currently, I work with Tony Ives and Jack Williams at UW-Madison. We are developing statistical models to test hypotheses about the drivers ecological change over time. Ecosystems evolve over centuries and millennia, so we delve beyond the observational record and reconstruct ecosystem histories and climate change from traces, such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change!
+I recently finished a postdoc with Tony Ives and Jack Williams at UW-Madison in developing statistical models to test hypotheses about the drivers ecological change over time. Ecosystems evolve over centuries and millennia, so we look beyond the observational record and reconstruct ecosystem histories and climate change from traces, such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and drivers of ecological change! Find me on the [Ives](https://ives.labs.wisc.edu/people/) and [Williams](https://williamspaleolab.github.io/people/) labs!
 
-I completed my PhD at the University of Auckland, NZ, with George Perry and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.
+I completed my PhD at the University of Auckland, NZ, with George Perry ([the P-lab](https://spatialecol.com/)) and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.
 
 {{< video https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT >}}
 
-Find me on the [Ives](https://ives.labs.wisc.edu/people/) and [Williams](https://williamspaleolab.github.io/people/) labs!
+
 
 ## Teaching
 
@@ -38,14 +38,16 @@ Teaching experience:
 - Natural and Human Environmental Systems
 - Environmental Science and Management
 
-Lectures:
+#### Workshops
+
+- [Quarto for Collaboration](https://github.com/QuinnAsena/resbaz2022)
+- [State-space modelling ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
+
+
+#### Lectures:
 
 - [Population growth 101](https://quinnasena.shinyapps.io/growth_app/)
 
-Workshops:
-
-- [Quarto for Collaboration](https://github.com/QuinnAsena/resbaz2022)
-- [State-space modelling ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html) (updating as you read this)
 
 ## Data science
 
