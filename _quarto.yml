@@ -30,6 +30,10 @@ website:
         href: https://github.com/QuinnAsena
       - icon: fingerprint
         menu:
+          - text: Cary Institute of Ecosystem Studies
+            href: https://www.caryinstitute.org/science/research-support/quinn-asena
+          - text: Forest Futures lab
+            href: https://forestfutureslab.org/  
           - text: Ives Lab
             href: https://ives.labs.wisc.edu/people/
           - text: Williams Lab
