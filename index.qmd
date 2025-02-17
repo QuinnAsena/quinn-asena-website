@@ -11,7 +11,7 @@ about:
     - text: GitHub
       href: https://github.com/QuinnAsena
     - text: Email
-      href: mailto:qasena@wisc.edu
+      href: mailto:asenaq@caryinstitute.org
 ---
 
 # Ecologist, data scientist, and many other things...

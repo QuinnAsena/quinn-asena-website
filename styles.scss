@@ -4,6 +4,7 @@
 $light-green: #009c4e;
 $cream: #FDFBF7;
 $gray: #64605f;
+$gray2: #f5f3f1;
 $purple: #9158A2;
 $darkblue: #053660;
 $blue: #374699;
@@ -16,7 +17,7 @@ $navbar-fg: $cream; // navbar foreground elements
 // $navbar-hl: $light-green; // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
 $body-color: $gray; // page text 
-$footer-bg: $cream; // footer 
+$footer-bg: $gray; // footer 
 $link-color: $purple; // hyperlinks 
 
 // Inline code
@@ -29,3 +30,22 @@ h1 {
     color: teal;
     font-size: 25px;
   }
+
+// Below copied from: https://github.com/thomaspark/bootswatch/blob/v5/dist/lux/_bootswatch.scss
+// editing works to overwrite defaults  
+.navbar {
+  font-size: $font-size-sm;
+  font-weight: 600;
+  text-transform: lowercase;
+
+  &-nav {
+    .nav-link {
+      padding-top: .715rem;
+      padding-bottom: .715rem;
+    }
+  }
+
+  &-brand {
+    margin-right: 2rem;
+  }
+}

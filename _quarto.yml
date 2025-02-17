@@ -10,7 +10,7 @@ website:
     background: "#374699"
     foreground: "#FFFFFF"
     search: false
-    right:
+    left:
       - href: index.qmd
         text: About Me
       - href: my-research.qmd
@@ -21,9 +21,26 @@ website:
 #        text: Talks
       - href: https://quinnasena.github.io/CV/resume_refs.html
         text: CV
-    tools:
-#      - icon: mortarboard-fill
-#        href: https://quinnasena.github.io/CV/resume_refs.html
+   # tools:
+#  #    - icon: mortarboard-fill
+#  #      href: https://quinnasena.github.io/CV/resume_refs.html
+   #   - icon: envelope
+   #     href: mailto:qasena@wisc.edu
+   #   - icon: github
+   #     href: https://github.com/QuinnAsena
+   #   - icon: fingerprint
+   #     menu:
+   #       - text: Cary Institute of Ecosystem Studies
+   #         href: https://www.caryinstitute.org/science/research-support/quinn-asena
+   #       - text: Forest Futures lab
+   #         href: https://forestfutureslab.org/  
+   #       - text: Ives Lab
+   #         href: https://ives.labs.wisc.edu/people/
+   #       - text: Williams Lab
+   #         href: https://williamspaleolab.github.io/people/
+   #       - text: Perry Lab
+   #         href: https://spatialecol.com/
+    right: 
       - icon: envelope
         href: mailto:qasena@wisc.edu
       - icon: github
@@ -41,7 +58,7 @@ website:
           - text: Perry Lab
             href: https://spatialecol.com/
   page-footer: 
-    left: "Email: qasena@wisc.edu" 
+    left: "Email: asenaq@caryinstitute.org" 
 
 format:
   html:
