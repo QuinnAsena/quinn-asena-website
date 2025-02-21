@@ -2,12 +2,15 @@
 title: "Resources"
 listing: 
   contents: 
+  - /resources-posts/fishR.qmd
   - /resources-posts/pop-growth-app.qmd
+  - /resources-posts/pop-growth-lecture.qmd
+  - /resources-posts/multinomialTS.qmd
+  - /resources-posts/multinomialTS-workshop.qmd
+  - /resources-posts/quarto-colab.qmd
   categories: true
-  type: default
+  type: grid
   sort: false
 ---
 
-My research has largely focused on ecological change over time. I'm interested in expanding to how ecosystems change over space and what the human implications of ecological change are. Feel free to get in touch if you want to chat about research! Here are some simple summaries of my published work, and some sneak previews of work that is about to be published.
-
-If you require access to any of the full articles, don't hesitate to contact me.
+All my work is open-access and open-source. See all my resources on my [GitHub](https://github.com/QuinnAsena). I host my workshops, packages, and talk content there.

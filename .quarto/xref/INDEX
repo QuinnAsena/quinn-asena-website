@@ -43,5 +43,11 @@
   },
   "resources-posts/state-space-workshop.qmd": {
     "state-space-workshop.html": "403ab470"
+  },
+  "resources-posts/multinomialTS-workshop.qmd": {
+    "multinomialTS-workshop.html": "09a1ddfd"
+  },
+  "resources-posts/pop-growth-lecture.qmd": {
+    "pop-growth-lecture.html": "fef44851"
   }
 }

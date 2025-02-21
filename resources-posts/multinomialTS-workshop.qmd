@@ -1,0 +1,8 @@
+---
+title: multinomialTS workshop and walkthrough
+path: https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html
+description: "Resources for the workshop I run on state-space modelling, including workshop content and extended walkthrough"
+categories:
+  - Workshop
+  - R
+---

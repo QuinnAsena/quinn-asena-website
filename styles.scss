@@ -13,7 +13,7 @@ $darkgray: #333333;
 // Base document colors
 $navbar-bg: $teal; // navbar
 $navbar-fg: $cream; // navbar foreground elements
-$navbar-hl: darken($cream, 10%); // highlight color when hovering over navbar links
+$navbar-hl: $darkblue; // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
 $body-color: $gray; // page text 
 $footer-bg: $teal; // footer 
@@ -50,13 +50,14 @@ h1 {
   }
 }
 
-// span.navbar-title {
-//   color: $cream;
-//   transition-duration: 0.5s;
-//   
-//   &:hover {
-//   color: darken($cream, 10%);
-//   transition-duration: 0.5s;
-//   }
-// }
+span.navbar-title {
+  color: $cream;
+  transition-duration: 0.2s;
+  
+  &:hover {
+//  color: darken($cream, 10%);
+  color: $darkblue;
+  transition-duration: 0.2s;
+  }
+}
 

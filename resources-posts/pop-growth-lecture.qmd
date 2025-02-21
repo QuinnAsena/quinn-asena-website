@@ -1,0 +1,8 @@
+---
+title: Population growth lecture
+path: https://quinnasena.shinyapps.io/growth_app/
+description: "First undergraduate lecture I gave during my PhD (looks a little dated now!)."
+categories:
+  - App
+  - Lecture
+---
