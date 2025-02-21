@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bde9ea0f3f77021e84e621e77686da42.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3f67394f7050a4e72e479659dab01e53.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -196,7 +196,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </header>
 
 
-<p>This is a sneak preview into work that I am submitting soon. Currently, my co-authors are reviewing the manuscript, and I will post a link to the published version.</p>
+<p>This is a sneak preview into work that is in review. I will post a link to the published version.</p>
 <p><a href="../my-research-posts/asena-2024a.html">In my previous post</a>, I described the phenomenological model used to generate species patterns that mimic the statistical properties of empirical data. How can we use this approach to quantify the relative influence of sources of uncertainty on the statistical inferences we make from palaeoecological data?</p>
 <p>I’ll pick up where I left off in the last post. In short, we simulate a whole bunch of species and begin to systematically degrade the data with physical processes (in this case core mixing), sub-sampling strategies (taking 1 cm thick slices of sediment at given intervals), and proxy counting (counting and identifying species in a sub-sample). Because each of these three sources of uncertainty are introduced to the data individually, and combined, at 10 levels each, we end up with 1210 datasets per replicate simulation! There are 30-35 replicate simulations, multiplied by four different scenarios varying the driving conditions. That is terabytes of data! We want to know the relative influence of the three sources of uncertainty (mixing, sub-sampling, and proxy counting) on the two statistical analyses (Fisher Information and principal curves), from the ‘error-free’ benchmark to the most degraded and least intensively sampled.</p>
 <p>To compare the Fisher Information and principal curve analyses of the ecological communities across the 1210 datasets we used Feature Analysis for Time series. This further reduces the time-seties into a set of ‘features’ that describe the time-series. We can then use Euclidean distance to measure the distance between the features of each dataset and the original benchmark. These distances are then summarised across the replicate simulations (<a href="#fig-flow" class="quarto-xref">Figure&nbsp;1</a>).</p>
