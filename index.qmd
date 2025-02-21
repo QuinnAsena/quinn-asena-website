@@ -38,16 +38,6 @@ Teaching experience:
 - Natural and Human Environmental Systems
 - Environmental Science and Management
 
-#### Workshops
-
-- [Quarto for Collaboration](https://github.com/QuinnAsena/resbaz2022)
-- [State-space modelling ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
-
-
-#### Lectures:
-
-- [Population growth 101](https://quinnasena.shinyapps.io/growth_app/)
-
 
 ## Data science
 

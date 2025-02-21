@@ -9,6 +9,8 @@ listing:
   categories: true
   type: grid
   sort: false
+#  field-display-names: 
+#    categories: "Tags"
 ---
 
 My research has largely focused on ecological change over time. I'm interested in expanding to how ecosystems change over space and what the human implications of ecological change are. Feel free to get in touch if you want to chat about research! Here are some simple summaries of my published work, and some sneak previews of work that is about to be published.

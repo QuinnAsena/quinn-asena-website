@@ -1,8 +1,0 @@
----
-title: multinomialTS
-path: https://github.com/QuinnAsena/multinomialTS
-description: "An R package for state-space modelling multinomially distributed time-series."
-categories:
-  - R package
-  - C++
----

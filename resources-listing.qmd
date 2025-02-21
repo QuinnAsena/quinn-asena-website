@@ -1,16 +1,18 @@
 ---
 title: "Resources"
 listing: 
-  contents: 
-  - /resources-posts/fishR.qmd
-  - /resources-posts/pop-growth-app.qmd
-  - /resources-posts/pop-growth-lecture.qmd
-  - /resources-posts/multinomialTS.qmd
-  - /resources-posts/multinomialTS-workshop.qmd
-  - /resources-posts/quarto-colab.qmd
+  contents: resources-posts/resources.yml
   categories: true
-  type: grid
+  type: table
   sort: false
+  sort-ui: false
+  filter-ui: false
+  fields: 
+    - title
+    - description
+    - categories
+  field-display-names: 
+    categories: "Tags"
 ---
 
 All my work is open-access and open-source. See all my resources on my [GitHub](https://github.com/QuinnAsena). I host my workshops, packages, and talk content there.

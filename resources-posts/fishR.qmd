@@ -1,7 +1,0 @@
----
-title: fishR
-path: https://github.com/UoA-eResearch/fisheR
-description: "An R package for calculating Fisher Information."
-categories:
-  - R package
----
