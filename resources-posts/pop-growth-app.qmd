@@ -1,0 +1,7 @@
+---
+title: Population growth Shiny app
+path: https://quinnasena.shinyapps.io/r_logistic/
+description: "Shiny app of two different population growth models."
+categories:
+  - App
+---

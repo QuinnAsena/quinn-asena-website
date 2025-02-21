@@ -1,0 +1,13 @@
+---
+title: "Resources"
+listing: 
+  contents: 
+  - /resources-posts/pop-growth-app.qmd
+  categories: true
+  type: default
+  sort: false
+---
+
+My research has largely focused on ecological change over time. I'm interested in expanding to how ecosystems change over space and what the human implications of ecological change are. Feel free to get in touch if you want to chat about research! Here are some simple summaries of my published work, and some sneak previews of work that is about to be published.
+
+If you require access to any of the full articles, don't hesitate to contact me.

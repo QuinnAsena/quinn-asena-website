@@ -25,5 +25,23 @@
   },
   "my-research-posts/asena-2024c.qmd": {
     "asena-2024c.html": "072398f6"
+  },
+  "resources-listing.qmd": {
+    "resources-listing.html": "6cf15801"
+  },
+  "resources-posts/fishR.qmd": {
+    "fishR.html": "4431ac2f"
+  },
+  "resources-posts/multinomialTS.qmd": {
+    "multinomialTS.html": "eceeb0bf"
+  },
+  "resources-posts/pop-growth-app.qmd": {
+    "pop-growth-app.html": "c22a64fa"
+  },
+  "resources-posts/quarto-colab.qmd": {
+    "quarto-colab.html": "64ae53bd"
+  },
+  "resources-posts/state-space-workshop.qmd": {
+    "state-space-workshop.html": "403ab470"
   }
 }

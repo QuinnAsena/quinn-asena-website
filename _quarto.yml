@@ -11,11 +11,9 @@ website:
     foreground: "#FFFFFF"
     search: false
     left:
-      - href: index.qmd
-        text: About Me
       - href: my-research.qmd
         text: My research
-      - href: resources.qmd
+      - href: resources-listing.qmd
         text: Packages and resources
 #      - href: talks.qmd
 #        text: Talks

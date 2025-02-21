@@ -13,7 +13,7 @@ $darkgray: #333333;
 // Base document colors
 $navbar-bg: $teal; // navbar
 $navbar-fg: $cream; // navbar foreground elements
-// $navbar-hl: $light-green; // highlight color when hovering over navbar links
+$navbar-hl: darken($cream, 10%); // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
 $body-color: $gray; // page text 
 $footer-bg: $teal; // footer 
@@ -31,7 +31,8 @@ h1 {
   }
 
 // Below copied from: https://github.com/thomaspark/bootswatch/blob/v5/dist/lux/_bootswatch.scss
-// editing works to overwrite defaults  
+// editing works to overwrite defaults 
+// https://youtu.be/pAN2Hiq0XGs?feature=shared&t=1611
 .navbar {
   font-size: $font-size-sm;
   font-weight: 600;
@@ -48,3 +49,14 @@ h1 {
     margin-right: 2rem;
   }
 }
+
+// span.navbar-title {
+//   color: $cream;
+//   transition-duration: 0.5s;
+//   
+//   &:hover {
+//   color: darken($cream, 10%);
+//   transition-duration: 0.5s;
+//   }
+// }
+
