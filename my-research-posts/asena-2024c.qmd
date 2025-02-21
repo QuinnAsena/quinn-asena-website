@@ -7,7 +7,7 @@ categories:
   - Ecostats
 ---
 
-This is a preview of a paper we are submitting in the next days, and I will add a link to the pre-print soon.
+This is a preview of a paper currently in review, and I will add a link to the pre-print soon.
 
 Over the last couple of years, Tony Ives, Jack Williams and I have been developing a model for estimating coefficients of driver-species relationships, and taxa-taxa interactions from multinomially distributed data. The model works with any data that are multinomially distributed; however, our objective is to be able to understand the drivers of ecological change using palaeo-data.
 

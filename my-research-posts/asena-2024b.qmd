@@ -9,7 +9,7 @@ categories:
   - Uncertainties
 ---
 
-This is a sneak preview into work that I am submitting soon. Currently, my co-authors are reviewing the manuscript, and I will post a link to the published version.
+This is a sneak preview into work that is in review. I will post a link to the published version.
 
 [In my previous post](./asena-2024a.qmd), I described the phenomenological model used to generate species patterns that mimic the statistical properties of empirical data. How can we use this approach to quantify the relative influence of sources of uncertainty on the statistical inferences we make from palaeoecological data?
 
