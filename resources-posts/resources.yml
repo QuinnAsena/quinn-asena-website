@@ -1,0 +1,53 @@
+title: ESA 2023 talk
+path: https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide
+description: "Talk slides from the Ecological Society of America conference 2023"
+categories:
+  - Talk
+
+title: ESA 2024 talk
+path: https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide
+description: "Talk slides from the Ecological Society of America conference 2024"
+categories:
+  - Talk
+
+title: Authoring Collaborative Research Projects in Quarto
+path: https://github.com/QuinnAsena/resbaz2022
+description: "This is a workshop I designed for using Quarto and Git to host collaborative workflows."
+categories:
+  - Workshop
+  - Quarto
+  - Git
+  - Multilang
+
+title: Population growth lecture
+path: https://quinnasena.shinyapps.io/growth_app/
+description: "First undergraduate lecture I gave during my PhD (looks a little dated now!)."
+categories:
+  - App
+  - Lecture
+
+title: Population growth Shiny app
+path: https://quinnasena.shinyapps.io/r_logistic/
+description: "Shiny app of two different population growth models."
+categories:
+  - App
+
+title: fishR
+path: https://github.com/UoA-eResearch/fisheR
+description: "An R package for calculating Fisher Information."
+categories:
+  - R package
+
+title: multinomialTS workshop and walkthrough
+path: https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html
+description: "Resources for the workshop I run on state-space modelling, including workshop content and extended walkthrough"
+categories:
+  - Workshop
+  - R
+
+title: multinomialTS
+path: https://github.com/QuinnAsena/multinomialTS
+description: "An R package for state-space modelling multinomially distributed time-series."
+categories:
+  - R package
+  - C++

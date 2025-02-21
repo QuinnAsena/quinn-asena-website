@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Resources for the workshop I run on state-space modelling, including workshop content and extended walkthrough">
 
-<title>Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data – Quinn Asena</title>
+<title>multinomialTS workshop and walkthrough – Quinn Asena</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-93a78bde66c81980bc8a58eb380219ce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-06da48d19f66073d86654c09feadacbb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -168,16 +169,18 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data</h1>
+<h1 class="title">multinomialTS workshop and walkthrough</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Ecology</div>
-    <div class="quarto-category">Modelling</div>
-    <div class="quarto-category">Virtual Ecology</div>
-    <div class="quarto-category">Proxy System Modelling</div>
-    <div class="quarto-category">Uncertainties</div>
+    <div class="quarto-category">Workshop</div>
+    <div class="quarto-category">R</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Resources for the workshop I run on state-space modelling, including workshop content and extended walkthrough
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -192,58 +195,6 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </header>
 
 
-<p><a href="https://doi.org/10.1177/09596836241247304">This paper</a> is about constructing a model that generates patterns of ecological change using population growth equations with underlying dynamics such as threshold points. We show how such a model can be used to assess uncertainties in palaeoecological data using a Virtual Ecological approach. The idea is to generate patterns with the same statistical properties that we see in empirical data, and not to recreate a given ecosystem (i.e., this is a phenomenological model). Why do this? We have no experimental manipulations or direct observations of the long time-scales necessary to understand ecosystem-level change, and even the most highly resolved palaeoecological data from laminated sediment cores contain many uncertainties from environmental processes, sampling, and lab processing. In empirical palaeoecology, we have no ‘known truth’ against which to assess our inferences. By using a virtual ecological approach, we can generate data under ‘known’ conditions.</p>
-<blockquote class="blockquote">
-<p>In reality, we have imperfect knowledge of a perfect world. In simulation, we have perfect knowledge of an imperfect representation of the world.</p>
-</blockquote>
-<p>Why is this all important? Palaeoecological data provide insight into past ecological and climatic change. This source of data is invaluable to understanding ecological change and potential future ecosystem states. However, the data are highly uncertain, relying on many layers of processing such as lab processing, radiocarbon dating, and age depth modelling. The data are often inconsistently spaced through time and may have large time-gaps between observations. Such sources of uncertainty can, at best, mask ‘true’ signals of change, or at worst, lead to false inferences. One way we can assess the influence of uncertainties on statistical inference is through simulation.</p>
-<p>If we start with our perfect knowledge of a simulated world, we can also simulate observations from that world, in the same way that we would sample from the real world. This gives us a benchmark dataset, the original simulated data, and a reduced dataset, the sampled simulated data.</p>
-<p>Here is my simulated world (<a href="#fig-VE" class="quarto-xref">Figure&nbsp;1</a>). Each species on the right (<a href="#fig-VE" class="quarto-xref">Figure&nbsp;1</a> d) is simulated by a population growth equation. The growth rate of each species is their combined response to the two environmental drivers (<a href="#fig-VE" class="quarto-xref">Figure&nbsp;1</a> b). Their optima and tolerance to each driver (<a href="#fig-VE" class="quarto-xref">Figure&nbsp;1</a> c) determine whether the population growth rate of a species is positive or negative. If the environment is unfavourable, then a species population growth rate becomes negative and it will go locally extinct. Species have the chance to re-establish if conditions become favourable again.</p>
-<div id="fig-VE" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-VE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-a/g2272.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-VE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Visualisation of a simulated core sample: the accumulation rate, time-span and length of the core (a); driver conditions over time (b); the niche of each species with respect to the driving environment (c); and the abundances of pseudoproxies in the archive (d). Each species niche comprises an optima and tolerance for each driver, the optima and tolerance curves in (c) are colour-coded to match each driver in (b). In the context of the proxy system model framework, environmental drivers (b) act on a sensor (c; in this case the response of the sensor is the populations’ growth rate changing in response to the environmental drivers) and records the response of the sensor in an archive (d). The simulation runs from past to present, the first time-step being the oldest.
-</figcaption>
-</figure>
-</div>
-<p>The number of species in (<a href="#fig-VE" class="quarto-xref">Figure&nbsp;1</a>) is only a fraction of those simulated. There are actually around 200 potential species, and about 15-40 in existence at any given point in the simulation (depending on the replicate). I simulated a bunch of different driving environments (e.g., one where the environmental driver undergoes an abrupt shift), in the example above (<a href="#fig-VE" class="quarto-xref">Figure&nbsp;1</a>) the ‘slow linear’ driver will eventually drive species that existed at the beginning of the simulation locally extinct (unless they were very generalist species!), and new species would establish and thrive.</p>
-<p>We then take those simulated species abundances (<a href="#fig-VE" class="quarto-xref">Figure&nbsp;1</a> d), remember this is our ‘perfect’ benchmark data, and degrade them with mixing (i.e., a physical process that alters the core), sub-sampling (i.e., slicing up the core into 1 cm segments at given intervals for processing), and proxy counting (i.e., the counting of species under a microscope from the 1 cm segments after lab processing). <a href="#fig-degradation" class="quarto-xref">Figure&nbsp;2</a> shows how we start with absolute abundances of species, and recreate the observational process, ultimately resulting in data that look a lot more like what we see in reality from proxy-data.</p>
-<div id="fig-degradation" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-degradation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-a/degradation_process_disturbed_area_ink.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-degradation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Sample model output showing two species, visualising data from the error-free reference (a) and one treatment level from each: mixing (b); mixing combined with sub-sampling (c); and mixing combined with sub-sampling and proxy counting (d). Mixing over 10 time-steps is shown as a magnified section of species 56 displaying the error-free reference transitioning to the mixed data (b). The mixed data are then sub-sampled every 10 cm, with a thickness of 1 cm (c) and the sub-sampled data are counted at a resolution of 400 individuals per sub-sample (d). Red dashed lines indicate disturbance events that occur randomly throughout the simulation.
-</figcaption>
-</figure>
-</div>
-<p>This is what a larger subset of the simulated species looks like before and after the virtual degradation and sub-sampling process (<a href="#fig-halfhalf" class="quarto-xref">Figure&nbsp;3</a>).</p>
-<div id="fig-halfhalf" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-halfhalf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-a/archive_half_half_walk_lin_forces.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-halfhalf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Visualisation of the environmental drivers, the ‘error-free’ benchmark pseudoproxy archive, and pseudoproxies mixed over 10 time-steps, sub-sampled at 10 cm intervals and counted at a resolution of 400 individuals per sub-sample. A subset of 10 species from the pool of 200 is shown. The ‘error-free’ record shows the absolute abundances per time-step and represents ‘perfect’ knowledge of the system through time, the degraded and sampled record is converted to relative abundances and represents observations comparable to empirical proxy records. Accumulation rate and depth are not pictured in favour of a more complete species record. Note that the y-axis is in simulation time, the most recent section of core is time-step 5000.
-</figcaption>
-</figure>
-</div>
-<p>Finally, we analyse both sets of data. In simulation the three sources of uncertainty (mixing, sub-sampling, and proxy counting) are applied individually, and in combination, at increasing levels of severity. So we end up with 1210 (<em>per simulation replicate!</em>) datasets from the ‘error-free’ benchmark to the most degraded. We analyse them all! But here is an example of the benchmark, and one level of degradation (<a href="#fig-analysis" class="quarto-xref">Figure&nbsp;4</a>).</p>
-<div id="fig-analysis" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-a/fi_prc_grad_vertical2.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Fisher Information (a) and PrCs (b) of both the ‘error-free’ pseudoproxies, and the degraded and sub-sampled data for Scenario 1. The blue highlighted region in the FI indicates a ~700-year period of reversed directionality. The highlighted regions in the PrCs indicate, in the analyses of the degraded and sub-sampled data, two periods of different rates of change in the PrC. The same regions are highlighted in the ‘error-free’ analysis where no apparent change is visible. Red dashed lines indicate disturbance events for both FI and PrCs.
-</figcaption>
-</figure>
-</div>
-<p>This figure shows two different multivariate community analyses (Fisher Information and principal curves), and how the results change between the ‘error-free’ data and the degraded and sub-sampled dataset. At the start, I mentioned that uncertainty can lead to incorrect inference. This example is only of one randomly selected model replicate, but it shows how interpretations can be influenced by uncertainties. The 700 year-long period of reversed directionality in Fisher Information (<a href="#fig-analysis" class="quarto-xref">Figure&nbsp;4</a> A) can change our inference from a system increasing in stability, to decreasing in stability (a decrease in Fisher Information is interpreted as a system becoming less predictable less stable). The principal curve changing from a gradual increase (a good representation of change driven by the primary driver system), to a sigmoidal shape (<a href="#fig-analysis" class="quarto-xref">Figure&nbsp;4</a> B), can alter our interpretation of the ‘true’ rate of species turnover in the system. This example demonstrates well how a Virtual Ecological approach can be used to assess uncertainty and its influence on statistical inference.</p>
 
 
 
@@ -338,7 +289,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/QuinnAsena\.github\.io\/quinn-asena-website\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
