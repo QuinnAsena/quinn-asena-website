@@ -27,7 +27,6 @@ I completed my PhD at the University of Auckland, NZ, with George Perry ([the P-
 {{< video https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT >}}
 
 
-
 ## Teaching
 
 Professionally, I have a broad experience in data science and with teaching. 
