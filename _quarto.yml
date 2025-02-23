@@ -13,7 +13,7 @@ website:
     left:
       - href: my-research.qmd
         text: My research
-      - href: resources-listing.qmd
+      - href: resources-posts/resources-custom-listing.qmd
         text: Packages and resources
 #      - href: talks.qmd
 #        text: Talks
@@ -64,7 +64,7 @@ format:
       - lux
       - styles.scss
     toc: true
-    link-external-icon: true
+#    link-external-icon: true
     link-external-newwindow: true
 
 

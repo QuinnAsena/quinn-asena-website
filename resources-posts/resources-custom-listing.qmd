@@ -1,0 +1,24 @@
+---
+title: "Packages and Resources"
+format:
+  html:
+    toc: false
+# image: articles/advanced-layout-pdf.png
+search: false
+execute:
+  echo: false
+listing:
+  - id: gallery
+    template: gallery.ejs
+    contents: resources-sectioned.yml
+---
+
+
+All my work is open-access and open-source. See all my resources on my [GitHub](https://github.com/QuinnAsena). I host my workshops, packages, and talk content there.
+
+<!-- -   [R Packages](#r-packages)
+-   [Workshops](#workshops)
+-   [Talks](#talks)
+-   [Apps and Dashboards](#dashboards)
+-   [Lectures](#lectures)
+-   [Outreach](#outreach) -->

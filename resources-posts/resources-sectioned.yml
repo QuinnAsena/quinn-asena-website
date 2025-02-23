@@ -4,18 +4,18 @@
 
 - category: Workshops
   description: |
-    Workshops I have developed.
+    Workshops I have developed and run at conferences and research bazaar.
   tiles:
-    - title: multinomialTS workshop and walkthrough
-      # subtitle: Learn state-space modelling!
+    - title: multinomialTS
+      subtitle: Workshop and walkthrough on state-space modelling.
       href: https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html
       code: https://github.com/QuinnAsena/state-space-workhop-ESA
-      # thumbnail: articles/articles-html.png
-    - title: Authoring Collaborative Research Projects in Quarto
-      # subtitle: Learn state-space modelling!
-      href: https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html
+      thumbnail: images/flowchart1.png
+    - title: Quarto workshop
+      subtitle: Authoring Collaborative Research Projects in Quarto.
+      href: https://quinnasena.github.io/resbaz2022/slides/slide_deck.html#/title-slide
       code: https://github.com/QuinnAsena/resbaz2022
-      # thumbnail: articles/articles-html.png
+      thumbnail: images/quarto-workshop.png
 
 
 - category: R packages
@@ -41,57 +41,57 @@
 
 - category: Talks
   description: |
-    Some recent talks from scientific conferences
+    Recent talks from scientific conferences. I attent multiple per year, here are a few recent examples.
   tiles:
     - title: ESA 2024 talk
-      # subtitle: 
+      subtitle: Ecological Society of America.
       href: https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide
       code: https://github.com/QuinnAsena/state-space-workhop-ESA/tree/main/slides
-      # thumbnail: articles/articles-html.png
+      thumbnail: images/esa-2024.png
       # categories:
       #   - R package
     - title: ESA 2023 talk
-      # subtitle: An R package for calculating Fisher Information.
+      subtitle: Ecological Society of America.
       href: https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide
       code: https://github.com/QuinnAsena/esa-slides
-      # thumbnail: articles/articles-html.png
+      thumbnail: images/esa-2023.png
       # categories:
       #   - R package
     - title: PalaeoSIG 2022
-      subtitle: British Ecological Society PalaeoSIG 2022.
+      subtitle: British Ecological Society.
       href: https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT
       code: https://github.com/QuinnAsena/palaeo_in_R_2022_talk_QA
-      # thumbnail: articles/articles-html.png
+      thumbnail: images/palaeosig.png
       # categories:
       #   - R package
 
 - category: Apps and dashboards
   description: |
-    Shiny apps
+    I use apps and dashboards for teaching and visualisation tools.
   tiles:
     - title: Population growth
       # subtitle: 
       href: https://quinnasena.shinyapps.io/r_logistic/
       code: https://github.com/QuinnAsena/r_logistic
-      # thumbnail: articles/articles-html.png
+      thumbnail: images/pop-growth-app.png
       # categories:
       #   - R package
  
 - category: Lectures
   description: |
-    First lecture I gave during my PhD
+    First lecture I gave during my PhD. I will update this section with other teaching resources.
   tiles:
     - title: Population growth
       # subtitle: 
       href: https://quinnasena.shinyapps.io/growth_app/
       code: https://github.com/QuinnAsena/growth_lecture
-      # thumbnail: articles/articles-html.png
+      thumbnail: images/pop-growth-lecture.png
       # categories:
       #   - R package
 
 - category: Outreach
   description: |
-    First lecture I gave during my PhD
+    Science outreach video for the York Institute for Tropical Ecosystems. Made before a phone could make a movie!
   tiles:
     - title: YorK Institute for Tropical Ecosystems (KITE)
       # subtitle: 
