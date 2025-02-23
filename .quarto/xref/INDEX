@@ -55,5 +55,14 @@
   },
   "resources-posts/esa-2024.qmd": {
     "esa-2024.html": "70d713f1"
+  },
+  "resources-posts/resource-custom-listing.qmd": {
+    "resource-custom-listing.html": "00ea7f98"
+  },
+  "my-research-posts/my-research.qmd": {
+    "my-research.html": "b71469f9"
+  },
+  "resources-posts/resources-custom-listing.qmd": {
+    "resources-custom-listing.html": "e8848a15"
   }
 }
