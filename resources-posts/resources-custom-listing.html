@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Resources for the workshop I run on state-space modelling, including workshop content and extended walkthrough">
 
-<title>multinomialTS workshop and walkthrough – Quinn Asena</title>
+<title>Packages and Resources – Quinn Asena</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.ico" rel="icon">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -40,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-06da48d19f66073d86654c09feadacbb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-93a78bde66c81980bc8a58eb380219ce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-gallery .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-category','listing-description','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-description","listing-tiles"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-gallery'] = new List('listing-gallery', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HT71J1MK87"></script>
 
 <script type="text/javascript">
@@ -78,10 +108,39 @@ gtag('js', new Date());
 gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -102,7 +161,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <span class="menu-text">My research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources-listing.html"> 
+    <a class="nav-link active" href="../resources-posts/resources-custom-listing.html" aria-current="page"> 
 <span class="menu-text">Packages and resources</span></a>
   </li>  
   <li class="nav-item">
@@ -161,26 +220,15 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">multinomialTS workshop and walkthrough</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Workshop</div>
-    <div class="quarto-category">R</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Resources for the workshop I run on state-space modelling, including workshop content and extended walkthrough
-  </div>
+<h1 class="title">Packages and Resources</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
@@ -195,10 +243,265 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </header>
 
 
+<p>All my work is open-access and open-source. See all my resources on my <a href="https://github.com/QuinnAsena">GitHub</a>. I host my workshops, packages, and talk content there.</p>
+<!-- -   [R Packages](#r-packages)
+-   [Workshops](#workshops)
+-   [Talks](#talks)
+-   [Apps and Dashboards](#dashboards)
+-   [Lectures](#lectures)
+-   [Outreach](#outreach) -->
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-gallery">
+
+<h4 class="anchored">Workshops</h4>
+
+<p>Workshops I have developed and run at conferences and research bazaar.
+</p>
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html" class="listing-title">multinomialTS</a>
+         
+        <a href="https://github.com/QuinnAsena/state-space-workhop-ESA" title="View source code" class="source-code card-text float-end inline-block">
+          <i class="bi-code-slash"></i>
+        </a>
+        
+        <span class="text-muted listing-subtitle">Workshop and walkthrough on state-space modelling.</span>
+      </small>
+    </div>
+    <a href="https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html">
+      <img src="images/flowchart1.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://quinnasena.github.io/resbaz2022/slides/slide_deck.html#/title-slide" class="listing-title">Quarto workshop</a>
+         
+        <a href="https://github.com/QuinnAsena/resbaz2022" title="View source code" class="source-code card-text float-end inline-block">
+          <i class="bi-code-slash"></i>
+        </a>
+        
+        <span class="text-muted listing-subtitle">Authoring Collaborative Research Projects in Quarto.</span>
+      </small>
+    </div>
+    <a href="https://quinnasena.github.io/resbaz2022/slides/slide_deck.html#/title-slide">
+      <img src="images/quarto-workshop.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+</div>
+
+<h4 class="anchored">R packages</h4>
+
+<p>Statistical packages.
+</p>
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="UiUyMHBhY2thZ2UlMkNDJTJCJTJC">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://github.com/QuinnAsena/multinomialTS" class="listing-title">multinomialTS package</a>
+        
+        <span class="text-muted listing-subtitle">An R package for state-space modelling multinomially distributed time-series.</span>
+      </small>
+    </div>
+    <a href="https://github.com/QuinnAsena/multinomialTS">
+      <img src="" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="UiUyMHBhY2thZ2U=">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://github.com/UoA-eResearch/fisheR" class="listing-title">fishR</a>
+        
+        <span class="text-muted listing-subtitle">An R package for calculating Fisher Information.</span>
+      </small>
+    </div>
+    <a href="https://github.com/UoA-eResearch/fisheR">
+      <img src="" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+</div>
+
+<h4 class="anchored">Talks</h4>
+
+<p>Recent talks from scientific conferences. I attent multiple per year, here are a few recent examples.
+</p>
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide" class="listing-title">ESA 2024 talk</a>
+         
+        <a href="https://github.com/QuinnAsena/state-space-workhop-ESA/tree/main/slides" title="View source code" class="source-code card-text float-end inline-block">
+          <i class="bi-code-slash"></i>
+        </a>
+        
+        <span class="text-muted listing-subtitle">Ecological Society of America.</span>
+      </small>
+    </div>
+    <a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide">
+      <img src="images/esa-2024.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide" class="listing-title">ESA 2023 talk</a>
+         
+        <a href="https://github.com/QuinnAsena/esa-slides" title="View source code" class="source-code card-text float-end inline-block">
+          <i class="bi-code-slash"></i>
+        </a>
+        
+        <span class="text-muted listing-subtitle">Ecological Society of America.</span>
+      </small>
+    </div>
+    <a href="https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide">
+      <img src="images/esa-2023.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT" class="listing-title">PalaeoSIG 2022</a>
+         
+        <a href="https://github.com/QuinnAsena/palaeo_in_R_2022_talk_QA" title="View source code" class="source-code card-text float-end inline-block">
+          <i class="bi-code-slash"></i>
+        </a>
+        
+        <span class="text-muted listing-subtitle">British Ecological Society.</span>
+      </small>
+    </div>
+    <a href="https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT">
+      <img src="images/palaeosig.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+</div>
+
+<h4 class="anchored">Apps and dashboards</h4>
+
+<p>I use apps and dashboards for teaching and visualisation tools.
+</p>
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="7">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://quinnasena.shinyapps.io/r_logistic/" class="listing-title">Population growth</a>
+         
+        <a href="https://github.com/QuinnAsena/r_logistic" title="View source code" class="source-code card-text float-end inline-block">
+          <i class="bi-code-slash"></i>
+        </a>
+        
+        <span class="text-muted listing-subtitle"></span>
+      </small>
+    </div>
+    <a href="https://quinnasena.shinyapps.io/r_logistic/">
+      <img src="images/pop-growth-app.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+</div>
+
+<h4 class="anchored">Lectures</h4>
+
+<p>First lecture I gave during my PhD. I will update this section with other teaching resources.
+</p>
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="8">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://quinnasena.shinyapps.io/growth_app/" class="listing-title">Population growth</a>
+         
+        <a href="https://github.com/QuinnAsena/growth_lecture" title="View source code" class="source-code card-text float-end inline-block">
+          <i class="bi-code-slash"></i>
+        </a>
+        
+        <span class="text-muted listing-subtitle"></span>
+      </small>
+    </div>
+    <a href="https://quinnasena.shinyapps.io/growth_app/">
+      <img src="images/pop-growth-lecture.png" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+</div>
+
+<h4 class="anchored">Outreach</h4>
+
+<p>Science outreach video for the York Institute for Tropical Ecosystems. Made before a phone could make a movie!
+</p>
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="9">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://www.youtube.com/watch?v=Htp0hVD-WYM" class="listing-title">YorK Institute for Tropical Ecosystems (KITE)</a>
+        
+        <span class="text-muted listing-subtitle"></span>
+      </small>
+    </div>
+    <a href="https://www.youtube.com/watch?v=Htp0hVD-WYM">
+      <img src="" alt="" class="card-img-top">
+    </a>
+    
+    
+    
+  </div>
+
+</div>
+
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -289,7 +592,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/QuinnAsena\.github\.io\/quinn-asena-website\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -308,8 +611,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           if (link.getAttribute("rel") === null) {
             link.setAttribute("rel", "noopener");
           }
-          // default icon
-          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
