@@ -27,7 +27,7 @@ We can also see how many documents belong to each topic over time (@fig-gamma). 
 
 ![The proportion of the literature belonging to a given topic over time.](images/parsons-2024/gamma_through_time.svg){#fig-gamma}
 
-Topics 1 and 2 around sustainability and international relations, respectively, make up a consistent, and substantial proportion of the literature. Smaller topics 1, 4, 5, and 6 have seen a small increase over time.
+Topics 2 and 3 around sustainable development and international relations, respectively, make up a consistent, and substantial proportion of the literature. Smaller topics 1, 4, 5, and 6 have seen a small increase over time.
 
 I won't comment a great deal in this summary on the interpretation of the results as the subject area is Meg's expertise. I would not be able to do justice to the extensive work she did as the primary author (and of course co-authors Danielle and Johanna!) and qualitative analyst.
 
