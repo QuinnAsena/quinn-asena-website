@@ -1,5 +1,7 @@
 ---
 title: Statistical analyses of community and paleoecological time series to identify environmental drivers and biotic interactions.
+date: "2024-12-01"
+image: "images/asena-2024-c/story-counts.png"
 categories:
   - Ecology
   - Modelling
@@ -11,14 +13,14 @@ This is a preview of a paper currently in review, and I will add a link to the p
 
 Over the last couple of years, Tony Ives, Jack Williams and I have been developing a model for estimating coefficients of driver-species relationships, and taxa-taxa interactions from multinomially distributed data. The model works with any data that are multinomially distributed; however, our objective is to be able to understand the drivers of ecological change using palaeo-data.
 
-The point of this work is to go beyond _describing_ patterns of past changes, and get at _why_ ecosystems change. If we can better understand the drivers of change in ecosystems, we can use this knowledge to understand how evosystems will change into the future under human pressures and environmental change.
+The point of this work is to go beyond _describing_ patterns of past changes, and get at _why_ ecosystems change. If we can better understand the drivers of change in ecosystems, we can use this knowledge to understand how ecosystems will change into the future under human pressures and environmental change.
 
 
 ### A crash course in palaeo-data
 
-There are many forms of data that describe historical changes in environments and ecosystems (e.g., isotopes from ice cores, or diatoms from lake sediments). To reconstruct changes in vegetation, lake sediment cores are often used, and fossilised pollen is extracted from the sediment core. Consider a lake as a big instrument for recording the surrounding environment. Every year, the air is full of pollen from all the wind-pollenated species around the lake. Some of this pollen lands on the lake surface and eventually sinks to the bottom of the lake and leaves a layer like a page in a book (borrowing an analogy from my Colleague Rose Gregerson in New Zealand). Every year, another page is added to the book. Each page saying something about the surrounding environment, maybe pine forest take over from oak woodland, or periods of more fire occur. The book tells the story of the ecosystem.
+There are many forms of data that describe historical changes in environments and ecosystems (e.g., isotopes from ice cores, or diatoms from lake sediments). To reconstruct changes in vegetation, lake sediment cores are often used, and fossilised pollen is extracted from the sediment core. Consider a lake as a big instrument for recording the surrounding environment. Every year, the air is full of pollen from all the wind-pollinated species around the lake. Some of this pollen lands on the lake surface and eventually sinks to the bottom of the lake and leaves a layer like a page in a book (borrowing an analogy from my Colleague Rose Gregerson in New Zealand). Every year, another page is added to the book. Each page saying something about the surrounding environment, maybe pine forest take over from oak woodland, or periods of more fire occur. The book tells the story of the ecosystem.
 
-@fig-story is a visualisation of the pollen data from a sediment core collected at Story Lake in Northern Indianna. The data are from Schlenker _et al.,_ 2024.
+@fig-story is a visualisation of the pollen data from a sediment core collected at Story Lake in Northern Indiana. The data are from Schlenker _et al.,_ 2024.
 
 ![Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schelnker _et al.,_ 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The multinomialTS model uses raw counts so I'm showing raw count data. Three key species are plot (_Quercus_, _Fagus_, and _Ulmus_), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in _ambrosia_ when forests were cleared after euro-american colonization of North America.](images/asena-2024-c/story-counts.png){#fig-story}
 
