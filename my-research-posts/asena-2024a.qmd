@@ -1,5 +1,7 @@
 ---
 title: Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data
+date: "2024-06-01"
+image: "images/asena-2024-a/g2272.png"
 categories:
   - Ecology
   - Modelling

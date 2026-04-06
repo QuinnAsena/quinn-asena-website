@@ -1,5 +1,7 @@
 ---
 title: Statistical analyses of community and paleoecological time series to identify environmental drivers and biotic interactions.
+date: "2024-12-01"
+image: "images/asena-2024-c/story-counts.png"
 categories:
   - Ecology
   - Modelling
