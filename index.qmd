@@ -22,26 +22,25 @@ I'm interested in ecological dynamics, the mechanisms underlying change in ecosy
 
 Now at the [Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/), investigating boreal forest dynamics under climate change and fire.
 
+<hr class="section-divider">
+
 ::: {.grid}
 
 ::: {.g-col-6}
-### [Research](my-research.qmd)
-Blog-style summaries of published and forthcoming work in palaeoecology, resilience, and statistical modelling.
+### [Cary Institute of Ecosystem Studies - Forest Futures Lab](https://www.caryinstitute.org/science/research-support/quinn-asena)
 :::
 
 ::: {.g-col-6}
-### [Talks](talks.qmd)
-Slides and recordings from recent scientific conferences and workshops.
+### [University of Wisconsin-Madison - Ives Lab](https://ives.labs.wisc.edu/people/)
 :::
 
 ::: {.g-col-6}
-### [Resources](resources-posts/resources-custom-listing.qmd)
-Open-source R packages, workshops, apps, and outreach materials.
+### [University of Wisconsin-Madison - William's Lab](https://williamspaleolab.github.io/people/)
 :::
 
 ::: {.g-col-6}
-### [About](about.qmd)
-Full bio, teaching experience, fieldwork, and other interests.
+### [University of Auckland - Perry Lab](https://spatialecol.com/)
 :::
+
 
 :::

@@ -10,18 +10,17 @@ $blue: #374699;
 $teal: #147C91;
 $darkgray: #333333;
 
-// Base document colors
-$navbar-bg: $teal; // navbar
-$navbar-fg: $cream; // navbar foreground elements
-$navbar-hl: $darkblue; // highlight color when hovering over navbar links
-$body-bg: $cream; // page background 
-$body-color: $gray; // page text 
-$footer-bg: $teal; // footer 
-$link-color: $purple; // hyperlinks 
+// Base document colors — single source of truth (no overrides in _quarto.yml)
+$navbar-bg: $teal;
+$navbar-fg: $cream;
+$navbar-hl: $darkblue;
+$body-bg: $cream;
+$body-color: $gray;
+$footer-bg: $teal;
+$link-color: $purple;
 
 // Inline code
-// $code-bg: $cream; // inline code background color
-$code-color: $purple; // inline code text color
+$code-color: $purple;
 
 /*-- scss:rules --*/
 
@@ -43,7 +42,7 @@ h4 {
 }
 
 // Below copied from: https://github.com/thomaspark/bootswatch/blob/v5/dist/lux/_bootswatch.scss
-// editing works to overwrite defaults 
+// editing works to overwrite defaults
 // https://youtu.be/pAN2Hiq0XGs?feature=shared&t=1611
 .navbar {
   font-size: $font-size-sm;
@@ -65,11 +64,18 @@ h4 {
 span.navbar-title {
   color: $cream;
   transition-duration: 0.2s;
-  
+
   &:hover {
     color: $darkblue;
     transition-duration: 0.2s;
   }
+}
+
+// Visual section divider between bio and navigation grid on homepage
+hr.section-divider {
+  border: none;
+  border-top: 1px solid darken($cream, 12%);
+  margin: 1.75rem 0;
 }
 
 // Card-based homepage sections
@@ -79,10 +85,11 @@ span.navbar-title {
   border-radius: 0.5rem;
   padding: 1.25rem;
   margin-bottom: 1rem;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.15s;
 
   &:hover {
-    box-shadow: 0 2px 8px rgba($teal, 0.15);
+    box-shadow: 0 4px 14px rgba($teal, 0.18);
+    transform: translateY(-2px);
   }
 
   h3 {
@@ -91,8 +98,17 @@ span.navbar-title {
   }
 }
 
+// Gallery resource cards hover effect
+.card {
+  transition: box-shadow 0.2s, transform 0.15s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba($teal, 0.18);
+    transform: translateY(-2px);
+  }
+}
+
 // Footer social icons
 .nav-footer {
   font-size: $font-size-sm;
 }
-
