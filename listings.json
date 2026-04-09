@@ -4,15 +4,7 @@
     "items": []
   },
   {
-    "listing": "/resources-posts/packages-apps.html",
-    "items": []
-  },
-  {
     "listing": "/resources-posts/resources-custom-listing.html",
-    "items": []
-  },
-  {
-    "listing": "/resources-posts/workshops-lectures.html",
     "items": []
   },
   {
@@ -23,5 +15,13 @@
       "/my-research-posts/asena-2024a.html",
       "/my-research-posts/parsons-2024.html"
     ]
+  },
+  {
+    "listing": "/resources-posts/packages-apps.html",
+    "items": []
+  },
+  {
+    "listing": "/resources-posts/workshops-lectures.html",
+    "items": []
   }
 ]
