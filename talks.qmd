@@ -1,0 +1,18 @@
+---
+title: "Talks"
+format:
+  html:
+    toc: false
+search: false
+execute:
+  echo: false
+listing:
+  - id: talks-gallery
+    template: resources-posts/gallery.ejs
+    contents: resources-posts/talks.yml
+---
+
+I present at multiple scientific conferences and workshops each year. Here are a few recent examples.
+
+::: {#talks-gallery}
+:::

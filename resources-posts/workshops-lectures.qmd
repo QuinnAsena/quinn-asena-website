@@ -1,0 +1,18 @@
+---
+title: "Workshops and Lectures"
+format:
+  html:
+    toc: false
+search: false
+execute:
+  echo: false
+listing:
+  - id: gallery
+    template: gallery.ejs
+    contents: workshops-lectures.yml
+---
+
+All my work is open-access and open-source. See all my resources on my [GitHub](https://github.com/QuinnAsena).
+
+::: {#gallery}
+:::
