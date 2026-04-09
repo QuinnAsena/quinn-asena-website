@@ -18,7 +18,7 @@ about:
 
 # Ecologist, data scientist, and many other things...
 
-I'm interested in ecological dynamics — the mechanisms underlying change in ecosystems over time and space. I study resilience, thresholds, and interactions across ecological, climate, and social systems.
+I'm interested in ecological dynamics, the mechanisms underlying change in ecosystems over time and space. I study resilience, thresholds, and interactions across ecological, climate, and social systems.
 
 Now at the [Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/), investigating boreal forest dynamics under climate change and fire.
 

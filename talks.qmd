@@ -12,7 +12,7 @@ listing:
     contents: resources-posts/talks.yml
 ---
 
-Recent talks from scientific conferences and workshops. I attend multiple per year — here are a few recent examples.
+I present at multiple scientific conferences and workshops each year. Here are a few recent examples.
 
 ::: {#talks-gallery}
 :::

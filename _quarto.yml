@@ -16,8 +16,10 @@ website:
         text: Research
       - href: talks.qmd
         text: Talks
-      - href: resources-posts/resources-custom-listing.qmd
-        text: Resources
+      - href: resources-posts/workshops-lectures.qmd
+        text: Workshops & Lectures
+      - href: resources-posts/packages-apps.qmd
+        text: Packages & Apps
       - href: about.qmd
         text: About
       - href: https://quinnasena.github.io/CV/resume_refs.html

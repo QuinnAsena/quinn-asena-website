@@ -64,5 +64,11 @@
   },
   "resources-posts/resources-custom-listing.qmd": {
     "resources-custom-listing.html": "e8848a15"
+  },
+  "resources-posts/packages-apps.qmd": {
+    "packages-apps.html": "bc07d99d"
+  },
+  "resources-posts/workshops-lectures.qmd": {
+    "workshops-lectures.html": "cb68edd2"
   }
 }

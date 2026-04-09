@@ -1,0 +1,29 @@
+- category: R packages
+  description: |
+    Statistical packages.
+  tiles:
+    - title: multinomialTS package
+      subtitle: An R package for state-space modelling multinomially distributed time-series.
+      href: https://github.com/QuinnAsena/multinomialTS
+      categories:
+        - R package
+        - C++
+    - title: fishR
+      subtitle: An R package for calculating Fisher Information.
+      href: https://github.com/UoA-eResearch/fisheR
+      categories:
+        - R package
+
+
+- category: Apps and dashboards
+  description: |
+    I use apps and dashboards for teaching and visualisation tools.
+  tiles:
+    - title: Population growth lecture with app
+      href: https://quinnasena.shinyapps.io/growth_app/
+      code: https://github.com/QuinnAsena/growth_lecture
+      thumbnail: images/pop-growth-app.png
+    - title: Two population growth models
+      href: https://quinnasena.shinyapps.io/r_logistic/
+      code: https://github.com/QuinnAsena/r_logistic
+      thumbnail: images/pop-growth-lecture-app.png

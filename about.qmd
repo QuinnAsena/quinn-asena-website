@@ -14,8 +14,6 @@ I recently finished a postdoc with Tony Ives and Jack Williams at UW-Madison in 
 
 I completed my PhD at the University of Auckland, NZ, with George Perry ([the P-lab](https://spatialecol.com/)) and Janet Wilmshurst. My thesis focused on a virtual ecological approach to assessing uncertainties in palaeoecological data. This involved simulating ecosystems from population growth models with underlying threshold dynamics, and assessing how sampling and environmental degradation can influence the inferences we make from the data.
 
-{{< video https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT >}}
-
 
 ## Teaching
 
