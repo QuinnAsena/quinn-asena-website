@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Packages and Resources – Quinn Asena</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2cfb4eec6a351599159202e8e93864bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0dd771d76e708b1f8278de96dad9dc48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,7 +113,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -123,7 +126,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -152,18 +155,31 @@ window.Quarto = {
     <span class="navbar-title">Quinn Asena</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../my-research.html"> 
-<span class="menu-text">My research</span></a>
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../resources-posts/resources-custom-listing.html" aria-current="page"> 
-<span class="menu-text">Packages and resources</span></a>
+    <a class="nav-link" href="../my-research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../talks.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources-posts/workshops-lectures.html"> 
+<span class="menu-text">Workshops &amp; Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources-posts/packages-apps.html"> 
+<span class="menu-text">Packages &amp; Apps</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://quinnasena.github.io/CV/resume_refs.html"> 
@@ -172,12 +188,17 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:qasena@wisc.edu"> <i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:asenaq@caryinstitute.org"> <i class="bi bi-envelope" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/QuinnAsena"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/quinn-asena-a394202a4/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -259,7 +280,7 @@ window.Quarto = {
 
 <h4 class="anchored">Workshops</h4>
 
-<p>Workshops I have developed and run at conferences and research bazaar.
+<p>Teaching resources I have developed and run at conferences and research bazaar.
 </p>
 
 <div class="list grid" style="column-gap: 10px;">
@@ -276,9 +297,11 @@ window.Quarto = {
         <span class="text-muted listing-subtitle">Workshop and walkthrough on state-space modelling.</span>
       </small>
     </div>
+    
     <a href="https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html">
-      <img src="images/flowchart1.png" alt="" class="card-img-top">
+      <img src="images/flowchart1.png" alt="Workshop and walkthrough on state-space modelling." class="card-img-top">
     </a>
+    
     
     
     
@@ -296,9 +319,11 @@ window.Quarto = {
         <span class="text-muted listing-subtitle">Authoring Collaborative Research Projects in Quarto.</span>
       </small>
     </div>
+    
     <a href="https://quinnasena.github.io/resbaz2022/slides/slide_deck.html#/title-slide">
-      <img src="images/quarto-workshop.png" alt="" class="card-img-top">
+      <img src="images/quarto-workshop.png" alt="Authoring Collaborative Research Projects in Quarto." class="card-img-top">
     </a>
+    
     
     
     
@@ -321,9 +346,7 @@ window.Quarto = {
         <span class="text-muted listing-subtitle">An R package for state-space modelling multinomially distributed time-series.</span>
       </small>
     </div>
-    <a href="https://github.com/QuinnAsena/multinomialTS">
-      <img src="" alt="" class="card-img-top">
-    </a>
+    
     
     
     
@@ -337,98 +360,7 @@ window.Quarto = {
         <span class="text-muted listing-subtitle">An R package for calculating Fisher Information.</span>
       </small>
     </div>
-    <a href="https://github.com/UoA-eResearch/fisheR">
-      <img src="" alt="" class="card-img-top">
-    </a>
     
-    
-    
-  </div>
-
-</div>
-
-<h4 class="anchored">Talks</h4>
-
-<p>Recent talks from scientific conferences. I attent multiple per year, here are a few recent examples.
-</p>
-
-<div class="list grid" style="column-gap: 10px;">
-
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text inline-block">
-        <a href="https://quinnasena.github.io/esa-2025/esa-2025-slides" class="listing-title">ESA 2025 talk</a>
-         
-        <a href="https://github.com/QuinnAsena/esa-2025" title="View source code" class="source-code card-text float-end inline-block">
-          <i class="bi-code-slash"></i>
-        </a>
-        
-        <span class="text-muted listing-subtitle">Ecological Society of America.</span>
-      </small>
-    </div>
-    <a href="https://quinnasena.github.io/esa-2025/esa-2025-slides">
-      <img src="images/esa-2025.png" alt="" class="card-img-top">
-    </a>
-    
-    
-    
-  </div>
-
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text inline-block">
-        <a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide" class="listing-title">ESA 2024 talk</a>
-         
-        <a href="https://github.com/QuinnAsena/state-space-workhop-ESA/tree/main/slides" title="View source code" class="source-code card-text float-end inline-block">
-          <i class="bi-code-slash"></i>
-        </a>
-        
-        <span class="text-muted listing-subtitle">Ecological Society of America.</span>
-      </small>
-    </div>
-    <a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide">
-      <img src="images/esa-2024.png" alt="" class="card-img-top">
-    </a>
-    
-    
-    
-  </div>
-
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text inline-block">
-        <a href="https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide" class="listing-title">ESA 2023 talk</a>
-         
-        <a href="https://github.com/QuinnAsena/esa-slides" title="View source code" class="source-code card-text float-end inline-block">
-          <i class="bi-code-slash"></i>
-        </a>
-        
-        <span class="text-muted listing-subtitle">Ecological Society of America.</span>
-      </small>
-    </div>
-    <a href="https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide">
-      <img src="images/esa-2023.png" alt="" class="card-img-top">
-    </a>
-    
-    
-    
-  </div>
-
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="7">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text inline-block">
-        <a href="https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT" class="listing-title">PalaeoSIG 2022</a>
-         
-        <a href="https://github.com/QuinnAsena/palaeo_in_R_2022_talk_QA" title="View source code" class="source-code card-text float-end inline-block">
-          <i class="bi-code-slash"></i>
-        </a>
-        
-        <span class="text-muted listing-subtitle">British Ecological Society.</span>
-      </small>
-    </div>
-    <a href="https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT">
-      <img src="images/palaeosig.png" alt="" class="card-img-top">
-    </a>
     
     
     
@@ -443,7 +375,7 @@ window.Quarto = {
 
 <div class="list grid" style="column-gap: 10px;">
 
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="8">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
         <a href="https://quinnasena.shinyapps.io/r_logistic/" class="listing-title">Population growth</a>
@@ -455,9 +387,11 @@ window.Quarto = {
         <span class="text-muted listing-subtitle"></span>
       </small>
     </div>
+    
     <a href="https://quinnasena.shinyapps.io/r_logistic/">
       <img src="images/pop-growth-app.png" alt="" class="card-img-top">
     </a>
+    
     
     
     
@@ -472,10 +406,10 @@ window.Quarto = {
 
 <div class="list grid" style="column-gap: 10px;">
 
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="9">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
-        <a href="https://quinnasena.shinyapps.io/growth_app/" class="listing-title">Population growth</a>
+        <a href="https://quinnasena.github.io/growth_lecture/pop_growth.html#/title-slide" class="listing-title">Population growth</a>
          
         <a href="https://github.com/QuinnAsena/growth_lecture" title="View source code" class="source-code card-text float-end inline-block">
           <i class="bi-code-slash"></i>
@@ -484,34 +418,11 @@ window.Quarto = {
         <span class="text-muted listing-subtitle"></span>
       </small>
     </div>
-    <a href="https://quinnasena.shinyapps.io/growth_app/">
+    
+    <a href="https://quinnasena.github.io/growth_lecture/pop_growth.html#/title-slide">
       <img src="images/pop-growth-lecture.png" alt="" class="card-img-top">
     </a>
     
-    
-    
-  </div>
-
-</div>
-
-<h4 class="anchored">Outreach</h4>
-
-<p>Science outreach video for the York Institute for Tropical Ecosystems. Made before a phone could make a movie!
-</p>
-
-<div class="list grid" style="column-gap: 10px;">
-
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="10">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text inline-block">
-        <a href="https://www.youtube.com/watch?v=Htp0hVD-WYM" class="listing-title">YorK Institute for Tropical Ecosystems (KITE)</a>
-        
-        <span class="text-muted listing-subtitle"></span>
-      </small>
-    </div>
-    <a href="https://www.youtube.com/watch?v=Htp0hVD-WYM">
-      <img src="" alt="" class="card-img-top">
-    </a>
     
     
     
@@ -572,13 +483,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -929,13 +841,32 @@ window.Quarto = {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Email: asenaq@caryinstitute.org</p>
+<p>© 2026 Quinn Asena</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:asenaq@caryinstitute.org">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/QuinnAsena">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/quinn-asena-a394202a4/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>
