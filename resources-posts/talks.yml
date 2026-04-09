@@ -1,0 +1,24 @@
+- category: Talks
+  description: |
+    Recent talks from scientific conferences. I attend multiple per year, here are a few recent examples.
+  tiles:
+    - title: ESA 2025 talk
+      subtitle: Ecological Society of America.
+      href: https://quinnasena.github.io/esa-2025/esa-2025-slides
+      code: https://github.com/QuinnAsena/esa-2025
+      thumbnail: resources-posts/images/esa-2025.png
+    - title: ESA 2024 talk
+      subtitle: Ecological Society of America.
+      href: https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide
+      code: https://github.com/QuinnAsena/state-space-workhop-ESA/tree/main/slides
+      thumbnail: resources-posts/images/esa-2024.png
+    - title: ESA 2023 talk
+      subtitle: Ecological Society of America.
+      href: https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide
+      code: https://github.com/QuinnAsena/esa-slides
+      thumbnail: resources-posts/images/esa-2023.png
+    - title: PalaeoSIG 2022
+      subtitle: British Ecological Society.
+      href: https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT
+      code: https://github.com/QuinnAsena/palaeo_in_R_2022_talk_QA
+      thumbnail: resources-posts/images/palaeosig.png

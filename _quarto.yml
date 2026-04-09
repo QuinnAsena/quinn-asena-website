@@ -10,54 +10,47 @@ website:
     toggle-position: right
     background: "#374699"
     foreground: "#FFFFFF"
-    search: false
+    search: true
     left:
       - href: my-research.qmd
-        text: My research
+        text: Research
+      - href: talks.qmd
+        text: Talks
       - href: resources-posts/resources-custom-listing.qmd
-        text: Packages and resources
-#      - href: talks.qmd
-#        text: Talks
+        text: Resources
+      - href: about.qmd
+        text: About
       - href: https://quinnasena.github.io/CV/resume_refs.html
         text: CV
-   # tools:
-#  #    - icon: mortarboard-fill
-#  #      href: https://quinnasena.github.io/CV/resume_refs.html
-   #   - icon: envelope
-   #     href: mailto:qasena@wisc.edu
-   #   - icon: github
-   #     href: https://github.com/QuinnAsena
-   #   - icon: fingerprint
-   #     menu:
-   #       - text: Cary Institute of Ecosystem Studies
-   #         href: https://www.caryinstitute.org/science/research-support/quinn-asena
-   #       - text: Forest Futures lab
-   #         href: https://forestfutureslab.org/  
-   #       - text: Ives Lab
-   #         href: https://ives.labs.wisc.edu/people/
-   #       - text: Williams Lab
-   #         href: https://williamspaleolab.github.io/people/
-   #       - text: Perry Lab
-   #         href: https://spatialecol.com/
-    right: 
+    right:
       - icon: envelope
-        href: mailto:qasena@wisc.edu
+        href: mailto:asenaq@caryinstitute.org
       - icon: github
         href: https://github.com/QuinnAsena
+      - icon: linkedin
+        href: https://www.linkedin.com/in/quinn-asena-a394202a4/
       - icon: fingerprint
         menu:
           - text: Cary Institute of Ecosystem Studies
             href: https://www.caryinstitute.org/science/research-support/quinn-asena
           - text: Forest Futures lab
-            href: https://forestfutureslab.org/  
+            href: https://forestfutureslab.org/
           - text: Ives Lab
             href: https://ives.labs.wisc.edu/people/
           - text: Williams Lab
             href: https://williamspaleolab.github.io/people/
           - text: Perry Lab
             href: https://spatialecol.com/
-  page-footer: 
-    left: "Email: asenaq@caryinstitute.org" 
+  page-footer:
+    left: "© 2026 Quinn Asena"
+    center: "Built with [Quarto](https://quarto.org/)"
+    right:
+      - icon: envelope
+        href: mailto:asenaq@caryinstitute.org
+      - icon: github
+        href: https://github.com/QuinnAsena
+      - icon: linkedin
+        href: https://www.linkedin.com/in/quinn-asena-a394202a4/
 
 format:
   html:
@@ -65,7 +58,6 @@ format:
       - lux
       - styles.scss
     toc: true
-#    link-external-icon: true
     link-external-newwindow: true
 
 

@@ -25,10 +25,22 @@ $code-color: $purple; // inline code text color
 
 /*-- scss:rules --*/
 
+// Heading hierarchy
 h1 {
-    color: teal;
-    font-size: 25px;
-  }
+  color: $teal;
+}
+
+h2 {
+  color: $darkblue;
+}
+
+h3 {
+  color: $blue;
+}
+
+h4 {
+  color: $gray;
+}
 
 // Below copied from: https://github.com/thomaspark/bootswatch/blob/v5/dist/lux/_bootswatch.scss
 // editing works to overwrite defaults 
@@ -55,9 +67,32 @@ span.navbar-title {
   transition-duration: 0.2s;
   
   &:hover {
-//  color: darken($cream, 10%);
-  color: $darkblue;
-  transition-duration: 0.2s;
+    color: $darkblue;
+    transition-duration: 0.2s;
   }
+}
+
+// Card-based homepage sections
+.grid .g-col-6 {
+  background-color: lighten($cream, 2%);
+  border: 1px solid darken($cream, 8%);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba($teal, 0.15);
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+}
+
+// Footer social icons
+.nav-footer {
+  font-size: $font-size-sm;
 }
 
