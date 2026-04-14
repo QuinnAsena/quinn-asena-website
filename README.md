@@ -1,20 +1,7 @@
 # Quinn Asena — Personal Research Website
 
-This is the source for [quinnasena.github.io](https://quinnasena.github.io/), built with [Quarto](https://quarto.org/).
+This is the source for my website [quinnasena.github.io](https://quinnasena.github.io/), built with [Quarto](https://quarto.org/).
 
-## Structure
-
-```
-.
-├── _quarto.yml               # Site-wide configuration (navbar, theme, metadata)
-├── index.qmd                 # Homepage / about page
-├── my-research.qmd           # Research listing page
-├── my-research-posts/        # Individual research post files (.qmd) and images
-├── resources-listing.qmd     # Resources listing page
-├── resources-posts/          # Resources content and gallery template
-├── styles.scss               # Custom styles (extends the Lux Bootswatch theme)
-└── favicon.ico
-```
 
 ## Building locally
 
@@ -41,9 +28,3 @@ A GitHub Actions workflow (`.github/workflows/publish.yml`) automatically render
 ```bash
 quarto publish gh-pages
 ```
-
-## Adding a new research post
-
-1. Create a new `.qmd` file in `my-research-posts/`, following the existing posts as a template.
-2. Add the front matter fields: `title`, `date`, `image`, and `categories`.
-3. Add the new file to the listing in `my-research.qmd`.

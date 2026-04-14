@@ -16,9 +16,9 @@ website:
         text: Research
       - href: talks.qmd
         text: Talks
-      - href: resources-posts/workshops-lectures.qmd
+      - href: workshops-lectures.qmd
         text: Workshops & Lectures
-      - href: resources-posts/packages-apps.qmd
+      - href: packages-apps.qmd
         text: Packages & Apps
       - href: https://quinnasena.github.io/CV-typst
         text: CV

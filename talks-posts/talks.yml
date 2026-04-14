@@ -4,31 +4,29 @@
       subtitle: Ecological Society of America.
       href: https://quinnasena.github.io/esa-2025/esa-2025-slides
       code: https://github.com/QuinnAsena/esa-2025
-      thumbnail: resources-posts/images/esa-2025.png
+      thumbnail: talks-posts/images/esa-2025.png
     - title: ESA 2024 talk
       subtitle: Ecological Society of America.
       href: https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide
       code: https://github.com/QuinnAsena/state-space-workhop-ESA/tree/main/slides
-      thumbnail: resources-posts/images/esa-2024.png
+      thumbnail: talks-posts/images/esa-2024.png
     - title: ESA 2023 talk
       subtitle: Ecological Society of America.
       href: https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide
       code: https://github.com/QuinnAsena/esa-slides
-      thumbnail: resources-posts/images/esa-2023.png
-    - title: PalaeoSIG 2022
-      subtitle: British Ecological Society.
-      href: https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT
-      code: https://github.com/QuinnAsena/palaeo_in_R_2022_talk_QA
-      thumbnail: resources-posts/images/palaeosig.png
+      thumbnail: talks-posts/images/esa-2023.png
 
 - category: Recorded talks
   tiles:
     - title: Neotoma outreach talk 2026
-      subtitle: Ecological Society of America.
+      subtitle: Neotoma
       href: https://www.youtube.com/watch?v=J-v0xkTIiNI&t=1s
-    - title: BES Palaeo in R
+      thumbnail: talks-posts/images/neotoma_talk.jpg
+    - title: PalaeoSIG 2022
       subtitle: British Ecological Society.
-      href: https://www.youtube.com/watch?v=z-aAIb7vkQo
+      href: https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT
+      code: https://github.com/QuinnAsena/palaeo_in_R_2022_talk_QA
+      thumbnail: talks-posts/images/palaeosig.png
 
 # - category: Outreach
 #   tiles:

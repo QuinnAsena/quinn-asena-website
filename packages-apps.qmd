@@ -9,7 +9,7 @@ execute:
 listing:
   - id: gallery
     template: gallery.ejs
-    contents: packages-apps.yml
+    contents: packages-apps-posts/packages-apps.yml
 ---
 
 All my work is open-access and open-source. See all my resources on my [GitHub](https://github.com/QuinnAsena).

@@ -8,11 +8,11 @@ execute:
   echo: false
 listing:
   - id: talks-gallery
-    template: resources-posts/gallery.ejs
-    contents: resources-posts/talks.yml
+    template: gallery.ejs
+    contents: talks-posts/talks.yml
 ---
 
-I present at multiple scientific conferences and workshops each year. Here are a few recent examples.
+I present at multiple scientific conferences and workshops each year including at the American Geophysical Union (AGU 2022 and 2025), and the International Union for Quaternary Research (INQUA 2019 and 2023), where I hosted a session on [Data science and paleoecology: current intersections and advances](https://inquaroma2023.exordo.com/programme/session/240). Below are some of my recent talks at the Ecological Society of America (ESA).
 
 ::: {#talks-gallery}
 :::

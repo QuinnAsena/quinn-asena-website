@@ -70,5 +70,11 @@
   },
   "resources-posts/workshops-lectures.qmd": {
     "workshops-lectures.html": "cb68edd2"
+  },
+  "packages-apps.qmd": {
+    "packages-apps.html": "b7dcc13b"
+  },
+  "workshops-lectures.qmd": {
+    "workshops-lectures.html": "5fb3819c"
   }
 }

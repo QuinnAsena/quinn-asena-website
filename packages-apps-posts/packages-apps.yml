@@ -22,8 +22,8 @@
     - title: Population growth lecture with app
       href: https://quinnasena.shinyapps.io/growth_app/
       code: https://github.com/QuinnAsena/growth_lecture
-      thumbnail: images/pop-growth-app.png
+      thumbnail: packages-apps-posts/images/pop-growth-app.png
     - title: Two population growth models
       href: https://quinnasena.shinyapps.io/r_logistic/
       code: https://github.com/QuinnAsena/r_logistic
-      thumbnail: images/pop-growth-lecture-app.png
+      thumbnail: packages-apps-posts/images/pop-growth-lecture-app.png

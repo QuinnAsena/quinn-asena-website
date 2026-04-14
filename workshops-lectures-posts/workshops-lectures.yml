@@ -2,16 +2,21 @@
   description: |
     Workshops I have developed and run at conferences and research bazaar.
   tiles:
+    - title: Hands-on workshop for age-depth modelling using Bchron
+      subtitle: Workshop on age-depth modelling.
+      href: https://quinnasena.github.io/neotoma-age-depth/neotoma-age-depth.html
+      code: https://github.com/QuinnAsena/neotoma-age-depth
+      thumbnail: workshops-lectures-posts/images/neotoma_hands-on.jpg
     - title: multinomialTS
       subtitle: Workshop and walkthrough on state-space modelling.
       href: https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html
       code: https://github.com/QuinnAsena/state-space-workhop-ESA
-      thumbnail: images/flowchart1.png
+      thumbnail: workshops-lectures-posts/images/flowchart1.png
     - title: Quarto workshop
       subtitle: Authoring Collaborative Research Projects in Quarto.
       href: https://quinnasena.github.io/resbaz2022/slides/slide_deck.html#/title-slide
       code: https://github.com/QuinnAsena/resbaz2022
-      thumbnail: images/quarto-workshop.png
+      thumbnail: workshops-lectures-posts/images/quarto-workshop.png
     - title: Curriculum for palaeoecology
       subtitle: "Palaeoecological data-science: a data driven curriculum"
       href: https://quinnasena.github.io/data-driven-curriculum-quarto/_book/index.html
@@ -24,4 +29,4 @@
     - title: Population growth
       href: https://quinnasena.shinyapps.io/growth_app/
       code: https://quinnasena.github.io/growth_lecture/pop_growth.html#/title-slide
-      thumbnail: images/pop-growth-lecture.png
+      thumbnail: workshops-lectures-posts/images/pop-growth-lecture.png
