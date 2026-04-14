@@ -1,7 +1,6 @@
 # Quinn Asena — Personal Research Website
 
-This is the source for my website [quinnasena.github.io](https://quinnasena.github.io/), built with [Quarto](https://quarto.org/).
-
+This is the source for my website [quinnasena.github.io](https://quinnasena.github.io/quinn-asena-website/), built with [Quarto](https://quarto.org/).
 
 ## Building locally
 
