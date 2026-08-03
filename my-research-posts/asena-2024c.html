@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-12-01">
+<meta name="dcterms.date" content="2026-07-13">
 
-<title>Statistical analyses of community and paleoecological time series to identify environmental drivers and biotic interactions. – Quinn Asena</title>
+<title>Statistical analyses of community and palaeoecological time series to identify environmental drivers and biotic interactions – Quinn Asena</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0dd771d76e708b1f8278de96dad9dc48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-81223e43502d302ca1246090e9044acc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -188,8 +191,11 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-crash-course-in-palaeo-data" id="toc-a-crash-course-in-palaeo-data" class="nav-link active" data-scroll-target="#a-crash-course-in-palaeo-data">A crash course in palaeo-data</a></li>
+  <li><a href="#post-from-2024-12-01" id="toc-post-from-2024-12-01" class="nav-link active" data-scroll-target="#post-from-2024-12-01">Post from 2024-12-01</a>
+  <ul class="collapse">
+  <li><a href="#a-crash-course-in-palaeo-data" id="toc-a-crash-course-in-palaeo-data" class="nav-link" data-scroll-target="#a-crash-course-in-palaeo-data">A crash course in palaeo-data</a></li>
   <li><a href="#our-model" id="toc-our-model" class="nav-link" data-scroll-target="#our-model">Our model</a></li>
+  </ul></li>
   <li><a href="#outro" id="toc-outro" class="nav-link" data-scroll-target="#outro">Outro</a></li>
   </ul>
 </nav>
@@ -199,7 +205,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Statistical analyses of community and paleoecological time series to identify environmental drivers and biotic interactions.</h1>
+<h1 class="title">Statistical analyses of community and palaeoecological time series to identify environmental drivers and biotic interactions</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Ecology</div>
     <div class="quarto-category">Modelling</div>
@@ -216,7 +222,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 1, 2024</p>
+      <p class="date">July 13, 2026</p>
     </div>
   </div>
   
@@ -228,20 +234,25 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </header>
 
 
-<p>This is a preview of a paper currently in review, and I will add a link to the pre-print soon.</p>
+<p>We recently <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210x.70315">published a new state-space modelling approach for analysing community time series data</a>. This model was developed during my postdoc at UW-Madison with Tony Ives and Jack Williams.</p>
+<p>A <a href="https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/">blog post accompanying the publication</a> includes links to all the newest resources!</p>
+<p>I gave a talk for Methods in Ecology and Evolution, and the recording will be available on the MEE <a href="https://www.youtube.com/@MethodsEcolEvol/videos">YouTube channel</a> soon. The resources from the talk are <a href="https://quinnasena.github.io/multinomialTS-workshop-MEE/">available at this repository</a>.</p>
+<p>Below is an older post from when we were developing the model, kept here for context:</p>
+<section id="post-from-2024-12-01" class="level2">
+<h2 class="anchored" data-anchor-id="post-from-2024-12-01">Post from 2024-12-01</h2>
 <p>Over the last couple of years, Tony Ives, Jack Williams and I have been developing a model for estimating coefficients of driver-species relationships, and taxa-taxa interactions from multinomially distributed data. The model works with any data that are multinomially distributed; however, our objective is to be able to understand the drivers of ecological change using palaeo-data.</p>
 <p>The point of this work is to go beyond <em>describing</em> patterns of past changes, and get at <em>why</em> ecosystems change. If we can better understand the drivers of change in ecosystems, we can use this knowledge to understand how ecosystems will change into the future under human pressures and environmental change.</p>
 <section id="a-crash-course-in-palaeo-data" class="level3">
 <h3 class="anchored" data-anchor-id="a-crash-course-in-palaeo-data">A crash course in palaeo-data</h3>
-<p>There are many forms of data that describe historical changes in environments and ecosystems (e.g., isotopes from ice cores, or diatoms from lake sediments). To reconstruct changes in vegetation, lake sediment cores are often used, and fossilised pollen is extracted from the sediment core. Consider a lake as a big instrument for recording the surrounding environment. Every year, the air is full of pollen from all the wind-pollinated species around the lake. Some of this pollen lands on the lake surface and eventually sinks to the bottom of the lake and leaves a layer like a page in a book (borrowing an analogy from my Colleague Rose Gregerson in New Zealand). Every year, another page is added to the book. Each page saying something about the surrounding environment, maybe pine forest take over from oak woodland, or periods of more fire occur. The book tells the story of the ecosystem.</p>
-<p><a href="#fig-story" class="quarto-xref">Figure&nbsp;1</a> is a visualisation of the pollen data from a sediment core collected at Story Lake in Northern Indiana. The data are from Schlenker <em>et al.,</em> 2024.</p>
+<p>There are many forms of data that describe historical changes in environments and ecosystems (e.g., isotopes from ice cores, or diatoms from lake sediments). To reconstruct changes in vegetation, lake sediment cores are often used, and fossilised pollen is extracted from the sediment core. Consider a lake as a big instrument for recording the surrounding environment. Every year, the air is full of pollen from all the wind-pollinated species around the lake. Some of this pollen lands on the lake surface and eventually sinks to the bottom of the lake and leaves a layer like a page in a book (borrowing an analogy from my colleague Rose Gregerson in New Zealand). Every year, another page is added to the book. Each page saying something about the surrounding environment, maybe pine forest takes over from oak woodland, or periods of more fire occur. The book tells the story of the ecosystem.</p>
+<p><a href="#fig-story" class="quarto-xref">Figure&nbsp;1</a> is a visualisation of the pollen data from a sediment core collected at Story Lake in Northern Indiana. The data are from Schlenker <em>et al.</em>, 2024.</p>
 <div id="fig-story" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/asena-2024-c/story-counts.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schelnker <em>et al.,</em> 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The multinomialTS model uses raw counts so I’m showing raw count data. Three key species are plot (<em>Quercus</em>, <em>Fagus</em>, and <em>Ulmus</em>), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in <em>ambrosia</em> when forests were cleared after euro-american colonization of North America.
+Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schlenker <em>et al.</em>, 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The multinomialTS model uses raw counts so I’m showing raw count data. Three key species are plotted (<em>Quercus</em>, <em>Fagus</em>, and <em>Ulmus</em>), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in <em>Ambrosia</em> when forests were cleared after Euro-American colonisation of North America.
 </figcaption>
 </figure>
 </div>
@@ -249,7 +260,7 @@ Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana)
 <section id="our-model" class="level3">
 <h3 class="anchored" data-anchor-id="our-model">Our model</h3>
 <p>These palaeo-data (<a href="#fig-story" class="quarto-xref">Figure&nbsp;1</a>) show patterns of change in the taxa over the time-scale of thousands of years, but we have no direct observations, or experimental evidence of the drivers of change. What this means is we cannot determine, with any certainty, the <em>causes</em> of ecological change over such long time periods. However, it turns out that, with some very fancy maths by Tony Ives, we can generate estimates of the relationships between: (i) environmental drivers (e.g., changes in temperature or moisture) and taxa in the system; and (ii) taxa-taxa interactions. While these estimates cannot be called <em>causal</em> links, they allow us to test (and lend statistical support to) multiple hypotheses about the drivers of ecological change from palaeo-data.</p>
-<p>To determine whether the model is recovering accurate estimates of driver-taxa relationships, and taxa-taxa interactions, we turn to simulation. We simulated data with different parameters and assess how well the model recovers those parameters. The whole process is described in detail in the paper, and here is an example from the upcoming paper on the success of the model at recovering driver-taxa relationships (<a href="#fig-BDis" class="quarto-xref">Figure&nbsp;2</a>). This figure (<a href="#fig-BDis" class="quarto-xref">Figure&nbsp;2</a>) will be a bit tricky to interpret out of the context of the full paper, the key points are that: each sub-plot represents different simulated conditions; each violin within the sub-plots is a simulated taxon; and the yellow dot is the target value that we want the model to estimate. Across many replicate simulations the median recovered value from the model is very close to the yellow dot, this is good!</p>
+<p>To determine whether the model is recovering accurate estimates of driver-taxa relationships, and taxa-taxa interactions, we turn to simulation. We simulated data with different parameters and assess how well the model recovers those parameters. The whole process is described in detail in the paper, and here is an example from the paper on the success of the model at recovering driver-taxa relationships (<a href="#fig-BDis" class="quarto-xref">Figure&nbsp;2</a>). This figure (<a href="#fig-BDis" class="quarto-xref">Figure&nbsp;2</a>) will be a bit tricky to interpret out of the context of the full paper, the key points are that: each sub-plot represents different simulated conditions; each violin within the sub-plots is a simulated taxon; and the yellow dot is the target value that we want the model to estimate. Across many replicate simulations the median recovered value from the model is very close to the yellow dot, this is good!</p>
 <div id="fig-BDis" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BDis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -261,9 +272,10 @@ Figure&nbsp;2: Estimated values of the driver-taxa relationship across the 500 r
 </figure>
 </div>
 </section>
+</section>
 <section id="outro" class="level2">
 <h2 class="anchored" data-anchor-id="outro">Outro</h2>
-<p>This is a <em>very</em> brief summary of some upcoming work. A great deal more can be said, but I am keeping these posts as short overviews! For more information, I have given talks and run workshops on this model (and the paper will be out soon!):</p>
+<p>This is a <em>very</em> brief summary of the work. A great deal more can be said, but I am keeping these posts as short overviews! For more information, I have given talks and run workshops on this model:</p>
 <ul>
 <li><a href="https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html">Model workshop</a>
 <ul>

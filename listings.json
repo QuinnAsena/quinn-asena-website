@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/talks.html",
-    "items": []
-  },
-  {
     "listing": "/my-research.html",
     "items": [
       "/my-research-posts/asena-2024c.html",
@@ -13,11 +9,15 @@
     ]
   },
   {
-    "listing": "/workshops-lectures.html",
+    "listing": "/talks.html",
     "items": []
   },
   {
     "listing": "/packages-apps.html",
+    "items": []
+  },
+  {
+    "listing": "/workshops-lectures.html",
     "items": []
   }
 ]
