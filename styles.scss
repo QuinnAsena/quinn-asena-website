@@ -23,6 +23,16 @@ $link-color: $purple;
 // Inline code
 $code-color: $purple;
 
+// Typography. lux ships Nunito Sans at line-height 1.5, which is tight for the
+// long-form prose in the research posts. Headings stay tighter than body text so
+// multi-line titles hold together as a single block.
+$line-height-base: 1.6;
+$headings-line-height: 1.25;
+
+// Readable line length for prose, applied to text elements rather than the
+// container so card and listing grids keep the full column width.
+$measure: 70ch;
+
 /*-- scss:rules --*/
 
 // Heading hierarchy — one hue, decreasing weight. h4 drops to body colour and
@@ -41,6 +51,29 @@ h3 {
 
 h4 {
   color: $gray;
+}
+
+// Cap the measure on running prose only. Cards, captions, listings and tables
+// manage their own width, so they opt back out.
+main.content {
+  p,
+  ul,
+  ol,
+  blockquote {
+    max-width: $measure;
+  }
+
+  figcaption,
+  table,
+  .card p,
+  .card ul,
+  .card ol,
+  .section-card p,
+  .quarto-listing p,
+  .quarto-listing ul,
+  .quarto-listing ol {
+    max-width: none;
+  }
 }
 
 // Below copied from: https://github.com/thomaspark/bootswatch/blob/v5/dist/lux/_bootswatch.scss
@@ -87,31 +120,49 @@ hr.section-divider {
   margin: 1.75rem 0;
 }
 
-// Homepage section cards. Scoped to .section-card so it cannot leak into other
-// grids on the site, and the whole card is the link target rather than the title.
+// ---------------------------------------------------------------------------
+// Cards
+//
+// One surface treatment shared by all three card types on the site, so the
+// homepage, the research listing and the resource galleries read as one system:
+//   .section-card    homepage section links (index.qmd)
+//   .quarto-grid-item research listing items (Quarto-generated)
+//   .resource-card    talks / workshops / packages tiles (gallery.ejs)
+// ---------------------------------------------------------------------------
+
+@mixin card-surface {
+  background-color: $card-bg;
+  border: 1px solid darken($cream, 8%);
+  border-left: 3px solid $teal;
+  border-radius: 0.5rem;
+  overflow: hidden; // clip thumbnails to the corner radius
+  transition: box-shadow 0.2s, transform 0.15s, border-left-color 0.2s;
+}
+
+@mixin card-surface-hover {
+  box-shadow: 0 4px 14px rgba($teal, 0.18);
+  transform: translateY(-2px);
+  border-left-color: $teal-900;
+}
+
 .section-cards {
   row-gap: 1rem;
 }
 
+// The whole card is the link target, not just the title.
 .section-card {
+  @include card-surface;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
   height: 100%;
   padding: 1.25rem 1.4rem;
-  background-color: $card-bg;
-  border: 1px solid darken($cream, 8%);
-  border-left: 3px solid $teal;
-  border-radius: 0.5rem;
   color: inherit;
   text-decoration: none;
-  transition: box-shadow 0.2s, transform 0.15s, border-left-color 0.2s;
 
   &:hover,
   &:focus-visible {
-    box-shadow: 0 4px 14px rgba($teal, 0.18);
-    transform: translateY(-2px);
-    border-left-color: $teal-900;
+    @include card-surface-hover;
     color: inherit;
     text-decoration: none;
   }
@@ -135,27 +186,104 @@ hr.section-divider {
   line-height: 1.45;
 }
 
+// Research listing (my-research.qmd)
+.quarto-grid-item.card {
+  @include card-surface;
+
+  &:hover,
+  &:focus-within {
+    @include card-surface-hover;
+  }
+
+  .card-title,
+  .listing-title {
+    color: $teal-700;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &:hover .card-title,
+  &:focus-within .card-title {
+    color: $teal-900;
+  }
+
+  .card-body {
+    padding: 1rem 1.15rem;
+  }
+
+  // Category chips: quiet by default, teal-tinted rather than grey.
+  .listing-categories .category {
+    display: inline-block;
+    margin: 0.15rem 0.25rem 0.15rem 0;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid rgba($teal, 0.35);
+    border-radius: 1rem;
+    color: $teal-700;
+    font-size: 0.72rem;
+    opacity: 1;
+  }
+}
+
+// Resource galleries (talks, workshops & lectures, packages & apps)
+.resource-card {
+  @include card-surface;
+
+  &:hover,
+  &:focus-within {
+    @include card-surface-hover;
+  }
+
+  // lux gives .card-header a grey fill and forces black text; keep the header on
+  // the same white surface as the body and separate it with a hairline instead.
+  .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid darken($cream, 8%);
+    color: inherit;
+  }
+
+  .listing-title {
+    color: $teal-700;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      color: $teal-900;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+  }
+
+  .listing-subtitle {
+    display: block;
+    color: $gray;
+    font-size: 0.85rem;
+  }
+
+  .source-code {
+    color: $teal;
+
+    &:hover {
+      color: $teal-900;
+    }
+  }
+}
+
 // Respect a reduced-motion preference: keep the colour and shadow cues, drop the lift.
 @media (prefers-reduced-motion: reduce) {
   .section-card,
-  .card {
+  .quarto-grid-item.card,
+  .resource-card {
     transition: none;
   }
 
   .section-card:hover,
   .section-card:focus-visible,
-  .card:hover {
+  .quarto-grid-item.card:hover,
+  .quarto-grid-item.card:focus-within,
+  .resource-card:hover,
+  .resource-card:focus-within {
     transform: none;
-  }
-}
-
-// Gallery resource cards hover effect
-.card {
-  transition: box-shadow 0.2s, transform 0.15s;
-
-  &:hover {
-    box-shadow: 0 4px 16px rgba($teal, 0.18);
-    transform: translateY(-2px);
   }
 }
 
