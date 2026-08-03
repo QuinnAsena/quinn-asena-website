@@ -1,19 +1,20 @@
 /*-- scss:defaults --*/
 
 // Colors
-$light-green: #009c4e;
+// Headings run a single-hue teal ramp (dark -> brand) so weight decreases
+// monotonically: 10.2:1 -> 6.9:1 -> 4.7:1 contrast on $cream. All pass WCAG AA.
+$teal-900: #0A4552; // h1 — heaviest
+$teal-700: #106074; // h2
+$teal: #147C91; // h3 + brand (navbar, footer, accents)
 $cream: #FDFBF7;
 $gray: #64605f;
 $purple: #9158A2;
-$darkblue: #053660;
-$blue: #374699;
-$teal: #147C91;
-$darkgray: #333333;
+$card-bg: #ffffff;
 
 // Base document colors — single source of truth (no overrides in _quarto.yml)
 $navbar-bg: $teal;
 $navbar-fg: $cream;
-$navbar-hl: $darkblue;
+$navbar-hl: #ffffff;
 $body-bg: $cream;
 $body-color: $gray;
 $footer-bg: $teal;
@@ -24,17 +25,18 @@ $code-color: $purple;
 
 /*-- scss:rules --*/
 
-// Heading hierarchy
+// Heading hierarchy — one hue, decreasing weight. h4 drops to body colour and
+// relies on size/weight alone, marking the end of the coloured levels.
 h1 {
-  color: $teal;
+  color: $teal-900;
 }
 
 h2 {
-  color: $darkblue;
+  color: $teal-700;
 }
 
 h3 {
-  color: $blue;
+  color: $teal;
 }
 
 h4 {
@@ -66,9 +68,16 @@ span.navbar-title {
   transition-duration: 0.2s;
 
   &:hover {
-    color: $darkblue;
+    color: #ffffff;
     transition-duration: 0.2s;
   }
+}
+
+// Navbar hover carries an underline as well as a colour shift, so the state
+// change does not rely on colour alone.
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
 
 // Visual section divider between bio and navigation grid on homepage
@@ -78,23 +87,65 @@ hr.section-divider {
   margin: 1.75rem 0;
 }
 
-// Card-based homepage sections
-.grid .g-col-6 {
-  background-color: lighten($cream, 2%);
-  border: 1px solid darken($cream, 8%);
-  border-radius: 0.5rem;
-  padding: 1.25rem;
-  margin-bottom: 1rem;
-  transition: box-shadow 0.2s, transform 0.15s;
+// Homepage section cards. Scoped to .section-card so it cannot leak into other
+// grids on the site, and the whole card is the link target rather than the title.
+.section-cards {
+  row-gap: 1rem;
+}
 
-  &:hover {
+.section-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  height: 100%;
+  padding: 1.25rem 1.4rem;
+  background-color: $card-bg;
+  border: 1px solid darken($cream, 8%);
+  border-left: 3px solid $teal;
+  border-radius: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.15s, border-left-color 0.2s;
+
+  &:hover,
+  &:focus-visible {
     box-shadow: 0 4px 14px rgba($teal, 0.18);
     transform: translateY(-2px);
+    border-left-color: $teal-900;
+    color: inherit;
+    text-decoration: none;
   }
 
-  h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
+  &:hover .section-card-title,
+  &:focus-visible .section-card-title {
+    color: $teal-900;
+  }
+}
+
+.section-card-title {
+  color: $teal-700;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.section-card-desc {
+  color: $gray;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+// Respect a reduced-motion preference: keep the colour and shadow cues, drop the lift.
+@media (prefers-reduced-motion: reduce) {
+  .section-card,
+  .card {
+    transition: none;
+  }
+
+  .section-card:hover,
+  .section-card:focus-visible,
+  .card:hover {
+    transform: none;
   }
 }
 

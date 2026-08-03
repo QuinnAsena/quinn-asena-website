@@ -24,23 +24,28 @@ My research background covers long-term ecological trajectories, ecosystem resil
 
 <hr class="section-divider">
 
-::: {.grid}
+```{=html}
+<div class="grid section-cards">
 
-::: {.g-col-6}
-### [Cary Institute of Ecosystem Studies - Forest Futures Lab](https://www.caryinstitute.org/science/research-support/quinn-asena)
-:::
+  <a class="section-card g-col-12 g-col-md-6" href="my-research.html">
+    <span class="section-card-title">Research</span>
+    <span class="section-card-desc">Plain-language summaries of my published work, from palaeoecology to wildfire risk.</span>
+  </a>
 
-::: {.g-col-6}
-### [University of Wisconsin-Madison - Ives Lab](https://ives.labs.wisc.edu/people/)
-:::
+  <a class="section-card g-col-12 g-col-md-6" href="talks.html">
+    <span class="section-card-title">Talks</span>
+    <span class="section-card-desc">Conference presentations and recorded talks, with slides and source.</span>
+  </a>
 
-::: {.g-col-6}
-### [University of Wisconsin-Madison - Williams Lab](https://williamspaleolab.github.io/people/)
-:::
+  <a class="section-card g-col-12 g-col-md-6" href="workshops-lectures.html">
+    <span class="section-card-title">Workshops &amp; Lectures</span>
+    <span class="section-card-desc">Open, hands-on teaching materials and walkthroughs.</span>
+  </a>
 
-::: {.g-col-6}
-### [University of Auckland - Perry Lab](https://spatialecol.com/)
-:::
+  <a class="section-card g-col-12 g-col-md-6" href="packages-apps.html">
+    <span class="section-card-title">Packages &amp; Apps</span>
+    <span class="section-card-desc">R packages and interactive apps for modelling and visualisation.</span>
+  </a>
 
-
-:::
+</div>
+```
