@@ -18,9 +18,9 @@ about:
 
 # Ecologist, data scientist, and many other things...
 
-I'm interested in ecological dynamics, the mechanisms underlying change in ecosystems over time and space. I study resilience, thresholds, and interactions across ecological, climate, and social systems.
+I am an ecologist and data scientist interested in ecosystem dynamics, the mechanisms underlying change in ecosystems over time and space. My current research focuses on continental-scale wildfire risk mapping using deep learning methods, and boreal ecology using landscape simulation models. I am based at the [Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/).
 
-Now at the [Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/), investigating boreal forest dynamics under climate change and fire.
+My research background covers long-term ecological trajectories, ecosystem resilience, and developing statistical models to analyse community time series data. I have had the privilege of working with [George Perry](https://spatialecol.com/) and [Janet Wilmshurst](https://www.landcareresearch.co.nz/about-us/our-people/janet-wilmshurst) during my PhD at the University of Auckland, and with [Tony Ives](https://ives.labs.wisc.edu/people/) and [Jack Williams](https://williamspaleolab.github.io/people/) during my postdoc at the University of Wisconsin-Madison.
 
 <hr class="section-divider">
 
@@ -35,7 +35,7 @@ Now at the [Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/s
 :::
 
 ::: {.g-col-6}
-### [University of Wisconsin-Madison - William's Lab](https://williamspaleolab.github.io/people/)
+### [University of Wisconsin-Madison - Williams Lab](https://williamspaleolab.github.io/people/)
 :::
 
 ::: {.g-col-6}
