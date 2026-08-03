@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Quinn Asena</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -36,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f61bf00846dcb397bca68adf4d46d323.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ae61fe8eae11195e2dc2b2ee27bca089.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -212,19 +218,23 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <p>I am an ecologist and data scientist interested in ecosystem dynamics, the mechanisms underlying change in ecosystems over time and space. My current research focuses on continental-scale wildfire risk mapping using deep learning methods, and boreal ecology using landscape simulation models. I am based at the <a href="https://www.caryinstitute.org/science/research-support/quinn-asena">Cary Institute of Ecosystem Studies</a> with Dr.&nbsp;Winslow Hansen in the <a href="https://forestfutureslab.org/">Forest Futures Lab</a>.</p>
 <p>My research background covers long-term ecological trajectories, ecosystem resilience, and developing statistical models to analyse community time series data. I have had the privilege of working with <a href="https://spatialecol.com/">George Perry</a> and <a href="https://www.landcareresearch.co.nz/about-us/our-people/janet-wilmshurst">Janet Wilmshurst</a> during my PhD at the University of Auckland, and with <a href="https://ives.labs.wisc.edu/people/">Tony Ives</a> and <a href="https://williamspaleolab.github.io/people/">Jack Williams</a> during my postdoc at the University of Wisconsin-Madison.</p>
 <hr class="section-divider">
-<div class="grid">
-<section id="cary-institute-of-ecosystem-studies---forest-futures-lab" class="level3 g-col-6">
-<h3 data-anchor-id="cary-institute-of-ecosystem-studies---forest-futures-lab"><a href="https://www.caryinstitute.org/science/research-support/quinn-asena">Cary Institute of Ecosystem Studies - Forest Futures Lab</a></h3>
-</section>
-<section id="university-of-wisconsin-madison---ives-lab" class="level3 g-col-6">
-<h3 data-anchor-id="university-of-wisconsin-madison---ives-lab"><a href="https://ives.labs.wisc.edu/people/">University of Wisconsin-Madison - Ives Lab</a></h3>
-</section>
-<section id="university-of-wisconsin-madison---williams-lab" class="level3 g-col-6">
-<h3 data-anchor-id="university-of-wisconsin-madison---williams-lab"><a href="https://williamspaleolab.github.io/people/">University of Wisconsin-Madison - Williams Lab</a></h3>
-</section>
-<section id="university-of-auckland---perry-lab" class="level3 g-col-6">
-<h3 data-anchor-id="university-of-auckland---perry-lab"><a href="https://spatialecol.com/">University of Auckland - Perry Lab</a></h3>
-</section>
+<div class="grid section-cards">
+  <a class="section-card g-col-12 g-col-md-6" href="my-research.html">
+    <span class="section-card-title">Research</span>
+    <span class="section-card-desc">Plain-language summaries of my published work, from palaeoecology to wildfire risk.</span>
+  </a>
+  <a class="section-card g-col-12 g-col-md-6" href="talks.html">
+    <span class="section-card-title">Talks</span>
+    <span class="section-card-desc">Conference presentations and recorded talks, with slides and source.</span>
+  </a>
+  <a class="section-card g-col-12 g-col-md-6" href="workshops-lectures.html">
+    <span class="section-card-title">Workshops &amp; Lectures</span>
+    <span class="section-card-desc">Open, hands-on teaching materials and walkthroughs.</span>
+  </a>
+  <a class="section-card g-col-12 g-col-md-6" href="packages-apps.html">
+    <span class="section-card-title">Packages &amp; Apps</span>
+    <span class="section-card-desc">R packages and interactive apps for modelling and visualisation.</span>
+  </a>
 </div>
 
 
@@ -276,13 +286,14 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
