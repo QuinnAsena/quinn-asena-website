@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Quinn Asena</title>
+<link>https://quinnasena.github.io/quinn-asena-website/my-research.html</link>
+<atom:link href="https://quinnasena.github.io/quinn-asena-website/my-research.xml" rel="self" type="application/rss+xml"/>
+<description>Quinn Asena, ecologist and data scientist. Wildfire risk mapping with deep learning, boreal forest dynamics under climate change, and statistical methods for long-term ecological change.</description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Mon, 13 Jul 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</title>
+  <link>https://quinnasena.github.io/quinn-asena-website/my-research-posts/asena-2024c.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This work is published in <em>Methods in Ecology and Evolution</em>: <a href="https://doi.org/10.1111/2041-210x.70315">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</a> (Asena et al., 2026). The model was developed during my postdoc at UW–Madison with Tony Ives and Jack Williams, and is available as the <a href="https://github.com/QuinnAsena/multinomialTS">multinomialTS</a> R package.</p>
+<p>A <a href="https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/">blog post accompanying the publication</a> walks through the idea less formally, and I gave an invited talk on it for <em>Methods in Ecology and Evolution</em>. The <a href="https://quinnasena.github.io/multinomialTS-workshop-MEE/">talk and workshop resources</a> are all open, and the recording goes up on the <a href="https://www.youtube.com/@MethodsEcolEvol/videos">MEE YouTube channel</a>.</p>
+<p>Below is an earlier post from when we were developing the model, kept here for context:</p>
+<section id="post-from-2024-12-01" class="level2">
+<h2 class="anchored" data-anchor-id="post-from-2024-12-01">Post from 2024-12-01</h2>
+<p>Over the last couple of years, Tony Ives, Jack Williams and I have been developing a model for estimating coefficients of driver-species relationships, and taxa-taxa interactions from multinomially distributed data. The model works with any data that are multinomially distributed; however, our objective is to be able to understand the drivers of ecological change using palaeo-data.</p>
+<p>The point of this work is to go beyond <em>describing</em> patterns of past changes, and get at <em>why</em> ecosystems change. If we can better understand the drivers of change in ecosystems, we can use this knowledge to understand how ecosystems will change into the future under human pressures and environmental change.</p>
+<section id="a-crash-course-in-palaeo-data" class="level3">
+<h3 class="anchored" data-anchor-id="a-crash-course-in-palaeo-data">A crash course in palaeo-data</h3>
+<p>There are many forms of data that describe historical changes in environments and ecosystems (e.g., isotopes from ice cores, or diatoms from lake sediments). To reconstruct changes in vegetation, lake sediment cores are often used, and fossilised pollen is extracted from the sediment core. Consider a lake as a big instrument for recording the surrounding environment. Every year, the air is full of pollen from all the wind-pollinated species around the lake. Some of this pollen lands on the lake surface and eventually sinks to the bottom of the lake and leaves a layer like a page in a book (borrowing an analogy from my colleague Rose Gregerson in New Zealand). Every year, another page is added to the book. Each page saying something about the surrounding environment, maybe pine forest takes over from oak woodland, or periods of more fire occur. The book tells the story of the ecosystem.</p>
+<p>Figure&nbsp;1 is a visualisation of the pollen data from a sediment core collected at Story Lake in Northern Indiana. The data are from Schlenker <em>et al.</em>, 2024.</p>
+<div id="fig-story" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-c/story-counts.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schlenker <em>et al.</em>, 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The multinomialTS model uses raw counts so I’m showing raw count data. Three key species are plotted (<em>Quercus</em>, <em>Fagus</em>, and <em>Ulmus</em>), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in <em>Ambrosia</em> when forests were cleared after Euro-American colonisation of North America.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="our-model" class="level3">
+<h3 class="anchored" data-anchor-id="our-model">Our model</h3>
+<p>These palaeo-data (Figure&nbsp;1) show patterns of change in the taxa over the time-scale of thousands of years, but we have no direct observations, or experimental evidence of the drivers of change. What this means is we cannot determine, with any certainty, the <em>causes</em> of ecological change over such long time periods. However, it turns out that, with some very fancy maths by Tony Ives, we can generate estimates of the relationships between: (i) environmental drivers (e.g., changes in temperature or moisture) and taxa in the system; and (ii) taxa-taxa interactions. While these estimates cannot be called <em>causal</em> links, they allow us to test (and lend statistical support to) multiple hypotheses about the drivers of ecological change from palaeo-data.</p>
+<p>To determine whether the model is recovering accurate estimates of driver-taxa relationships, and taxa-taxa interactions, we turn to simulation. We simulated data with different parameters and assess how well the model recovers those parameters. The whole process is described in detail in the paper, and here is an example from the paper on the success of the model at recovering driver-taxa relationships (Figure&nbsp;2). This figure (Figure&nbsp;2) will be a bit tricky to interpret out of the context of the full paper, the key points are that: each sub-plot represents different simulated conditions; each violin within the sub-plots is a simulated taxon; and the yellow dot is the target value that we want the model to estimate. Across many replicate simulations the median recovered value from the model is very close to the yellow dot, this is good!</p>
+<div id="fig-BDis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BDis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-c/B_dis.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BDis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Estimated values of the driver-taxa relationship across the 500 replicate simulations for six different scenarios and two taxa for each scenario. The point within each violin plot is the scenario-prescribed value for the simulations. The horizontal lines within each violin plot are the median, 25th and 75th quantiles of the estimated values from the model fits across the 500 replicates. Good model performance is indicated by the true value sitting close to the median and within the interquartile range of the estimated values.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="outro" class="level2">
+<h2 class="anchored" data-anchor-id="outro">Outro</h2>
+<p>This is a <em>very</em> brief summary of the work. A great deal more can be said, but I am keeping these posts as short overviews! For more information, I have given talks and run workshops on this model:</p>
+<ul>
+<li><a href="https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html">Model workshop</a>
+<ul>
+<li><a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_deck.html#%2Ftitle-slide">Workshop talk</a></li>
+</ul></li>
+<li><a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#%2Ftitle-slide">Application of the model talk</a></li>
+<li><a href="https://quinnasena.github.io/esa-slides/slide_deck.html#%2Ftitle-slide">Model development talk</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Ecology</category>
+  <category>Modelling</category>
+  <category>Statistics</category>
+  <category>Ecostats</category>
+  <guid>https://quinnasena.github.io/quinn-asena-website/my-research-posts/asena-2024c.html</guid>
+  <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-c/story-counts.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Information loss in palaeoecological data from process and observer error</title>
+  <link>https://quinnasena.github.io/quinn-asena-website/my-research-posts/asena-2024b.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This work is published in <em>Climate of the Past</em>: <a href="https://doi.org/10.5194/cp-22-783-2026">Information loss in palaeoecological data from process and observer error</a> (Asena, Perry &amp; Wilmshurst, 2026). The article is open access, so the full methods and results are freely available.</p>
+<p><a href="../my-research-posts/asena-2024a.html">In my previous post</a>, I described the phenomenological model used to generate species patterns that mimic the statistical properties of empirical data. How can we use this approach to quantify the relative influence of sources of uncertainty on the statistical inferences we make from palaeoecological data?</p>
+<p>I’ll pick up where I left off in the last post. In short, we simulate a whole bunch of species and begin to systematically degrade the data with physical processes (in this case core mixing), sub-sampling strategies (taking 1 cm thick slices of sediment at given intervals), and proxy counting (counting and identifying species in a sub-sample). Because each of these three sources of uncertainty are introduced to the data individually, and combined, at 10 levels each, we end up with 1210 datasets per replicate simulation! There are 30-35 replicate simulations, multiplied by four different scenarios varying the driving conditions. That is terabytes of data! We want to know the relative influence of the three sources of uncertainty (mixing, sub-sampling, and proxy counting) on the two statistical analyses (Fisher Information and principal curves), from the ‘error-free’ benchmark to the most degraded and least intensively sampled.</p>
+<p>To compare the Fisher Information and principal curve analyses of the ecological communities across the 1210 datasets we used Feature Analysis for Time series. This further reduces the time-series into a set of ‘features’ that describe the time-series. We can then use Euclidean distance to measure the distance between the features of each dataset and the original benchmark. These distances are then summarised across the replicate simulations (Figure&nbsp;1).</p>
+<div id="fig-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024b/analysis_process.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Conceptual data-flow of the degradation, sampling, and analysis process. Treatments of mixing, sub-sampling and proxy counting are applied individually and in combination to the replicate pseudoproxy archive. Fisher’s information (FI) and principal curves (PrC) are applied separately to each treatment level and subsequently analysed using feature analysis for time-series (FATs). Extracted features are scaled and Euclidean distance between each treatment level and the ‘error-free’ reference core is calculated.
+</figcaption>
+</figure>
+</div>
+<p>Ok, the methods are not very easy to describe in simple terms… They are set out in full in the <a href="https://doi.org/10.5194/cp-22-783-2026">paper</a>, so let’s jump to the exciting results!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-a/then-a-miracle-happens.gif" class="img-fluid figure-img"></p>
+<figcaption>A cartoon of two scientists at a blackboard, where a complicated derivation is bridged by a step reading “then a miracle occurs”.</figcaption>
+</figure>
+</div>
+<p>The uncertainties are introduced to the data systematically. By introducing the uncertainties individually, we can see how the Euclidean distance increases from our benchmark data (Figure&nbsp;2). It is interesting the Euclidean distance increases steadily with mixing, while the Euclidean distance does not increase a great deal as the proxy count is reduced. Decreasing sub-sampling intervals are having the strongest influence on the Euclidean distance.</p>
+<div id="fig-oneD" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oneD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024b/walk_step_fisher_metrics_dotplot.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oneD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The median (dots), 25th, and 75th quantiles (error-bars and shaded area) of the Euclidean distance from the ‘error-free’ core of features extracted from the Fisher’s information (A) and PrC distances (B) calculated across replicate simulations.
+</figcaption>
+</figure>
+</div>
+<p>It is useful to see the different influence of the uncertainties when applied individually. However, this result is expected. We know that data become worse if we ruin them! What we want to find out is which sources of uncertainty have the strongest influence, and which ones interact when applied in combination.</p>
+<p>In the following figure (Figure&nbsp;3), two sources of uncertainty are plotted, one on each axis. What we are interested in here is whether the Euclidean distance increases along the diagonal of the plot, indicating an interaction between the uncertainties. By far the strongest influence is from the combined effect of proxy counting and sub-sampling (Figure&nbsp;3 C). There appears to be little interaction between mixing and either proxy counting and sub-sampling.</p>
+<div id="fig-twoD" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-twoD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024b/walk_step_fisher_two_dim_metrics_mean_plot.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-twoD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Mean Euclidean distance from the ‘error-free’ core of two treatments combined calculated across replicate simulations for Fisher’s information. The mixing axis shows the number of time-steps over which mixing occurs. Along the sub-sampling axis, the frequency of sub-sampling in centimetres is shown, and the proxy counting axis displays count resolutions in number of individuals counted per sample. In the proxy counting treatment, uncertainty increases as count resolution decreases.
+</figcaption>
+</figure>
+</div>
+<p>In the <a href="https://doi.org/10.5194/cp-22-783-2026">paper</a>, all three uncertainties are combined and visualised. I won’t go there in this short summary! What does this all mean for palaeoecologists?</p>
+<p>This approach allows us to make informed decisions around sampling strategies and lab hours spent quantifying proxies. Where should we focus money and effort in a study depending on the research question of interest? We can use this approach to assess how strong the influence of sources of uncertainty are on different statistical methods. Understanding uncertainties is crucial to understanding how reliable our inferences are from the data we have.</p>
+
+
+
+ ]]></description>
+  <category>Ecology</category>
+  <category>Modelling</category>
+  <category>Virtual Ecology</category>
+  <category>Proxy System Modelling</category>
+  <category>Uncertainties</category>
+  <guid>https://quinnasena.github.io/quinn-asena-website/my-research-posts/asena-2024b.html</guid>
+  <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024b/walk_step_fisher_two_dim_metrics_mean_plot.png" medium="image" type="image/png" height="68" width="144"/>
+</item>
+<item>
+  <title>Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data</title>
+  <link>https://quinnasena.github.io/quinn-asena-website/my-research-posts/asena-2024a.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="https://doi.org/10.1177/09596836241247304">This paper</a> is about constructing a model that generates patterns of ecological change using population growth equations with underlying dynamics such as threshold points. We show how such a model can be used to assess uncertainties in palaeoecological data using a Virtual Ecological approach. The idea is to generate patterns with the same statistical properties that we see in empirical data, and not to recreate a given ecosystem (i.e., this is a phenomenological model). Why do this? We have no experimental manipulations or direct observations of the long time-scales necessary to understand ecosystem-level change, and even the most highly resolved palaeoecological data from laminated sediment cores contain many uncertainties from environmental processes, sampling, and lab processing. In empirical palaeoecology, we have no ‘known truth’ against which to assess our inferences. By using a virtual ecological approach, we can generate data under ‘known’ conditions.</p>
+<blockquote class="blockquote">
+<p>In reality, we have imperfect knowledge of a perfect world. In simulation, we have perfect knowledge of an imperfect representation of the world.</p>
+</blockquote>
+<p>Why is this all important? Palaeoecological data provide insight into past ecological and climatic change. This source of data is invaluable to understanding ecological change and potential future ecosystem states. However, the data are highly uncertain, relying on many layers of processing such as lab processing, radiocarbon dating, and age depth modelling. The data are often inconsistently spaced through time and may have large time-gaps between observations. Such sources of uncertainty can, at best, mask ‘true’ signals of change, or at worst, lead to false inferences. One way we can assess the influence of uncertainties on statistical inference is through simulation.</p>
+<p>If we start with our perfect knowledge of a simulated world, we can also simulate observations from that world, in the same way that we would sample from the real world. This gives us a benchmark dataset, the original simulated data, and a reduced dataset, the sampled simulated data.</p>
+<p>Here is my simulated world (Figure&nbsp;1). Each species on the right (Figure&nbsp;1 d) is simulated by a population growth equation. The growth rate of each species is their combined response to the two environmental drivers (Figure&nbsp;1 b). Their optima and tolerance to each driver (Figure&nbsp;1 c) determine whether the population growth rate of a species is positive or negative. If the environment is unfavourable, then a species population growth rate becomes negative and it will go locally extinct. Species have the chance to re-establish if conditions become favourable again.</p>
+<div id="fig-VE" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-VE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-a/g2272.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-VE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Visualisation of a simulated core sample: the accumulation rate, time-span and length of the core (a); driver conditions over time (b); the niche of each species with respect to the driving environment (c); and the abundances of pseudoproxies in the archive (d). Each species niche comprises an optima and tolerance for each driver, the optima and tolerance curves in (c) are colour-coded to match each driver in (b). In the context of the proxy system model framework, environmental drivers (b) act on a sensor (c; in this case the response of the sensor is the populations’ growth rate changing in response to the environmental drivers) and records the response of the sensor in an archive (d). The simulation runs from past to present, the first time-step being the oldest.
+</figcaption>
+</figure>
+</div>
+<p>The number of species in (Figure&nbsp;1) is only a fraction of those simulated. There are actually around 200 potential species, and about 15-40 in existence at any given point in the simulation (depending on the replicate). I simulated a bunch of different driving environments (e.g., one where the environmental driver undergoes an abrupt shift), in the example above (Figure&nbsp;1) the ‘slow linear’ driver will eventually drive species that existed at the beginning of the simulation locally extinct (unless they were very generalist species!), and new species would establish and thrive.</p>
+<p>We then take those simulated species abundances (Figure&nbsp;1 d), remember this is our ‘perfect’ benchmark data, and degrade them with mixing (i.e., a physical process that alters the core), sub-sampling (i.e., slicing up the core into 1 cm segments at given intervals for processing), and proxy counting (i.e., the counting of species under a microscope from the 1 cm segments after lab processing). Figure&nbsp;2 shows how we start with absolute abundances of species, and recreate the observational process, ultimately resulting in data that look a lot more like what we see in reality from proxy-data.</p>
+<div id="fig-degradation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-degradation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-a/degradation_process_disturbed_area_ink.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-degradation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Sample model output showing two species, visualising data from the error-free reference (a) and one treatment level from each: mixing (b); mixing combined with sub-sampling (c); and mixing combined with sub-sampling and proxy counting (d). Mixing over 10 time-steps is shown as a magnified section of species 56 displaying the error-free reference transitioning to the mixed data (b). The mixed data are then sub-sampled every 10 cm, with a thickness of 1 cm (c) and the sub-sampled data are counted at a resolution of 400 individuals per sub-sample (d). Red dashed lines indicate disturbance events that occur randomly throughout the simulation.
+</figcaption>
+</figure>
+</div>
+<p>This is what a larger subset of the simulated species looks like before and after the virtual degradation and sub-sampling process (Figure&nbsp;3).</p>
+<div id="fig-halfhalf" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-halfhalf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-a/archive_half_half_walk_lin_forces.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-halfhalf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Visualisation of the environmental drivers, the ‘error-free’ benchmark pseudoproxy archive, and pseudoproxies mixed over 10 time-steps, sub-sampled at 10 cm intervals and counted at a resolution of 400 individuals per sub-sample. A subset of 10 species from the pool of 200 is shown. The ‘error-free’ record shows the absolute abundances per time-step and represents ‘perfect’ knowledge of the system through time, the degraded and sampled record is converted to relative abundances and represents observations comparable to empirical proxy records. Accumulation rate and depth are not pictured in favour of a more complete species record. Note that the y-axis is in simulation time, the most recent section of core is time-step 5000.
+</figcaption>
+</figure>
+</div>
+<p>Finally, we analyse both sets of data. In simulation the three sources of uncertainty (mixing, sub-sampling, and proxy counting) are applied individually, and in combination, at increasing levels of severity. So we end up with 1210 (<em>per simulation replicate!</em>) datasets from the ‘error-free’ benchmark to the most degraded. We analyse them all! But here is an example of the benchmark, and one level of degradation (Figure&nbsp;4).</p>
+<div id="fig-analysis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-a/fi_prc_grad_vertical2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Fisher Information (a) and PrCs (b) of both the ‘error-free’ pseudoproxies, and the degraded and sub-sampled data for Scenario 1. The blue highlighted region in the FI indicates a ~700-year period of reversed directionality. The highlighted regions in the PrCs indicate, in the analyses of the degraded and sub-sampled data, two periods of different rates of change in the PrC. The same regions are highlighted in the ‘error-free’ analysis where no apparent change is visible. Red dashed lines indicate disturbance events for both FI and PrCs.
+</figcaption>
+</figure>
+</div>
+<p>This figure shows two different multivariate community analyses (Fisher Information and principal curves), and how the results change between the ‘error-free’ data and the degraded and sub-sampled dataset. At the start, I mentioned that uncertainty can lead to incorrect inference. This example is only of one randomly selected model replicate, but it shows how interpretations can be influenced by uncertainties. The 700 year-long period of reversed directionality in Fisher Information (Figure&nbsp;4 A) can change our inference from a system increasing in stability, to decreasing in stability (a decrease in Fisher Information is interpreted as a system becoming less predictable less stable). The principal curve changing from a gradual increase (a good representation of change driven by the primary driver system), to a sigmoidal shape (Figure&nbsp;4 B), can alter our interpretation of the ‘true’ rate of species turnover in the system. This example demonstrates well how a Virtual Ecological approach can be used to assess uncertainty and its influence on statistical inference.</p>
+
+
+
+ ]]></description>
+  <category>Ecology</category>
+  <category>Modelling</category>
+  <category>Virtual Ecology</category>
+  <category>Proxy System Modelling</category>
+  <category>Uncertainties</category>
+  <guid>https://quinnasena.github.io/quinn-asena-website/my-research-posts/asena-2024a.html</guid>
+  <pubDate>Sat, 01 Jun 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-a/g2272.png" medium="image" type="image/png" height="120" width="144"/>
+</item>
+<item>
+  <title>A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward</title>
+  <link>https://quinnasena.github.io/quinn-asena-website/my-research-posts/parsons-2024.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>In <a href="https://doi.org/10.1016/j.crm.2024.100593">this paper</a> by Meg Parsons, we explored research trends in the literature around the topic of climate justice since its conception. I was the quantitative expert and analysed the corpus using Latent Dirichlet Allocation (LDA) to identify trends in the literature.</p>
+<p>LDA uses the word frequencies from a corpus to assign documents in the corpus to arbitrary ‘topics’. For example, if we took a corpus around the subject ‘nuclear’, the corpus will probably be characterised by words like ‘sustainable’, ‘energy’, ‘green’, and ‘disaster’, ‘fallout’, ‘meltdown’, and ‘weapon’, ‘conflict’… and so on. Words will cluster around ‘topics’, that are described by those words. The LDA model is agnostic and does not know what the ‘topics’ are, but we can identify that there are themes in the words that characterise the topics, such as ‘energy’, ‘conflict/politics’, maybe ‘social movements’, and other topics.</p>
+<p>‘Climate Justice’ was first mentioned in a published article in <a href="https://doi.org/10.1080/09644019708414340">1997 by Ian H. Rowlands</a>, and between 1997 and 2021 has seen 1683 published works on the Scopus database that had enough text (e.g., an abstract) that I could use for the analysis.</p>
+<p>Six overall topics emerged from the literature that we assigned the following descriptions to (Figure&nbsp;1):</p>
+<ul>
+<li>Education and food security</li>
+<li>Sustainable development and policy</li>
+<li>International relations and carbon emissions</li>
+<li>Health, vulnerability and adaptation</li>
+<li>Policy and activism</li>
+<li>Human rights and indigenous people</li>
+</ul>
+<div id="fig-topics" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/parsons-2024/six_topic_plot.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Six topics (corpus) identified through topic modelling within the published papers, with the keywords appearing most frequently within each topic.
+</figcaption>
+</figure>
+</div>
+<p>We can also see how many documents belong to each topic over time (Figure&nbsp;2). Each document gets a score per topic, and may not belong <em>only</em> to one topic, but we can still reasonably map out the trends. It is also true that there were not many documents published on climate justice in the early years, so interpret the first decade with that in mind.</p>
+<div id="fig-gamma" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/parsons-2024/gamma_through_time.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The proportion of the literature belonging to a given topic over time.
+</figcaption>
+</figure>
+</div>
+<p>Topics 2 and 3 around sustainable development and international relations, respectively, make up a consistent, and substantial proportion of the literature. Smaller topics 1, 4, 5, and 6 have seen a small increase over time.</p>
+<p>I won’t comment a great deal in this summary on the interpretation of the results as the subject area is Meg’s expertise. I would not be able to do justice to the extensive work she did as the primary author (and of course co-authors Danielle and Johanna!) and qualitative analyst.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reproducible workflow
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To maintain a smooth workflow between me and collaborators, I host my analyses as a link on GitHub. The workflow is reproducible, and collaborators can see the latest results by following the same link:</p>
+<ul>
+<li>Here is the <a href="https://quinnasena.github.io/climate-justice-modelling/bib_analysis.html">whole workflow</a></li>
+<li>The code is available on my <a href="https://github.com/QuinnAsena/climate-justice-modelling">GitHub</a> and on <a href="https://doi.org/10.17608/k6.auckland.24539314.v1">Figshare</a></li>
+</ul>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>Climate Justice</category>
+  <category>Social Science</category>
+  <category>Topic Modelling</category>
+  <guid>https://quinnasena.github.io/quinn-asena-website/my-research-posts/parsons-2024.html</guid>
+  <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/parsons-2024/six_topic_plot.svg" medium="image" type="image/svg+xml"/>
+</item>
+</channel>
+</rss>
