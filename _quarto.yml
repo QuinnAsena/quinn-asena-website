@@ -70,9 +70,16 @@ website:
 
 format:
   html:
+    # Both modes share lux + styles.scss so the type, spacing and card system are
+    # defined once; styles-dark.scss only overrides colour. Quarto adds the toggle.
     theme:
-      - lux
-      - styles.scss
+      light:
+        - lux
+        - styles.scss
+      dark:
+        - lux
+        - styles.scss
+        - styles-dark.scss
     toc: true
     link-external-newwindow: true
 

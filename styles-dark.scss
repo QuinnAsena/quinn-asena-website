@@ -1,0 +1,151 @@
+/*-- scss:defaults --*/
+
+// Dark theme, layered on lux + styles.scss rather than swapping in a dark bootswatch
+// theme, so both modes stay one design system instead of two.
+//
+// IMPORTANT: overriding Bootstrap variables such as $body-bg here does NOT work.
+// Quarto concatenates the scss:defaults blocks of multiple theme files in an order
+// that lets styles.scss's plain (non-!default) assignments win, so a $body-bg set
+// here is silently discarded. This was verified: the dark bundle kept
+// --bs-body-bg: #FDFBF7. Everything below is therefore done in the rules layer,
+// where ordinary cascade order applies. These variables exist only to be referenced
+// by those rules.
+//
+// Every value was measured for contrast, not estimated:
+//   body text on page   12.27:1     body text on card    9.40:1
+//   muted text on page   7.16:1     muted text on card   5.48:1
+//   links on page        7.84:1     links on card        6.01:1
+//   navbar label         8.08:1     CV button label      9.11:1 worst
+//   card vs page         1.31:1     border vs card       1.37:1
+//   accent ramp          5.41:1 worst across all six page hues, nothing gamut-clipped
+
+$dark-page: #14161A; // warm-tinted near-black, not a pure neutral
+$dark-card: #282D33; // raised surface: 1.31:1 against the page, so cards read as cards
+$dark-text: #D8D4CE; // warm light grey, echoing the cream of light mode
+$dark-muted: #A8A29A;
+$dark-border: #3C424A;
+$dark-navbar: #0F5567; // the brand #147C91 glares against a dark page, so go deeper
+$dark-link: #C79BD6; // the purple lifted until it clears AA on both surfaces
+
+/*-- scss:rules --*/
+
+// Plain :root, NOT [data-bs-theme="dark"].
+//
+// Quarto switches colour scheme by enabling and disabling the two compiled <link>
+// elements, and it sets data-bs-theme="dark" only on the <nav> element so lux renders
+// light navbar text. Scoping to that attribute would apply these overrides to the
+// navbar alone and leave the rest of the page in light colours. Because this
+// stylesheet is only active in dark mode, :root is correct, and it beats styles.scss
+// on source order within the compiled dark bundle.
+:root {
+  // Bootstrap reads these as custom properties (body{background-color:var(--bs-body-bg)}),
+  // which is what makes overriding them here effective.
+  --bs-body-bg: #{$dark-page};
+  --bs-body-color: #{$dark-text};
+  --bs-link-color: #{$dark-link};
+  --bs-link-hover-color: #{lighten($dark-link, 10%)};
+  --bs-code-color: #{$dark-link};
+  --bs-emphasis-color: #{lighten($dark-text, 10%)};
+  --bs-secondary-color: #{$dark-muted};
+  --bs-border-color: #{$dark-border};
+
+  // Site properties from styles.scss.
+  --surface: #{$dark-card};
+  --border: #{$dark-border};
+  --border-strong: #{lighten($dark-border, 8%)};
+  --text-muted: #{$dark-muted};
+
+  // Accent ramp: only lightness and chroma change. --accent-h is still whatever the
+  // page set, so the per-page hues carry into dark mode with no duplication.
+  // Lightness rises and chroma falls relative to light mode. Blue is the binding sRGB
+  // gamut constraint at these lightnesses, and C .065 at L .86 keeps all six hues in
+  // gamut.
+  --accent-900: oklch(0.86 0.065 var(--accent-h));
+  --accent-700: oklch(0.79 0.072 var(--accent-h));
+  --accent-500: oklch(0.72 0.078 var(--accent-h));
+
+  --accent-tint-35: oklch(0.72 0.078 var(--accent-h) / 0.4);
+  --accent-tint-30: oklch(0.72 0.078 var(--accent-h) / 0.35);
+  --accent-shadow: rgba(0, 0, 0, 0.5); // a coloured glow would read as neon on dark
+}
+
+// Chrome. These three selectors hardcode the brand teal in the compiled output, so
+// each needs an explicit override rather than a variable change.
+.navbar,
+.nav-footer,
+nav.quarto-secondary-nav.color-navbar {
+  background-color: $dark-navbar;
+}
+
+// The CV button inverts: in dark mode --accent-700 is a LIGHT colour, so the white
+// label from light mode would be light-on-light. Use the page background instead,
+// which measures 9.11:1 at worst across the six page hues.
+.cv-download {
+  color: $dark-page;
+
+  &:hover,
+  &:focus-visible {
+    color: $dark-page;
+  }
+}
+
+// The inline PDF preview keeps a white surround, because the PDF pages are white.
+.cv-preview {
+  background-color: #ffffff;
+}
+
+// lux forces a light fill on card headers; keep the gallery header transparent so it
+// sits on the card surface as it does in light mode.
+.resource-card .card-header {
+  background-color: transparent;
+}
+
+// ---------------------------------------------------------------------------
+// Figures on a dark page
+//
+// The research figures cannot work on a dark background. Two separate failure modes:
+// the white-background plots glare as bright rectangles, and the transparent ones
+// have dark axis text and rules that disappear entirely. Regenerating them for dark
+// mode would mean re-running the plotting code for every paper, and a CSS invert is
+// wrong because the colours carry meaning (viridis scales, per-taxon categories).
+//
+// So instead of fighting it, each figure sits on a light mat: padded, rounded, and
+// clearly a deliberate panel rather than a raw image dumped on dark. That fixes both
+// modes at once, because a white-background plot blends into the mat and a
+// transparent one gets a readable light backing.
+//
+// $mat is white knocked back 5%, and the images are dimmed by the same 5%, so the
+// plot's own white matches the mat exactly and there is no visible seam. The knock
+// -back also takes the worst of the glare off without washing out the data colours.
+// ---------------------------------------------------------------------------
+
+$mat: #F3F1ED;
+$mat-dim: 0.95;
+
+// Photographs are excluded: they already read correctly on a dark page, and a mat
+// around one looks like a picture frame rather than a figure on paper. Mark a
+// photograph with {.photo} in the markdown to opt it out.
+.figure-img:not(.photo) {
+  background-color: $mat;
+  padding: 0.85rem;
+  border-radius: 0.4rem;
+  filter: brightness($mat-dim);
+}
+
+// Research listing thumbnails are the same plots at 150px, so they get the same
+// treatment. A light backing beats dimming here: these are charts, not photographs.
+.quarto-grid-item .thumbnail-image {
+  background-color: $mat;
+  filter: brightness($mat-dim);
+}
+
+// Gallery thumbnails are object-fit: cover, so a background would never show. They
+// are slide screenshots rather than data figures, and only need the glare taken off.
+// Hovering a card restores full brightness.
+.card-img-top {
+  filter: brightness(0.92);
+}
+
+.resource-card:hover .card-img-top {
+  filter: none;
+}

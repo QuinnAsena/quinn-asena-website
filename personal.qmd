@@ -13,13 +13,13 @@ include-in-header:
 I love being out in the field and help out wherever I can. I've been out sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, and flowering plants, and setting recorders and camera traps. Coring wetlands is the work closest to my own research. The sediment that comes up is the raw material for everything on the [Research](my-research.qmd) page.
 
 ::: {layout-ncol=2}
-![Biodiversity surveys and wetland coring in New Zealand](images/nz.jpg){group="fieldwork"}
+![Biodiversity surveys and wetland coring in New Zealand](images/nz.jpg){.photo group="fieldwork"}
 
-![Agricultural fieldwork in the US](images/arlington.jpeg){group="fieldwork"}
+![Agricultural fieldwork in the US](images/arlington.jpeg){.photo group="fieldwork"}
 :::
 
 ## Other interests
 
 In my spare time I have no shortage of hobbies: classical piano, art, rock climbing, and baking. The piano goes back furthest. I studied performance and composition before I studied ecology, and I still play most days.
 
-![Jackson Falls, US](images/rock-climbing.jpeg){group="interests"}
+![Jackson Falls, US](images/rock-climbing.jpeg){.photo group="interests"}

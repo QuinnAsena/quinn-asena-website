@@ -7,9 +7,22 @@ toc: true
 
 What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!). I'm also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?
 
-Much of my work looks beyond the observational record. Ecosystems change over centuries and millennia, far longer than we have been measuring them, so we reconstruct ecosystem histories and past climates from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and the drivers of ecological change.
+In the [Forest Futures Lab](https://forestfutureslab.org/) I work on process-based landscape simulations of boreal North America under multiple climate scenarios, and on mapping wildfire risk at continental scale using deep learning. This year, 2026, is seeing record breaking wildfires globally, and I am developing cutting edge methods to better understand and predict wildfire risk.
 
-The other half of the problem is the future. In the [Forest Futures Lab](https://forestfutureslab.org/) I work on process-based landscape simulations of boreal North America under multiple climate scenarios, and on mapping wildfire risk at continental scale using deep learning. Both directions ask the same question from opposite ends of the record: what makes an ecosystem shift, and can we see it coming?
+```{=html}
+<figure class="video-figure">
+  <video controls autoplay loop muted playsinline
+    width="1920" height="1440"
+    aria-label="Animated map of the wildfire record in Alaska from 1980 to 2020">
+    <source src="images/ak_fire_1980_2020.webm" type="video/webm">
+    <p>Your browser can't play this video.
+      <a href="images/ak_fire_1980_2020.webm">Download it instead</a>.</p>
+  </video>
+  <figcaption>Wildfire record in Alaska from 1980 to 2020.</figcaption>
+</figure>
+```
+
+Much of my previous work has looked beyond the observational record. Ecosystems change over centuries and millennia, far longer than we have been measuring them, so we reconstruct ecosystem histories and past climates from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and the drivers of ecological change.
 
 My PhD took a virtual ecology approach to a prior question: whether we can trust what the data tell us at all. It involved simulating ecosystems from population growth models with underlying threshold dynamics, then degrading those simulations to see how sampling and environmental processes change the inferences we would draw.
 

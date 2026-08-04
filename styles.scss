@@ -110,6 +110,14 @@ $measure: 70ch;
   // which would have been a latent bug once a dark theme existed.
   --border: #{darken($cream, 8%)};
   --border-strong: #{darken($cream, 12%)};
+
+  // Secondary text (card descriptions, meta lines, subtitles, h4). A property rather
+  // than $gray inline, so the dark theme flips it in one place.
+  --text-muted: #{$gray};
+
+  // Raised surface for cards. Also a property so the dark theme can flip it: the
+  // card mixin compiles to a literal otherwise.
+  --surface: #{$card-bg};
 }
 
 // Heading hierarchy: one hue, decreasing weight. h4 drops to body colour and
@@ -127,7 +135,7 @@ h3 {
 }
 
 h4 {
-  color: $gray;
+  color: var(--text-muted);
 }
 
 // Cap the measure on running prose only. Cards, captions, listings and tables
@@ -244,9 +252,37 @@ hr.section-divider {
   width: 100%;
   height: min(85vh, 1000px);
   margin-top: 1.5rem;
-  background-color: $card-bg;
+  background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 0.5rem;
+}
+
+// ---------------------------------------------------------------------------
+// Video figures
+//
+// aspect-ratio reserves the space before the video's metadata arrives, so the page
+// does not jump. Keep it in sync with the source dimensions if the file is replaced.
+// ---------------------------------------------------------------------------
+
+.video-figure {
+  margin: 1.5rem 0;
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
 }
 
 // Publication list on the research page. Each citation gets the same teal hairline
@@ -367,7 +403,7 @@ hr.section-divider {
 // ---------------------------------------------------------------------------
 
 @mixin card-surface {
-  background-color: $card-bg;
+  background-color: var(--surface);
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent-500);
   border-radius: 0.5rem;
@@ -411,7 +447,7 @@ hr.section-divider {
 
 // Journal / year line above a featured-work card title.
 .section-card-meta {
-  color: $gray;
+  color: var(--text-muted);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -426,7 +462,7 @@ hr.section-divider {
 }
 
 .section-card-desc {
-  color: $gray;
+  color: var(--text-muted);
   font-size: 0.92rem;
   line-height: 1.45;
 }
@@ -501,7 +537,7 @@ hr.section-divider {
 
   .listing-subtitle {
     display: block;
-    color: $gray;
+    color: var(--text-muted);
     font-size: 0.85rem;
   }
 
