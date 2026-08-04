@@ -12,7 +12,7 @@ listing:
     contents: workshops-lectures-posts/workshops-lectures.yml
 ---
 
-All my work is open-access and open-source. See all my resources on my [GitHub](https://github.com/QuinnAsena).
+Workshop and lecture material I have developed and taught, all open and free to reuse or adapt. Most come with a written walkthrough, slides, and the source repository, so they can be run without me. I am a [certified Carpentries instructor](https://carpentries.org/) and have run these at conferences, research bazaars, and universities.
 
 ::: {#gallery}
 :::

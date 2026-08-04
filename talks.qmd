@@ -12,7 +12,47 @@ listing:
     contents: talks-posts/talks.yml
 ---
 
-I present at multiple scientific conferences and workshops each year including at the American Geophysical Union (AGU 2022 and 2025), and the International Union for Quaternary Research (INQUA 2019 and 2023), where I hosted a session on [Data science and paleoecology: current intersections and advances](https://inquaroma2023.exordo.com/programme/session/240). Below are some of my recent talks at the Ecological Society of America (ESA).
+I present at scientific conferences and workshops several times a year, most regularly at the Ecological Society of America. Talks with slides or a recording available are below, followed by the full record.
+
+## Slides and recordings
 
 ::: {#talks-gallery}
+:::
+
+## All talks and conferences
+
+<!-- Source of record: CV-typst/csvs/positions.csv (section == workshops_conferences). Update both together. -->
+
+::: {.talk-record}
+- [2026]{.talk-year}
+  - **Methods in Ecology and Evolution**, virtual. Invited talk: *multinomialTS: a state-space approach for modelling community time series*. [Talk and workshop resources](https://quinnasena.github.io/multinomialTS-workshop-MEE/)
+  - **ESA**, Salt Lake City, UT. Speaker: [*Assessing climate-driven compositional shifts in boreal forests using iLand*](https://quinnasena.github.io/esa-2026/slides/slides.html#/title-slide)
+  - **Neotoma Outreach**, virtual. Talk: [*A virtual ecological approach to modelling uncertainties in palaeoecology*](https://www.youtube.com/watch?v=J-v0xkTIiNI). Workshop: [*Hands-on age-depth modelling using Bchron*](https://www.youtube.com/watch?v=yMNpRbNHz-w)
+- [2025]{.talk-year}
+  - **ESA**, Baltimore, MD. Speaker: [*Modelling palaeoecological datasets using a state-space approach: two case studies*](https://quinnasena.github.io/esa-2025/esa-2025-slides)
+  - **AGU**, New Orleans, LA. Poster: *Assessing climate-driven compositional shifts in boreal forests using iLand*
+  - **ResBaz** (Research Bazaar), Auckland and Madison. Workshop lead: [*Quarto for collaboration*](https://github.com/QuinnAsena/resbaz2022), ResBaz Aotearoa 2022–2024 and Madison, WI 2023. Organiser, ResBaz Aotearoa 2021
+- [2024]{.talk-year}
+  - **ESA**, Long Beach, CA. Speaker: *Hypothesis testing of the drivers of long-term ecological change in Michigan*. Workshop host: [*State-space methods for testing hypotheses about environmental drivers and biotic interactions*](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
+- [2023]{.talk-year}
+  - **INQUA**, Rome, Italy. Lead Convenor: [*Data science and palaeoecology: current intersections and advances*](https://inquaroma2023.exordo.com/programme/session/240)
+  - **ESA**, Portland, OR. Speaker: [*Modelling palaeoecological community data: a state-space approach*](https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide)
+- [2022]{.talk-year}
+  - **AGU**, Chicago, IL. Speaker: *Virtual ecological methods for assessing uncertainty in palaeoecological data using pseudoproxies*
+  - **AMQUA**, Madison, WI. Poster: *Virtual ecological methods for assessing uncertainty in palaeoecological data using pseudoproxies*
+  - **British Ecological Society**, Palaeo in R, virtual. Speaker: [*Virtual ecological methods for assessing uncertainty in palaeoecological data*](https://www.youtube.com/watch?v=z-aAIb7vkQo)
+- [2019]{.talk-year}
+  - **INQUA**, Dublin, Ireland. Speaker: *Pseudoproxy modelling for assessing statistical inferences*
+  - **Durham University**, Durham, UK. Invited speaker: *Modelling resilience in ecosystems*
+  - **Biological Heritage National Science Challenge**, University of Canterbury, Christchurch, NZ. Speaker on resilience in ecosystems (2017–2019)
+  - **Joint Graduate School**, University of Auckland. Speaker
+  - **Post-graduate Showcase**, University of Auckland. Speaker
+- [2018]{.talk-year}
+  - **EcoRe3** (PAGES), University of Utah. Speaker: *Modelling resilience in ecosystems*
+  - **International Swiss Climate Summer School**, University of Bern. Poster and participant; accredited course (3 ECTS)
+  - **Te Pūnaha Matatini Biomaths**, University of Auckland. Speaker
+- [2017]{.talk-year}
+  - **BIOGEOMON**, International Symposium on Ecosystem Behaviour, Czech Republic. Poster co-author
+- [2016]{.talk-year}
+  - **Sensors100**, University of York, UK. Poster
 :::

@@ -1,5 +1,5 @@
 ---
-title: Statistical analyses of community and palaeoecological time series to identify environmental drivers and biotic interactions
+title: Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions
 date: "2026-07-13"
 image: "images/asena-2024-c/story-counts.png"
 categories:
@@ -9,14 +9,11 @@ categories:
   - Ecostats
 ---
 
-We recently [published a new state-space modelling approach for analysing community time series data](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210x.70315). This model was developed during my postdoc at UW-Madison with Tony Ives and Jack Williams.
+This work is published in *Methods in Ecology and Evolution*: [Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions](https://doi.org/10.1111/2041-210x.70315) (Asena et al., 2026). The model was developed during my postdoc at UW–Madison with Tony Ives and Jack Williams, and is available as the [multinomialTS](https://github.com/QuinnAsena/multinomialTS) R package.
 
-A [blog post accompanying the publication](https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/) includes links to all the newest resources!
+A [blog post accompanying the publication](https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/) walks through the idea less formally, and I gave an invited talk on it for *Methods in Ecology and Evolution*. The [talk and workshop resources](https://quinnasena.github.io/multinomialTS-workshop-MEE/) are all open, and the recording goes up on the [MEE YouTube channel](https://www.youtube.com/@MethodsEcolEvol/videos).
 
-I gave a talk for Methods in Ecology and Evolution, and the recording will be available on the MEE [YouTube channel](https://www.youtube.com/@MethodsEcolEvol/videos) soon. The resources from the talk are [available at this repository](https://quinnasena.github.io/multinomialTS-workshop-MEE/).
-
-
-Below is an older post from when we were developing the model, kept here for context:
+Below is an earlier post from when we were developing the model, kept here for context:
 
 ## Post from 2024-12-01
 

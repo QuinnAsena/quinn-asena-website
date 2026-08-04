@@ -1,6 +1,16 @@
 
 ```{=html}
+<%
+  /* Tile fields: title, subtitle, href, code?, thumbnail?, alt?, publicationdate?
 
+     Each tile exposes ONE link to assistive tech: the title. The thumbnail link is a
+     duplicate of it, so it is aria-hidden and out of the tab order, and the image is
+     decorative (empty alt) unless a tile sets alt in its yml.
+
+     Quarto's EJS does not support hash-style template comments, and an HTML comment
+     here would be emitted into every card. Use a JS comment in a scriptlet like this
+     one, which compiles away. Never write a scriptlet close sequence in the text. */
+%>
 <% for (const item of items) { %>
 
 <h4><%- item.category %></h4>
@@ -25,9 +35,6 @@
       </small>
     </div>
     <% if (tile.thumbnail) { %>
-    <!-- Duplicate of the title link above: hidden from the accessibility tree and
-         removed from the tab order so each card exposes one link, not two. The
-         thumbnail is decorative by default; a tile may set alt in its .yml. -->
     <a href="<%- tile.href %>" aria-hidden="true" tabindex="-1">
       <img src="<%- tile.thumbnail %>" alt="<%- tile.alt || '' %>"
         loading="lazy" decoding="async" class="card-img-top"/>

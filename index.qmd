@@ -1,51 +1,70 @@
 ---
 title: "Quinn Asena"
 toc: false
-about:
-  template: trestles
-  image: images/profile_pic.jpg
-  image-width: 20em
-  links:
-    - text: LinkedIn
-      href: https://www.linkedin.com/in/quinn-asena-a394202a4/
-    - text: GitHub
-      href: https://github.com/QuinnAsena
-    - text: Email
-      href: mailto:asenaq@caryinstitute.org
-    - text: ORCID
-      href: https://orcid.org/0000-0002-9543-3988
 ---
 
-# Ecologist, data scientist, and many other things...
-
-I am an ecologist and data scientist interested in ecosystem dynamics, the mechanisms underlying change in ecosystems over time and space. My current research focuses on continental-scale wildfire risk mapping using deep learning methods, and boreal ecology using landscape simulation models. I am based at the [Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/science/research-support/quinn-asena) with Dr. Winslow Hansen in the [Forest Futures Lab](https://forestfutureslab.org/).
-
-My research background covers long-term ecological trajectories, ecosystem resilience, and developing statistical models to analyse community time series data. I have had the privilege of working with [George Perry](https://spatialecol.com/) and [Janet Wilmshurst](https://www.landcareresearch.co.nz/about-us/our-people/janet-wilmshurst) during my PhD at the University of Auckland, and with [Tony Ives](https://ives.labs.wisc.edu/people/) and [Jack Williams](https://williamspaleolab.github.io/people/) during my postdoc at the University of Wisconsin-Madison.
+```{=html}
+<div class="grid hero">
+  <div class="g-col-12 g-col-sm-4 hero-photo">
+    <img src="images/profile_pic.jpg" alt="Quinn Asena" width="800" height="600"/>
+  </div>
+  <div class="g-col-12 g-col-sm-8 hero-text">
+    <p class="hero-role">Data Scientist,
+      <a href="https://www.caryinstitute.org/science/research-support/quinn-asena">Cary Institute of Ecosystem Studies</a>
+    </p>
+    <p class="hero-lede">I study how and why ecosystems change over time and space, and
+      what those changes mean for the people who depend on them.</p>
+    <ul class="hero-tags">
+      <li>Wildfire risk mapping</li>
+      <li>Boreal forest dynamics</li>
+      <li>Palaeoecology</li>
+      <li>Statistical ecology</li>
+    </ul>
+    <p class="hero-links">
+      <a href="https://orcid.org/0000-0002-4086-460X">ORCID</a>
+      <a href="https://github.com/QuinnAsena">GitHub</a>
+      <a href="https://www.linkedin.com/in/quinn-asena-a394202a4/">LinkedIn</a>
+      <a href="mailto:asenaq@caryinstitute.org">Email</a>
+    </p>
+  </div>
+</div>
+```
 
 <hr class="section-divider">
+
+## Selected work
 
 ```{=html}
 <div class="grid section-cards">
 
-  <a class="section-card g-col-12 g-col-md-6" href="my-research.html">
-    <span class="section-card-title">Research</span>
-    <span class="section-card-desc">Plain-language summaries of my published work, from palaeoecology to wildfire risk.</span>
+  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024c.html">
+    <span class="section-card-meta">Methods in Ecology and Evolution &middot; 2026</span>
+    <span class="section-card-title">A state-space model for ecological count data</span>
+    <span class="section-card-desc">Estimating species interactions and driver&ndash;species
+      relationships from multinomial time series.</span>
   </a>
 
-  <a class="section-card g-col-12 g-col-md-6" href="talks.html">
-    <span class="section-card-title">Talks</span>
-    <span class="section-card-desc">Conference presentations and recorded talks, with slides and source.</span>
+  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024b.html">
+    <span class="section-card-meta">Climate of the Past &middot; 2026</span>
+    <span class="section-card-title">Information loss in palaeoecological data</span>
+    <span class="section-card-desc">Which sources of uncertainty matter most, and where
+      sampling effort is best spent.</span>
   </a>
 
-  <a class="section-card g-col-12 g-col-md-6" href="workshops-lectures.html">
-    <span class="section-card-title">Workshops &amp; Lectures</span>
-    <span class="section-card-desc">Open, hands-on teaching materials and walkthroughs.</span>
-  </a>
-
-  <a class="section-card g-col-12 g-col-md-6" href="packages-apps.html">
-    <span class="section-card-title">Packages &amp; Apps</span>
-    <span class="section-card-desc">R packages and interactive apps for modelling and visualisation.</span>
+  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024a.html">
+    <span class="section-card-meta">The Holocene &middot; 2024</span>
+    <span class="section-card-title">Is the past recoverable from the data?</span>
+    <span class="section-card-desc">A virtual ecology approach to testing what fossil
+      records can and cannot tell us.</span>
   </a>
 
 </div>
 ```
+
+[See all publications and research summaries →](my-research.qmd)
+
+<hr class="section-divider">
+
+## Explore
+
+{{< include _section-cards.qmd >}}

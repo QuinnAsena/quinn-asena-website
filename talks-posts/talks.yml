@@ -1,44 +1,37 @@
-- category: Talks
+- category: Conference slides
+  description: |
+    Slide decks from recent conference talks. Source repositories are linked where public.
   tiles:
-    - title: ESA 2026 talk
-      subtitle: Ecological Society of America.
+    - title: "ESA 2026: boreal forest shifts"
+      subtitle: Ecological Society of America, Salt Lake City, UT.
       href: https://quinnasena.github.io/esa-2026/slides/slides.html#/title-slide
-      code: https://quinnasena.github.io/esa-2026/slides/slides.html#/title-slide
       thumbnail: talks-posts/images/esa-2026.png
-    - title: ESA 2025 talk
-      subtitle: Ecological Society of America.
+    - title: "ESA 2025: state-space case studies"
+      subtitle: Ecological Society of America, Baltimore, MD.
       href: https://quinnasena.github.io/esa-2025/esa-2025-slides
       code: https://github.com/QuinnAsena/esa-2025
       thumbnail: talks-posts/images/esa-2025.png
-    - title: ESA 2024 talk
-      subtitle: Ecological Society of America.
+    - title: "ESA 2024: drivers of change in Michigan"
+      subtitle: Ecological Society of America, Long Beach, CA.
       href: https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide
       code: https://github.com/QuinnAsena/state-space-workhop-ESA/tree/main/slides
       thumbnail: talks-posts/images/esa-2024.png
-    - title: ESA 2023 talk
-      subtitle: Ecological Society of America.
+    - title: "ESA 2023: modelling community data"
+      subtitle: Ecological Society of America, Portland, OR.
       href: https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide
       code: https://github.com/QuinnAsena/esa-slides
       thumbnail: talks-posts/images/esa-2023.png
 
 - category: Recorded talks
+  description: |
+    Talks available to watch in full.
   tiles:
-    - title: Neotoma outreach talk 2026
-      subtitle: Neotoma
-      href: https://www.youtube.com/watch?v=J-v0xkTIiNI&t=1s
+    - title: Uncertainties in palaeoecology
+      subtitle: Neotoma Outreach, 2026.
+      href: https://www.youtube.com/watch?v=J-v0xkTIiNI
       thumbnail: talks-posts/images/neotoma_talk.jpg
-    - title: PalaeoSIG 2022
-      subtitle: British Ecological Society.
-      href: https://www.youtube.com/embed/z-aAIb7vkQo?si=RM0735zeLP0nMjlT
+    - title: Palaeo in R
+      subtitle: British Ecological Society PalaeoSIG, 2022.
+      href: https://www.youtube.com/watch?v=z-aAIb7vkQo
       code: https://github.com/QuinnAsena/palaeo_in_R_2022_talk_QA
       thumbnail: talks-posts/images/palaeosig.png
-
-# - category: Outreach
-#   tiles:
-#     - title: YorK Institute for Tropical Ecosystems (KITE)
-#       # subtitle: 
-#       href: https://www.youtube.com/watch?v=Htp0hVD-WYM
-#       # code: https://github.com/QuinnAsena/growth_lecture
-#       # thumbnail: articles/articles-html.png
-#       # categories:
-#       #   - R package

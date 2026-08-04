@@ -1,0 +1,29 @@
+```{=html}
+<div class="grid section-cards">
+
+  <a class="section-card g-col-12 g-col-md-6" href="my-research.html">
+    <span class="section-card-title">Research</span>
+    <span class="section-card-desc">Publications, with plain-language summaries of what
+      they found.</span>
+  </a>
+
+  <a class="section-card g-col-12 g-col-md-6" href="talks.html">
+    <span class="section-card-title">Talks</span>
+    <span class="section-card-desc">Slides, recordings, and a full record of conference
+      presentations.</span>
+  </a>
+
+  <a class="section-card g-col-12 g-col-md-6" href="workshops-lectures.html">
+    <span class="section-card-title">Teaching</span>
+    <span class="section-card-desc">Open, hands-on workshop materials and lecture
+      resources.</span>
+  </a>
+
+  <a class="section-card g-col-12 g-col-md-6" href="packages-apps.html">
+    <span class="section-card-title">Software</span>
+    <span class="section-card-desc">R packages and interactive apps for modelling and
+      visualisation.</span>
+  </a>
+
+</div>
+```

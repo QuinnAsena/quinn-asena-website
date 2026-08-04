@@ -1,29 +1,37 @@
 project:
   type: website
+  # The CV PDF is built from the Typst source in the CV-typst repo and copied here, so
+  # the link cannot break independently of this site. Update both together.
+  resources:
+    - cv/
 
 website:
   title: "Quinn Asena"
   # Required for absolute links in the RSS feed and on the 404 page, which can be
   # served from any URL depth and so cannot rely on relative paths.
   site-url: https://quinnasena.github.io/quinn-asena-website/
-  description: "Personal research website of Quinn Asena — ecologist and data scientist studying ecological dynamics, palaeoecology, and resilience."
+  description: "Quinn Asena, ecologist and data scientist. Wildfire risk mapping with deep learning, boreal forest dynamics under climate change, and statistical methods for long-term ecological change."
   favicon: favicon.ico
   google-analytics: "G-HT71J1MK87"
   navbar:
     toggle-position: right
     search: true
     left:
-      - href: about.qmd
-        text: About
+      # Labels are deliberately shorter than the filenames so the bar stays on one
+      # row. Filenames are unchanged, so existing URLs keep working.
       - href: my-research.qmd
         text: Research
       - href: talks.qmd
         text: Talks
       - href: workshops-lectures.qmd
-        text: Workshops & Lectures
+        text: Teaching
       - href: packages-apps.qmd
-        text: Packages & Apps
-      - href: https://quinnasena.github.io/CV-typst
+        text: Software
+      - href: about.qmd
+        text: About
+      - href: personal.qmd
+        text: Personal
+      - href: cv.qmd
         text: CV
     right:
       - icon: envelope
@@ -34,6 +42,8 @@ website:
         href: https://www.linkedin.com/in/quinn-asena-a394202a4/
       - icon: fingerprint
         menu:
+          - text: ORCID
+            href: https://orcid.org/0000-0002-4086-460X
           - text: Cary Institute of Ecosystem Studies
             href: https://www.caryinstitute.org/science/research-support/quinn-asena
           - text: Forest Futures lab
@@ -45,7 +55,8 @@ website:
           - text: Perry Lab
             href: https://spatialecol.com/
   page-footer:
-    left: "© 2026 Quinn Asena"
+    # No year: a hardcoded one silently goes stale every January.
+    left: "© Quinn Asena"
     right:
       - icon: envelope
         href: mailto:asenaq@caryinstitute.org

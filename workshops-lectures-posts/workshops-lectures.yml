@@ -24,9 +24,10 @@
 
 - category: Lectures
   description: |
-    First lecture I gave during my PhD. I will update this section with other teaching resources.
+    Lecture material, free to reuse and adapt.
   tiles:
     - title: Population growth
-      href: https://quinnasena.shinyapps.io/growth_app/
-      code: https://quinnasena.github.io/growth_lecture/pop_growth.html#/title-slide
+      subtitle: Lecture slides, with an accompanying interactive app.
+      href: https://quinnasena.github.io/growth_lecture/pop_growth.html#/title-slide
+      code: https://github.com/QuinnAsena/growth_lecture
       thumbnail: workshops-lectures-posts/images/pop-growth-lecture.png

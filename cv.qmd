@@ -1,0 +1,20 @@
+---
+title: "CV"
+toc: false
+---
+
+```{=html}
+<p class="cv-actions">
+  <a class="cv-download" href="cv/quinn-asena-cv.pdf" download>Download CV (PDF, 150 KB)</a>
+  <a class="cv-open" href="cv/quinn-asena-cv.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+</p>
+```
+
+Much of what's in the CV is also on this site, in a form that's quicker to browse: my [publications](my-research.qmd), the [full record of talks and conferences](talks.qmd), and my [positions, education, and teaching](about.qmd).
+
+```{=html}
+<object class="cv-preview" data="cv/quinn-asena-cv.pdf" type="application/pdf">
+  <p>Your browser can't display the PDF inline.
+    <a href="cv/quinn-asena-cv.pdf">Download it instead</a>.</p>
+</object>
+```

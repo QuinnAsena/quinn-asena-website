@@ -8,7 +8,7 @@
       categories:
         - R package
         - C++
-    - title: fishR
+    - title: fisheR
       subtitle: An R package for calculating Fisher Information.
       href: https://github.com/UoA-eResearch/fisheR
       categories:
@@ -19,11 +19,13 @@
   description: |
     I use apps and dashboards for teaching and visualisation tools.
   tiles:
-    - title: Population growth lecture with app
+    - title: Population growth app
+      subtitle: Interactive companion to the population growth lecture.
       href: https://quinnasena.shinyapps.io/growth_app/
       code: https://github.com/QuinnAsena/growth_lecture
       thumbnail: packages-apps-posts/images/pop-growth-lecture-app.png
     - title: Two population growth models
+      subtitle: Comparing exponential and logistic growth.
       href: https://quinnasena.shinyapps.io/r_logistic/
       code: https://github.com/QuinnAsena/r_logistic
       thumbnail: packages-apps-posts/images/pop-growth-app.png

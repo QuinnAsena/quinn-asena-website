@@ -12,7 +12,7 @@ listing:
     contents: packages-apps-posts/packages-apps.yml
 ---
 
-All my work is open-access and open-source. See all my resources on my [GitHub](https://github.com/QuinnAsena).
+Software that came out of my research and teaching: R packages implementing methods from the papers, and interactive apps I use to teach modelling concepts. Everything is open source. The full set is on my [GitHub](https://github.com/QuinnAsena).
 
 ::: {#gallery}
 :::

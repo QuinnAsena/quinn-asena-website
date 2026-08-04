@@ -3,7 +3,7 @@
 // Colors
 // Headings run a single-hue teal ramp (dark -> brand) so weight decreases
 // monotonically: 10.2:1 -> 6.9:1 -> 4.7:1 contrast on $cream. All pass WCAG AA.
-$teal-900: #0A4552; // h1 — heaviest
+$teal-900: #0A4552; // h1, heaviest
 $teal-700: #106074; // h2
 $teal: #147C91; // h3 + brand (navbar, footer, accents)
 $cream: #FDFBF7;
@@ -11,7 +11,7 @@ $gray: #64605f;
 $purple: #9158A2;
 $card-bg: #ffffff;
 
-// Base document colors — single source of truth (no overrides in _quarto.yml)
+// Base document colors: single source of truth (no overrides in _quarto.yml)
 $navbar-bg: $teal;
 $navbar-fg: $cream;
 $navbar-hl: #ffffff;
@@ -35,7 +35,7 @@ $measure: 70ch;
 
 /*-- scss:rules --*/
 
-// Heading hierarchy — one hue, decreasing weight. h4 drops to body colour and
+// Heading hierarchy: one hue, decreasing weight. h4 drops to body colour and
 // relies on size/weight alone, marking the end of the coloured levels.
 h1 {
   color: $teal-900;
@@ -121,6 +121,161 @@ hr.section-divider {
 }
 
 // ---------------------------------------------------------------------------
+// CV page
+// ---------------------------------------------------------------------------
+
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+  max-width: none;
+}
+
+.cv-download {
+  display: inline-block;
+  padding: 0.55rem 1.15rem;
+  background-color: $teal-700;
+  border: 1px solid $teal-700;
+  border-radius: 0.4rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $teal-900;
+    border-color: $teal-900;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+.cv-open {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+// Inline preview. Tall enough to be useful on a laptop, capped so it never exceeds
+// the viewport, and it degrades to a download link where inline PDF is unsupported.
+.cv-preview {
+  width: 100%;
+  height: min(85vh, 1000px);
+  margin-top: 1.5rem;
+  background-color: $card-bg;
+  border: 1px solid darken($cream, 8%);
+  border-radius: 0.5rem;
+}
+
+// Publication list on the research page. Each citation gets the same teal hairline
+// used on the cards, so the list reads as part of the same system.
+.publications p {
+  margin-bottom: 1rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid rgba($teal, 0.3);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+// Chronological talk record: a tight two-level list, years as the outer level.
+.talk-record {
+  > ul {
+    padding-left: 0;
+    list-style: none;
+
+    > li {
+      margin-bottom: 1.1rem;
+    }
+  }
+
+  .talk-year {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: $teal-700;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  ul ul {
+    margin-bottom: 0;
+    padding-left: 0.9rem;
+    border-left: 2px solid rgba($teal, 0.3);
+    list-style: none;
+
+    li {
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Homepage hero
+// ---------------------------------------------------------------------------
+
+.hero {
+  align-items: center;
+  margin-top: 0.5rem;
+  row-gap: 1.25rem;
+
+  // The measure cap on running prose must not apply inside the hero.
+  p {
+    max-width: none;
+  }
+}
+
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid darken($cream, 8%);
+}
+
+.hero-role {
+  margin-bottom: 0.5rem;
+  color: $teal-700;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.hero-lede {
+  margin-bottom: 0.9rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+// Research-area chips. Same pill idiom as the research listing categories.
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.15rem 0.6rem;
+    border: 1px solid rgba($teal, 0.35);
+    border-radius: 1rem;
+    color: $teal-700;
+    font-size: 0.78rem;
+  }
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+// ---------------------------------------------------------------------------
 // Cards
 //
 // One surface treatment shared by all three card types on the site, so the
@@ -171,6 +326,15 @@ hr.section-divider {
   &:focus-visible .section-card-title {
     color: $teal-900;
   }
+}
+
+// Journal / year line above a featured-work card title.
+.section-card-meta {
+  color: $gray;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .section-card-title {

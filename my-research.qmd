@@ -9,6 +9,36 @@ listing:
     - "date desc"
 ---
 
-My research has largely focused on ecological change over time. I'm interested in expanding to how ecosystems change over space and what the human implications of ecological change are. Feel free to get in touch if you want to chat about research! Here are some simple summaries of my published work, and some sneak previews of work that is about to be published.
+My research is about ecological change: what drives it, how fast it happens, and how confidently we can detect it. That has taken me from fossil pollen records spanning millennia to continental-scale simulations of boreal forests under future climates.
 
-If you require access to any of the full articles, don't hesitate to contact me.
+If you can't access any of the full articles, [get in touch](mailto:asenaq@caryinstitute.org) and I'll send you a copy. Everything I write is also open on [GitHub](https://github.com/QuinnAsena).
+
+## Publications
+
+<!-- Source of record: CV-typst/csvs/publications.csv. Update both together. -->
+
+::: {.publications}
+**2026** · **Asena, Q.**, Williams, J., Johnson, J., Shuman, B., Stefanova, V., Ives, A. [Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions](https://doi.org/10.1111/2041-210x.70315). *Methods in Ecology and Evolution.* [Read the summary →](my-research-posts/asena-2024c.qmd)
+
+**2026** · **Asena, Q.**, Perry, G.L., Wilmshurst, J. [Information loss in palaeoecological data from process and observer error](https://doi.org/10.5194/cp-22-783-2026). *Climate of the Past.* [Read the summary →](my-research-posts/asena-2024b.qmd)
+
+**2025** · Lee, F., Bellvé, A.M., Alena, H., **Asena, Q.**, Perry, G.L. [Using population viability analysis and fossil records to inform the conservation of pateke (*Anas chlorotis*)](http://dx.doi.org/10.20417/nzjecol.49.3585). *New Zealand Journal of Ecology.*
+
+**2024** · **Asena, Q.**, Perry, G.L., Wilmshurst, J. [Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data](https://doi.org/10.1177/09596836241247304). *The Holocene.* [Read the summary →](my-research-posts/asena-2024a.qmd)
+
+**2024** · Parsons, M., **Asena, Q.**, Johnson, D., Nalau, J. [A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward](https://doi.org/10.1016/j.crm.2024.100593). *Climate Risk Management.* [Code repository](https://figshare.com/s/1906f8088eb05bffc5b3) · [Read the summary →](my-research-posts/parsons-2024.qmd)
+
+**2019** · Courtney-Mustaphi, C.J., Brahney, J., Aquino-López, M.A., Goring, S., Orton, K., Noronha, A., Czaplewski, J., **Asena, Q.**, Paton, S. [Guidelines for Reporting and Archiving <sup>210</sup>Pb Sediment Chronologies to Improve Fidelity and Extend Data Lifecycle](https://doi.org/10.1016/j.quageo.2019.04.003). *Quaternary Geochronology.*
+
+**2019** · Heinemeyer, A., Burn, W.L., **Asena, Q.**, Jones, A., Ashby, M. [Response to comment on Peatland carbon stocks and burn history](https://doi.org/10.1002/geo2.78). *GEO: Geography and Environment.*
+
+**2018** · Heinemeyer, A., **Asena, Q.**, Burn, W.L., Jones, A. [Peatland carbon stocks and burn history: Blanket bog peat core evidence highlights charcoal impacts on peat physical properties and long-term carbon storage](https://doi.org/10.1002/geo2.63). *GEO: Geography and Environment.*
+
+**2018** · Simpkins, C.E., Lee, F., Powers, B.F., Anderson, S., **Asena, Q.**, Brock, J.M.R., Perry, G.L. [Population viability analyses in New Zealand: a review](https://newzealandecology.org/nzje/3343). *New Zealand Journal of Ecology.*
+
+**2018** · Hamilton, R., Brussel, T., **Asena, Q.**, Bruel, R., Marcisz, K., Słowiński, M., Morris, J. [Assessing the links between resilience, disturbance, and functional traits in paleoecological datasets](https://doi.org/10.22498/pages.26.2.87). *Past Global Changes Magazine* 26(2), 87.
+:::
+
+## Research summaries
+
+Longer, plain-language write-ups of selected papers: what the question was, and what we found.
