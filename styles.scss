@@ -260,6 +260,16 @@ hr.section-divider {
     font-size: 0.85rem;
   }
 
+  // A fixed thumbnail box reserves space before the image loads, so the grid no
+  // longer reflows on arrival, and it evens out the mixed source aspect ratios
+  // into a consistent card height.
+  .card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .source-code {
     color: $teal;
 

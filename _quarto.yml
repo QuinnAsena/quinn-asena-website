@@ -3,6 +3,9 @@ project:
 
 website:
   title: "Quinn Asena"
+  # Required for absolute links in the RSS feed and on the 404 page, which can be
+  # served from any URL depth and so cannot rely on relative paths.
+  site-url: https://quinnasena.github.io/quinn-asena-website/
   description: "Personal research website of Quinn Asena — ecologist and data scientist studying ecological dynamics, palaeoecology, and resilience."
   favicon: favicon.ico
   google-analytics: "G-HT71J1MK87"

@@ -1,0 +1,37 @@
+---
+title: "Page not found"
+toc: false
+search: false
+---
+
+That page doesn't exist — it may have moved, or the link may be out of date.
+
+Try one of these instead:
+
+```{=html}
+<div class="grid section-cards">
+
+  <a class="section-card g-col-12 g-col-md-6" href="index.html">
+    <span class="section-card-title">Home</span>
+    <span class="section-card-desc">Back to the start.</span>
+  </a>
+
+  <a class="section-card g-col-12 g-col-md-6" href="my-research.html">
+    <span class="section-card-title">Research</span>
+    <span class="section-card-desc">Plain-language summaries of my published work.</span>
+  </a>
+
+  <a class="section-card g-col-12 g-col-md-6" href="talks.html">
+    <span class="section-card-title">Talks</span>
+    <span class="section-card-desc">Conference presentations and recorded talks.</span>
+  </a>
+
+  <a class="section-card g-col-12 g-col-md-6" href="workshops-lectures.html">
+    <span class="section-card-title">Workshops &amp; Lectures</span>
+    <span class="section-card-desc">Open, hands-on teaching materials.</span>
+  </a>
+
+</div>
+```
+
+If you think something is broken here, [let me know](mailto:asenaq@caryinstitute.org).

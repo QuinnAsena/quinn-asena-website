@@ -1,9 +1,10 @@
 ---
 title: "My Research"
-listing: 
+listing:
   contents: my-research-posts/*.qmd
   categories: true
   type: grid
+  feed: true
   sort:
     - "date desc"
 ---

@@ -15,17 +15,22 @@
       <small class="card-text inline-block">
         <a href="<%- tile.href %>" class="listing-title"><%= tile.title %></a>
         <% if (tile.code) { %> 
-        <a href="<%- tile.code %>" title="View source code" 
+        <a href="<%- tile.code %>" title="View source code"
+          aria-label="View source code for <%- tile.title %>"
           class="source-code card-text float-end inline-block">
-          <i class="bi-code-slash"></i>
+          <i class="bi-code-slash" aria-hidden="true"></i>
         </a>
         <% } %>
         <span class="text-muted listing-subtitle"><%= tile.subtitle %></span>
       </small>
     </div>
     <% if (tile.thumbnail) { %>
-    <a href="<%- tile.href %>">
-      <img src="<%- tile.thumbnail %>" alt="<%- tile.subtitle %>" class="card-img-top"/>
+    <!-- Duplicate of the title link above: hidden from the accessibility tree and
+         removed from the tab order so each card exposes one link, not two. The
+         thumbnail is decorative by default; a tile may set alt in its .yml. -->
+    <a href="<%- tile.href %>" aria-hidden="true" tabindex="-1">
+      <img src="<%- tile.thumbnail %>" alt="<%- tile.alt || '' %>"
+        loading="lazy" decoding="async" class="card-img-top"/>
     </a>
     <% } %>
     
