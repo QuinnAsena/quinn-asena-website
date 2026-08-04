@@ -1,5 +1,9 @@
 ---
 title: "Talks"
+# Amber, sampled from B_dis.png.
+include-in-header:
+  text: |
+    <style>:root { --accent-h: 60; }</style>
 format:
   html:
     toc: false

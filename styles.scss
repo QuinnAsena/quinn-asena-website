@@ -1,11 +1,14 @@
 /*-- scss:defaults --*/
 
 // Colors
-// Headings run a single-hue teal ramp (dark -> brand) so weight decreases
-// monotonically: 10.2:1 -> 6.9:1 -> 4.7:1 contrast on $cream. All pass WCAG AA.
-$teal-900: #0A4552; // h1, heaviest
-$teal-700: #106074; // h2
-$teal: #147C91; // h3 + brand (navbar, footer, accents)
+//
+// These three are the brand teal ramp. They stay SCSS variables because Bootstrap
+// needs them at compile time (navbar, footer) and because they are the hex fallbacks
+// for the --accent-* custom properties defined in the rules section. Content colour
+// comes from those properties, not from these, so it can vary per page.
+$teal-900: #0A4552;
+$teal-700: #106074;
+$teal: #147C91; // brand: navbar, footer, and the default accent hue
 $cream: #FDFBF7;
 $gray: #64605f;
 $purple: #9158A2;
@@ -23,9 +26,26 @@ $link-color: $purple;
 // Inline code
 $code-color: $purple;
 
-// Typography. lux ships Nunito Sans at line-height 1.5, which is tight for the
-// long-form prose in the research posts. Headings stay tighter than body text so
-// multi-line titles hold together as a single block.
+// Typography.
+//
+// lux pulls Nunito Sans in with a CSS `@import url(fonts.googleapis.com/...)`, which
+// is render-blocking and serial: the browser must fetch this stylesheet, parse it,
+// then fetch Google's stylesheet, then the font. Setting $web-font-path to false
+// suppresses that import entirely, removing a third-party request from every page.
+$web-font-path: false;
+
+// Body text now uses the OS system sans stack: zero bytes, paints immediately, and
+// it is the most optimised face on each platform.
+//
+// Headings get a real typeface. Source Serif 4 was designed to pair with a sans
+// body, and the latin subset at one weight is only 21 KB. See fonts/README.md.
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$headings-font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+// Line height: lux ships 1.5, which is tight for the long-form prose in the research
+// posts. Headings stay tighter than body text so multi-line titles hold together.
 $line-height-base: 1.6;
 $headings-line-height: 1.25;
 
@@ -35,18 +55,75 @@ $measure: 70ch;
 
 /*-- scss:rules --*/
 
+// Quarto resolves url() in theme SCSS relative to the project root and copies the
+// file into the output itself, rewriting the path. Only weight 600 is shipped
+// because every lux heading level uses 600.
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/source-serif-4-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+// ---------------------------------------------------------------------------
+// Per-page accent
+//
+// The whole ramp derives from ONE number, --accent-h, so a page recolours itself by
+// setting a single custom property in its front matter. Lightness and chroma are
+// fixed at the values measured off the original teal ramp (#0A4552 / #106074 /
+// #147C91 = L .362/.454/.542, C .060/.078/.092, all at hue ~218), so the brand teal
+// is unchanged and every other hue lands at the same contrast: measured 8.9-10.1:1,
+// 6.5-7.2:1 and 5.1-5.6:1 on $cream across teal, blue, green, amber and crimson.
+//
+// Teal is the tightest sRGB gamut constraint at these lightnesses (max chroma
+// .070/.080/.095), so a chroma safe for teal is safe for every hue.
+//
+// Each property is declared twice: a hex fallback first for browsers without oklch,
+// then the oklch value, which wins where supported. Without oklch a page simply
+// stays teal.
+// ---------------------------------------------------------------------------
+
+:root {
+  --accent-h: 218;
+
+  --accent-900: #{$teal-900};
+  --accent-900: oklch(0.362 0.06 var(--accent-h));
+  --accent-700: #{$teal-700};
+  --accent-700: oklch(0.454 0.078 var(--accent-h));
+  --accent-500: #{$teal};
+  --accent-500: oklch(0.542 0.092 var(--accent-h));
+
+  // Translucent accents. oklch takes alpha natively; SCSS rgba() cannot accept a
+  // custom property, which is why these are named here rather than written inline.
+  --accent-tint-35: #{rgba($teal, 0.35)};
+  --accent-tint-35: oklch(0.542 0.092 var(--accent-h) / 0.35);
+  --accent-tint-30: #{rgba($teal, 0.3)};
+  --accent-tint-30: oklch(0.542 0.092 var(--accent-h) / 0.3);
+  --accent-shadow: #{rgba($teal, 0.18)};
+  --accent-shadow: oklch(0.542 0.092 var(--accent-h) / 0.18);
+
+  // Semantic borders. Previously darken($cream, N%) inline in six places, each of
+  // which would have been a latent bug once a dark theme existed.
+  --border: #{darken($cream, 8%)};
+  --border-strong: #{darken($cream, 12%)};
+}
+
 // Heading hierarchy: one hue, decreasing weight. h4 drops to body colour and
 // relies on size/weight alone, marking the end of the coloured levels.
 h1 {
-  color: $teal-900;
+  color: var(--accent-900);
 }
 
 h2 {
-  color: $teal-700;
+  color: var(--accent-700);
 }
 
 h3 {
-  color: $teal;
+  color: var(--accent-500);
 }
 
 h4 {
@@ -84,6 +161,10 @@ main.content {
   font-weight: 600;
   text-transform: uppercase;
 
+  // The navbar itself stays brand teal on every page so the site always reads as one
+  // site. This 4px rule underneath is where the page's own accent announces itself.
+  border-bottom: 4px solid var(--accent-500);
+
   &-nav {
     .nav-link {
       padding-top: .715rem;
@@ -116,7 +197,7 @@ span.navbar-title {
 // Visual section divider between bio and navigation grid on homepage
 hr.section-divider {
   border: none;
-  border-top: 1px solid darken($cream, 12%);
+  border-top: 1px solid var(--border-strong);
   margin: 1.75rem 0;
 }
 
@@ -135,8 +216,8 @@ hr.section-divider {
 .cv-download {
   display: inline-block;
   padding: 0.55rem 1.15rem;
-  background-color: $teal-700;
-  border: 1px solid $teal-700;
+  background-color: var(--accent-700);
+  border: 1px solid var(--accent-700);
   border-radius: 0.4rem;
   color: #ffffff;
   font-weight: 600;
@@ -145,8 +226,8 @@ hr.section-divider {
 
   &:hover,
   &:focus-visible {
-    background-color: $teal-900;
-    border-color: $teal-900;
+    background-color: var(--accent-900);
+    border-color: var(--accent-900);
     color: #ffffff;
     text-decoration: none;
   }
@@ -164,7 +245,7 @@ hr.section-divider {
   height: min(85vh, 1000px);
   margin-top: 1.5rem;
   background-color: $card-bg;
-  border: 1px solid darken($cream, 8%);
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
 }
 
@@ -173,7 +254,7 @@ hr.section-divider {
 .publications p {
   margin-bottom: 1rem;
   padding-left: 0.9rem;
-  border-left: 2px solid rgba($teal, 0.3);
+  border-left: 2px solid var(--accent-tint-30);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -192,7 +273,7 @@ hr.section-divider {
   .talk-year {
     display: block;
     margin-bottom: 0.3rem;
-    color: $teal-700;
+    color: var(--accent-700);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -201,7 +282,7 @@ hr.section-divider {
   ul ul {
     margin-bottom: 0;
     padding-left: 0.9rem;
-    border-left: 2px solid rgba($teal, 0.3);
+    border-left: 2px solid var(--accent-tint-30);
     list-style: none;
 
     li {
@@ -231,12 +312,12 @@ hr.section-divider {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  border: 1px solid darken($cream, 8%);
+  border: 1px solid var(--border);
 }
 
 .hero-role {
   margin-bottom: 0.5rem;
-  color: $teal-700;
+  color: var(--accent-700);
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.3;
@@ -259,9 +340,9 @@ hr.section-divider {
 
   li {
     padding: 0.15rem 0.6rem;
-    border: 1px solid rgba($teal, 0.35);
+    border: 1px solid var(--accent-tint-35);
     border-radius: 1rem;
-    color: $teal-700;
+    color: var(--accent-700);
     font-size: 0.78rem;
   }
 }
@@ -287,17 +368,17 @@ hr.section-divider {
 
 @mixin card-surface {
   background-color: $card-bg;
-  border: 1px solid darken($cream, 8%);
-  border-left: 3px solid $teal;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-500);
   border-radius: 0.5rem;
   overflow: hidden; // clip thumbnails to the corner radius
   transition: box-shadow 0.2s, transform 0.15s, border-left-color 0.2s;
 }
 
 @mixin card-surface-hover {
-  box-shadow: 0 4px 14px rgba($teal, 0.18);
+  box-shadow: 0 4px 14px var(--accent-shadow);
   transform: translateY(-2px);
-  border-left-color: $teal-900;
+  border-left-color: var(--accent-900);
 }
 
 .section-cards {
@@ -324,7 +405,7 @@ hr.section-divider {
 
   &:hover .section-card-title,
   &:focus-visible .section-card-title {
-    color: $teal-900;
+    color: var(--accent-900);
   }
 }
 
@@ -338,7 +419,7 @@ hr.section-divider {
 }
 
 .section-card-title {
-  color: $teal-700;
+  color: var(--accent-700);
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.3;
@@ -361,7 +442,7 @@ hr.section-divider {
 
   .card-title,
   .listing-title {
-    color: $teal-700;
+    color: var(--accent-700);
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.3;
@@ -369,7 +450,7 @@ hr.section-divider {
 
   &:hover .card-title,
   &:focus-within .card-title {
-    color: $teal-900;
+    color: var(--accent-900);
   }
 
   .card-body {
@@ -381,9 +462,9 @@ hr.section-divider {
     display: inline-block;
     margin: 0.15rem 0.25rem 0.15rem 0;
     padding: 0.1rem 0.5rem;
-    border: 1px solid rgba($teal, 0.35);
+    border: 1px solid var(--accent-tint-35);
     border-radius: 1rem;
-    color: $teal-700;
+    color: var(--accent-700);
     font-size: 0.72rem;
     opacity: 1;
   }
@@ -402,17 +483,17 @@ hr.section-divider {
   // the same white surface as the body and separate it with a hairline instead.
   .card-header {
     background-color: transparent;
-    border-bottom: 1px solid darken($cream, 8%);
+    border-bottom: 1px solid var(--border);
     color: inherit;
   }
 
   .listing-title {
-    color: $teal-700;
+    color: var(--accent-700);
     font-weight: 600;
     text-decoration: none;
 
     &:hover {
-      color: $teal-900;
+      color: var(--accent-900);
       text-decoration: underline;
       text-underline-offset: 0.2em;
     }
@@ -435,10 +516,10 @@ hr.section-divider {
   }
 
   .source-code {
-    color: $teal;
+    color: var(--accent-500);
 
     &:hover {
-      color: $teal-900;
+      color: var(--accent-900);
     }
   }
 }

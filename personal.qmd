@@ -2,6 +2,10 @@
 title: "Personal"
 toc: true
 lightbox: true
+# Purple, matching the site's long-standing link colour (#9158A2, hue 318).
+include-in-header:
+  text: |
+    <style>:root { --accent-h: 320; }</style>
 ---
 
 ## Fieldwork

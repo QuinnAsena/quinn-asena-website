@@ -4,6 +4,9 @@ project:
   # the link cannot break independently of this site. Update both together.
   resources:
     - cv/
+    # Only the licence: Quarto already copies the woff2 itself as a CSS dependency,
+    # so listing all of fonts/ here would ship the font twice.
+    - fonts/OFL.txt
 
 website:
   title: "Quinn Asena"

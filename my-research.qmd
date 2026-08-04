@@ -1,5 +1,9 @@
 ---
 title: "My Research"
+# Blue, sampled from the Fisher-information figures in these papers.
+include-in-header:
+  text: |
+    <style>:root { --accent-h: 255; }</style>
 listing:
   contents: my-research-posts/*.qmd
   categories: true

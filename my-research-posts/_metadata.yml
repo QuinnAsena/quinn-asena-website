@@ -1,0 +1,5 @@
+# Directory-level metadata: Quarto applies this to every document in this folder, so
+# the posts inherit the Research page's blue accent without repeating it in each file.
+include-in-header:
+  text: |
+    <style>:root { --accent-h: 255; }</style>

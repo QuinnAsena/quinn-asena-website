@@ -1,5 +1,9 @@
 ---
 title: "Packages and Apps"
+# Crimson, sampled from archive_half_half_walk_lin.png.
+include-in-header:
+  text: |
+    <style>:root { --accent-h: 25; }</style>
 format:
   html:
     toc: false
