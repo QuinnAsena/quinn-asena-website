@@ -13,7 +13,7 @@ Professionally, I am an ecologist with borderline data-scientist disorder. In my
 
 ## Art
 
-Occasionally dabble in art...
+Occasionally dabble in art... Click on any image for slideshow with more photos.
 
 ::: {.photo-grid}
 ![Ink art mix](images/art-mix.jpg){.photo group="art"}
@@ -38,7 +38,7 @@ Occasionally dabble in art...
 
 ## Travel
 
-Lots of travel...
+Lots of travel... More photos in slideshow.
 
 ::: {.photo-grid}
 ![Iceland, where glacier meets ocean](images/travel-iceland-icebeach-ice.jpg){.photo group="travel"}
@@ -75,17 +75,19 @@ Lots of travel...
 
 ![Upstate New York](images/travel-upstate-ny.jpg){.photo group="travel"}
 
-![Bubble Lake](images/travel-bubble-lake.jpg){.photo group="travel"}
+![Madison, US frozen lake](images/travel-log-lake.jpg){.photo group="travel"}
 
-![Lake and log](images/travel-log-lake.jpg){.photo group="travel"}
+![Madison, US lake](images/travel-log-lake.jpg){.photo group="travel"}
 
-![Canoeing](images/travel-kemp-canoe.jpg){.photo group="travel"}
+![Canoeing at Kemp research station](images/travel-kemp-canoe.jpg){.photo group="travel"}
 
 ![South of France](images/travel-sfrance.jpg){.photo group="travel"}
 
-![Not a bear](images/travel-notabear.jpg){.photo group="travel"}
+![That's not a bear](images/travel-notabear.jpg){.photo group="travel"}
 
 ![Mushroom](images/travel-mushroom.jpg){.photo group="travel"}
+
+![Governor Dodge](images/travel-gov-dodge.jpg){.photo group="travel"}
 :::
 
 
