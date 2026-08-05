@@ -86,14 +86,17 @@ format:
   html:
     # Both modes share lux + styles.scss so the type, spacing and card system are
     # defined once; styles-dark.scss only overrides colour. Quarto adds the toggle.
+    #
+    # dark is listed first, which makes it the default for a first-time visitor.
+    # Returning visitors keep whatever they last chose, which Quarto stores locally.
     theme:
-      light:
-        - lux
-        - styles.scss
       dark:
         - lux
         - styles.scss
         - styles-dark.scss
+      light:
+        - lux
+        - styles.scss
     toc: true
     link-external-newwindow: true
 

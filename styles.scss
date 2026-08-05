@@ -212,6 +212,32 @@ span.navbar-title {
   text-underline-offset: 0.25em;
 }
 
+// Label the colour-scheme toggle. On its own the little switch icon is easy to miss
+// among the social icons, and nothing indicates what it does.
+//
+// Quarto adds .alternate to this control whenever the DARK stylesheet is active. That
+// is true regardless of which theme is the default: dark is always the "alternate"
+// sheet, layered over light, and making it the default just means the page starts
+// with the alternate applied. So .alternate here means "dark is showing".
+//
+// The label names the mode you are switching TO, which is the convention most toggles
+// follow: it reads "Dark" while you are in light mode, and "Light" while in dark.
+.quarto-color-scheme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  &::after {
+    content: "Dark";
+    font-size: $font-size-sm;
+    font-weight: 600;
+  }
+
+  &.alternate::after {
+    content: "Light";
+  }
+}
+
 // Visual section divider between bio and navigation grid on homepage
 hr.section-divider {
   border: none;
@@ -496,16 +522,25 @@ hr.section-divider {
     letter-spacing: 0.06em;
   }
 
+  // Individual talks keep their bullets. Only the outer level (the years) is
+  // bulletless, since a bullet beside a year heading reads as noise.
+  //
+  // padding-left has to clear both the border and the marker: list markers render
+  // inside the padding box, so at the old 0.9rem they sat on top of the border.
   ul ul {
     margin-bottom: 0;
-    padding-left: 0.9rem;
+    padding-left: 2rem;
     border-left: 2px solid var(--brand-tint-30);
-    list-style: none;
+    list-style: disc;
 
     li {
       margin-bottom: 0.35rem;
       font-size: 0.95rem;
       line-height: 1.5;
+
+      &::marker {
+        color: var(--brand-500);
+      }
     }
   }
 }

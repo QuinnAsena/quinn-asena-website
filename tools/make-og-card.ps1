@@ -19,7 +19,7 @@ $role = "Ecologist and data scientist"
 # for 3 lines; the script warns if it needs more.
 $lede = @(
   "Investigating ecological dynamics in the past, present and future",
-  "with statistical and process-based modelling, deep learning",
+  "with statistical and process-based modelling, deep learning,",
   "and continental-scale simulation."
 )
 
