@@ -222,21 +222,88 @@ hr.section-divider {
 // ---------------------------------------------------------------------------
 // Stratigraphy rule
 //
-// The section divider, drawn as stacked sediment strata. It references lake cores,
-// which are the actual object of the research, and it recurs on every page as the
-// site's one recurring motif. Inline SVG rather than a background-image data URI,
-// because a data URI cannot reference a CSS custom property, and the fill has to
-// follow the theme. See _strata.qmd.
+// The section divider: a single undulating line, echoing a stratum boundary in a
+// sediment core. Inline SVG rather than a background-image data URI, because a data
+// URI cannot reference a CSS custom property and the colour has to follow the theme.
+// See _strata.qmd.
+//
+// Stroked rather than filled, so the thickness is uniform along the whole line.
+//
+// Deliberately NO viewBox. Quarto's HTML post-processing lowercases attribute names,
+// and SVG attributes are case-sensitive, so a camelCase viewBox arrives in the output
+// as "viewbox" and is silently ignored. Instead the path is drawn at 1:1 in user units
+// and runs on for 3000 of them, so it fills any realistic column width and is simply
+// clipped at the edge. A side benefit: the wave keeps a constant period instead of
+// stretching with the viewport.
 // ---------------------------------------------------------------------------
 
 .strata {
   display: block;
   width: 100%;
-  height: 13px;
-  margin: 2rem 0 1.5rem;
+  height: 8px;
+  margin: 2.25rem 0 1.75rem;
+  overflow: hidden;
 
   path {
-    fill: var(--brand-500);
+    fill: none;
+    stroke: var(--brand-500);
+    stroke-width: 1.5;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Photo grid
+//
+// For mixing portrait and landscape photos. Quarto's own layout-ncol cannot do this:
+// nesting a layout div inside another silently flattens into one cell, and the
+// non-nested version forces every photo in a row to share a height, which crops or
+// letterboxes whichever orientation is in the minority.
+//
+// CSS multi-column instead. Photos flow top-to-bottom filling each column, so a
+// portrait simply takes more vertical space than a landscape and the columns even
+// themselves out. Nothing is cropped and every photo keeps its own aspect ratio.
+//
+// column-count with column-width means "at most 2 columns, each at least 13rem", so
+// it drops to a single column on a phone without a media query.
+//
+// Usage: wrap the images in ::: {.photo-grid} with a blank line between each, so
+// Pandoc makes a separate figure per photo rather than one paragraph of inline images.
+// ---------------------------------------------------------------------------
+
+.photo-grid {
+  column-count: 2;
+  column-width: 13rem;
+  column-gap: 0.8rem;
+  margin: 1.25rem 0;
+  max-width: none;
+
+  // Keep a photo and its caption together in one column. Quarto wraps each figure in
+  // div.quarto-figure, and that wrapper is the element the column flow can break, so
+  // it is the one that needs break-inside; targeting figure alone has no effect.
+  > .quarto-figure {
+    break-inside: avoid;
+    margin: 0 0 0.8rem;
+    max-width: none;
+  }
+
+  figure,
+  p {
+    margin: 0;
+    max-width: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+  }
+
+  figcaption {
+    margin-top: 0.35rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 }
 

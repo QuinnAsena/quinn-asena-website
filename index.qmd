@@ -1,6 +1,6 @@
 ---
 title: "Quinn Asena"
-description: "Data Scientist at the Cary Institute of Ecosystem Studies. Reading ecological change from fossil records, and forecasting it with continental-scale simulation."
+description: "Data Scientist at the Cary Institute of Ecosystem Studies. Mapping wildfire risk at continental scale with deep learning, and simulating boreal forest dynamics under climate change."
 toc: false
 # Person schema, on the homepage only because that is the page about the person.
 # The value here is sameAs: it tells search engines that this site, the ORCID record,
@@ -53,10 +53,7 @@ include-in-header:
     <p class="hero-role">Data Scientist,
       <a href="https://www.caryinstitute.org/science/research-support/quinn-asena">Cary Institute of Ecosystem Studies</a>
     </p>
-    <p class="hero-lede">I read ecological change out of fossil records spanning
-      millennia, and forecast it with continental-scale simulation. Both ends of the
-      record ask the same question: what makes an ecosystem shift, and can we see it
-      coming?</p>
+    <p class="hero-lede">Invetigating ecological dynamics in the past, present and future. My research spans palaeoecology, statistical ecology, process-based landscape modelling, wildfire risk mapping, and deep learning.</p>
     <ul class="hero-tags">
       <li>Palaeoecology</li>
       <li>Wildfire risk mapping</li>
@@ -108,8 +105,7 @@ include-in-header:
   <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024a.html">
     <span class="section-card-meta">The Holocene &middot; 2024</span>
     <span class="section-card-title">Is the past recoverable from the data?</span>
-    <span class="section-card-desc">A virtual ecology approach to testing what fossil
-      records can and cannot tell us.</span>
+    <span class="section-card-desc">A virtual ecology approach to assessing uncertainty in palaeo-records.</span>
   </a>
 
 </div>
