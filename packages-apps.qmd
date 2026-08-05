@@ -1,5 +1,6 @@
 ---
 title: "Packages and Apps"
+description: "Open-source R packages and interactive Shiny apps from my research and teaching, including multinomialTS for state-space modelling of community time series."
 # Crimson, sampled from archive_half_half_walk_lin.png.
 include-in-header:
   text: |

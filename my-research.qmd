@@ -1,5 +1,6 @@
 ---
 title: "My Research"
+description: "Ten peer-reviewed publications with DOIs, plus plain-language summaries of selected papers on palaeoecology, statistical ecology and climate justice."
 # Blue, sampled from the Fisher-information figures in these papers.
 include-in-header:
   text: |

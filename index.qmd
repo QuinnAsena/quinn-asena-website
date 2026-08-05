@@ -1,6 +1,47 @@
 ---
 title: "Quinn Asena"
+description: "Data Scientist at the Cary Institute of Ecosystem Studies. Reading ecological change from fossil records, and forecasting it with continental-scale simulation."
 toc: false
+# Person schema, on the homepage only because that is the page about the person.
+# The value here is sameAs: it tells search engines that this site, the ORCID record,
+# the GitHub account and the Cary staff page are all one entity. URLs must be absolute.
+include-in-header:
+  text: |
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Quinn Asena",
+      "url": "https://quinnasena.github.io/quinn-asena-website/",
+      "image": "https://quinnasena.github.io/quinn-asena-website/images/og-card.jpg",
+      "jobTitle": "Data Scientist",
+      "description": "Ecologist and data scientist working on palaeoecology, wildfire risk mapping with deep learning, and boreal forest dynamics under climate change.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Cary Institute of Ecosystem Studies",
+        "url": "https://www.caryinstitute.org/"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Auckland" },
+        { "@type": "CollegeOrUniversity", "name": "University of York" }
+      ],
+      "knowsAbout": [
+        "Palaeoecology", "Wildfire risk", "Boreal forest ecology",
+        "Statistical ecology", "State-space models", "Machine learning"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "https://orcid.org/0000-0002-4086-460X"
+      },
+      "sameAs": [
+        "https://orcid.org/0000-0002-4086-460X",
+        "https://github.com/QuinnAsena",
+        "https://www.linkedin.com/in/quinn-asena-a394202a4/",
+        "https://www.caryinstitute.org/science/research-support/quinn-asena"
+      ]
+    }
+    </script>
 ---
 
 ```{=html}
@@ -12,12 +53,14 @@ toc: false
     <p class="hero-role">Data Scientist,
       <a href="https://www.caryinstitute.org/science/research-support/quinn-asena">Cary Institute of Ecosystem Studies</a>
     </p>
-    <p class="hero-lede">I study how and why ecosystems change over time and space, and
-      what those changes mean for the people who depend on them.</p>
+    <p class="hero-lede">I read ecological change out of fossil records spanning
+      millennia, and forecast it with continental-scale simulation. Both ends of the
+      record ask the same question: what makes an ecosystem shift, and can we see it
+      coming?</p>
     <ul class="hero-tags">
+      <li>Palaeoecology</li>
       <li>Wildfire risk mapping</li>
       <li>Boreal forest dynamics</li>
-      <li>Palaeoecology</li>
       <li>Statistical ecology</li>
     </ul>
     <p class="hero-links">
@@ -30,7 +73,18 @@ toc: false
 </div>
 ```
 
-<hr class="section-divider">
+```{=html}
+<ul class="stat-tiles">
+  <li><a href="my-research.html"><span class="stat-n">10</span>
+    <span class="stat-l">peer-reviewed publications</span></a></li>
+  <li><a href="talks.html"><span class="stat-n">22</span>
+    <span class="stat-l">talks, posters &amp; workshops</span></a></li>
+  <li><a href="packages-apps.html"><span class="stat-n">4</span>
+    <span class="stat-l">open-source packages &amp; apps</span></a></li>
+</ul>
+```
+
+{{< include _strata.qmd >}}
 
 ## Selected work
 
@@ -63,7 +117,7 @@ toc: false
 
 [See all publications and research summaries →](my-research.qmd)
 
-<hr class="section-divider">
+{{< include _strata.qmd >}}
 
 ## Explore
 

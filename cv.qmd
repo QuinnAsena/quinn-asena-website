@@ -1,5 +1,6 @@
 ---
 title: "CV"
+description: "Download Quinn Asena's CV as a PDF, or browse publications, talks, positions and teaching on this site."
 toc: false
 ---
 

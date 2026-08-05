@@ -1,5 +1,6 @@
 ---
 title: "Workshops and Lectures"
+description: "Open, reusable workshop and lecture materials on state-space modelling, age-depth modelling with Bchron, Quarto for collaboration, and population growth."
 # Green, sampled from analysis_process.png.
 include-in-header:
   text: |

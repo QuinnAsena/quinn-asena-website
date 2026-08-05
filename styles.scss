@@ -4,8 +4,7 @@
 //
 // These three are the brand teal ramp. They stay SCSS variables because Bootstrap
 // needs them at compile time (navbar, footer) and because they are the hex fallbacks
-// for the --accent-* custom properties defined in the rules section. Content colour
-// comes from those properties, not from these, so it can vary per page.
+// for the --brand-* and --accent-* custom properties defined in the rules section.
 $teal-900: #0A4552;
 $teal-700: #106074;
 $teal: #147C91; // brand: navbar, footer, and the default accent hue
@@ -70,41 +69,52 @@ $measure: 70ch;
 }
 
 // ---------------------------------------------------------------------------
-// Per-page accent
+// Colour
 //
-// The whole ramp derives from ONE number, --accent-h, so a page recolours itself by
-// setting a single custom property in its front matter. Lightness and chroma are
-// fixed at the values measured off the original teal ramp (#0A4552 / #106074 /
-// #147C91 = L .362/.454/.542, C .060/.078/.092, all at hue ~218), so the brand teal
-// is unchanged and every other hue lands at the same contrast: measured 8.9-10.1:1,
-// 6.5-7.2:1 and 5.1-5.6:1 on $cream across teal, blue, green, amber and crimson.
+// Two ramps, both built in OKLCH so lightness is perceptually even:
 //
-// Teal is the tightest sRGB gamut constraint at these lightnesses (max chroma
-// .070/.080/.095), so a chroma safe for teal is safe for every hue.
+//   --brand-*   fixed teal, hue 218. Everything in the content uses this.
+//   --accent-*  derived from --accent-h, which a page may override in its front
+//               matter. Drives only the 4px rule under the navbar.
+//
+// Lightness and chroma come from the original hand-picked teal ramp (#0A4552 /
+// #106074 / #147C91 = L .362/.454/.542, C .060/.078/.092, all hue ~218), so the brand
+// colour is unchanged. Those values were chosen because teal is the tightest sRGB
+// gamut constraint at these lightnesses, which means any hue --accent-h is set to
+// stays in gamut and lands at comparable contrast (measured 4.65:1 worst case across
+// six hues in light mode, 5.41:1 in dark).
 //
 // Each property is declared twice: a hex fallback first for browsers without oklch,
-// then the oklch value, which wins where supported. Without oklch a page simply
-// stays teal.
+// then the oklch value, which wins where supported.
 // ---------------------------------------------------------------------------
 
 :root {
+  // Per-page hue. Now drives ONLY the 4px rule under the navbar.
+  //
+  // It used to drive every heading and card too, which made each page look like a
+  // different site: colour that varies without carrying meaning is decoration, and it
+  // cost more in coherence than it bought in identity. The bar alone still says "you
+  // are somewhere specific" while the content stays recognisably one system.
   --accent-h: 218;
-
-  --accent-900: #{$teal-900};
-  --accent-900: oklch(0.362 0.06 var(--accent-h));
-  --accent-700: #{$teal-700};
-  --accent-700: oklch(0.454 0.078 var(--accent-h));
   --accent-500: #{$teal};
   --accent-500: oklch(0.542 0.092 var(--accent-h));
 
-  // Translucent accents. oklch takes alpha natively; SCSS rgba() cannot accept a
+  // Brand ramp: fixed teal on every page, used by all content.
+  --brand-900: #{$teal-900};
+  --brand-900: oklch(0.362 0.06 218);
+  --brand-700: #{$teal-700};
+  --brand-700: oklch(0.454 0.078 218);
+  --brand-500: #{$teal};
+  --brand-500: oklch(0.542 0.092 218);
+
+  // Translucent brand tints. oklch takes alpha natively; SCSS rgba() cannot accept a
   // custom property, which is why these are named here rather than written inline.
-  --accent-tint-35: #{rgba($teal, 0.35)};
-  --accent-tint-35: oklch(0.542 0.092 var(--accent-h) / 0.35);
-  --accent-tint-30: #{rgba($teal, 0.3)};
-  --accent-tint-30: oklch(0.542 0.092 var(--accent-h) / 0.3);
-  --accent-shadow: #{rgba($teal, 0.18)};
-  --accent-shadow: oklch(0.542 0.092 var(--accent-h) / 0.18);
+  --brand-tint-35: #{rgba($teal, 0.35)};
+  --brand-tint-35: oklch(0.542 0.092 218 / 0.35);
+  --brand-tint-30: #{rgba($teal, 0.3)};
+  --brand-tint-30: oklch(0.542 0.092 218 / 0.3);
+  --brand-shadow: #{rgba($teal, 0.18)};
+  --brand-shadow: oklch(0.542 0.092 218 / 0.18);
 
   // Semantic borders. Previously darken($cream, N%) inline in six places, each of
   // which would have been a latent bug once a dark theme existed.
@@ -123,15 +133,15 @@ $measure: 70ch;
 // Heading hierarchy: one hue, decreasing weight. h4 drops to body colour and
 // relies on size/weight alone, marking the end of the coloured levels.
 h1 {
-  color: var(--accent-900);
+  color: var(--brand-900);
 }
 
 h2 {
-  color: var(--accent-700);
+  color: var(--brand-700);
 }
 
 h3 {
-  color: var(--accent-500);
+  color: var(--brand-500);
 }
 
 h4 {
@@ -210,6 +220,96 @@ hr.section-divider {
 }
 
 // ---------------------------------------------------------------------------
+// Stratigraphy rule
+//
+// The section divider, drawn as stacked sediment strata. It references lake cores,
+// which are the actual object of the research, and it recurs on every page as the
+// site's one recurring motif. Inline SVG rather than a background-image data URI,
+// because a data URI cannot reference a CSS custom property, and the fill has to
+// follow the theme. See _strata.qmd.
+// ---------------------------------------------------------------------------
+
+.strata {
+  display: block;
+  width: 100%;
+  height: 13px;
+  margin: 2rem 0 1.5rem;
+
+  path {
+    fill: var(--brand-500);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Stat tiles
+//
+// A five-second scan of the homepage should convey scale. Each number links to the
+// page where it can be verified, so they are claims the visitor can check rather
+// than decoration.
+// ---------------------------------------------------------------------------
+
+.stat-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: none;
+
+  li {
+    flex: 1 1 10rem;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    height: 100%;
+    padding: 0.9rem 1.1rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand-500);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.15s, border-left-color 0.2s;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 4px 14px var(--brand-shadow);
+      transform: translateY(-2px);
+      border-left-color: var(--brand-900);
+      text-decoration: none;
+    }
+  }
+}
+
+.stat-n {
+  color: var(--brand-700);
+  font-family: $headings-font-family;
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.stat-l {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-tiles a {
+    transition: none;
+  }
+
+  .stat-tiles a:hover,
+  .stat-tiles a:focus-visible {
+    transform: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // CV page
 // ---------------------------------------------------------------------------
 
@@ -224,8 +324,8 @@ hr.section-divider {
 .cv-download {
   display: inline-block;
   padding: 0.55rem 1.15rem;
-  background-color: var(--accent-700);
-  border: 1px solid var(--accent-700);
+  background-color: var(--brand-700);
+  border: 1px solid var(--brand-700);
   border-radius: 0.4rem;
   color: #ffffff;
   font-weight: 600;
@@ -234,8 +334,8 @@ hr.section-divider {
 
   &:hover,
   &:focus-visible {
-    background-color: var(--accent-900);
-    border-color: var(--accent-900);
+    background-color: var(--brand-900);
+    border-color: var(--brand-900);
     color: #ffffff;
     text-decoration: none;
   }
@@ -290,7 +390,7 @@ hr.section-divider {
 .publications p {
   margin-bottom: 1rem;
   padding-left: 0.9rem;
-  border-left: 2px solid var(--accent-tint-30);
+  border-left: 2px solid var(--brand-tint-30);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -309,7 +409,7 @@ hr.section-divider {
   .talk-year {
     display: block;
     margin-bottom: 0.3rem;
-    color: var(--accent-700);
+    color: var(--brand-700);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -318,7 +418,7 @@ hr.section-divider {
   ul ul {
     margin-bottom: 0;
     padding-left: 0.9rem;
-    border-left: 2px solid var(--accent-tint-30);
+    border-left: 2px solid var(--brand-tint-30);
     list-style: none;
 
     li {
@@ -353,7 +453,7 @@ hr.section-divider {
 
 .hero-role {
   margin-bottom: 0.5rem;
-  color: var(--accent-700);
+  color: var(--brand-700);
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.3;
@@ -376,9 +476,9 @@ hr.section-divider {
 
   li {
     padding: 0.15rem 0.6rem;
-    border: 1px solid var(--accent-tint-35);
+    border: 1px solid var(--brand-tint-35);
     border-radius: 1rem;
-    color: var(--accent-700);
+    color: var(--brand-700);
     font-size: 0.78rem;
   }
 }
@@ -405,16 +505,16 @@ hr.section-divider {
 @mixin card-surface {
   background-color: var(--surface);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent-500);
+  border-left: 3px solid var(--brand-500);
   border-radius: 0.5rem;
   overflow: hidden; // clip thumbnails to the corner radius
   transition: box-shadow 0.2s, transform 0.15s, border-left-color 0.2s;
 }
 
 @mixin card-surface-hover {
-  box-shadow: 0 4px 14px var(--accent-shadow);
+  box-shadow: 0 4px 14px var(--brand-shadow);
   transform: translateY(-2px);
-  border-left-color: var(--accent-900);
+  border-left-color: var(--brand-900);
 }
 
 .section-cards {
@@ -441,7 +541,7 @@ hr.section-divider {
 
   &:hover .section-card-title,
   &:focus-visible .section-card-title {
-    color: var(--accent-900);
+    color: var(--brand-900);
   }
 }
 
@@ -455,7 +555,7 @@ hr.section-divider {
 }
 
 .section-card-title {
-  color: var(--accent-700);
+  color: var(--brand-700);
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.3;
@@ -478,7 +578,7 @@ hr.section-divider {
 
   .card-title,
   .listing-title {
-    color: var(--accent-700);
+    color: var(--brand-700);
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.3;
@@ -486,7 +586,7 @@ hr.section-divider {
 
   &:hover .card-title,
   &:focus-within .card-title {
-    color: var(--accent-900);
+    color: var(--brand-900);
   }
 
   .card-body {
@@ -498,9 +598,9 @@ hr.section-divider {
     display: inline-block;
     margin: 0.15rem 0.25rem 0.15rem 0;
     padding: 0.1rem 0.5rem;
-    border: 1px solid var(--accent-tint-35);
+    border: 1px solid var(--brand-tint-35);
     border-radius: 1rem;
-    color: var(--accent-700);
+    color: var(--brand-700);
     font-size: 0.72rem;
     opacity: 1;
   }
@@ -524,12 +624,12 @@ hr.section-divider {
   }
 
   .listing-title {
-    color: var(--accent-700);
+    color: var(--brand-700);
     font-weight: 600;
     text-decoration: none;
 
     &:hover {
-      color: var(--accent-900);
+      color: var(--brand-900);
       text-decoration: underline;
       text-underline-offset: 0.2em;
     }
@@ -552,10 +652,10 @@ hr.section-divider {
   }
 
   .source-code {
-    color: var(--accent-500);
+    color: var(--brand-500);
 
     &:hover {
-      color: var(--accent-900);
+      color: var(--brand-900);
     }
   }
 }

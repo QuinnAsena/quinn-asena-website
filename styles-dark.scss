@@ -55,18 +55,22 @@ $dark-link: #C79BD6; // the purple lifted until it clears AA on both surfaces
   --border-strong: #{lighten($dark-border, 8%)};
   --text-muted: #{$dark-muted};
 
-  // Accent ramp: only lightness and chroma change. --accent-h is still whatever the
-  // page set, so the per-page hues carry into dark mode with no duplication.
-  // Lightness rises and chroma falls relative to light mode. Blue is the binding sRGB
-  // gamut constraint at these lightnesses, and C .065 at L .86 keeps all six hues in
-  // gamut.
-  --accent-900: oklch(0.86 0.065 var(--accent-h));
-  --accent-700: oklch(0.79 0.072 var(--accent-h));
+  // Both ramps lift in lightness and drop in chroma for a dark background. Blue is
+  // the binding sRGB gamut constraint at these lightnesses, and C .065 at L .86 keeps
+  // every hue --accent-h might be set to in gamut.
+  //
+  // --accent-* keeps var(--accent-h), so a page's own hue carries into dark mode with
+  // no duplication. It drives only the rule under the navbar.
   --accent-500: oklch(0.72 0.078 var(--accent-h));
 
-  --accent-tint-35: oklch(0.72 0.078 var(--accent-h) / 0.4);
-  --accent-tint-30: oklch(0.72 0.078 var(--accent-h) / 0.35);
-  --accent-shadow: rgba(0, 0, 0, 0.5); // a coloured glow would read as neon on dark
+  // --brand-* is the fixed teal used by all content.
+  --brand-900: oklch(0.86 0.065 218);
+  --brand-700: oklch(0.79 0.072 218);
+  --brand-500: oklch(0.72 0.078 218);
+
+  --brand-tint-35: oklch(0.72 0.078 218 / 0.4);
+  --brand-tint-30: oklch(0.72 0.078 218 / 0.35);
+  --brand-shadow: rgba(0, 0, 0, 0.5); // a coloured glow would read as neon on dark
 }
 
 // Chrome. These three selectors hardcode the brand teal in the compiled output, so

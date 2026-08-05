@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "Research interests, positions, education, teaching and service. From fossil pollen records spanning millennia to continental-scale wildfire risk mapping."
 toc: true
 ---
 
