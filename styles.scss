@@ -307,6 +307,20 @@ hr.section-divider {
   }
 }
 
+// Photos that exist only to join a lightbox gallery.
+//
+// The lightbox collects its slides with querySelectorAll over the anchors it has
+// wrapped around each image, and that is unaffected by display, so an image inside
+// this container never renders on the page but still appears in the slideshow when
+// the visitor arrows through. That keeps a section down to a few thumbnails while
+// still letting anyone who is curious page through the whole set.
+//
+// Usage: a ::: {.lightbox-only} block after the visible .photo-grid, holding images
+// with the same group= value.
+.lightbox-only {
+  display: none;
+}
+
 // ---------------------------------------------------------------------------
 // Stat tiles
 //

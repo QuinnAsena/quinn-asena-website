@@ -9,7 +9,7 @@ include-in-header:
     <style>:root { --accent-h: 320; }</style>
 ---
 
-Prefessionally, I am a ecologist with borderline data-scientis disorder. In my personal life, I have a background in music performance, and lots of hobbies. I don't have quality recordings of my music, but I do have some photos of my hobbies.
+Professionally, I am an ecologist with borderline data-scientist disorder. In my personal life, I have a background in music performance, and lots of hobbies. I don't have quality recordings of my music, but I do have some photos of my hobbies.
 
 ## Art
 
@@ -18,11 +18,21 @@ Occasionally dabble in art...
 ::: {.photo-grid}
 ![Ink art mix](images/art-mix.jpg){.photo group="art"}
 
-![Ink art art cartoons](images/art-owl-camp.jpg){.photo group="art"}
+![Ink art cartoons](images/art-owl-camp.jpg){.photo group="art"}
 
-![Ink art art kitten](images/art-kitten.jpg){.photo group="art"}
+![Ink art kitten](images/art-kitten.jpg){.photo group="art"}
 
-![Ink art art turtle](images/art-turtle.jpg){.photo group="art"}
+![Ink art turtle](images/art-turtle.jpg){.photo group="art"}
+:::
+
+::: {.lightbox-only}
+![Ink art otter](images/art-otter.jpg){.photo group="art"}
+
+![Ink art owl cartoon](images/art-owl-cartoon.jpg){.photo group="art"}
+
+![Ink art mix](images/art-mix-2.jpg){.photo group="art"}
+
+![Ink art mix](images/art-mix-2.1.jpg){.photo group="art"}
 :::
 
 
@@ -40,6 +50,44 @@ Lots of travel...
 ![Squamish, Canada](images/travel-squamish-waterfall.jpg){.photo group="travel"}
 :::
 
+<!-- Captions below are inferred from the filenames. Worth a read-through: I have
+     guessed at some of the locations. -->
+::: {.lightbox-only}
+![Ice beach, Iceland](images/travel-iceland-icebeach.jpg){.photo group="travel"}
+
+![Driftwood, Iceland](images/travel-iceland-driftwood.jpg){.photo group="travel"}
+
+![Puffins, Iceland](images/travel-iceland-puffins.jpg){.photo group="travel"}
+
+![Yoda, Iceland](images/travel-iceland-yoda.jpg){.photo group="travel"}
+
+![Cappadocia, Turkey](images/travel-capadocia-lcp.jpg){.photo group="travel"}
+
+![Alaska](images/travel-ak.jpg){.photo group="travel"}
+
+![Bison, Antelope Island, Utah](images/travel-antelopeisland-bison.jpg){.photo group="travel"}
+
+![Badlands, US](images/travel-badlands-lcp.jpg){.photo group="travel"}
+
+![Yellowstone, US](images/travel-yellowstone.jpg){.photo group="travel"}
+
+![Katterskill, New York](images/travel-katterskill.jpg){.photo group="travel"}
+
+![Upstate New York](images/travel-upstate-ny.jpg){.photo group="travel"}
+
+![Bubble Lake](images/travel-bubble-lake.jpg){.photo group="travel"}
+
+![Lake and log](images/travel-log-lake.jpg){.photo group="travel"}
+
+![Canoeing](images/travel-kemp-canoe.jpg){.photo group="travel"}
+
+![South of France](images/travel-sfrance.jpg){.photo group="travel"}
+
+![Not a bear](images/travel-notabear.jpg){.photo group="travel"}
+
+![Mushroom](images/travel-mushroom.jpg){.photo group="travel"}
+:::
+
 
 ## Climbing
 
@@ -51,5 +99,9 @@ Lots of climbing...
 ![Puerto Rico](images/climbing-puerto.jpg){.photo group="climbing"}
 
 ![Antalya, Turkey](images/climbing-antalya2.jpg){.photo group="climbing"}
+:::
+
+::: {.lightbox-only}
+![Antalya, Turkey](images/climbing-antalya.jpg){.photo group="climbing"}
 :::
 

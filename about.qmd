@@ -2,6 +2,10 @@
 title: "About"
 description: "From fossil pollen records spanning millennia to simulating forest futures, and continental-scale wildfire risk mapping."
 toc: true
+# Needed for the fieldwork photo gallery. Without it the images render as plain
+# figures with no lightbox, and the .lightbox-only block below would be invisible
+# dead weight rather than extra slides.
+lightbox: true
 ---
 
 ## Research interests
@@ -39,11 +43,21 @@ I love being out in the field. I've been out taking core samples, sampling heavy
 ![Agricultural fieldwork in the US](images/fieldwork-arlington.jpeg){.photo group="fieldwork"}
 :::
 
+<!-- Not shown on the page, but they join the lightbox: click any thumbnail above and
+     arrow through all six. Captions inferred from filenames, worth checking. -->
+::: {.lightbox-only}
+![Black spruce, Alaska](images/fieldwork-ak-spruce.jpg){.photo group="fieldwork"}
+
+![Deciduous regrowth after fire, Alaska](images/fieldwork-ak-decid.jpg){.photo group="fieldwork"}
+
+![Cone collection, Alaska](images/fieldwork-ak-cones.jpg){.photo group="fieldwork"}
+:::
+
 ## Positions
 
 **Data Scientist** · Cary Institute of Ecosystem Studies, Millbrook, NY · 2025–present
 
-: Automated HPC workflows for process-based landscape simulations across boreal North America under multiple CMIP6 climate scenarios. Petabyte-scale data management using SQL and Apache Arrow, integrating climate, soil, and elevation data from distributed archives (NASA DAACs, STAC). Built an interactive interface for collaborators to query simulation outputs and generate visualisations.
+: Automated HPC workflows for process-based landscape simulations across boreal North America under multiple CMIP6 climate scenarios. Large-scale data management using SQL and Apache Arrow, integrating climate, soil, and elevation data from distributed archives (NASA DAACs, STAC). Built an interactive interface for collaborators to query simulation outputs and generate visualisations.
 
 **Postdoctoral Research Associate** · University of Wisconsin–Madison · 2022–2024
 

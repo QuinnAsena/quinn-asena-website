@@ -53,7 +53,7 @@ include-in-header:
     <p class="hero-role">Data Scientist,
       <a href="https://www.caryinstitute.org/science/research-support/quinn-asena">Cary Institute of Ecosystem Studies</a>
     </p>
-    <p class="hero-lede">Invetigating ecological dynamics in the past, present and future. My research spans palaeoecology, statistical ecology, process-based landscape modelling, wildfire risk mapping, and deep learning.</p>
+    <p class="hero-lede">Investigating ecological dynamics in the past, present and future. My research spans palaeoecology, statistical ecology, process-based landscape modelling, wildfire risk mapping, and deep learning.</p>
     <ul class="hero-tags">
       <li>Palaeoecology</li>
       <li>Wildfire risk mapping</li>
