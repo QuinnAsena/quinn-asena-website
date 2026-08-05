@@ -25,21 +25,28 @@
     "href": "personal.html",
     "title": "Personal",
     "section": "",
-    "text": "I love being out in the field and help out wherever I can. I’ve been out sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, and flowering plants, and setting recorders and camera traps. Coring wetlands is the work closest to my own research. The sediment that comes up is the raw material for everything on the Research page.\n\n\n\n\n\n\nBiodiversity surveys and wetland coring in New Zealand\n\n\n\n\n\n\n\nAgricultural fieldwork in the US"
+    "text": "Professionally, I am an ecologist with borderline data-scientist disorder. In my personal life, I have a background in music performance, and lots of hobbies. I don’t have quality recordings of my music, but I do have some photos of my hobbies."
   },
   {
-    "objectID": "personal.html#fieldwork",
-    "href": "personal.html#fieldwork",
+    "objectID": "personal.html#art",
+    "href": "personal.html#art",
     "title": "Personal",
-    "section": "",
-    "text": "I love being out in the field and help out wherever I can. I’ve been out sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, and flowering plants, and setting recorders and camera traps. Coring wetlands is the work closest to my own research. The sediment that comes up is the raw material for everything on the Research page.\n\n\n\n\n\n\nBiodiversity surveys and wetland coring in New Zealand\n\n\n\n\n\n\n\nAgricultural fieldwork in the US"
+    "section": "Art",
+    "text": "Art\nOccasionally dabble in art… Click on any image for slideshow with more photos.\n\n\n\n\nInk art mix\n\n\n\n\n\nInk art cartoons\n\n\n\n\n\nInk art kitten\n\n\n\n\n\nInk art turtle\n\n\n\n\n\n\n\nInk art otter\n\n\n\n\n\nInk art owl cartoon\n\n\n\n\n\nInk art mix\n\n\n\n\n\nInk art mix"
   },
   {
-    "objectID": "personal.html#other-interests",
-    "href": "personal.html#other-interests",
+    "objectID": "personal.html#travel",
+    "href": "personal.html#travel",
     "title": "Personal",
-    "section": "Other interests",
-    "text": "Other interests\nIn my spare time I have no shortage of hobbies: classical piano, art, rock climbing, and baking. The piano goes back furthest. I studied performance and composition before I studied ecology, and I still play most days.\n\n\n\nJackson Falls, US"
+    "section": "Travel",
+    "text": "Travel\nLots of travel… More photos in slideshow.\n\n\n\n\nIceland, where glacier meets ocean\n\n\n\n\n\nCappadocia, Turkey\n\n\n\n\n\nTeton National Park, US\n\n\n\n\n\nSquamish, Canada\n\n\n\n\n\n\n\n\nIce beach, Iceland\n\n\n\n\n\nDriftwood, Iceland\n\n\n\n\n\nPuffins, Iceland\n\n\n\n\n\nYoda, Iceland\n\n\n\n\n\nCappadocia, Turkey\n\n\n\n\n\nAlaska\n\n\n\n\n\nBison, Antelope Island, Utah\n\n\n\n\n\nBadlands, US\n\n\n\n\n\nYellowstone, US\n\n\n\n\n\nKatterskill, New York\n\n\n\n\n\nUpstate New York\n\n\n\n\n\nMadison, US frozen lake\n\n\n\n\n\nGas bubbles trapped in lake ice, Madison, US\n\n\n\n\n\nCanoeing at Kemp research station\n\n\n\n\n\nSouth of France\n\n\n\n\n\nThat’s not a bear\n\n\n\n\n\nMushroom\n\n\n\n\n\nGovernor Dodge"
+  },
+  {
+    "objectID": "personal.html#climbing",
+    "href": "personal.html#climbing",
+    "title": "Personal",
+    "section": "Climbing",
+    "text": "Climbing\nLots of climbing…\n\n\n\n\nJackson Falls, US\n\n\n\n\n\nPuerto Rico\n\n\n\n\n\nAntalya, Turkey\n\n\n\n\n\n\n\nAntalya, Turkey"
   },
   {
     "objectID": "my-research-posts/asena-2024c.html",
@@ -74,21 +81,28 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!). I’m also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?\nIn the Forest Futures Lab I work on process-based landscape simulations of boreal North America under multiple climate scenarios, and on mapping wildfire risk at continental scale using deep learning. This year, 2026, is seeing record breaking wildfires globally, and I am developing cutting edge methods to better understand and predict wildfire risk.\n\n  \n    \n    Your browser can't play this video.\n      Download it instead.\n  \n  Wildfire record in Alaska from 1980 to 2020.\n\nMuch of my previous work has looked beyond the observational record. Ecosystems change over centuries and millennia, far longer than we have been measuring them, so we reconstruct ecosystem histories and past climates from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and the drivers of ecological change.\nMy PhD took a virtual ecology approach to a prior question: whether we can trust what the data tell us at all. It involved simulating ecosystems from population growth models with underlying threshold dynamics, then degrading those simulations to see how sampling and environmental processes change the inferences we would draw."
+    "text": "What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones. I’m also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?\nIn the Forest Futures Lab I work on process-based landscape simulations of boreal North America under multiple climate scenarios, and on mapping wildfire risk at continental scale using deep learning. This year, 2026, is seeing record breaking wildfires globally, and I am developing cutting edge methods to better understand and predict wildfire risk.\n\n  \n    \n    Your browser can't play this video.\n      Download it instead.\n  \n  Wildfire record in Alaska from 1980 to 2020.\n\nMuch of my previous work has looked beyond the observational record. Ecosystems change over centuries and millennia, far longer than we have been measuring them, so we reconstruct ecosystem histories and past climates from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and the drivers of ecological change.\nMy PhD took a virtual ecology approach to a prior question: whether we can trust what the data tell us at all. It involved simulating ecosystems from population growth models with underlying threshold dynamics, then degrading those simulations to see how sampling and environmental processes change the inferences we would draw."
   },
   {
     "objectID": "about.html#research-interests",
     "href": "about.html#research-interests",
     "title": "About",
     "section": "",
-    "text": "What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones (and many more!). I’m also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?\nIn the Forest Futures Lab I work on process-based landscape simulations of boreal North America under multiple climate scenarios, and on mapping wildfire risk at continental scale using deep learning. This year, 2026, is seeing record breaking wildfires globally, and I am developing cutting edge methods to better understand and predict wildfire risk.\n\n  \n    \n    Your browser can't play this video.\n      Download it instead.\n  \n  Wildfire record in Alaska from 1980 to 2020.\n\nMuch of my previous work has looked beyond the observational record. Ecosystems change over centuries and millennia, far longer than we have been measuring them, so we reconstruct ecosystem histories and past climates from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and the drivers of ecological change.\nMy PhD took a virtual ecology approach to a prior question: whether we can trust what the data tell us at all. It involved simulating ecosystems from population growth models with underlying threshold dynamics, then degrading those simulations to see how sampling and environmental processes change the inferences we would draw."
+    "text": "What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones. I’m also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?\nIn the Forest Futures Lab I work on process-based landscape simulations of boreal North America under multiple climate scenarios, and on mapping wildfire risk at continental scale using deep learning. This year, 2026, is seeing record breaking wildfires globally, and I am developing cutting edge methods to better understand and predict wildfire risk.\n\n  \n    \n    Your browser can't play this video.\n      Download it instead.\n  \n  Wildfire record in Alaska from 1980 to 2020.\n\nMuch of my previous work has looked beyond the observational record. Ecosystems change over centuries and millennia, far longer than we have been measuring them, so we reconstruct ecosystem histories and past climates from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and the drivers of ecological change.\nMy PhD took a virtual ecology approach to a prior question: whether we can trust what the data tell us at all. It involved simulating ecosystems from population growth models with underlying threshold dynamics, then degrading those simulations to see how sampling and environmental processes change the inferences we would draw."
+  },
+  {
+    "objectID": "about.html#fieldwork---not-just-a-desk-ecologist",
+    "href": "about.html#fieldwork---not-just-a-desk-ecologist",
+    "title": "About",
+    "section": "Fieldwork - not just a desk ecologist",
+    "text": "Fieldwork - not just a desk ecologist\nI love being out in the field. I’ve been out taking core samples, sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, flowering plants, and setting audio recorders and camera traps. Click on any image for slideshow with more photos.\n\n\n\n\nBiodiversity surveys and wetland coring in New Zealand\n\n\n\n\n\nPost-fire recovery fieldwork in Alaska\n\n\n\n\n\nAgricultural fieldwork in the US\n\n\n\n\n\n\n\n\nBlack spruce, Alaska\n\n\n\n\n\nDeciduous regrowth after fire, Alaska\n\n\n\n\n\nCone collection, Alaska"
   },
   {
     "objectID": "about.html#positions",
     "href": "about.html#positions",
     "title": "About",
     "section": "Positions",
-    "text": "Positions\n\nData Scientist · Cary Institute of Ecosystem Studies, Millbrook, NY · 2025–present\n\nAutomated HPC workflows for process-based landscape simulations across boreal North America under multiple CMIP6 climate scenarios. Petabyte-scale data management using SQL and Apache Arrow, integrating climate, soil, and elevation data from distributed archives (NASA DAACs, STAC). Built an interactive interface for collaborators to query simulation outputs and generate visualisations.\n\nPostdoctoral Research Associate · University of Wisconsin–Madison · 2022–2024\n\nNSF-funded project developing state-space modelling methods for palaeoecological records, part of the abrupt ecosystem change project led by Jack Williams and Tony Ives.\n\nEngagement Specialist · Centre for eResearch, University of Auckland · 2021–2022\n\nSeminars on data management, FAIR and CARE principles, and reproducible workflows; research-computing support for graduate students and staff across virtual machines, storage, and analytical workflows.\n\nResearch Assistant · University of Auckland · 2021–2022\n\nBibliometric and topic analysis of the climate justice literature.\n\nData Analyst · Auckland Council · 2021\n\nAnalysis of citizen science bird count data, and a technical report on the findings.\n\nResearch Assistant · Stockholm Environment Institute, York · 2016–2017\n\nReconstruction of fire regimes in the North York Moors, including microscope analysis and core preparation for charcoal and spheroidal carbonaceous particles."
+    "text": "Positions\n\nData Scientist · Cary Institute of Ecosystem Studies, Millbrook, NY · 2025–present\n\nAutomated HPC workflows for process-based landscape simulations across boreal North America under multiple CMIP6 climate scenarios. Large-scale data management using SQL and Apache Arrow, integrating climate, soil, and elevation data from distributed archives (NASA DAACs, STAC). Built an interactive interface for collaborators to query simulation outputs and generate visualisations.\n\nPostdoctoral Research Associate · University of Wisconsin–Madison · 2022–2024\n\nNSF-funded project developing state-space modelling methods for palaeoecological records, part of the abrupt ecosystem change project led by Jack Williams and Tony Ives.\n\nEngagement Specialist · Centre for eResearch, University of Auckland · 2021–2022\n\nSeminars on data management, FAIR and CARE principles, and reproducible workflows; research-computing support for graduate students and staff across virtual machines, storage, and analytical workflows.\n\nResearch Assistant · University of Auckland · 2021–2022\n\nBibliometric and topic analysis of the climate justice literature.\n\nData Analyst · Auckland Council · 2021\n\nAnalysis of citizen science bird count data, and a technical report on the findings.\n\nResearch Assistant · Stockholm Environment Institute, York · 2016–2017\n\nReconstruction of fire regimes in the North York Moors, including microscope analysis and core preparation for charcoal and spheroidal carbonaceous particles."
   },
   {
     "objectID": "about.html#education",
@@ -144,14 +158,14 @@
     "href": "index.html",
     "title": "Quinn Asena",
     "section": "",
-    "text": "Data Scientist,\n      Cary Institute of Ecosystem Studies\n    \n    I study how and why ecosystems change over time and space, and\n      what those changes mean for the people who depend on them.\n    \n      Wildfire risk mapping\n      Boreal forest dynamics\n      Palaeoecology\n      Statistical ecology\n    \n    \n      ORCID\n      GitHub\n      LinkedIn\n      Email"
+    "text": "Data Scientist,\n      Cary Institute of Ecosystem Studies\n    \n    Investigating ecological dynamics in the past, present and future. My research spans palaeoecology, statistical ecology, process-based landscape modelling, wildfire risk mapping, and deep learning.\n    \n      Palaeoecology\n      Wildfire risk mapping\n      Boreal forest dynamics\n      Statistical ecology\n    \n    \n      ORCID\n      GitHub\n      LinkedIn\n      Email"
   },
   {
     "objectID": "index.html#selected-work",
     "href": "index.html#selected-work",
     "title": "Quinn Asena",
     "section": "Selected work",
-    "text": "Selected work\n\n\n  \n    Methods in Ecology and Evolution · 2026\n    A state-space model for ecological count data\n    Estimating species interactions and driver–species\n      relationships from multinomial time series.\n  \n\n  \n    Climate of the Past · 2026\n    Information loss in palaeoecological data\n    Which sources of uncertainty matter most, and where\n      sampling effort is best spent.\n  \n\n  \n    The Holocene · 2024\n    Is the past recoverable from the data?\n    A virtual ecology approach to testing what fossil\n      records can and cannot tell us.\n  \n\n\nSee all publications and research summaries →"
+    "text": "Selected work\n\n\n  \n    Methods in Ecology and Evolution · 2026\n    A state-space model for ecological count data\n    Estimating species interactions and driver–species\n      relationships from multinomial time series.\n  \n\n  \n    Climate of the Past · 2026\n    Information loss in palaeoecological data\n    Which sources of uncertainty matter most, and where\n      sampling effort is best spent.\n  \n\n  \n    The Holocene · 2024\n    Is the past recoverable from the data?\n    A virtual ecology approach to assessing uncertainty in palaeo-records.\n  \n\n\nSee all publications and research summaries →"
   },
   {
     "objectID": "index.html#explore",
