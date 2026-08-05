@@ -14,12 +14,13 @@
 $name = "Quinn Asena"
 $role = "Ecologist and data scientist"
 
-# Positioning lines. Wrapped by hand, because System.Drawing does not wrap for us.
-# Keep each under about 34 characters or it will run past the right edge.
+# Positioning statement. Write it however you like: the script measures the text and
+# wraps it to fit, so line breaks here are only for your own readability. There is room
+# for 3 lines; the script warns if it needs more.
 $lede = @(
-  "Reading ecological change from",
-  "fossil records, and forecasting it",
-  "with continental-scale simulation."
+  "Invetigating ecological dynamics in the past, present and future",
+  "with statistical and process-based modelling, deep learning",
+  "and continental-scale simulation."
 )
 
 # Research areas, joined with a middle dot.
@@ -88,15 +89,43 @@ $fTag  = New-Object System.Drawing.Font("Segoe UI Semibold", 20, [System.Drawing
 $g.DrawString($name, $fName, (New-Object System.Drawing.SolidBrush($teal900)), $tx, 158)
 $g.DrawString($role, $fRole, (New-Object System.Drawing.SolidBrush($teal700)), $tx, 236)
 
+# Wrap the lede to the space actually available, rather than trusting hand-counted
+# character limits. Greedy word wrap against MeasureString.
+$avail = $W - $tx - 84
+$words = (($lede -join " ") -split '\s+') | Where-Object { $_ }
+$lines = @(); $cur = ""
+# NOTE: do not name this loop variable $w. PowerShell variables are case-insensitive,
+# so $w and $W are the same variable, and using $w here silently overwrites the canvas
+# width with the last word of the lede.
+foreach ($word in $words) {
+  $try = if ($cur) { "$cur $word" } else { $word }
+  if ($g.MeasureString($try, $fBody).Width -le $avail) {
+    $cur = $try
+  } else {
+    if ($cur) { $lines += $cur }
+    $cur = $word
+  }
+}
+if ($cur) { $lines += $cur }
+
+# The hairline and the tag row follow the lede rather than sitting at fixed heights, so
+# a longer statement pushes them down instead of colliding with them.
 $y = 292
-foreach ($line in $lede) {
+foreach ($line in $lines) {
   $g.DrawString($line, $fBody, (New-Object System.Drawing.SolidBrush($gray)), $tx, $y)
   $y += 32
 }
 
-$g.DrawLine((New-Object System.Drawing.Pen($border, 2)), $tx, 410, $W - 84, 410)
-$g.DrawString(($tags -join $sep), $fTag, (New-Object System.Drawing.SolidBrush($teal500)), $tx, 430)
+$ruleY = $y + 18
+$tagY  = $ruleY + 20
+$g.DrawLine((New-Object System.Drawing.Pen($border, 2)), $tx, $ruleY, $W - 84, $ruleY)
+$g.DrawString(($tags -join $sep), $fTag, (New-Object System.Drawing.SolidBrush($teal500)), $tx, $tagY)
 $g.Dispose()
+
+# Only complain when the text would actually reach the brand bar at the bottom.
+if (($tagY + 26) -gt ($H - 14)) {
+  Write-Warning ("Lede wraps to {0} lines, which pushes the tag row past the bottom bar. Shorten it." -f $lines.Count)
+}
 
 # JPEG, not PNG: this is a photograph, and PNG came out nearly six times larger.
 $jpeg = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }

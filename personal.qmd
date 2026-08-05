@@ -9,23 +9,47 @@ include-in-header:
     <style>:root { --accent-h: 320; }</style>
 ---
 
-## Fieldwork
-
-I love being out in the field and help out wherever I can. I've been out sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, and flowering plants, and setting recorders and camera traps. Coring wetlands is the work closest to my own research. The sediment that comes up is the raw material for everything on the [Research](my-research.qmd) page.
-
-::: {.photo-grid}
-![Biodiversity surveys and wetland coring in New Zealand](images/nz.jpg){.photo group="fieldwork"}
-
-![Post-fire recovery fieldwork in Alaska](images/fieldwork-ak.jpg){.photo group="fieldwork"}
-
-![Agricultural fieldwork in the US](images/arlington.jpeg){.photo group="fieldwork"}
-:::
-
-## Travel
+Prefessionally, I am a ecologist with borderline data-scientis disorder. In my personal life, I have a background in music performance, and lots of hobbies. I don't have quality recordings of my music, but I do have some photos of my hobbies.
 
 ## Art
 
+Occasionally dabble in art...
+
+::: {.photo-grid}
+![Ink art mix](images/art-mix.jpg){.photo group="art"}
+
+![Ink art art cartoons](images/art-owl-camp.jpg){.photo group="art"}
+
+![Ink art art kitten](images/art-kitten.jpg){.photo group="art"}
+
+![Ink art art turtle](images/art-turtle.jpg){.photo group="art"}
+:::
+
+
+## Travel
+
+Lots of travel...
+
+::: {.photo-grid}
+![Iceland, where glacier meets ocean](images/travel-iceland-icebeach-ice.jpg){.photo group="travel"}
+
+![Cappadocia, Turkey](images/travel-capadocia.jpg){.photo group="travel"}
+
+![Teton National Park, US](images/travel-teton-lcp.jpg){.photo group="travel"}
+
+![Squamish, Canada](images/travel-squamish-waterfall.jpg){.photo group="travel"}
+:::
+
+
 ## Climbing
 
+Lots of climbing...
 
-![Jackson Falls, US](images/rock-climbing.jpeg){.photo group="interests"}
+::: {.photo-grid}
+![Jackson Falls, US](images/climbing-jackson.jpeg){.photo group="climbing"}
+
+![Puerto Rico](images/climbing-puerto.jpg){.photo group="climbing"}
+
+![Antalya, Turkey](images/climbing-antalya2.jpg){.photo group="climbing"}
+:::
+
