@@ -77,7 +77,7 @@ Lots of travel... More photos in slideshow.
 
 ![Madison, US frozen lake](images/travel-log-lake.jpg){.photo group="travel"}
 
-![Madison, US lake](images/travel-log-lake.jpg){.photo group="travel"}
+![Gas bubbles trapped in lake ice, Madison, US](images/travel-bubble-lake.jpg){.photo group="travel"}
 
 ![Canoeing at Kemp research station](images/travel-kemp-canoe.jpg){.photo group="travel"}
 
