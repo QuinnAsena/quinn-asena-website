@@ -11,7 +11,7 @@ categories:
 
 This work is published in *Methods in Ecology and Evolution*: [Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions](https://doi.org/10.1111/2041-210x.70315) (Asena et al., 2026). The model was developed during my postdoc at UW–Madison with Tony Ives and Jack Williams, and is available as the [multinomialTS](https://github.com/QuinnAsena/multinomialTS) R package.
 
-A [blog post accompanying the publication](https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/) walks through the idea less formally, and I gave an invited talk on it for *Methods in Ecology and Evolution*. The [talk and workshop resources](https://quinnasena.github.io/multinomialTS-workshop-MEE/) are all open, and the recording goes up on the [MEE YouTube channel](https://www.youtube.com/@MethodsEcolEvol/videos).
+A [blog post accompanying the publication](https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/) walks through the idea less formally, and I gave an invited talk on it for *Methods in Ecology and Evolution*. The [workshop materials](https://quinnasena.github.io/multinomialTS-workshop/) are all open, and the recording goes up on the [MEE YouTube channel](https://www.youtube.com/@MethodsEcolEvol/videos).
 
 Below is an earlier post from when we were developing the model, kept here for context:
 
@@ -46,8 +46,5 @@ The [multinomialTS page](../multinomialts.qmd) collects everything about the pac
 
 I have also given talks and run workshops on this model:
 
-- [Workshop for Methods in Ecology and Evolution](https://quinnasena.github.io/multinomialTS-workshop-MEE/), the most recent
-- [ESA workshop walkthrough](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
-  - [Workshop talk](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_deck.html#%2Ftitle-slide)
-- [Application of the model talk](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#%2Ftitle-slide)
-- [Model development talk](https://quinnasena.github.io/esa-slides/slide_deck.html#%2Ftitle-slide)
+- [The multinomialTS workshop](https://quinnasena.github.io/multinomialTS-workshop/), the maintained hands-on walkthrough
+- Slide decks from individual events: [workshop talk, ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_deck.html#%2Ftitle-slide), [application of the model, ESA 2024](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#%2Ftitle-slide), [model development, ESA 2023](https://quinnasena.github.io/esa-slides/slide_deck.html#%2Ftitle-slide)

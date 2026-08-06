@@ -60,8 +60,7 @@ for Windows, Intel macOS and Apple silicon are on the
 - [multinomialTS vignette](https://quinnasena.github.io/multinomialTS/articles/multinomialTS-vignette.html), the place to start
 - [Sunfish Pond example](https://quinnasena.github.io/multinomialTS/articles/sunfish_pond_example.html), a worked analysis end to end
 - [Function reference](https://quinnasena.github.io/multinomialTS/reference/index.html)
-- [Workshop for Methods in Ecology and Evolution](https://quinnasena.github.io/multinomialTS-workshop-MEE/), slides and materials, all open
-- [ESA workshop walkthrough](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html), the earlier hands-on version
+- [The workshop](https://quinnasena.github.io/multinomialTS-workshop/), a hands-on walkthrough with everything you need to run it yourself. This is the maintained version; the copies made for individual conferences are frozen at whatever the package looked like on the day.
 
 ## The paper
 

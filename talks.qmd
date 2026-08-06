@@ -30,7 +30,7 @@ I present at scientific conferences and workshops several times a year, most reg
 
 ::: {.talk-record}
 - [2026]{.talk-year}
-  - **Methods in Ecology and Evolution**, virtual. Invited talk: *multinomialTS: a state-space approach for modelling community time series*. [Talk and workshop resources](https://quinnasena.github.io/multinomialTS-workshop-MEE/)
+  - **Methods in Ecology and Evolution**, virtual. Invited talk: *multinomialTS: a state-space approach for modelling community time series*. [Workshop materials](https://quinnasena.github.io/multinomialTS-workshop/)
   - **ESA**, Salt Lake City, UT. Speaker: [*Assessing climate-driven compositional shifts in boreal forests using iLand*](https://quinnasena.github.io/esa-2026/slides/slides.html#/title-slide)
   - **Neotoma Outreach**, virtual. Talk: [*A virtual ecological approach to modelling uncertainties in palaeoecology*](https://www.youtube.com/watch?v=J-v0xkTIiNI). Workshop: [*Hands-on age-depth modelling using Bchron*](https://www.youtube.com/watch?v=yMNpRbNHz-w)
 - [2025]{.talk-year}
@@ -38,7 +38,7 @@ I present at scientific conferences and workshops several times a year, most reg
   - **AGU**, New Orleans, LA. Poster: *Assessing climate-driven compositional shifts in boreal forests using iLand*
   - **ResBaz** (Research Bazaar), Auckland and Madison. Workshop lead: [*Quarto for collaboration*](https://github.com/QuinnAsena/resbaz2022), ResBaz Aotearoa 2022–2024 and Madison, WI 2023. Organiser, ResBaz Aotearoa 2021
 - [2024]{.talk-year}
-  - **ESA**, Long Beach, CA. Speaker: *Hypothesis testing of the drivers of long-term ecological change in Michigan*. Workshop host: [*State-space methods for testing hypotheses about environmental drivers and biotic interactions*](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
+  - **ESA**, Long Beach, CA. Speaker: *Hypothesis testing of the drivers of long-term ecological change in Michigan*. Workshop host: [*State-space methods for testing hypotheses about environmental drivers and biotic interactions*](https://quinnasena.github.io/multinomialTS-workshop/)
 - [2023]{.talk-year}
   - **INQUA**, Rome, Italy. Lead Convenor: [*Data science and palaeoecology: current intersections and advances*](https://inquaroma2023.exordo.com/programme/session/240)
   - **ESA**, Portland, OR. Speaker: [*Modelling palaeoecological community data: a state-space approach*](https://quinnasena.github.io/esa-slides/slide_deck.html#/title-slide)
