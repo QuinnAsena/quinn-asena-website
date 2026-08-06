@@ -115,6 +115,26 @@ include-in-header:
 
 {{< include _strata.qmd >}}
 
+## Software
+
+```{=html}
+<a class="feature-card" href="multinomialts.html">
+  <span class="feature-card-media">
+    <img src="workshops-lectures-posts/images/flowchart1.png" alt="" loading="lazy" decoding="async"/>
+  </span>
+  <span class="feature-card-body">
+    <span class="feature-card-meta">R package &middot; Methods in Ecology and Evolution &middot; 2026</span>
+    <span class="feature-card-title">multinomialTS</span>
+    <span class="feature-card-desc">State-space modelling of multinomially distributed
+      data. Estimate how environmental drivers relate to each taxon, and how taxa
+      interact, directly from count data such as fossil pollen.</span>
+    <span class="feature-card-more">Documentation, install, paper and workshops &rarr;</span>
+  </span>
+</a>
+```
+
+{{< include _strata.qmd >}}
+
 ## Explore
 
 {{< include _section-cards.qmd >}}

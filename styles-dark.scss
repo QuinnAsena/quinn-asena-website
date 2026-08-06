@@ -81,10 +81,10 @@ nav.quarto-secondary-nav.color-navbar {
   background-color: $dark-navbar;
 }
 
-// The CV button inverts: in dark mode --accent-700 is a LIGHT colour, so the white
+// The primary button inverts: in dark mode --brand-700 is a LIGHT colour, so the white
 // label from light mode would be light-on-light. Use the page background instead,
-// which measures 9.11:1 at worst across the six page hues.
-.cv-download {
+// which measures 9.11:1 at worst.
+.action-primary {
   color: $dark-page;
 
   &:hover,

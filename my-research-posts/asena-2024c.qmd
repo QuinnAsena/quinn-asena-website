@@ -40,9 +40,14 @@ To determine whether the model is recovering accurate estimates of driver-taxa r
 
 ## Outro
 
-This is a _very_ brief summary of the work. A great deal more can be said, but I am keeping these posts as short overviews! For more information, I have given talks and run workshops on this model:
+This is a _very_ brief summary of the work. A great deal more can be said, but I am keeping these posts as short overviews!
 
-- [Model workshop](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
+The [multinomialTS page](../multinomialts.qmd) collects everything about the package in one place: documentation, install instructions, the paper, and the workshops. For the model itself, start with the [package documentation](https://quinnasena.github.io/multinomialTS/).
+
+I have also given talks and run workshops on this model:
+
+- [Workshop for Methods in Ecology and Evolution](https://quinnasena.github.io/multinomialTS-workshop-MEE/), the most recent
+- [ESA workshop walkthrough](https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html)
   - [Workshop talk](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_deck.html#%2Ftitle-slide)
 - [Application of the model talk](https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#%2Ftitle-slide)
 - [Model development talk](https://quinnasena.github.io/esa-slides/slide_deck.html#%2Ftitle-slide)

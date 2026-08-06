@@ -5,9 +5,9 @@ toc: false
 ---
 
 ```{=html}
-<p class="cv-actions">
-  <a class="cv-download" href="cv/quinn-asena-cv.pdf" download>Download CV (PDF, 150 KB)</a>
-  <a class="cv-open" href="cv/quinn-asena-cv.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+<p class="actions">
+  <a class="action-primary" href="cv/quinn-asena-cv.pdf" download>Download CV (PDF, 150 KB)</a>
+  <a class="action-secondary" href="cv/quinn-asena-cv.pdf" target="_blank" rel="noopener">Open in a new tab</a>
 </p>
 ```
 

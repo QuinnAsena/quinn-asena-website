@@ -6,12 +6,12 @@
       subtitle: Ecological Society of America, Salt Lake City, UT.
       href: https://quinnasena.github.io/esa-2026/slides/slides.html#/title-slide
       thumbnail: talks-posts/images/esa-2026.png
-    - title: "ESA 2025: state-space case studies"
+    - title: "ESA 2025: multinomialTS case studies"
       subtitle: Ecological Society of America, Baltimore, MD.
       href: https://quinnasena.github.io/esa-2025/esa-2025-slides
       thumbnail: talks-posts/images/esa-2025.png
     - title: "ESA 2024: drivers of change in Michigan"
-      subtitle: Ecological Society of America, Long Beach, CA.
+      subtitle: multinomialTS applied to a pollen record. ESA, Long Beach, CA.
       href: https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide
       thumbnail: talks-posts/images/esa-2024.png
 

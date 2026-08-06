@@ -417,10 +417,15 @@ hr.section-divider {
 }
 
 // ---------------------------------------------------------------------------
-// CV page
+// Action row
+//
+// One solid primary button plus one or more plain secondary links. Used by the CV
+// page and the multinomialTS page. Named generically rather than .cv-* because two
+// pages now need the same control and duplicating the button would mean two places
+// to keep in sync, including the dark-mode label flip.
 // ---------------------------------------------------------------------------
 
-.cv-actions {
+.actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
@@ -428,7 +433,7 @@ hr.section-divider {
   max-width: none;
 }
 
-.cv-download {
+.action-primary {
   display: inline-block;
   padding: 0.55rem 1.15rem;
   background-color: var(--brand-700);
@@ -448,7 +453,7 @@ hr.section-divider {
   }
 }
 
-.cv-open {
+.action-secondary {
   font-size: 0.92rem;
   font-weight: 600;
 }
@@ -683,6 +688,98 @@ hr.section-divider {
   line-height: 1.45;
 }
 
+// ---------------------------------------------------------------------------
+// Feature card
+//
+// A wide, image-beside-text card for the one item on a page that matters more than
+// the rest. Built on the same card-surface mixin as everything else so it reads as
+// the same family, just larger: image left on desktop, stacked on mobile.
+// ---------------------------------------------------------------------------
+
+.feature-card {
+  @include card-surface;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.4rem;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    @include card-surface-hover;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover .feature-card-title,
+  &:focus-visible .feature-card-title {
+    color: var(--brand-900);
+  }
+}
+
+.feature-card-media {
+  flex: 1 1 15rem;
+  min-width: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.35rem;
+  }
+}
+
+.feature-card-body {
+  display: flex;
+  flex: 2 1 18rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.feature-card-meta {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.feature-card-title {
+  color: var(--brand-700);
+  font-family: $headings-font-family;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.feature-card-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.feature-card-more {
+  margin-top: auto;
+  padding-top: 0.3rem;
+  color: var(--brand-500);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card {
+    transition: none;
+  }
+
+  .feature-card:hover,
+  .feature-card:focus-visible {
+    transform: none;
+  }
+}
+
 // Research listing (my-research.qmd)
 .quarto-grid-item.card {
   @include card-surface;
@@ -737,6 +834,12 @@ hr.section-divider {
     background-color: transparent;
     border-bottom: 1px solid var(--border);
     color: inherit;
+  }
+
+  // A tile with no thumbnail has nothing below the header, so that hairline becomes a
+  // dangling rule along the card's own bottom edge. Drop it in that case.
+  &:not(:has(.card-img-top)) .card-header {
+    border-bottom: none;
   }
 
   .listing-title {

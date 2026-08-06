@@ -7,11 +7,14 @@
       href: https://quinnasena.github.io/neotoma-age-depth/neotoma-age-depth.html
       code: https://github.com/QuinnAsena/neotoma-age-depth
       thumbnail: workshops-lectures-posts/images/neotoma_hands-on.jpg
-    - title: multinomialTS
-      subtitle: Workshop and walkthrough on state-space modelling.
+    - title: "multinomialTS: Methods in Ecology and Evolution workshop"
+      subtitle: Invited workshop on state-space modelling of count data, 2026.
+      href: https://quinnasena.github.io/multinomialTS-workshop-MEE/
+      thumbnail: workshops-lectures-posts/images/flowchart1.png
+    - title: "multinomialTS: ESA walkthrough"
+      subtitle: The earlier hands-on version, run at ESA 2024.
       href: https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html
       code: https://github.com/QuinnAsena/state-space-workhop-ESA
-      thumbnail: workshops-lectures-posts/images/flowchart1.png
     - title: Quarto workshop
       subtitle: Authoring Collaborative Research Projects in Quarto.
       href: https://quinnasena.github.io/resbaz2022/slides/slide_deck.html#/title-slide
