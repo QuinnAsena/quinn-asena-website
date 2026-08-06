@@ -33,7 +33,7 @@ My PhD took a virtual ecology approach to a prior question: whether we can trust
 
 ## Fieldwork - not just a desk ecologist
 
-I love being out in the field. I've been out taking core samples, sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, flowering plants, and setting audio recorders and camera traps. Click on any image for slideshow with more photos.
+I love being out in the field. I've been out taking core samples, sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, flowering plants, and setting audio recorders and camera traps. Click on any image for a slideshow with more photos.
 
 ::: {.photo-grid}
 ![Biodiversity surveys and wetland coring in New Zealand](images/fieldwork-nz.jpg){.photo group="fieldwork"}

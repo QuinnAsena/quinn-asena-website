@@ -9,11 +9,11 @@ include-in-header:
     <style>:root { --accent-h: 320; }</style>
 ---
 
-Professionally, I am an ecologist with borderline data-scientist disorder. In my personal life, I have a background in music performance, and lots of hobbies. I don't have quality recordings of my music, but I do have some photos of my hobbies.
+Professionally, I am an ecologist with borderline data scientist disorder. In my personal life, I have a background in music performance, and lots of hobbies. I don't have quality recordings of my music, but I do have some photos of my hobbies.
 
 ## Art
 
-Occasionally dabble in art... Click on any image for slideshow with more photos.
+Occasionally dabble in art... Click on any image for a slideshow with more photos.
 
 ::: {.photo-grid}
 ![Ink art mix](images/art-mix.jpg){.photo group="art"}
@@ -59,7 +59,7 @@ Lots of travel... More photos in slideshow.
 
 ![Puffins, Iceland](images/travel-iceland-puffins.jpg){.photo group="travel"}
 
-![Yoda, Iceland](images/travel-iceland-yoda.jpg){.photo group="travel"}
+![Yoda cave, Iceland](images/travel-iceland-yoda.jpg){.photo group="travel"}
 
 ![Cappadocia, Turkey](images/travel-capadocia-lcp.jpg){.photo group="travel"}
 
@@ -71,7 +71,7 @@ Lots of travel... More photos in slideshow.
 
 ![Yellowstone, US](images/travel-yellowstone.jpg){.photo group="travel"}
 
-![Katterskill, New York](images/travel-katterskill.jpg){.photo group="travel"}
+![Katterskill falls, New York](images/travel-katterskill.jpg){.photo group="travel"}
 
 ![Upstate New York](images/travel-upstate-ny.jpg){.photo group="travel"}
 
@@ -79,11 +79,11 @@ Lots of travel... More photos in slideshow.
 
 ![Gas bubbles trapped in lake ice, Madison, US](images/travel-bubble-lake.jpg){.photo group="travel"}
 
-![Canoeing at Kemp research station](images/travel-kemp-canoe.jpg){.photo group="travel"}
+![Canoeing at Kemp research station, Madison, US](images/travel-kemp-canoe.jpg){.photo group="travel"}
 
 ![South of France](images/travel-sfrance.jpg){.photo group="travel"}
 
-![That's not a bear](images/travel-notabear.jpg){.photo group="travel"}
+![That's not a dog, Squamish, CA](images/travel-notabear.jpg){.photo group="travel"}
 
 ![Mushroom](images/travel-mushroom.jpg){.photo group="travel"}
 
