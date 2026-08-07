@@ -26,7 +26,7 @@ Software that came out of my research and teaching: R packages implementing meth
   </span>
   <span class="feature-card-body">
     <span class="feature-card-meta">R package &middot; Methods in Ecology and Evolution &middot; 2026</span>
-    <span class="feature-card-title">multinomialTS</span>
+    <span class="feature-card-title"><code>multinomialTS</code></span>
     <span class="feature-card-desc">State-space modelling of multinomially distributed
       data. Estimate how environmental drivers relate to each taxon, and how taxa
       interact, directly from count data such as fossil pollen.</span>

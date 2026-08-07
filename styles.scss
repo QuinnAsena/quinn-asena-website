@@ -148,6 +148,34 @@ h4 {
   color: var(--text-muted);
 }
 
+// Inline code in headings and card text, for package names like `multinomialTS`.
+//
+// Three things need undoing. lux uppercases every heading
+// (text-transform: uppercase, letter-spacing: 3px), which turns a camelCase package
+// name into MULTINOMIALTS and is wrong for something case-sensitive. Bootstrap then
+// gives code a pale #f8f9fa chip background and the purple $code-color, neither of
+// which belongs in a teal heading or on a card.
+//
+// Running prose keeps Bootstrap's chip, where it is conventional and useful. It is
+// only display text that wants the plain treatment: the chip is visual noise at card
+// sizes and fights the heading colour.
+//
+// The monospace face is kept on purpose: it is what makes the name read as software.
+h1, h2, h3, h4, h5, h6,
+.feature-card-title,
+.feature-card-desc,
+.section-card-title,
+.section-card-desc {
+  code {
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    font-size: 0.92em;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+}
+
 // Cap the measure on running prose only. Cards, captions, listings and tables
 // manage their own width, so they opt back out.
 main.content {
@@ -467,6 +495,35 @@ hr.section-divider {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 0.5rem;
+}
+
+// ---------------------------------------------------------------------------
+// Embedded video (YouTube)
+//
+// YouTube hands you a fixed 560x315 iframe with a deprecated frameborder attribute.
+// This wrapper makes it fluid instead: aspect-ratio reserves the right space at any
+// width, so nothing reflows once the iframe loads.
+//
+// The iframe is lazy-loaded, so it costs nothing until scrolled into view, and it
+// points at youtube-nocookie.com. This is the only third-party embed on the site, and
+// the nocookie host avoids setting tracking cookies unless the visitor actually plays.
+// ---------------------------------------------------------------------------
+
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1.25rem 0 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #000;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }
 
 // ---------------------------------------------------------------------------

@@ -2,6 +2,11 @@
   description: |
     Workshops I have developed and run at conferences and research bazaar.
   tiles:
+    - title: multinomialTS workshop
+      subtitle: Hands-on walkthrough of state-space modelling for ecological count data.
+      href: https://quinnasena.github.io/multinomialTS-workshop/
+      code: https://github.com/QuinnAsena/multinomialTS-workshop
+      thumbnail: workshops-lectures-posts/images/flowchart1.png
     - title: Hands-on workshop for age-depth modelling using Bchron
       subtitle: Workshop on age-depth modelling.
       href: https://quinnasena.github.io/neotoma-age-depth/neotoma-age-depth.html
@@ -9,11 +14,6 @@
       thumbnail: workshops-lectures-posts/images/neotoma_hands-on.jpg
     # The maintained workshop. The per-conference repos (MEE, ESA) are frozen snapshots
     # and should not be linked as if they were the current materials.
-    - title: multinomialTS workshop
-      subtitle: Hands-on walkthrough of state-space modelling for ecological count data.
-      href: https://quinnasena.github.io/multinomialTS-workshop/
-      code: https://github.com/QuinnAsena/multinomialTS-workshop
-      thumbnail: workshops-lectures-posts/images/flowchart1.png
     - title: Quarto workshop
       subtitle: Authoring Collaborative Research Projects in Quarto.
       href: https://quinnasena.github.io/resbaz2022/slides/slide_deck.html#/title-slide

@@ -93,6 +93,16 @@ nav.quarto-secondary-nav.color-navbar {
   }
 }
 
+// Inline code needs a dark chip.
+//
+// Bootstrap's chip background is a hardcoded near-white #f8f9fa, and it is not a custom
+// property, so it survived into dark mode while the text colour flipped to the light
+// purple. That left every inline code span at 2.19:1, effectively unreadable. A dark
+// chip takes it to 6.58:1, and it stays distinct from both the page and a card surface.
+code {
+  background-color: #22262C;
+}
+
 // The inline PDF preview keeps a white surround, because the PDF pages are white.
 .cv-preview {
   background-color: #ffffff;
@@ -143,13 +153,21 @@ $mat-dim: 0.95;
   filter: brightness($mat-dim);
 }
 
-// Gallery thumbnails are object-fit: cover, so a background would never show. They
-// are slide screenshots rather than data figures, and only need the glare taken off.
-// Hovering a card restores full brightness.
-.card-img-top {
-  filter: brightness(0.92);
+// Gallery thumbnails and feature-card images get the mat too.
+//
+// An earlier version assumed object-fit: cover meant a background could never show, so
+// these only got a brightness knock-back. That is wrong for a diagram saved with a
+// transparent background: flowchart1.png is 99% transparent, so the dark page showed
+// straight through it and its dark strokes all but disappeared, with the knock-back
+// making it worse. A light backing fixes transparent artwork and is invisible behind
+// an opaque screenshot, so it is safe to apply to both.
+.card-img-top,
+.feature-card-media img {
+  background-color: $mat;
+  filter: brightness($mat-dim);
 }
 
-.resource-card:hover .card-img-top {
+.resource-card:hover .card-img-top,
+.feature-card:hover .feature-card-media img {
   filter: none;
 }
