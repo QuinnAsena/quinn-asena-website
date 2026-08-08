@@ -44,7 +44,9 @@ $dark-link: #C79BD6; // the purple lifted until it clears AA on both surfaces
   --bs-body-color: #{$dark-text};
   --bs-link-color: #{$dark-link};
   --bs-link-hover-color: #{lighten($dark-link, 10%)};
-  --bs-code-color: #{$dark-link};
+  // Inline code follows the brand teal in both modes, not the link colour.
+  --bs-code-color: #84C6D9;
+  --code-bg: #22262C;
   --bs-emphasis-color: #{lighten($dark-text, 10%)};
   --bs-secondary-color: #{$dark-muted};
   --bs-border-color: #{$dark-border};
@@ -91,16 +93,6 @@ nav.quarto-secondary-nav.color-navbar {
   &:focus-visible {
     color: $dark-page;
   }
-}
-
-// Inline code needs a dark chip.
-//
-// Bootstrap's chip background is a hardcoded near-white #f8f9fa, and it is not a custom
-// property, so it survived into dark mode while the text colour flipped to the light
-// purple. That left every inline code span at 2.19:1, effectively unreadable. A dark
-// chip takes it to 6.58:1, and it stays distinct from both the page and a card surface.
-code {
-  background-color: #22262C;
 }
 
 // The inline PDF preview keeps a white surround, because the PDF pages are white.

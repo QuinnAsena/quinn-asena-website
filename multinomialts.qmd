@@ -19,11 +19,11 @@ Count data, or multinomially distributed data, are a common form of ecological d
 
 ## How it works
 
-Full descriptions of the model is in the main paper ([Asena et al., 2006](https://doi.org/10.1111/2041-210x.70315)) with a full mathematical description from Tony Ives. Tony is the mathematician behind the model, Jack Williams is the palaeoecological expert, and my part was largly co-developing the model framework, writing the code-base, and implementing model test simulations and fitting empirical data. I also maintain the package and write and deliver the workshop materials.
+A full description of the model is in the main paper ([Asena et al., 2026](https://doi.org/10.1111/2041-210x.70315)), including the mathematics from Tony Ives. Tony is the mathematician behind the model, Jack Williams is the palaeoecological expert, and my part was largely co-developing the model framework, writing the code base, and implementing model test simulations and fitting empirical data. I also maintain the package and write and deliver the workshop materials.
 
 In brief, state-space modelling attempts to predict the 'true' unobservable state of a system from underlying ecological processes and observations from the system. In a palaeoecological context, the 'true' state is the relative abundance of each taxon in a community, and the observations are the counts of each taxon in a sample. The model estimates how environmental drivers (or covariates) relate to each taxon, and how taxa interact, directly from count data such as fossil pollen.
 
-![The `multinomialTS` workflow: preparing state variables and covariates, the decisions to make about grouping taxa, interpolating covariates and chosing a prediction resolution, then fitting and comparing competing hypotheses.](workshops-lectures-posts/images/flowchart1.png)
+![The `multinomialTS` workflow: preparing state variables and covariates, the decisions to make about grouping taxa, interpolating covariates and choosing a prediction resolution, then fitting and comparing competing hypotheses.](workshops-lectures-posts/images/flowchart1.png)
 
 
 ## Install

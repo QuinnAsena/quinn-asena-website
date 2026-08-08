@@ -22,8 +22,10 @@ $body-color: $gray;
 $footer-bg: $teal;
 $link-color: $purple;
 
-// Inline code
-$code-color: $purple;
+// Inline code. Teal rather than the link purple, so a package name in running text is
+// not mistaken for a link, and because teal has enough contrast headroom to sit on a
+// visible chip (6.2:1 on the chip below, against 4.4:1 for the purple).
+$code-color: $teal-700;
 
 // Typography.
 //
@@ -128,6 +130,11 @@ $measure: 70ch;
   // Raised surface for cards. Also a property so the dark theme can flip it: the
   // card mixin compiles to a literal otherwise.
   --surface: #{$card-bg};
+
+  // Inline code chip. Bootstrap hardcodes #f8f9fa, a cold grey that reads as a patch
+  // against this warm cream, and being a literal rather than a property it also leaked
+  // into dark mode. A property fixes both.
+  --code-bg: #F2EFE8;
 }
 
 // Heading hierarchy: one hue, decreasing weight. h4 drops to body colour and
@@ -146,6 +153,27 @@ h3 {
 
 h4 {
   color: var(--text-muted);
+}
+
+// Inline code in running prose. Keeps a chip, because it usefully delimits things like
+// `xcode-select --install`, but a warm one that belongs to this palette, with a
+// hairline and a small radius instead of Bootstrap's flat grey block.
+//
+// The three long selectors are not padding. Quarto ships
+//   p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode)
+//     { background-color: #f8f9fa; padding: .2em }
+// which at 0,1,2 outranks a bare `code` at 0,0,1 and wins no matter how late our rule
+// comes. Matching its selector list exactly is what lets source order decide, and
+// avoids reaching for !important. The bare `code` selector still covers the places
+// Quarto's rule does not reach, such as figure captions.
+code,
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  padding: 0.08rem 0.3rem;
 }
 
 // Inline code in headings and card text, for package names like `multinomialTS`.
@@ -169,6 +197,7 @@ h1, h2, h3, h4, h5, h6,
   code {
     padding: 0;
     background-color: transparent;
+    border: 0;
     color: inherit;
     font-size: 0.92em;
     text-transform: none;
@@ -786,6 +815,40 @@ hr.section-divider {
     height: auto;
     border-radius: 0.35rem;
   }
+}
+
+// Same surface as .feature-card but NOT a link, because it holds a video whose controls
+// have to be clickable and an <a> may not wrap interactive content. The text classes
+// are shared with .feature-card, so the two bands read as the same component.
+.media-card {
+  @include card-surface;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.4rem;
+}
+
+.media-card-media {
+  flex: 1 1 16rem;
+  min-width: 0;
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background-color: var(--surface);
+    border-radius: 0.35rem;
+  }
+}
+
+.media-card-body {
+  display: flex;
+  flex: 1 1 16rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
 }
 
 .feature-card-body {

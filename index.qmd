@@ -53,7 +53,7 @@ include-in-header:
     <p class="hero-role">Data Scientist,
       <a href="https://www.caryinstitute.org/science/research-support/quinn-asena">Cary Institute of Ecosystem Studies</a>
     </p>
-    <p class="hero-lede">Investigating ecological dynamics in the past, present and future. My research spans palaeoecology, statistical ecology, process-based landscape modelling, wildfire risk mapping, and deep learning.</p>
+    <p class="hero-lede">Investigating ecological dynamics in the past, present and future: what drives ecosystems to change, and can see it coming.</p>
     <ul class="hero-tags">
       <li>Palaeoecology</li>
       <li>Wildfire risk mapping</li>
@@ -83,7 +83,33 @@ include-in-header:
 
 {{< include _strata.qmd >}}
 
-## Selected work
+## Current work
+
+```{=html}
+<div class="media-card">
+  <span class="media-card-media">
+    <video controls muted loop playsinline preload="metadata"
+      width="1920" height="1440"
+      aria-label="Animated map of the wildfire record in Alaska from 1980 to 2020">
+      <source src="images/ak_fire_1980_2020.webm" type="video/webm">
+      <p>Your browser can't play this video.
+        <a href="images/ak_fire_1980_2020.webm">Download it instead</a>.</p>
+    </video>
+  </span>
+  <span class="media-card-body">
+    <span class="feature-card-meta">Cary Institute &middot; Forest Futures Lab</span>
+    <span class="feature-card-title">Boreal forests and wildfire risk</span>
+    <span class="feature-card-desc">Process-based landscape simulations of boreal North
+      America under multiple climate scenarios, and mapping wildfire risk at continental
+      scale with deep learning. The clip shows Alaska's fire record, 1980 to 2020.</span>
+    <a class="feature-card-more" href="about.html">More about this work &rarr;</a>
+  </span>
+</div>
+```
+
+{{< include _strata.qmd >}}
+
+## Selected publications
 
 ```{=html}
 <div class="grid section-cards">
@@ -133,7 +159,7 @@ include-in-header:
 </a>
 ```
 
-[Watch the hour-long Methods in Ecology and Evolution webinar →](https://youtu.be/h7uBQd-je8A)
+[Watch the Methods in Ecology and Evolution webinar →](https://youtu.be/h7uBQd-je8A)
 
 {{< include _strata.qmd >}}
 
