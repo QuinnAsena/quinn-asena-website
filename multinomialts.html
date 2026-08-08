@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="From fossil pollen records spanning millennia to simulating forest futures, and continental-scale wildfire risk mapping.">
+<meta name="description" content="An R package for state-space modelling of multinomially distributed data to estimate environmental drivers and species interactions. Published in Methods in Ecology and Evolution, 2026.">
 
-<title>About – Quinn Asena</title>
+<title>multinomialTS – Quinn Asena</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -46,9 +81,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-cf54a59340c666b85222fb4ecde7c52f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-2bd61695de55948d6cb10b4d4327353a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -75,13 +107,13 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="About – Quinn Asena">
-<meta property="og:description" content="From fossil pollen records spanning millennia to simulating forest futures, and continental-scale wildfire risk mapping.">
+<meta property="og:title" content="multinomialTS – Quinn Asena">
+<meta property="og:description" content="An R package for state-space modelling of multinomially distributed data to estimate environmental drivers and species interactions. Published in Methods in Ecology and Evolution, 2026.">
 <meta property="og:image" content="https://quinnasena.github.io/quinn-asena-website/images/og-card.jpg">
 <meta property="og:site_name" content="Quinn Asena">
 <meta property="og:image:alt" content="Quinn Asena, ecologist and data scientist. Palaeoecology, wildfire risk, boreal forests.">
-<meta name="twitter:title" content="About – Quinn Asena">
-<meta name="twitter:description" content="From fossil pollen records spanning millennia to simulating forest futures, and continental-scale wildfire risk mapping.">
+<meta name="twitter:title" content="multinomialTS – Quinn Asena">
+<meta name="twitter:description" content="An R package for state-space modelling of multinomially distributed data to estimate environmental drivers and species interactions. Published in Methods in Ecology and Evolution, 2026.">
 <meta name="twitter:image" content="https://quinnasena.github.io/quinn-asena-website/images/og-card.jpg">
 <meta name="twitter:image:alt" content="Quinn Asena, ecologist and data scientist. Palaeoecology, wildfire risk, boreal forests.">
 <meta name="twitter:card" content="summary_large_image">
@@ -280,7 +312,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -358,13 +390,12 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#research-interests" id="toc-research-interests" class="nav-link active" data-scroll-target="#research-interests">Research interests</a></li>
-  <li><a href="#fieldwork---not-just-a-desk-ecologist" id="toc-fieldwork---not-just-a-desk-ecologist" class="nav-link" data-scroll-target="#fieldwork---not-just-a-desk-ecologist">Fieldwork - not just a desk ecologist</a></li>
-  <li><a href="#positions" id="toc-positions" class="nav-link" data-scroll-target="#positions">Positions</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
-  <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science">Data science</a></li>
-  <li><a href="#service" id="toc-service" class="nav-link" data-scroll-target="#service">Service</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link active" data-scroll-target="#how-it-works">How it works</a></li>
+  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a></li>
+  <li><a href="#learn-it" id="toc-learn-it" class="nav-link" data-scroll-target="#learn-it">Learn it</a></li>
+  <li><a href="#the-paper" id="toc-the-paper" class="nav-link" data-scroll-target="#the-paper">The paper</a></li>
+  <li><a href="#watch-the-talk" id="toc-watch-the-talk" class="nav-link" data-scroll-target="#watch-the-talk">Watch the talk</a></li>
+  <li><a href="#how-to-cite" id="toc-how-to-cite" class="nav-link" data-scroll-target="#how-to-cite">How to cite</a></li>
   </ul>
 </nav>
     </div>
@@ -374,12 +405,12 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title"><code>multinomialTS</code></h1>
 </div>
 
 <div>
   <div class="description">
-    From fossil pollen records spanning millennia to simulating forest futures, and continental-scale wildfire risk mapping.
+    An R package for state-space modelling of multinomially distributed data to estimate environmental drivers and species interactions. Published in <a href="https://doi.org/10.1111/2041-210x.70315">Methods in Ecology and Evolution, 2026</a>.
   </div>
 </div>
 
@@ -396,146 +427,63 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </header>
 
 
-<section id="research-interests" class="level2">
-<h2 class="anchored" data-anchor-id="research-interests">Research interests</h2>
-<p>What mechanisms underlie change in ecosystems over time and space? I study resilience, thresholds, and interactions. These are properties of dynamical systems that appear not only in ecological systems but also social, climate, and economic ones. I’m also interested in how climate, ecosystems, and humans interact. What do changing climates and ecosystems mean for humans? What do these changes mean for food and water security? How are we shaped by, and shape, our environment?</p>
-<p>In the <a href="https://forestfutureslab.org/">Forest Futures Lab</a> I work on process-based landscape simulations of boreal North America under multiple climate scenarios, and on mapping wildfire risk at continental scale using deep learning. This year, 2026, is seeing record breaking wildfires globally, and I am developing cutting edge methods to better understand and predict wildfire risk.</p>
-<figure class="video-figure figure">
-  <video controls="" autoplay="" loop="" muted="" playsinline="" width="1920" height="1440" aria-label="Animated map of the wildfire record in Alaska from 1980 to 2020">
-    <source src="images/ak_fire_1980_2020.webm" type="video/webm">
-    <p>Your browser can't play this video.
-      <a href="images/ak_fire_1980_2020.webm">Download it instead</a>.</p>
-  </video>
-  <figcaption>Wildfire record in Alaska from 1980 to 2020.</figcaption>
-</figure>
-<p>Much of my previous work has looked beyond the observational record. Ecosystems change over centuries and millennia, far longer than we have been measuring them, so we reconstruct ecosystem histories and past climates from traces such as fossil pollen and chemical isotopes. From these traces we can begin to estimate past interactions among species and the drivers of ecological change.</p>
-<p>My PhD took a virtual ecology approach to a prior question: whether we can trust what the data tell us at all. It involved simulating ecosystems from population growth models with underlying threshold dynamics, then degrading those simulations to see how sampling and environmental processes change the inferences we would draw.</p>
-</section>
-<section id="fieldwork---not-just-a-desk-ecologist" class="level2">
-<h2 class="anchored" data-anchor-id="fieldwork---not-just-a-desk-ecologist">Fieldwork - not just a desk ecologist</h2>
-<p>I love being out in the field. I’ve been out taking core samples, sampling heavy metals in streams, freshwater invertebrates, invasive fish, lake chemistry, aphids, flowering plants, and setting audio recorders and camera traps. Click on any image for a slideshow with more photos.</p>
-<div class="photo-grid">
+<p>Count data, or multinomially distributed data, are a common form of ecological data (but are not exclusive to ecology). Count data carry the issue of relative abundances, where the true abundance of a taxon, or species, is not known, and only their relative proportions are known. Additionally, ecological time-series are often irregularly spaced in time, which violates assumptions of many time-series models. <code>multinomialTS</code> is designed to model count data directly and provide estimates of driver-taxa relationships and taxa-taxa interactions, and also account for unevenly spaced time-intervals.</p>
+<p class="actions">
+  <a class="action-primary" href="https://quinnasena.github.io/multinomialTS/">Documentation</a>
+  <a class="action-secondary" href="https://doi.org/10.1111/2041-210x.70315">Read the paper</a>
+  <a class="action-secondary" href="https://github.com/QuinnAsena/multinomialTS">Source on GitHub</a>
+</p>
+<svg class="strata" width="100%" height="8" role="presentation" aria-hidden="true" focusable="false">
+  <path d="M0,4 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0 c30,-2 90,2 120,0"></path>
+</svg>
+<section id="how-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-works">How it works</h2>
+<p>A full description of the model is in the main paper (<a href="https://doi.org/10.1111/2041-210x.70315">Asena et al., 2026</a>), including the mathematics from Tony Ives. Tony is the mathematician behind the model, Jack Williams is the palaeoecological expert, and my part was largely co-developing the model framework, writing the code base, and implementing model test simulations and fitting empirical data. I also maintain the package and write and deliver the workshop materials.</p>
+<p>In brief, state-space modelling attempts to predict the ‘true’ unobservable state of a system from underlying ecological processes and observations from the system. In a palaeoecological context, the ‘true’ state is the relative abundance of each taxon in a community, and the observations are the counts of each taxon in a sample. The model estimates how environmental drivers (or covariates) relate to each taxon, and how taxa interact, directly from count data such as fossil pollen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/fieldwork-nz.jpg" class="lightbox" data-gallery="fieldwork" title="Biodiversity surveys and wetland coring in New Zealand"><img src="images/fieldwork-nz.jpg" class="photo img-fluid figure-img" alt="Biodiversity surveys and wetland coring in New Zealand"></a></p>
-<figcaption>Biodiversity surveys and wetland coring in New Zealand</figcaption>
+<p><img src="workshops-lectures-posts/images/flowchart1.png" class="img-fluid figure-img"></p>
+<figcaption>The <code>multinomialTS</code> workflow: preparing state variables and covariates, the decisions to make about grouping taxa, interpolating covariates and choosing a prediction resolution, then fitting and comparing competing hypotheses.</figcaption>
 </figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/fieldwork-ak.jpg" class="lightbox" data-gallery="fieldwork" title="Post-fire recovery fieldwork in Alaska"><img src="images/fieldwork-ak.jpg" class="photo img-fluid figure-img" alt="Post-fire recovery fieldwork in Alaska"></a></p>
-<figcaption>Post-fire recovery fieldwork in Alaska</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/fieldwork-arlington.jpeg" class="lightbox" data-gallery="fieldwork" title="Agricultural fieldwork in the US"><img src="images/fieldwork-arlington.jpeg" class="photo img-fluid figure-img" alt="Agricultural fieldwork in the US"></a></p>
-<figcaption>Agricultural fieldwork in the US</figcaption>
-</figure>
-</div>
-</div>
-<!-- Not shown on the page, but they join the lightbox: click any thumbnail above and
-     arrow through all six. Captions inferred from filenames, worth checking. -->
-<div class="lightbox-only">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/fieldwork-ak-spruce.jpg" class="lightbox" data-gallery="fieldwork" title="Black spruce, Alaska"><img src="images/fieldwork-ak-spruce.jpg" class="photo img-fluid figure-img" alt="Black spruce, Alaska"></a></p>
-<figcaption>Black spruce, Alaska</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/fieldwork-ak-decid.jpg" class="lightbox" data-gallery="fieldwork" title="Deciduous regrowth after fire, Alaska"><img src="images/fieldwork-ak-decid.jpg" class="photo img-fluid figure-img" alt="Deciduous regrowth after fire, Alaska"></a></p>
-<figcaption>Deciduous regrowth after fire, Alaska</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/fieldwork-ak-cones.jpg" class="lightbox" data-gallery="fieldwork" title="Cone collection, Alaska"><img src="images/fieldwork-ak-cones.jpg" class="photo img-fluid figure-img" alt="Cone collection, Alaska"></a></p>
-<figcaption>Cone collection, Alaska</figcaption>
-</figure>
-</div>
 </div>
 </section>
-<section id="positions" class="level2">
-<h2 class="anchored" data-anchor-id="positions">Positions</h2>
-<dl>
-<dt><strong>Data Scientist</strong> · Cary Institute of Ecosystem Studies, Millbrook, NY · 2025–present</dt>
-<dd>
-<p>Automated HPC workflows for process-based landscape simulations across boreal North America under multiple CMIP6 climate scenarios. Large-scale data management using SQL and Apache Arrow, integrating climate, soil, and elevation data from distributed archives (NASA DAACs, STAC). Built an interactive interface for collaborators to query simulation outputs and generate visualisations.</p>
-</dd>
-<dt><strong>Postdoctoral Research Associate</strong> · University of Wisconsin–Madison · 2022–2024</dt>
-<dd>
-<p>NSF-funded project developing state-space modelling methods for palaeoecological records, part of the abrupt ecosystem change project led by <a href="https://williamspaleolab.github.io/people/">Jack Williams</a> and <a href="https://ives.labs.wisc.edu/people/">Tony Ives</a>.</p>
-</dd>
-<dt><strong>Engagement Specialist</strong> · <a href="https://www.eresearch.auckland.ac.nz/">Centre for eResearch</a>, University of Auckland · 2021–2022</dt>
-<dd>
-<p>Seminars on data management, FAIR and CARE principles, and reproducible workflows; research-computing support for graduate students and staff across virtual machines, storage, and analytical workflows.</p>
-</dd>
-<dt><strong>Research Assistant</strong> · University of Auckland · 2021–2022</dt>
-<dd>
-<p>Bibliometric and topic analysis of the climate justice literature.</p>
-</dd>
-<dt><strong>Data Analyst</strong> · Auckland Council · 2021</dt>
-<dd>
-<p>Analysis of citizen science bird count data, and a technical report on the findings.</p>
-</dd>
-<dt><strong>Research Assistant</strong> · Stockholm Environment Institute, York · 2016–2017</dt>
-<dd>
-<p>Reconstruction of fire regimes in the North York Moors, including microscope analysis and core preparation for charcoal and spheroidal carbonaceous particles.</p>
-</dd>
-</dl>
+<section id="install" class="level2">
+<h2 class="anchored" data-anchor-id="install">Install</h2>
+<p>The model is not on CRAN yet. Until it is, it can be installed from GitHub:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("devtools")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"https://github.com/QuinnAsena/multinomialTS"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The package has compiled C++ code, so building from source needs <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> on Windows or <code>xcode-select --install</code> on macOS. If you would rather not compile, pre-built binaries for Windows, Intel macOS and Apple silicon are on the <a href="https://github.com/QuinnAsena/multinomialTS/releases">releases page</a>.</p>
 </section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<dl>
-<dt><strong>PhD</strong>, School of Environment, University of Auckland · 2017–2021</dt>
-<dd>
-<p>Virtual ecological methods for generating pseudoproxy data to assess statistical inference under data uncertainty. Supervised by George Perry (<a href="https://spatialecol.com/">the P-lab</a>) and Janet Wilmshurst.</p>
-</dd>
-<dt><strong>MEnv. Environmental Science</strong>, University of York · 2012–2016</dt>
-<dd>
-<p>First-class integrated master’s degree. Master’s research on environmental monitoring using sensor networks and robotics.</p>
-</dd>
-<dt><strong>Geocomputation &amp; Machine Learning for Environmental Applications</strong>, Basilicata University, Matera · 2025</dt>
-<dd>
-<p>Certified course in machine learning for spatial analysis.</p>
-</dd>
-<dt><strong>Certified Carpentries Instructor</strong>, <a href="https://carpentries.org/">The Carpentries</a> · 2023</dt>
-<dd>
-<p>Certified to teach and host workshops in data science and computational skills.</p>
-</dd>
-<dt><strong>Performance, Composition &amp; Theory</strong>, Royal Academy of Music, London · 2005–2010</dt>
-<dd>
-<p>Study in performance, composition, and musical theory, with multiple competition awards.</p>
-</dd>
-</dl>
-</section>
-<section id="teaching" class="level2">
-<h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
-<p>I teach wherever I can, and everything I produce is open and reusable. See <a href="./workshops-lectures.html">Teaching</a> for the materials themselves.</p>
-<p>University courses I have taught on:</p>
+<section id="learn-it" class="level2">
+<h2 class="anchored" data-anchor-id="learn-it">Learn it</h2>
+<p>The package includes two vignettes:</p>
 <ul>
-<li>Discovering Environmental Modelling</li>
-<li>Natural and Human Environmental Systems</li>
-<li>Environmental Science and Management</li>
+<li><a href="https://quinnasena.github.io/multinomialTS/articles/multinomialTS-vignette.html">Story lake vignette</a></li>
+<li><a href="https://quinnasena.github.io/multinomialTS/articles/sunfish_pond_example.html">Sunfish Pond vignette</a></li>
 </ul>
-<p>I have also led the Quarto workshop at ResBaz Aotearoa and Madison (2022–2024), hosted the state-space methods workshop at ESA 2024, and run a hands-on age-depth modelling workshop for Neotoma.</p>
+<p>And a more extensive walkthrough (not restricted by the vignette format) is here:</p>
+<ul>
+<li><a href="https://quinnasena.github.io/multinomialTS-workshop/state-space-walkthrough.html">The workshop</a></li>
+</ul>
 </section>
-<section id="data-science" class="level2">
-<h2 class="anchored" data-anchor-id="data-science">Data science</h2>
-<p>Working across empirical and theoretical ecology means a great deal of data science. My own work runs on cluster computing and virtual machines, and routinely involves data volumes that will not fit on a laptop: petabyte-scale simulation output managed with SQL and Apache Arrow, and climate, soil, and elevation layers pulled from distributed archives.</p>
-<p>My time at the Centre for eResearch added the other side of that work: consulting on researchers’ needs, secure data storage, and helping people set up analysis workflows they could actually maintain. Technical work across Linux, Bash, Slurm, HPC, and version control.</p>
+<section id="the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="the-paper">The paper</h2>
+<p><strong>Asena, Q.</strong>, Williams, J., Johnson, J., Shuman, B., Stefanova, V., Ives, A. (2026). <a href="https://doi.org/10.1111/2041-210x.70315">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</a>. <em>Methods in Ecology and Evolution.</em></p>
+<p>There is also a <a href="https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/">Methods blog post</a> for a more informal discussion of the method.</p>
+<p>The model was developed during my postdoc at UW–Madison with <a href="https://ives.labs.wisc.edu/people/">Tony Ives</a> and <a href="https://williamspaleolab.github.io/people/">Jack Williams</a>.</p>
 </section>
-<section id="service" class="level2">
-<h2 class="anchored" data-anchor-id="service">Service</h2>
-<dl>
-<dt><strong>Early Career Representative</strong>, Neotoma Leadership Council · 2024–present</dt>
-<dd>
-<p>Contributing to database governance, ingestion standards, and community user support for a global palaeoecological data resource.</p>
-</dd>
-</dl>
-<p>I also review for ecological and palaeoecological journals.</p>
+<section id="watch-the-talk" class="level2">
+<h2 class="anchored" data-anchor-id="watch-the-talk">Watch the talk</h2>
+<p>Here is a talk that accompanied the publication of the paper.</p>
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/h7uBQd-je8A" title="MEE live! A state-space approach for modelling multinomially distributed community time series" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div>
+<p>I have also presented this work at ESA in 2023, 2024 and 2025. Those slides are on the <a href="./talks.html">Talks</a> page.</p>
+</section>
+<section id="how-to-cite" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-cite">How to cite</h2>
+<p>Cite the paper above for the method. For the software itself, <code>citation("multinomialTS")</code> in R gives the current version, and the <a href="https://quinnasena.github.io/multinomialTS/authors.html">citation page</a> has it too.</p>
+<p>Released under the MIT licence. Issues and contributions are welcome on <a href="https://github.com/QuinnAsena/multinomialTS/issues">GitHub</a>.</p>
 
 
 </section>
@@ -992,38 +940,6 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

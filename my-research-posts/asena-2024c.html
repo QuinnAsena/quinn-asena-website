@@ -44,8 +44,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c628828a0008924d221e5cbdf0199827.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-3d84e954987f9cfef286619cf717d7d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cf54a59340c666b85222fb4ecde7c52f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2bd61695de55948d6cb10b4d4327353a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -404,8 +404,8 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 </header>
 
 
-<p>This work is published in <em>Methods in Ecology and Evolution</em>: <a href="https://doi.org/10.1111/2041-210x.70315">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</a> (Asena et al., 2026). The model was developed during my postdoc at UW–Madison with Tony Ives and Jack Williams, and is available as the <a href="https://github.com/QuinnAsena/multinomialTS">multinomialTS</a> R package.</p>
-<p>A <a href="https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/">blog post accompanying the publication</a> walks through the idea less formally, and I gave an invited talk on it for <em>Methods in Ecology and Evolution</em>. The <a href="https://quinnasena.github.io/multinomialTS-workshop-MEE/">talk and workshop resources</a> are all open, and the recording goes up on the <a href="https://www.youtube.com/@MethodsEcolEvol/videos">MEE YouTube channel</a>.</p>
+<p>This work is published in <em>Methods in Ecology and Evolution</em>: <a href="https://doi.org/10.1111/2041-210x.70315">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</a> (Asena et al., 2026). The model was developed during my postdoc at UW–Madison with Tony Ives and Jack Williams, and is available as the <a href="https://github.com/QuinnAsena/multinomialTS"><code>multinomialTS</code></a> R package.</p>
+<p>A <a href="https://methodsblog.com/2026/07/13/from-pattern-to-process-estimating-species-interactions-and-driver-species-relationships-from-count-data/">blog post accompanying the publication</a> walks through the idea less formally, and I gave an invited talk on it for <em>Methods in Ecology and Evolution</em>. You can <a href="https://youtu.be/h7uBQd-je8A">watch the talk</a>, and the <a href="https://quinnasena.github.io/multinomialTS-workshop/">workshop materials</a> are all open.</p>
 <p>Below is an earlier post from when we were developing the model, kept here for context:</p>
 <section id="post-from-2024-12-01" class="level2">
 <h2 class="anchored" data-anchor-id="post-from-2024-12-01">Post from 2024-12-01</h2>
@@ -421,7 +421,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <img src="images/asena-2024-c/story-counts.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schlenker <em>et al.</em>, 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The multinomialTS model uses raw counts so I’m showing raw count data. Three key species are plotted (<em>Quercus</em>, <em>Fagus</em>, and <em>Ulmus</em>), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in <em>Ambrosia</em> when forests were cleared after Euro-American colonisation of North America.
+Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schlenker <em>et al.</em>, 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The <code>multinomialTS</code> model uses raw counts so I’m showing raw count data. Three key species are plotted (<em>Quercus</em>, <em>Fagus</em>, and <em>Ulmus</em>), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in <em>Ambrosia</em> when forests were cleared after Euro-American colonisation of North America.
 </figcaption>
 </figure>
 </div>
@@ -444,14 +444,12 @@ Figure&nbsp;2: Estimated values of the driver-taxa relationship across the 500 r
 </section>
 <section id="outro" class="level2">
 <h2 class="anchored" data-anchor-id="outro">Outro</h2>
-<p>This is a <em>very</em> brief summary of the work. A great deal more can be said, but I am keeping these posts as short overviews! For more information, I have given talks and run workshops on this model:</p>
+<p>This is a <em>very</em> brief summary of the work. A great deal more can be said, but I am keeping these posts as short overviews!</p>
+<p>The <a href="../multinomialts.html"><code>multinomialTS</code> page</a> collects everything about the package in one place: documentation, install instructions, the paper, and the workshops. For the model itself, start with the <a href="https://quinnasena.github.io/multinomialTS/">package documentation</a>.</p>
+<p>I have also given talks and run workshops on this model:</p>
 <ul>
-<li><a href="https://quinnasena.github.io/state-space-workhop-ESA/state-space-walkthrough.html">Model workshop</a>
-<ul>
-<li><a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_deck.html#%2Ftitle-slide">Workshop talk</a></li>
-</ul></li>
-<li><a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#%2Ftitle-slide">Application of the model talk</a></li>
-<li><a href="https://quinnasena.github.io/esa-slides/slide_deck.html#%2Ftitle-slide">Model development talk</a></li>
+<li><a href="https://quinnasena.github.io/multinomialTS-workshop/">The <code>multinomialTS</code> workshop</a>, the maintained hands-on walkthrough</li>
+<li>Slide decks from individual events: <a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_deck.html#%2Ftitle-slide">workshop talk, ESA 2024</a>, <a href="https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#%2Ftitle-slide">application of the model, ESA 2024</a>, <a href="https://quinnasena.github.io/esa-slides/slide_deck.html#%2Ftitle-slide">model development, ESA 2023</a></li>
 </ul>
 
 
