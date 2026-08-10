@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/workshops-lectures.html",
-    "items": []
-  },
-  {
     "listing": "/my-research.html",
     "items": [
       "/my-research-posts/asena-2026-multinomialts.html",
@@ -14,6 +10,10 @@
   },
   {
     "listing": "/packages-apps.html",
+    "items": []
+  },
+  {
+    "listing": "/workshops-lectures.html",
     "items": []
   },
   {
