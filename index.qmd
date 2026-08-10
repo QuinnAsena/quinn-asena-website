@@ -114,21 +114,21 @@ include-in-header:
 ```{=html}
 <div class="grid section-cards">
 
-  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024c.html">
+  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2026-multinomialts.html">
     <span class="section-card-meta">Methods in Ecology and Evolution &middot; 2026</span>
     <span class="section-card-title">A state-space model for ecological count data</span>
     <span class="section-card-desc">Estimating species interactions and driver&ndash;species
       relationships from multinomial time series.</span>
   </a>
 
-  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024b.html">
+  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2026-information-loss.html">
     <span class="section-card-meta">Climate of the Past &middot; 2026</span>
     <span class="section-card-title">Information loss in palaeoecological data</span>
     <span class="section-card-desc">Which sources of uncertainty matter most, and where
       sampling effort is best spent.</span>
   </a>
 
-  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024a.html">
+  <a class="section-card g-col-12 g-col-md-4" href="my-research-posts/asena-2024-pseudoproxy.html">
     <span class="section-card-meta">The Holocene &middot; 2024</span>
     <span class="section-card-title">Is the past recoverable from the data?</span>
     <span class="section-card-desc">A virtual ecology approach to assessing uncertainty in palaeo-records.</span>

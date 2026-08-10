@@ -1,7 +1,9 @@
 ---
 title: "A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward"
 date: "2024-03-01"
-image: "images/parsons-2024/six_topic_plot.svg"
+image: "images/parsons-2024-climate-justice/six_topic_plot.svg"
+aliases:
+  - /my-research-posts/parsons-2024.html
 categories:
   - Climate Justice
   - Social Science
@@ -23,11 +25,11 @@ Six overall topics emerged from the literature that we assigned the following de
 - Policy and activism
 - Human rights and indigenous people
 
-![Six topics (corpus) identified through topic modelling within the published papers, with the keywords appearing most frequently within each topic.](images/parsons-2024/six_topic_plot.svg){#fig-topics}
+![Six topics (corpus) identified through topic modelling within the published papers, with the keywords appearing most frequently within each topic.](images/parsons-2024-climate-justice/six_topic_plot.svg){#fig-topics}
 
 We can also see how many documents belong to each topic over time (@fig-gamma). Each document gets a score per topic, and may not belong _only_ to one topic, but we can still reasonably map out the trends. It is also true that there were not many documents published on climate justice in the early years, so interpret the first decade with that in mind.
 
-![The proportion of the literature belonging to a given topic over time.](images/parsons-2024/gamma_through_time.svg){#fig-gamma}
+![The proportion of the literature belonging to a given topic over time.](images/parsons-2024-climate-justice/gamma_through_time.svg){#fig-gamma}
 
 Topics 2 and 3 around sustainable development and international relations, respectively, make up a consistent, and substantial proportion of the literature. Smaller topics 1, 4, 5, and 6 have seen a small increase over time.
 
