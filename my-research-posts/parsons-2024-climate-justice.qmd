@@ -2,8 +2,6 @@
 title: "A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward"
 date: "2024-03-01"
 image: "images/parsons-2024-climate-justice/six_topic_plot.svg"
-aliases:
-  - /my-research-posts/parsons-2024.html
 categories:
   - Climate Justice
   - Social Science

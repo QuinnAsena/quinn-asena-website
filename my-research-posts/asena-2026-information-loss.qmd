@@ -2,8 +2,6 @@
 title: Information loss in palaeoecological data from process and observer error
 date: "2026-04-10"
 image: "images/asena-2026-information-loss/walk_step_fisher_two_dim_metrics_mean_plot.png"
-aliases:
-  - /my-research-posts/asena-2024b.html
 categories:
   - Ecology
   - Modelling
