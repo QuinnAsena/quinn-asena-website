@@ -20,9 +20,9 @@
       subtitle: Interactive companion to the population growth lecture.
       href: https://quinnasena.shinyapps.io/growth_app/
       code: https://github.com/QuinnAsena/growth_lecture
-      thumbnail: packages-apps-posts/images/pop-growth-lecture-app.png
+      thumbnail: packages-apps-posts/images/pop-growth-lecture-app.webp
     - title: Two population growth models
       subtitle: Comparing exponential and logistic growth.
       href: https://quinnasena.shinyapps.io/r_logistic/
       code: https://github.com/QuinnAsena/r_logistic
-      thumbnail: packages-apps-posts/images/pop-growth-app.png
+      thumbnail: packages-apps-posts/images/pop-growth-app.webp

@@ -6,44 +6,68 @@ include-in-header:
   text: |
     <style>:root { --accent-h: 255; }</style>
 listing:
-  contents: my-research-posts/*.qmd
-  categories: true
-  type: grid
-  feed: true
-  sort:
-    - "date desc"
+  # Given an id so the grid can be placed in the body above the publication list.
+  # Without one, Quarto appends the listing to the end of the page, which is what
+  # buried the summaries underneath ten citations.
+  - id: summaries
+    contents: my-research-posts/*.qmd
+    categories: true
+    type: grid
+    # Four across so the summaries occupy a single horizontal band rather than a
+    # stacked block. That is what keeps the publication list near the fold. At eight
+    # or more summaries this stops being one row: add max-items and a "see all" link
+    # at that point rather than letting it grow into the publications.
+    grid-columns: 4
+    # Categories are deliberately absent. Five chips stacked in a quarter-width card
+    # added about 100px of height each, and the same taxonomy is already on every
+    # publication above as .pub-tag, so the card chips were duplicating it. Listing
+    # them here explicitly also keeps the subtitle (the full paper title) off the card.
+    fields: [image, title, description, date]
+    image-height: "140px"
+    feed: true
+    sort:
+      - "date desc"
 ---
 
 My research is about ecological change: what drives it, how fast it happens, and how confidently we can detect it. That has taken me from fossil pollen records spanning millennia to continental-scale simulations of boreal forests under future climates.
 
-If you can't access any of the full articles, [get in touch](mailto:asenaq@caryinstitute.org) and I'll send you a copy. Everything I write is also open on [GitHub](https://github.com/QuinnAsena).
+If you can't access any of the full articles, [get in touch](mailto:asenaq@caryinstitute.org) and I'll send you a copy. The same record with citation counts is on [Google Scholar](https://scholar.google.com/citations?user=eKltz04AAAAJ) and [ORCID](https://orcid.org/0000-0002-4086-460X), and everything I write is open on [GitHub](https://github.com/QuinnAsena).
+
+## Research summaries
+
+Longer, plain-language write-ups of selected papers: what the question was, and what we found.
+
+<!-- Break the band out of the prose measure: at body width four cards are only ~180px
+     each, which forces every title onto five or six lines. Outset buys ~30px per card.
+     Deliberately not .column-page, which spans to page-end with z-index 998 and would
+     render on top of the TOC and category filter sitting in the right margin. -->
+::: {.column-body-outset}
+::: {#summaries}
+:::
+:::
 
 ## Publications
 
 <!-- Source of record: CV-typst/csvs/publications.csv. Update both together. -->
 
 ::: {.publications}
-**2026** · **Asena, Q.**, Williams, J., Johnson, J., Shuman, B., Stefanova, V., Ives, A. [Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions](https://doi.org/10.1111/2041-210x.70315). *Methods in Ecology and Evolution.* [Read the summary →](my-research-posts/asena-2026-multinomialts.qmd)
+**2026** · **Asena, Q.**, Williams, J., Johnson, J., Shuman, B., Stefanova, V., Ives, A. [Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions](https://doi.org/10.1111/2041-210x.70315). *Methods in Ecology and Evolution.* [Read the summary →](my-research-posts/asena-2026-multinomialts.qmd) [[Statistical methods]{.pub-tag} [Palaeoecology]{.pub-tag}]{.pub-tags}
 
-**2026** · **Asena, Q.**, Perry, G.L., Wilmshurst, J. [Information loss in palaeoecological data from process and observer error](https://doi.org/10.5194/cp-22-783-2026). *Climate of the Past.* [Read the summary →](my-research-posts/asena-2026-information-loss.qmd)
+**2026** · **Asena, Q.**, Perry, G.L., Wilmshurst, J. [Information loss in palaeoecological data from process and observer error](https://doi.org/10.5194/cp-22-783-2026). *Climate of the Past.* [Read the summary →](my-research-posts/asena-2026-information-loss.qmd) [[Statistical methods]{.pub-tag} [Palaeoecology]{.pub-tag}]{.pub-tags}
 
-**2025** · Lee, F., Bellvé, A.M., Alena, H., **Asena, Q.**, Perry, G.L. [Using population viability analysis and fossil records to inform the conservation of pateke (*Anas chlorotis*)](http://dx.doi.org/10.20417/nzjecol.49.3585). *New Zealand Journal of Ecology.*
+**2025** · Lee, F., Bellvé, A.M., Alena, H., **Asena, Q.**, Perry, G.L. [Using population viability analysis and fossil records to inform the conservation of pateke (*Anas chlorotis*)](http://dx.doi.org/10.20417/nzjecol.49.3585). *New Zealand Journal of Ecology.* [[Conservation]{.pub-tag} [Palaeoecology]{.pub-tag}]{.pub-tags}
 
-**2024** · **Asena, Q.**, Perry, G.L., Wilmshurst, J. [Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data](https://doi.org/10.1177/09596836241247304). *The Holocene.* [Read the summary →](my-research-posts/asena-2024-pseudoproxy.qmd)
+**2024** · **Asena, Q.**, Perry, G.L., Wilmshurst, J. [Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data](https://doi.org/10.1177/09596836241247304). *The Holocene.* [Read the summary →](my-research-posts/asena-2024-pseudoproxy.qmd) [[Statistical methods]{.pub-tag} [Palaeoecology]{.pub-tag}]{.pub-tags}
 
-**2024** · Parsons, M., **Asena, Q.**, Johnson, D., Nalau, J. [A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward](https://doi.org/10.1016/j.crm.2024.100593). *Climate Risk Management.* [Code repository](https://figshare.com/s/1906f8088eb05bffc5b3) · [Read the summary →](my-research-posts/parsons-2024-climate-justice.qmd)
+**2024** · Parsons, M., **Asena, Q.**, Johnson, D., Nalau, J. [A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward](https://doi.org/10.1016/j.crm.2024.100593). *Climate Risk Management.* [Code repository](https://figshare.com/s/1906f8088eb05bffc5b3) · [Read the summary →](my-research-posts/parsons-2024-climate-justice.qmd) [[Climate & society]{.pub-tag} [Data practice]{.pub-tag}]{.pub-tags}
 
-**2019** · Courtney-Mustaphi, C.J., Brahney, J., Aquino-López, M.A., Goring, S., Orton, K., Noronha, A., Czaplewski, J., **Asena, Q.**, Paton, S. [Guidelines for Reporting and Archiving <sup>210</sup>Pb Sediment Chronologies to Improve Fidelity and Extend Data Lifecycle](https://doi.org/10.1016/j.quageo.2019.04.003). *Quaternary Geochronology.*
+**2019** · Courtney-Mustaphi, C.J., Brahney, J., Aquino-López, M.A., Goring, S., Orton, K., Noronha, A., Czaplewski, J., **Asena, Q.**, Paton, S. [Guidelines for Reporting and Archiving <sup>210</sup>Pb Sediment Chronologies to Improve Fidelity and Extend Data Lifecycle](https://doi.org/10.1016/j.quageo.2019.04.003). *Quaternary Geochronology.* [[Data practice]{.pub-tag} [Palaeoecology]{.pub-tag}]{.pub-tags}
 
-**2019** · Heinemeyer, A., Burn, W.L., **Asena, Q.**, Jones, A., Ashby, M. [Response to comment on Peatland carbon stocks and burn history](https://doi.org/10.1002/geo2.78). *GEO: Geography and Environment.*
+**2019** · Heinemeyer, A., Burn, W.L., **Asena, Q.**, Jones, A., Ashby, M. [Response to comment on Peatland carbon stocks and burn history](https://doi.org/10.1002/geo2.78). *GEO: Geography and Environment.* [[Fire & peatlands]{.pub-tag}]{.pub-tags}
 
-**2018** · Heinemeyer, A., **Asena, Q.**, Burn, W.L., Jones, A. [Peatland carbon stocks and burn history: Blanket bog peat core evidence highlights charcoal impacts on peat physical properties and long-term carbon storage](https://doi.org/10.1002/geo2.63). *GEO: Geography and Environment.*
+**2018** · Heinemeyer, A., **Asena, Q.**, Burn, W.L., Jones, A. [Peatland carbon stocks and burn history: Blanket bog peat core evidence highlights charcoal impacts on peat physical properties and long-term carbon storage](https://doi.org/10.1002/geo2.63). *GEO: Geography and Environment.* [[Fire & peatlands]{.pub-tag} [Palaeoecology]{.pub-tag}]{.pub-tags}
 
-**2018** · Simpkins, C.E., Lee, F., Powers, B.F., Anderson, S., **Asena, Q.**, Brock, J.M.R., Perry, G.L. [Population viability analyses in New Zealand: a review](https://newzealandecology.org/nzje/3343). *New Zealand Journal of Ecology.*
+**2018** · Simpkins, C.E., Lee, F., Powers, B.F., Anderson, S., **Asena, Q.**, Brock, J.M.R., Perry, G.L. [Population viability analyses in New Zealand: a review](https://newzealandecology.org/nzje/3343). *New Zealand Journal of Ecology.* [[Conservation]{.pub-tag}]{.pub-tags}
 
-**2018** · Hamilton, R., Brussel, T., **Asena, Q.**, Bruel, R., Marcisz, K., Słowiński, M., Morris, J. [Assessing the links between resilience, disturbance, and functional traits in paleoecological datasets](https://doi.org/10.22498/pages.26.2.87). *Past Global Changes Magazine* 26(2), 87.
+**2018** · Hamilton, R., Brussel, T., **Asena, Q.**, Bruel, R., Marcisz, K., Słowiński, M., Morris, J. [Assessing the links between resilience, disturbance, and functional traits in paleoecological datasets](https://doi.org/10.22498/pages.26.2.87). *Past Global Changes Magazine* 26(2), 87. [[Palaeoecology]{.pub-tag}]{.pub-tags}
 :::
-
-## Research summaries
-
-Longer, plain-language write-ups of selected papers: what the question was, and what we found.

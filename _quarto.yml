@@ -59,6 +59,8 @@ website:
         href: https://www.linkedin.com/in/quinn-asena-a394202a4/
       - icon: fingerprint
         menu:
+          - text: Google Scholar
+            href: "https://scholar.google.com/citations?user=eKltz04AAAAJ"
           - text: ORCID
             href: https://orcid.org/0000-0002-4086-460X
           - text: Cary Institute of Ecosystem Studies
@@ -73,7 +75,11 @@ website:
             href: https://spatialecol.com/
   page-footer:
     # No year: a hardcoded one silently goes stale every January.
-    left: "© Quinn Asena"
+    #
+    # The licence is stated here rather than only in LICENSE, because a bare © reads as
+    # all rights reserved, which contradicts the reuse the Teaching and Research pages
+    # invite. Copyright is still retained; CC BY-NC grants the permission on top of it.
+    left: "© Quinn Asena · Content [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)"
     right:
       - icon: envelope
         href: mailto:asenaq@caryinstitute.org

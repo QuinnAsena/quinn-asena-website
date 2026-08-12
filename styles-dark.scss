@@ -149,7 +149,7 @@ $mat-dim: 0.95;
 //
 // An earlier version assumed object-fit: cover meant a background could never show, so
 // these only got a brightness knock-back. That is wrong for a diagram saved with a
-// transparent background: flowchart1.png is 99% transparent, so the dark page showed
+// transparent background: flowchart1.webp is 99% transparent, so the dark page showed
 // straight through it and its dark strokes all but disappeared, with the knock-back
 // making it worse. A light backing fixes transparent artwork and is invisible behind
 // an opaque screenshot, so it is safe to apply to both.

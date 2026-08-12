@@ -1,7 +1,7 @@
 ---
 title: "Workshops and Lectures"
 description: "Open, reusable workshop and lecture materials on state-space modelling, age-depth modelling with Bchron, Quarto for collaboration, and population growth."
-# Green, sampled from analysis_process.png.
+# Green, sampled from analysis_process.webp.
 include-in-header:
   text: |
     <style>:root { --accent-h: 150; }</style>
@@ -17,7 +17,7 @@ listing:
     contents: workshops-lectures-posts/workshops-lectures.yml
 ---
 
-Workshop and lecture material I have developed and taught, all open and free to reuse or adapt. Most come with a written walkthrough, slides, and the source repository, so they can be run without me. I am a [certified Carpentries instructor](https://carpentries.org/) and have run these at conferences, research bazaars, and universities.
+Workshop and lecture material I have developed and taught, all open and free to reuse or adapt under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/): credit me and don't sell it, and you need not ask. Most come with a written walkthrough, slides, and the source repository, so they can be run without me. I am a [certified Carpentries instructor](https://carpentries.org/) and have run these at conferences, research bazaars, and universities.
 
 ::: {#gallery}
 :::

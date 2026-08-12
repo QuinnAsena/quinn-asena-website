@@ -1,7 +1,9 @@
 ---
-title: Information loss in palaeoecological data from process and observer error
+title: "Information loss in palaeoecological data"
+subtitle: "Information loss in palaeoecological data from process and observer error"
+description: "Which uncertainties matter most, and where sampling effort is best spent."
 date: "2026-04-10"
-image: "images/asena-2026-information-loss/walk_step_fisher_two_dim_metrics_mean_plot.png"
+image: "images/asena-2026-information-loss/walk_step_fisher_two_dim_metrics_mean_plot.webp"
 categories:
   - Ecology
   - Modelling
@@ -18,7 +20,7 @@ I'll pick up where I left off in the last post. In short, we simulate a whole bu
 
 To compare the Fisher Information and principal curve analyses of the ecological communities across the 1210 datasets we used Feature Analysis for Time series. This further reduces the time-series into a set of 'features' that describe the time-series. We can then use Euclidean distance to measure the distance between the features of each dataset and the original benchmark. These distances are then summarised across the replicate simulations (@fig-flow).
 
-![Conceptual data-flow of the degradation, sampling, and analysis process. Treatments of mixing, sub-sampling and proxy counting are applied individually and in combination to the replicate pseudoproxy archive. Fisher’s information (FI) and principal curves (PrC) are applied separately to each treatment level and subsequently analysed using feature analysis for time-series (FATs). Extracted features are scaled and Euclidean distance between each treatment level and the ‘error-free’ reference core is calculated.](images/asena-2026-information-loss/analysis_process.png){#fig-flow}
+![Conceptual data-flow of the degradation, sampling, and analysis process. Treatments of mixing, sub-sampling and proxy counting are applied individually and in combination to the replicate pseudoproxy archive. Fisher’s information (FI) and principal curves (PrC) are applied separately to each treatment level and subsequently analysed using feature analysis for time-series (FATs). Extracted features are scaled and Euclidean distance between each treatment level and the ‘error-free’ reference core is calculated.](images/asena-2026-information-loss/analysis_process.webp){#fig-flow}
 
 Ok, the methods are not very easy to describe in simple terms... They are set out in full in the [paper](https://doi.org/10.5194/cp-22-783-2026), so let's jump to the exciting results!
 
@@ -26,13 +28,13 @@ Ok, the methods are not very easy to describe in simple terms... They are set ou
 
 The uncertainties are introduced to the data systematically. By introducing the uncertainties individually, we can see how the Euclidean distance increases from our benchmark data (@fig-oneD). It is interesting the Euclidean distance increases steadily with mixing, while the Euclidean distance does not increase a great deal as the proxy count is reduced. Decreasing sub-sampling intervals are having the strongest influence on the Euclidean distance.
 
-![The median (dots), 25th, and 75th quantiles (error-bars and shaded area) of the Euclidean distance from the ‘error-free’ core of features extracted from the Fisher’s information (A) and PrC distances (B) calculated across replicate simulations.](images/asena-2026-information-loss/walk_step_fisher_metrics_dotplot.png){#fig-oneD}
+![The median (dots), 25th, and 75th quantiles (error-bars and shaded area) of the Euclidean distance from the ‘error-free’ core of features extracted from the Fisher’s information (A) and PrC distances (B) calculated across replicate simulations.](images/asena-2026-information-loss/walk_step_fisher_metrics_dotplot.webp){#fig-oneD}
 
 It is useful to see the different influence of the uncertainties when applied individually. However, this result is expected. We know that data become worse if we ruin them! What we want to find out is which sources of uncertainty have the strongest influence, and which ones interact when applied in combination.
 
 In the following figure (@fig-twoD), two sources of uncertainty are plotted, one on each axis. What we are interested in here is whether the Euclidean distance increases along the diagonal of the plot, indicating an interaction between the uncertainties. By far the strongest influence is from the combined effect of proxy counting and sub-sampling (@fig-twoD C). There appears to be little interaction between mixing and either proxy counting and sub-sampling.
 
-![Mean Euclidean distance from the ‘error-free’ core of two treatments combined calculated across replicate simulations for Fisher’s information. The mixing axis shows the number of time-steps over which mixing occurs. Along the sub-sampling axis, the frequency of sub-sampling in centimetres is shown, and the proxy counting axis displays count resolutions in number of individuals counted per sample. In the proxy counting treatment, uncertainty increases as count resolution decreases.](images/asena-2026-information-loss/walk_step_fisher_two_dim_metrics_mean_plot.png){#fig-twoD}
+![Mean Euclidean distance from the ‘error-free’ core of two treatments combined calculated across replicate simulations for Fisher’s information. The mixing axis shows the number of time-steps over which mixing occurs. Along the sub-sampling axis, the frequency of sub-sampling in centimetres is shown, and the proxy counting axis displays count resolutions in number of individuals counted per sample. In the proxy counting treatment, uncertainty increases as count resolution decreases.](images/asena-2026-information-loss/walk_step_fisher_two_dim_metrics_mean_plot.webp){#fig-twoD}
 
 In the [paper](https://doi.org/10.5194/cp-22-783-2026), all three uncertainties are combined and visualised. I won't go there in this short summary! What does this all mean for palaeoecologists?
 

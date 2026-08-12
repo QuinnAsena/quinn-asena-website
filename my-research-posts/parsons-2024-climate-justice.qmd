@@ -1,5 +1,7 @@
 ---
-title: "A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward"
+title: "Mapping the climate justice literature"
+subtitle: "A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward"
+description: "Trends, voices and gaps, from a topic analysis of the literature."
 date: "2024-03-01"
 image: "images/parsons-2024-climate-justice/six_topic_plot.svg"
 categories:

@@ -1,7 +1,7 @@
 ---
 title: "Packages and Apps"
 description: "Open-source R packages and interactive Shiny apps from my research and teaching, including multinomialTS for state-space modelling of community time series."
-# Crimson, sampled from archive_half_half_walk_lin.png.
+# Crimson, sampled from archive_half_half_walk_lin.webp.
 include-in-header:
   text: |
     <style>:root { --accent-h: 25; }</style>
@@ -22,7 +22,7 @@ Software that came out of my research and teaching: R packages implementing meth
 ```{=html}
 <a class="feature-card" href="multinomialts.html">
   <span class="feature-card-media">
-    <img src="workshops-lectures-posts/images/flowchart1.png" alt="" loading="lazy" decoding="async"/>
+    <img src="workshops-lectures-posts/images/flowchart1.webp" alt="" loading="lazy" decoding="async"/>
   </span>
   <span class="feature-card-body">
     <span class="feature-card-meta">R package &middot; Methods in Ecology and Evolution &middot; 2026</span>

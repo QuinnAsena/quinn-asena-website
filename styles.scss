@@ -593,6 +593,30 @@ hr.section-divider {
   line-height: 1.5;
 }
 
+// Topic tags on each citation.
+//
+// Deliberately identical to .listing-categories .category on the summary cards below:
+// seeing "Palaeoecology" in the same chip in both places is what tells a reader the two
+// sections are indexed the same way. Diverging styles here would break that link.
+//
+// The wrapper is display: block so the chips drop onto their own line rather than
+// trailing the citation text, which at this density reads as part of the sentence.
+.pub-tags {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.pub-tag {
+  display: inline-block;
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--brand-tint-35);
+  border-radius: 1rem;
+  color: var(--brand-700);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
 // Chronological talk record: a tight two-level list, years as the outer level.
 .talk-record {
   > ul {

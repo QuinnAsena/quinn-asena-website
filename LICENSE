@@ -1,0 +1,20 @@
+Copyright (c) Quinn Asena
+
+The content of this website (text, images, photographs, video, slides, workshop
+and lecture material) is licensed under a Creative Commons
+Attribution-NonCommercial 4.0 International Licence (CC BY-NC 4.0).
+
+You are free to share and adapt this material for non-commercial purposes,
+provided you give appropriate credit and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Summary:          https://creativecommons.org/licenses/by-nc/4.0/
+
+Two exceptions:
+
+  1. The R packages, apps and workshop repositories linked from this site live in
+     their own repositories and carry their own licences. Those licences apply to
+     that code, not this one.
+
+  2. The bundled font in fonts/ is licensed under the SIL Open Font Licence. Its
+     terms are in fonts/OFL.txt.

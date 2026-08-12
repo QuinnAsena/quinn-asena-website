@@ -1,7 +1,7 @@
 ---
 title: "Talks"
 description: "Slides and recordings from recent conference talks, plus a full chronological record of 22 talks, posters and workshops given since 2016."
-# Amber, sampled from B_dis.png.
+# Amber, sampled from B_dis.webp.
 include-in-header:
   text: |
     <style>:root { --accent-h: 60; }</style>

@@ -1,7 +1,15 @@
 ---
-title: Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions
+# Short enough to wrap to two lines in a listing card. The full paper title is the
+# subtitle below, so nothing is lost on the page itself, and the listing template does
+# not render subtitles.
+title: "A state-space model for ecological count data"
+subtitle: "Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions"
+# Without this, Quarto auto-excerpts the opening line of the post, which restates the
+# title inside the card. It also becomes the page's meta description, which these posts
+# previously had none of.
+description: "Estimating species interactions and environmental drivers from count data."
 date: "2026-07-13"
-image: "images/asena-2026-multinomialts/story-counts.png"
+image: "images/asena-2026-multinomialts/story-counts.webp"
 categories:
   - Ecology
   - Modelling
@@ -28,7 +36,7 @@ There are many forms of data that describe historical changes in environments an
 
 @fig-story is a visualisation of the pollen data from a sediment core collected at Story Lake in Northern Indiana. The data are from Schlenker _et al._, 2024.
 
-![Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schlenker _et al._, 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The `multinomialTS` model uses raw counts so I'm showing raw count data. Three key species are plotted (_Quercus_, _Fagus_, and _Ulmus_), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in _Ambrosia_ when forests were cleared after Euro-American colonisation of North America.](images/asena-2026-multinomialts/story-counts.png){#fig-story}
+![Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schlenker _et al._, 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The `multinomialTS` model uses raw counts so I'm showing raw count data. Three key species are plotted (_Quercus_, _Fagus_, and _Ulmus_), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in _Ambrosia_ when forests were cleared after Euro-American colonisation of North America.](images/asena-2026-multinomialts/story-counts.webp){#fig-story}
 
 ### Our model
 
@@ -36,7 +44,7 @@ These palaeo-data (@fig-story) show patterns of change in the taxa over the time
 
 To determine whether the model is recovering accurate estimates of driver-taxa relationships, and taxa-taxa interactions, we turn to simulation. We simulated data with different parameters and assess how well the model recovers those parameters. The whole process is described in detail in the paper, and here is an example from the paper on the success of the model at recovering driver-taxa relationships (@fig-BDis). This figure (@fig-BDis) will be a bit tricky to interpret out of the context of the full paper, the key points are that: each sub-plot represents different simulated conditions; each violin within the sub-plots is a simulated taxon; and the yellow dot is the target value that we want the model to estimate. Across many replicate simulations the median recovered value from the model is very close to the yellow dot, this is good!
 
-![Estimated values of the driver-taxa relationship across the 500 replicate simulations for six different scenarios and two taxa for each scenario. The point within each violin plot is the scenario-prescribed value for the simulations. The horizontal lines within each violin plot are the median, 25th and 75th quantiles of the estimated values from the model fits across the 500 replicates. Good model performance is indicated by the true value sitting close to the median and within the interquartile range of the estimated values.](images/asena-2026-multinomialts/B_dis.png){#fig-BDis}
+![Estimated values of the driver-taxa relationship across the 500 replicate simulations for six different scenarios and two taxa for each scenario. The point within each violin plot is the scenario-prescribed value for the simulations. The horizontal lines within each violin plot are the median, 25th and 75th quantiles of the estimated values from the model fits across the 500 replicates. Good model performance is indicated by the true value sitting close to the median and within the interquartile range of the estimated values.](images/asena-2026-multinomialts/B_dis.webp){#fig-BDis}
 
 ## Outro
 

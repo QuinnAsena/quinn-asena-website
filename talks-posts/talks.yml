@@ -5,15 +5,15 @@
     - title: "ESA 2026: boreal forest shifts"
       subtitle: Ecological Society of America, Salt Lake City, UT.
       href: https://quinnasena.github.io/esa-2026/slides/slides.html#/title-slide
-      thumbnail: talks-posts/images/esa-2026.png
+      thumbnail: talks-posts/images/esa-2026.webp
     - title: "ESA 2025: multinomialTS case studies"
       subtitle: Ecological Society of America, Baltimore, MD.
       href: https://quinnasena.github.io/esa-2025/esa-2025-slides
-      thumbnail: talks-posts/images/esa-2025.png
+      thumbnail: talks-posts/images/esa-2025.webp
     - title: "ESA 2024: drivers of change in Michigan"
       subtitle: multinomialTS applied to a pollen record. ESA, Long Beach, CA.
       href: https://quinnasena.github.io/state-space-workhop-ESA/slides/slide_ESA_talk.html#/title-slide
-      thumbnail: talks-posts/images/esa-2024.png
+      thumbnail: talks-posts/images/esa-2024.webp
 
 - category: Recorded talks
   description: |
@@ -22,16 +22,16 @@
     - title: "multinomialTS: modelling community time series"
       subtitle: Invited MEE live! webinar, British Ecological Society, 2026.
       href: https://youtu.be/h7uBQd-je8A
-      thumbnail: talks-posts/images/mee-talk.jpg
+      thumbnail: talks-posts/images/mee-talk.webp
     - title: Uncertainties in palaeoecology
       subtitle: Neotoma Outreach, 2026.
       href: https://www.youtube.com/watch?v=J-v0xkTIiNI
-      thumbnail: talks-posts/images/neotoma_talk.jpg
+      thumbnail: talks-posts/images/neotoma_talk.webp
     - title: Hands-on workshop for age-depth modelling
       subtitle: Neotoma Outreach, 2026.
       href: https://youtu.be/yMNpRbNHz-w?si=AkW29iG42sN-WkdG
-      thumbnail: workshops-lectures-posts/images/neotoma_hands-on.jpg
+      thumbnail: workshops-lectures-posts/images/neotoma_hands-on.webp
     - title: Palaeo in R
       subtitle: British Ecological Society PalaeoSIG, 2022.
       href: https://www.youtube.com/watch?v=z-aAIb7vkQo
-      thumbnail: talks-posts/images/palaeosig.png
+      thumbnail: talks-posts/images/palaeosig.webp

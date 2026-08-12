@@ -16,23 +16,23 @@ Professionally, I am an ecologist with borderline data scientist disorder. In my
 Occasionally dabble in art... Click on any image for a slideshow with more photos.
 
 ::: {.photo-grid}
-![Ink art mix](images/art-mix.jpg){.photo group="art"}
+![Ink art mix](images/art-mix.webp){.photo loading="lazy" group="art"}
 
-![Ink art cartoons](images/art-owl-camp.jpg){.photo group="art"}
+![Ink art cartoons](images/art-owl-camp.webp){.photo loading="lazy" group="art"}
 
-![Ink art kitten](images/art-kitten.jpg){.photo group="art"}
+![Ink art kitten](images/art-kitten.webp){.photo loading="lazy" group="art"}
 
-![Ink art turtle](images/art-turtle.jpg){.photo group="art"}
+![Ink art turtle](images/art-turtle.webp){.photo loading="lazy" group="art"}
 :::
 
 ::: {.lightbox-only}
-![Ink art otter](images/art-otter.jpg){.photo group="art"}
+![Ink art otter](images/art-otter.webp){.photo loading="lazy" group="art"}
 
-![Ink art owl cartoon](images/art-owl-cartoon.jpg){.photo group="art"}
+![Ink art owl cartoon](images/art-owl-cartoon.webp){.photo loading="lazy" group="art"}
 
-![Ink art mix](images/art-mix-2.jpg){.photo group="art"}
+![Ink art mix](images/art-mix-2.webp){.photo loading="lazy" group="art"}
 
-![Ink art mix](images/art-mix-2.1.jpg){.photo group="art"}
+![Ink art mix](images/art-mix-2.1.webp){.photo loading="lazy" group="art"}
 :::
 
 
@@ -41,53 +41,53 @@ Occasionally dabble in art... Click on any image for a slideshow with more photo
 Lots of travel... More photos in slideshow.
 
 ::: {.photo-grid}
-![Iceland, where glacier meets ocean](images/travel-iceland-icebeach-ice.jpg){.photo group="travel"}
+![Iceland, where glacier meets ocean](images/travel-iceland-icebeach-ice.webp){.photo loading="lazy" group="travel"}
 
-![Cappadocia, Turkey](images/travel-capadocia.jpg){.photo group="travel"}
+![Cappadocia, Turkey](images/travel-capadocia.jpg){.photo loading="lazy" group="travel"}
 
-![Teton National Park, US](images/travel-teton-lcp.jpg){.photo group="travel"}
+![Teton National Park, US](images/travel-teton-lcp.webp){.photo loading="lazy" group="travel"}
 
-![Squamish, Canada](images/travel-squamish-waterfall.jpg){.photo group="travel"}
+![Squamish, Canada](images/travel-squamish-waterfall.jpg){.photo loading="lazy" group="travel"}
 :::
 
 <!-- Captions below are inferred from the filenames. Worth a read-through: I have
      guessed at some of the locations. -->
 ::: {.lightbox-only}
-![Ice beach, Iceland](images/travel-iceland-icebeach.jpg){.photo group="travel"}
+![Ice beach, Iceland](images/travel-iceland-icebeach.jpg){.photo loading="lazy" group="travel"}
 
-![Driftwood, Iceland](images/travel-iceland-driftwood.jpg){.photo group="travel"}
+![Driftwood, Iceland](images/travel-iceland-driftwood.webp){.photo loading="lazy" group="travel"}
 
-![Puffins, Iceland](images/travel-iceland-puffins.jpg){.photo group="travel"}
+![Puffins, Iceland](images/travel-iceland-puffins.webp){.photo loading="lazy" group="travel"}
 
-![Yoda cave, Iceland](images/travel-iceland-yoda.jpg){.photo group="travel"}
+![Yoda cave, Iceland](images/travel-iceland-yoda.webp){.photo loading="lazy" group="travel"}
 
-![Cappadocia, Turkey](images/travel-capadocia-lcp.jpg){.photo group="travel"}
+![Cappadocia, Turkey](images/travel-capadocia-lcp.webp){.photo loading="lazy" group="travel"}
 
-![Alaska](images/travel-ak.jpg){.photo group="travel"}
+![Alaska](images/travel-ak.webp){.photo loading="lazy" group="travel"}
 
-![Bison, Antelope Island, Utah](images/travel-antelopeisland-bison.jpg){.photo group="travel"}
+![Bison, Antelope Island, Utah](images/travel-antelopeisland-bison.webp){.photo loading="lazy" group="travel"}
 
-![Badlands, US](images/travel-badlands-lcp.jpg){.photo group="travel"}
+![Badlands, US](images/travel-badlands-lcp.webp){.photo loading="lazy" group="travel"}
 
-![Yellowstone, US](images/travel-yellowstone.jpg){.photo group="travel"}
+![Yellowstone, US](images/travel-yellowstone.webp){.photo loading="lazy" group="travel"}
 
-![Katterskill falls, New York](images/travel-katterskill.jpg){.photo group="travel"}
+![Katterskill falls, New York](images/travel-katterskill.jpg){.photo loading="lazy" group="travel"}
 
-![Upstate New York](images/travel-upstate-ny.jpg){.photo group="travel"}
+![Upstate New York](images/travel-upstate-ny.webp){.photo loading="lazy" group="travel"}
 
-![Madison, US frozen lake](images/travel-log-lake.jpg){.photo group="travel"}
+![Madison, US frozen lake](images/travel-log-lake.webp){.photo loading="lazy" group="travel"}
 
-![Gas bubbles trapped in lake ice, Madison, US](images/travel-bubble-lake.jpg){.photo group="travel"}
+![Gas bubbles trapped in lake ice, Madison, US](images/travel-bubble-lake.webp){.photo loading="lazy" group="travel"}
 
-![Canoeing at Kemp research station, Madison, US](images/travel-kemp-canoe.jpg){.photo group="travel"}
+![Canoeing at Kemp research station, Madison, US](images/travel-kemp-canoe.webp){.photo loading="lazy" group="travel"}
 
-![South of France](images/travel-sfrance.jpg){.photo group="travel"}
+![South of France](images/travel-sfrance.webp){.photo loading="lazy" group="travel"}
 
-![That's not a dog, Squamish, CA](images/travel-notabear.jpg){.photo group="travel"}
+![That's not a dog, Squamish, CA](images/travel-notabear.webp){.photo loading="lazy" group="travel"}
 
-![Mushroom](images/travel-mushroom.jpg){.photo group="travel"}
+![Mushroom](images/travel-mushroom.webp){.photo loading="lazy" group="travel"}
 
-![Governor Dodge](images/travel-gov-dodge.jpg){.photo group="travel"}
+![Governor Dodge](images/travel-gov-dodge.webp){.photo loading="lazy" group="travel"}
 :::
 
 
@@ -96,14 +96,14 @@ Lots of travel... More photos in slideshow.
 Lots of climbing...
 
 ::: {.photo-grid}
-![Jackson Falls, US](images/climbing-jackson.jpeg){.photo group="climbing"}
+![Jackson Falls, US](images/climbing-jackson.webp){.photo loading="lazy" group="climbing"}
 
-![Puerto Rico](images/climbing-puerto.jpg){.photo group="climbing"}
+![Puerto Rico](images/climbing-puerto.webp){.photo loading="lazy" group="climbing"}
 
-![Antalya, Turkey](images/climbing-antalya2.jpg){.photo group="climbing"}
+![Antalya, Turkey](images/climbing-antalya2.jpg){.photo loading="lazy" group="climbing"}
 :::
 
 ::: {.lightbox-only}
-![Antalya, Turkey](images/climbing-antalya.jpg){.photo group="climbing"}
+![Antalya, Turkey](images/climbing-antalya.webp){.photo loading="lazy" group="climbing"}
 :::
 
