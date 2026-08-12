@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-07-13">
+<meta name="description" content="Estimating species interactions and environmental drivers from count data.">
 
-<title>Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions – Quinn Asena</title>
+<title>A state-space model for ecological count data – Quinn Asena</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cf54a59340c666b85222fb4ecde7c52f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-2bd61695de55948d6cb10b4d4327353a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c2e66ec86818ec660a9774415c7d4cee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-045da42fba1fa3172208f6b732f362de.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -73,20 +74,16 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <style>:root { --accent-h: 255; }</style>
 
 
-<meta property="og:title" content="Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions – Quinn Asena">
-<meta property="og:description" content="Quinn Asena, ecologist and data scientist. Wildfire risk mapping with deep learning, boreal forest dynamics under climate change, and statistical methods for long-term ecological change.">
-<meta property="og:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2026-multinomialts/story-counts.png">
+<meta property="og:title" content="A state-space model for ecological count data – Quinn Asena">
+<meta property="og:description" content="Estimating species interactions and environmental drivers from count data.">
+<meta property="og:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2026-multinomialts/story-counts.webp">
 <meta property="og:site_name" content="Quinn Asena">
 <meta property="og:image:alt" content="Quinn Asena, ecologist and data scientist. Palaeoecology, wildfire risk, boreal forests.">
-<meta property="og:image:height" content="1600">
-<meta property="og:image:width" content="1600">
-<meta name="twitter:title" content="Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions – Quinn Asena">
-<meta name="twitter:description" content="Quinn Asena, ecologist and data scientist. Wildfire risk mapping with deep learning, boreal forest dynamics under climate change, and statistical methods for long-term ecological change.">
-<meta name="twitter:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2026-multinomialts/story-counts.png">
+<meta name="twitter:title" content="A state-space model for ecological count data – Quinn Asena">
+<meta name="twitter:description" content="Estimating species interactions and environmental drivers from count data.">
+<meta name="twitter:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2026-multinomialts/story-counts.webp">
 <meta name="twitter:image:alt" content="Quinn Asena, ecologist and data scientist. Palaeoecology, wildfire risk, boreal forests.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1600">
-<meta name="twitter:image-width" content="1600">
 </head>
 
 <body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
@@ -318,6 +315,10 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-fingerprint">    
         <li>
+    <a class="dropdown-item" href="https://scholar.google.com/citations?user=eKltz04AAAAJ">
+ <span class="dropdown-text">Google Scholar</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://orcid.org/0000-0002-4086-460X">
  <span class="dropdown-text">ORCID</span></a>
   </li>  
@@ -375,7 +376,8 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</h1>
+<h1 class="title">A state-space model for ecological count data</h1>
+<p class="subtitle lead">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</p>
   <div class="quarto-categories">
     <div class="quarto-category">Ecology</div>
     <div class="quarto-category">Modelling</div>
@@ -384,6 +386,11 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Estimating species interactions and environmental drivers from count data.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -418,7 +425,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <div id="fig-story" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2026-multinomialts/story-counts.png" class="img-fluid figure-img">
+<img src="images/asena-2026-multinomialts/story-counts.webp" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana). Using data from Schlenker <em>et al.</em>, 2024. The x-axis shows the counts of fossil pollen grains from identified taxa, the y-axis shows the time period from the present (top) to past (bottom). Often pollen data are displayed as relative abundances in the palaeoecological literature. The <code>multinomialTS</code> model uses raw counts so I’m showing raw count data. Three key species are plotted (<em>Quercus</em>, <em>Fagus</em>, and <em>Ulmus</em>), along with a group of hardwood species, and a group of all other taxa. The spike in other taxa is caused by an increase in <em>Ambrosia</em> when forests were cleared after Euro-American colonisation of North America.
@@ -433,7 +440,7 @@ Figure&nbsp;1: Raw pollen counts of key species in Story Lake (Northern Indiana)
 <div id="fig-BDis" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BDis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2026-multinomialts/B_dis.png" class="img-fluid figure-img">
+<img src="images/asena-2026-multinomialts/B_dis.webp" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-BDis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Estimated values of the driver-taxa relationship across the 500 replicate simulations for six different scenarios and two taxa for each scenario. The point within each violin plot is the scenario-prescribed value for the simulations. The horizontal lines within each violin plot are the median, 25th and 75th quantiles of the estimated values from the model fits across the 500 replicates. Good model performance is indicated by the true value sitting close to the median and within the interquartile range of the estimated values.
@@ -878,7 +885,7 @@ Figure&nbsp;2: Estimated values of the driver-taxa relationship across the 500 r
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© Quinn Asena</p>
+<p>© Quinn Asena · Content <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

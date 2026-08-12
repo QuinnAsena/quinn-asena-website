@@ -46,8 +46,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cf54a59340c666b85222fb4ecde7c52f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-2bd61695de55948d6cb10b4d4327353a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c2e66ec86818ec660a9774415c7d4cee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-045da42fba1fa3172208f6b732f362de.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -66,20 +66,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-summaries .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-summaries'] = new List('listing-summaries', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -374,6 +374,10 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-fingerprint">    
         <li>
+    <a class="dropdown-item" href="https://scholar.google.com/citations?user=eKltz04AAAAJ">
+ <span class="dropdown-text">Google Scholar</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://orcid.org/0000-0002-4086-460X">
  <span class="dropdown-text">ORCID</span></a>
   </li>  
@@ -416,13 +420,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#publications" id="toc-publications" class="nav-link active" data-scroll-target="#publications">Publications</a></li>
-  <li><a href="#research-summaries" id="toc-research-summaries" class="nav-link" data-scroll-target="#research-summaries">Research summaries</a></li>
+  <li><a href="#research-summaries" id="toc-research-summaries" class="nav-link active" data-scroll-target="#research-summaries">Research summaries</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
   </ul>
 </nav>
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q2xpbWF0ZSUyMEp1c3RpY2U=">Climate Justice <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWNvbG9neQ==">Ecology <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RWNvc3RhdHM=">Ecostats <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWxsaW5n">Modelling <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UHJveHklMjBTeXN0ZW0lMjBNb2RlbGxpbmc=">Proxy System Modelling <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U29jaWFsJTIwU2NpZW5jZQ==">Social Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RhdGlzdGljcw==">Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VG9waWMlMjBNb2RlbGxpbmc=">Topic Modelling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VW5jZXJ0YWludGllcw==">Uncertainties <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VmlydHVhbCUyMEVjb2xvZ3k=">Virtual Ecology <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -450,61 +454,31 @@ window.Quarto = {
 
 
 <p>My research is about ecological change: what drives it, how fast it happens, and how confidently we can detect it. That has taken me from fossil pollen records spanning millennia to continental-scale simulations of boreal forests under future climates.</p>
-<p>If you can’t access any of the full articles, <a href="mailto:asenaq@caryinstitute.org">get in touch</a> and I’ll send you a copy. Everything I write is also open on <a href="https://github.com/QuinnAsena">GitHub</a>.</p>
-<section id="publications" class="level2">
-<h2 class="anchored" data-anchor-id="publications">Publications</h2>
-<!-- Source of record: CV-typst/csvs/publications.csv. Update both together. -->
-<div class="publications">
-<p><strong>2026</strong> · <strong>Asena, Q.</strong>, Williams, J., Johnson, J., Shuman, B., Stefanova, V., Ives, A. <a href="https://doi.org/10.1111/2041-210x.70315">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</a>. <em>Methods in Ecology and Evolution.</em> <a href="./my-research-posts/asena-2026-multinomialts.html">Read the summary →</a></p>
-<p><strong>2026</strong> · <strong>Asena, Q.</strong>, Perry, G.L., Wilmshurst, J. <a href="https://doi.org/10.5194/cp-22-783-2026">Information loss in palaeoecological data from process and observer error</a>. <em>Climate of the Past.</em> <a href="./my-research-posts/asena-2026-information-loss.html">Read the summary →</a></p>
-<p><strong>2025</strong> · Lee, F., Bellvé, A.M., Alena, H., <strong>Asena, Q.</strong>, Perry, G.L. <a href="http://dx.doi.org/10.20417/nzjecol.49.3585">Using population viability analysis and fossil records to inform the conservation of pateke (<em>Anas chlorotis</em>)</a>. <em>New Zealand Journal of Ecology.</em></p>
-<p><strong>2024</strong> · <strong>Asena, Q.</strong>, Perry, G.L., Wilmshurst, J. <a href="https://doi.org/10.1177/09596836241247304">Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data</a>. <em>The Holocene.</em> <a href="./my-research-posts/asena-2024-pseudoproxy.html">Read the summary →</a></p>
-<p><strong>2024</strong> · Parsons, M., <strong>Asena, Q.</strong>, Johnson, D., Nalau, J. <a href="https://doi.org/10.1016/j.crm.2024.100593">A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward</a>. <em>Climate Risk Management.</em> <a href="https://figshare.com/s/1906f8088eb05bffc5b3">Code repository</a> · <a href="./my-research-posts/parsons-2024-climate-justice.html">Read the summary →</a></p>
-<p><strong>2019</strong> · Courtney-Mustaphi, C.J., Brahney, J., Aquino-López, M.A., Goring, S., Orton, K., Noronha, A., Czaplewski, J., <strong>Asena, Q.</strong>, Paton, S. <a href="https://doi.org/10.1016/j.quageo.2019.04.003">Guidelines for Reporting and Archiving <sup>210</sup>Pb Sediment Chronologies to Improve Fidelity and Extend Data Lifecycle</a>. <em>Quaternary Geochronology.</em></p>
-<p><strong>2019</strong> · Heinemeyer, A., Burn, W.L., <strong>Asena, Q.</strong>, Jones, A., Ashby, M. <a href="https://doi.org/10.1002/geo2.78">Response to comment on Peatland carbon stocks and burn history</a>. <em>GEO: Geography and Environment.</em></p>
-<p><strong>2018</strong> · Heinemeyer, A., <strong>Asena, Q.</strong>, Burn, W.L., Jones, A. <a href="https://doi.org/10.1002/geo2.63">Peatland carbon stocks and burn history: Blanket bog peat core evidence highlights charcoal impacts on peat physical properties and long-term carbon storage</a>. <em>GEO: Geography and Environment.</em></p>
-<p><strong>2018</strong> · Simpkins, C.E., Lee, F., Powers, B.F., Anderson, S., <strong>Asena, Q.</strong>, Brock, J.M.R., Perry, G.L. <a href="https://newzealandecology.org/nzje/3343">Population viability analyses in New Zealand: a review</a>. <em>New Zealand Journal of Ecology.</em></p>
-<p><strong>2018</strong> · Hamilton, R., Brussel, T., <strong>Asena, Q.</strong>, Bruel, R., Marcisz, K., Słowiński, M., Morris, J. <a href="https://doi.org/10.22498/pages.26.2.87">Assessing the links between resilience, disturbance, and functional traits in paleoecological datasets</a>. <em>Past Global Changes Magazine</em> 26(2), 87.</p>
-</div>
-</section>
-<section id="research-summaries" class="level2">
+<p>If you can’t access any of the full articles, <a href="mailto:asenaq@caryinstitute.org">get in touch</a> and I’ll send you a copy. The same record with citation counts is on <a href="https://scholar.google.com/citations?user=eKltz04AAAAJ">Google Scholar</a> and <a href="https://orcid.org/0000-0002-4086-460X">ORCID</a>, and everything I write is open on <a href="https://github.com/QuinnAsena">GitHub</a>.</p>
+<section id="research-summaries" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="research-summaries">Research summaries</h2>
 <p>Longer, plain-language write-ups of selected papers: what the question was, and what we found.</p>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RWNvbG9neSUyQ01vZGVsbGluZyUyQ1N0YXRpc3RpY3MlMkNFY29zdGF0cw==" data-listing-date-sort="1783900800000" data-listing-file-modified-sort="1786377110204" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="924">
+<!-- Break the band out of the prose measure: at body width four cards are only ~180px
+     each, which forces every title onto five or six lines. Outset buys ~30px per card.
+     Deliberately not .column-page, which spans to page-end with z-index 998 and would
+     render on top of the TOC and category filter sitting in the right margin. -->
+<div class="column-body-outset">
+<div id="listing-summaries" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-4">
+<div class="g-col-1" data-index="0" data-categories="RWNvbG9neSUyQ01vZGVsbGluZyUyQ1N0YXRpc3RpY3MlMkNFY29zdGF0cw==" data-listing-date-sort="1783900800000" data-listing-file-modified-sort="1786573738289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="924">
 <a href="./my-research-posts/asena-2026-multinomialts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./my-research-posts/images/asena-2026-multinomialts/story-counts.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./my-research-posts/images/asena-2026-multinomialts/story-counts.webp" class="thumbnail-image card-img" style="height: 140px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions
+A state-space model for ecological count data
 </h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvbG9neQ=='); return false;">Ecology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TW9kZWxsaW5n'); return false;">Modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljcw=='); return false;">Statistics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvc3RhdHM='); return false;">Ecostats</div>
-
-</div>
 <div class="card-text listing-description delink">
-This work is published in <em>Methods in Ecology and Evolution</em>: Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic…<code></code>
+<p>Estimating species interactions and environmental drivers from count data.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 13, 2026
 </div>
@@ -512,36 +486,20 @@ Jul 13, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="RWNvbG9neSUyQ01vZGVsbGluZyUyQ1ZpcnR1YWwlMjBFY29sb2d5JTJDUHJveHklMjBTeXN0ZW0lMjBNb2RlbGxpbmclMkNVbmNlcnRhaW50aWVz" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1786377110204" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="786">
+<div class="g-col-1" data-index="1" data-categories="RWNvbG9neSUyQ01vZGVsbGluZyUyQ1ZpcnR1YWwlMjBFY29sb2d5JTJDUHJveHklMjBTeXN0ZW0lMjBNb2RlbGxpbmclMkNVbmNlcnRhaW50aWVz" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1786573738289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="786">
 <a href="./my-research-posts/asena-2026-information-loss.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./my-research-posts/images/asena-2026-information-loss/walk_step_fisher_two_dim_metrics_mean_plot.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./my-research-posts/images/asena-2026-information-loss/walk_step_fisher_two_dim_metrics_mean_plot.webp" class="thumbnail-image card-img" style="height: 140px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Information loss in palaeoecological data from process and observer error
+Information loss in palaeoecological data
 </h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvbG9neQ=='); return false;">Ecology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TW9kZWxsaW5n'); return false;">Modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlydHVhbCUyMEVjb2xvZ3k='); return false;">Virtual Ecology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJveHklMjBTeXN0ZW0lMjBNb2RlbGxpbmc='); return false;">Proxy System Modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VW5jZXJ0YWludGllcw=='); return false;">Uncertainties</div>
-
-</div>
 <div class="card-text listing-description delink">
-This work is published in <em>Climate of the Past</em>: Information loss in palaeoecological data from process and observer error (Asena, Perry &amp; Wilmshurst, 2026). The article is…
+<p>Which uncertainties matter most, and where sampling effort is best spent.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Apr 10, 2026
 </div>
@@ -549,36 +507,20 @@ Apr 10, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RWNvbG9neSUyQ01vZGVsbGluZyUyQ1ZpcnR1YWwlMjBFY29sb2d5JTJDUHJveHklMjBTeXN0ZW0lMjBNb2RlbGxpbmclMkNVbmNlcnRhaW50aWVz" data-listing-date-sort="1717200000000" data-listing-file-modified-sort="1786377110204" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1251">
+<div class="g-col-1" data-index="2" data-categories="RWNvbG9neSUyQ01vZGVsbGluZyUyQ1ZpcnR1YWwlMjBFY29sb2d5JTJDUHJveHklMjBTeXN0ZW0lMjBNb2RlbGxpbmclMkNVbmNlcnRhaW50aWVz" data-listing-date-sort="1717200000000" data-listing-file-modified-sort="1786573738289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1251">
 <a href="./my-research-posts/asena-2024-pseudoproxy.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./my-research-posts/images/asena-2024-pseudoproxy/g2272.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./my-research-posts/images/asena-2024-pseudoproxy/g2272.webp" class="thumbnail-image card-img" style="height: 140px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data
+Is the past recoverable from the data?
 </h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvbG9neQ=='); return false;">Ecology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TW9kZWxsaW5n'); return false;">Modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlydHVhbCUyMEVjb2xvZ3k='); return false;">Virtual Ecology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJveHklMjBTeXN0ZW0lMjBNb2RlbGxpbmc='); return false;">Proxy System Modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VW5jZXJ0YWludGllcw=='); return false;">Uncertainties</div>
-
-</div>
 <div class="card-text listing-description delink">
-This paper is about constructing a model that generates patterns of ecological change using population growth equations with underlying dynamics such as threshold points. We…
+<p>A virtual ecology approach to uncertainty in palaeo-records.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jun 1, 2024
 </div>
@@ -586,32 +528,20 @@ Jun 1, 2024
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Q2xpbWF0ZSUyMEp1c3RpY2UlMkNTb2NpYWwlMjBTY2llbmNlJTJDVG9waWMlMjBNb2RlbGxpbmc=" data-listing-date-sort="1709251200000" data-listing-file-modified-sort="1786377110212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="447">
+<div class="g-col-1" data-index="3" data-categories="Q2xpbWF0ZSUyMEp1c3RpY2UlMkNTb2NpYWwlMjBTY2llbmNlJTJDVG9waWMlMjBNb2RlbGxpbmc=" data-listing-date-sort="1709251200000" data-listing-file-modified-sort="1786573738293" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="447">
 <a href="./my-research-posts/parsons-2024-climate-justice.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./my-research-posts/images/parsons-2024-climate-justice/six_topic_plot.svg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./my-research-posts/images/parsons-2024-climate-justice/six_topic_plot.svg" class="thumbnail-image card-img" style="height: 140px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward
+Mapping the climate justice literature
 </h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xpbWF0ZSUyMEp1c3RpY2U='); return false;">Climate Justice</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29jaWFsJTIwU2NpZW5jZQ=='); return false;">Social Science</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VG9waWMlMjBNb2RlbGxpbmc='); return false;">Topic Modelling</div>
-
-</div>
 <div class="card-text listing-description delink">
-In this paper by Meg Parsons, we explored research trends in the literature around the topic of climate justice since its conception. I was the quantitative expert and…
+<p>Trends, voices and gaps, from a topic analysis of the literature.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Mar 1, 2024
 </div>
@@ -621,7 +551,30 @@ Mar 1, 2024
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+</div>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<!-- Source of record: CV-typst/csvs/publications.csv. Update both together. -->
+<div class="publications">
+<p><strong>2026</strong> · <strong>Asena, Q.</strong>, Williams, J., Johnson, J., Shuman, B., Stefanova, V., Ives, A. <a href="https://doi.org/10.1111/2041-210x.70315">Statistical analyses of ecological multinomial time series to identify environmental drivers and biotic interactions</a>. <em>Methods in Ecology and Evolution.</em> <a href="./my-research-posts/asena-2026-multinomialts.html">Read the summary →</a> <span class="pub-tags"><span class="pub-tag">Statistical methods</span> <span class="pub-tag">Palaeoecology</span></span></p>
+<p><strong>2026</strong> · <strong>Asena, Q.</strong>, Perry, G.L., Wilmshurst, J. <a href="https://doi.org/10.5194/cp-22-783-2026">Information loss in palaeoecological data from process and observer error</a>. <em>Climate of the Past.</em> <a href="./my-research-posts/asena-2026-information-loss.html">Read the summary →</a> <span class="pub-tags"><span class="pub-tag">Statistical methods</span> <span class="pub-tag">Palaeoecology</span></span></p>
+<p><strong>2025</strong> · Lee, F., Bellvé, A.M., Alena, H., <strong>Asena, Q.</strong>, Perry, G.L. <a href="http://dx.doi.org/10.20417/nzjecol.49.3585">Using population viability analysis and fossil records to inform the conservation of pateke (<em>Anas chlorotis</em>)</a>. <em>New Zealand Journal of Ecology.</em> <span class="pub-tags"><span class="pub-tag">Conservation</span> <span class="pub-tag">Palaeoecology</span></span></p>
+<p><strong>2024</strong> · <strong>Asena, Q.</strong>, Perry, G.L., Wilmshurst, J. <a href="https://doi.org/10.1177/09596836241247304">Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data</a>. <em>The Holocene.</em> <a href="./my-research-posts/asena-2024-pseudoproxy.html">Read the summary →</a> <span class="pub-tags"><span class="pub-tag">Statistical methods</span> <span class="pub-tag">Palaeoecology</span></span></p>
+<p><strong>2024</strong> · Parsons, M., <strong>Asena, Q.</strong>, Johnson, D., Nalau, J. <a href="https://doi.org/10.1016/j.crm.2024.100593">A Bibliometric Review and Topic Analysis of Climate Justice Literature: Mapping Trends, Voices, and the Way Forward</a>. <em>Climate Risk Management.</em> <a href="https://figshare.com/s/1906f8088eb05bffc5b3">Code repository</a> · <a href="./my-research-posts/parsons-2024-climate-justice.html">Read the summary →</a> <span class="pub-tags"><span class="pub-tag">Climate &amp; society</span> <span class="pub-tag">Data practice</span></span></p>
+<p><strong>2019</strong> · Courtney-Mustaphi, C.J., Brahney, J., Aquino-López, M.A., Goring, S., Orton, K., Noronha, A., Czaplewski, J., <strong>Asena, Q.</strong>, Paton, S. <a href="https://doi.org/10.1016/j.quageo.2019.04.003">Guidelines for Reporting and Archiving <sup>210</sup>Pb Sediment Chronologies to Improve Fidelity and Extend Data Lifecycle</a>. <em>Quaternary Geochronology.</em> <span class="pub-tags"><span class="pub-tag">Data practice</span> <span class="pub-tag">Palaeoecology</span></span></p>
+<p><strong>2019</strong> · Heinemeyer, A., Burn, W.L., <strong>Asena, Q.</strong>, Jones, A., Ashby, M. <a href="https://doi.org/10.1002/geo2.78">Response to comment on Peatland carbon stocks and burn history</a>. <em>GEO: Geography and Environment.</em> <span class="pub-tags"><span class="pub-tag">Fire &amp; peatlands</span></span></p>
+<p><strong>2018</strong> · Heinemeyer, A., <strong>Asena, Q.</strong>, Burn, W.L., Jones, A. <a href="https://doi.org/10.1002/geo2.63">Peatland carbon stocks and burn history: Blanket bog peat core evidence highlights charcoal impacts on peat physical properties and long-term carbon storage</a>. <em>GEO: Geography and Environment.</em> <span class="pub-tags"><span class="pub-tag">Fire &amp; peatlands</span> <span class="pub-tag">Palaeoecology</span></span></p>
+<p><strong>2018</strong> · Simpkins, C.E., Lee, F., Powers, B.F., Anderson, S., <strong>Asena, Q.</strong>, Brock, J.M.R., Perry, G.L. <a href="https://newzealandecology.org/nzje/3343">Population viability analyses in New Zealand: a review</a>. <em>New Zealand Journal of Ecology.</em> <span class="pub-tags"><span class="pub-tag">Conservation</span></span></p>
+<p><strong>2018</strong> · Hamilton, R., Brussel, T., <strong>Asena, Q.</strong>, Bruel, R., Marcisz, K., Słowiński, M., Morris, J. <a href="https://doi.org/10.22498/pages.26.2.87">Assessing the links between resilience, disturbance, and functional traits in paleoecological datasets</a>. <em>Past Global Changes Magazine</em> 26(2), 87. <span class="pub-tags"><span class="pub-tag">Palaeoecology</span></span></p>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1044,7 +997,7 @@ Mar 1, 2024
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© Quinn Asena</p>
+<p>© Quinn Asena · Content <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

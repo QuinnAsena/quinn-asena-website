@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2024-06-01">
+<meta name="description" content="A virtual ecology approach to uncertainty in palaeo-records.">
 
-<title>Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data – Quinn Asena</title>
+<title>Is the past recoverable from the data? – Quinn Asena</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cf54a59340c666b85222fb4ecde7c52f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-2bd61695de55948d6cb10b4d4327353a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c2e66ec86818ec660a9774415c7d4cee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-045da42fba1fa3172208f6b732f362de.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -73,20 +74,16 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <style>:root { --accent-h: 255; }</style>
 
 
-<meta property="og:title" content="Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data – Quinn Asena">
-<meta property="og:description" content="Quinn Asena, ecologist and data scientist. Wildfire risk mapping with deep learning, boreal forest dynamics under climate change, and statistical methods for long-term ecological change.">
-<meta property="og:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-pseudoproxy/g2272.png">
+<meta property="og:title" content="Is the past recoverable from the data? – Quinn Asena">
+<meta property="og:description" content="A virtual ecology approach to uncertainty in palaeo-records.">
+<meta property="og:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-pseudoproxy/g2272.webp">
 <meta property="og:site_name" content="Quinn Asena">
 <meta property="og:image:alt" content="Quinn Asena, ecologist and data scientist. Palaeoecology, wildfire risk, boreal forests.">
-<meta property="og:image:height" content="595">
-<meta property="og:image:width" content="712">
-<meta name="twitter:title" content="Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data – Quinn Asena">
-<meta name="twitter:description" content="Quinn Asena, ecologist and data scientist. Wildfire risk mapping with deep learning, boreal forest dynamics under climate change, and statistical methods for long-term ecological change.">
-<meta name="twitter:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-pseudoproxy/g2272.png">
+<meta name="twitter:title" content="Is the past recoverable from the data? – Quinn Asena">
+<meta name="twitter:description" content="A virtual ecology approach to uncertainty in palaeo-records.">
+<meta name="twitter:image" content="https://quinnasena.github.io/quinn-asena-website/my-research-posts/images/asena-2024-pseudoproxy/g2272.webp">
 <meta name="twitter:image:alt" content="Quinn Asena, ecologist and data scientist. Palaeoecology, wildfire risk, boreal forests.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="595">
-<meta name="twitter:image-width" content="712">
 </head>
 
 <body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
@@ -318,6 +315,10 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-fingerprint">    
         <li>
+    <a class="dropdown-item" href="https://scholar.google.com/citations?user=eKltz04AAAAJ">
+ <span class="dropdown-text">Google Scholar</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://orcid.org/0000-0002-4086-460X">
  <span class="dropdown-text">ORCID</span></a>
   </li>  
@@ -364,7 +365,8 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Is the past recoverable from the data? Pseudoproxy modelling of uncertainties in palaeoecological data</h1>
+<h1 class="title">Is the past recoverable from the data?</h1>
+<p class="subtitle lead">Pseudoproxy modelling of uncertainties in palaeoecological data</p>
   <div class="quarto-categories">
     <div class="quarto-category">Ecology</div>
     <div class="quarto-category">Modelling</div>
@@ -374,6 +376,11 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
   </div>
   </div>
 
+<div>
+  <div class="description">
+    A virtual ecology approach to uncertainty in palaeo-records.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -404,7 +411,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <div id="fig-VE" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-VE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-pseudoproxy/g2272.png" class="img-fluid figure-img">
+<img src="images/asena-2024-pseudoproxy/g2272.webp" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-VE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Visualisation of a simulated core sample: the accumulation rate, time-span and length of the core (a); driver conditions over time (b); the niche of each species with respect to the driving environment (c); and the abundances of pseudoproxies in the archive (d). Each species niche comprises an optima and tolerance for each driver, the optima and tolerance curves in (c) are colour-coded to match each driver in (b). In the context of the proxy system model framework, environmental drivers (b) act on a sensor (c; in this case the response of the sensor is the populations’ growth rate changing in response to the environmental drivers) and records the response of the sensor in an archive (d). The simulation runs from past to present, the first time-step being the oldest.
@@ -416,7 +423,7 @@ Figure&nbsp;1: Visualisation of a simulated core sample: the accumulation rate, 
 <div id="fig-degradation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-degradation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-pseudoproxy/degradation_process_disturbed_area_ink.png" class="img-fluid figure-img">
+<img src="images/asena-2024-pseudoproxy/degradation_process_disturbed_area_ink.webp" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-degradation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Sample model output showing two species, visualising data from the error-free reference (a) and one treatment level from each: mixing (b); mixing combined with sub-sampling (c); and mixing combined with sub-sampling and proxy counting (d). Mixing over 10 time-steps is shown as a magnified section of species 56 displaying the error-free reference transitioning to the mixed data (b). The mixed data are then sub-sampled every 10 cm, with a thickness of 1 cm (c) and the sub-sampled data are counted at a resolution of 400 individuals per sub-sample (d). Red dashed lines indicate disturbance events that occur randomly throughout the simulation.
@@ -427,7 +434,7 @@ Figure&nbsp;2: Sample model output showing two species, visualising data from th
 <div id="fig-halfhalf" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-halfhalf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-pseudoproxy/archive_half_half_walk_lin_forces.png" class="img-fluid figure-img">
+<img src="images/asena-2024-pseudoproxy/archive_half_half_walk_lin_forces.webp" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-halfhalf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Visualisation of the environmental drivers, the ‘error-free’ benchmark pseudoproxy archive, and pseudoproxies mixed over 10 time-steps, sub-sampled at 10 cm intervals and counted at a resolution of 400 individuals per sub-sample. A subset of 10 species from the pool of 200 is shown. The ‘error-free’ record shows the absolute abundances per time-step and represents ‘perfect’ knowledge of the system through time, the degraded and sampled record is converted to relative abundances and represents observations comparable to empirical proxy records. Accumulation rate and depth are not pictured in favour of a more complete species record. Note that the y-axis is in simulation time, the most recent section of core is time-step 5000.
@@ -438,7 +445,7 @@ Figure&nbsp;3: Visualisation of the environmental drivers, the ‘error-free’ 
 <div id="fig-analysis" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/asena-2024-pseudoproxy/fi_prc_grad_vertical2.png" class="img-fluid figure-img">
+<img src="images/asena-2024-pseudoproxy/fi_prc_grad_vertical2.webp" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Fisher Information (a) and PrCs (b) of both the ‘error-free’ pseudoproxies, and the degraded and sub-sampled data for Scenario 1. The blue highlighted region in the FI indicates a ~700-year period of reversed directionality. The highlighted regions in the PrCs indicate, in the analyses of the degraded and sub-sampled data, two periods of different rates of change in the PrC. The same regions are highlighted in the ‘error-free’ analysis where no apparent change is visible. Red dashed lines indicate disturbance events for both FI and PrCs.
@@ -872,7 +879,7 @@ Figure&nbsp;4: Fisher Information (a) and PrCs (b) of both the ‘error-free’ 
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© Quinn Asena</p>
+<p>© Quinn Asena · Content <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
