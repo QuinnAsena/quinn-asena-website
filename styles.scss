@@ -617,6 +617,24 @@ hr.section-divider {
   white-space: nowrap;
 }
 
+// Each citation carries two links. The title goes out to the DOI; this one goes inward
+// to my own write-up. Both inherited $link-color, so nothing distinguished the paper
+// from the summary of it.
+//
+// Brand teal rather than another chip: .pub-tag already occupies the chip slot on this
+// line, and a second one would read as a tag rather than an action.
+.publications a.summary-link {
+  color: var(--brand-700);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
 // Chronological talk record: a tight two-level list, years as the outer level.
 .talk-record {
   > ul {

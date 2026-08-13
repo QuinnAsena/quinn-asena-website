@@ -121,8 +121,22 @@ My time at the Centre for eResearch added the other side of that work: consultin
 
 ## Service
 
+**Committee Member**, Cary PRADAS Committee · 2026–present
+
+: Sharing information, training, and skills across the Cary community of postdocs, research associates, and data analysts and scientists.
+
+**Committee Member**, Computational Resources Committee · 2025–present
+
+: Contributing to data infrastructure design and decisions, including security, data management, and FAIR and CARE practices.
+
 **Early Career Representative**, Neotoma Leadership Council · 2024–present
 
 : Contributing to database governance, ingestion standards, and community user support for a global palaeoecological data resource.
 
 I also review for ecological and palaeoecological journals.
+
+## Working together
+
+Get in touch if you would like to collaborate, if you want a workshop or a talk, or if you have a question about the methods, code, or data behind any of this work.
+
+[asenaq@caryinstitute.org](mailto:asenaq@caryinstitute.org)
