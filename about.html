@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>About – Quinn Asena</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -34,12 +40,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-aa67b63998b8b9ff6e5ab2b8bff7b9f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-221134c60cacc4b578de3abd4015dd53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-256e43d6671ccb4ae92fe4056af3057d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-17f9f31c684f9836b2c9425cd112536b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -363,6 +369,7 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
   <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
   <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science">Data science</a></li>
   <li><a href="#service" id="toc-service" class="nav-link" data-scroll-target="#service">Service</a></li>
+  <li><a href="#working-together" id="toc-working-together" class="nav-link" data-scroll-target="#working-together">Working together</a></li>
   </ul>
 </nav>
     </div>
@@ -528,12 +535,25 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
 <section id="service" class="level2">
 <h2 class="anchored" data-anchor-id="service">Service</h2>
 <dl>
+<dt><strong>Committee Member</strong>, Cary PRADAS Committee · 2026–present</dt>
+<dd>
+<p>Sharing information, training, and skills across the Cary community of postdocs, research associates, and data analysts and scientists.</p>
+</dd>
+<dt><strong>Committee Member</strong>, Computational Resources Committee · 2025–present</dt>
+<dd>
+<p>Contributing to data infrastructure design and decisions, including security, data management, and FAIR and CARE practices.</p>
+</dd>
 <dt><strong>Early Career Representative</strong>, Neotoma Leadership Council · 2024–present</dt>
 <dd>
 <p>Contributing to database governance, ingestion standards, and community user support for a global palaeoecological data resource.</p>
 </dd>
 </dl>
 <p>I also review for ecological and palaeoecological journals.</p>
+</section>
+<section id="working-together" class="level2">
+<h2 class="anchored" data-anchor-id="working-together">Working together</h2>
+<p>Get in touch if you would like to collaborate, if you want a workshop or a talk, or if you have a question about the methods, code, or data behind any of this work.</p>
+<p><a href="mailto:asenaq@caryinstitute.org">asenaq@caryinstitute.org</a></p>
 
 
 </section>
@@ -603,13 +623,14 @@ gtag('config', 'G-HT71J1MK87', { 'anonymize_ip': true});
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
