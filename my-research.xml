@@ -9,7 +9,7 @@
 <link>https://quinnasena.github.io/quinn-asena-website/my-research.html</link>
 <atom:link href="https://quinnasena.github.io/quinn-asena-website/my-research.xml" rel="self" type="application/rss+xml"/>
 <description>Ten peer-reviewed publications with DOIs, plus plain-language summaries of selected papers on palaeoecology, statistical ecology and climate justice.</description>
-<generator>quarto-1.10.18</generator>
+<generator>quarto-1.10.19</generator>
 <lastBuildDate>Mon, 13 Jul 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A state-space model for ecological count data</title>
