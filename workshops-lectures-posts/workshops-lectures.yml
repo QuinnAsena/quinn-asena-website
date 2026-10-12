@@ -21,7 +21,7 @@
       thumbnail: workshops-lectures-posts/images/quarto-workshop.webp
     - title: Curriculum for palaeoecology
       subtitle: "Palaeoecological data-science: a data driven curriculum"
-      href: https://quinnasena.github.io/data-driven-curriculum-quarto/_book/index.html
+      href: https://quinnasena.github.io/data-driven-curriculum-quarto/
       code: https://github.com/QuinnAsena/data-driven-curriculum-quarto
 
 - category: Lectures
